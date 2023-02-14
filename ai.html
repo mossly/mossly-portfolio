@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+	</script>
+	<script src="./js/bootstrap.js">
+	</script>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta content="" name="AI">
+	<meta content="" name="Aaron Moss">
+	<link href="favicon.ico" rel="icon">
+	<title>AI</title><!-- Bootstrap core CSS -->
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/lightbox.css" rel="stylesheet"><!-- Custom styles for this template -->
+</head>
+<body>
+	<header>
+		<div class="navbar navbar-dark bg-dark box-shadow">
+			<div class="container d-flex justify-content-between">
+				<a class="navbar-brand d-flex align-items-center" href="#"><strong>Aaron Moss</strong></a>
+			</div>
+		</div>
+	</header>
+	<main role="main">
+		<script>
+		          var activePhotoset = "JWST"; 
+		</script>
+		<section class="jumbotron text-center">
+			<div class="container-fluid" style="max-width:700px; margin: 0 auto;">
+				<h1 class="jumbotron-heading">AI Art <br><span style="font-weight: 100;">Portfolio</span></h1>
+				<p >I approach every shot with an adventurous spirit, always seeking out the unexpected angle, the play of light, and the unique behaviours of my subjects.</p>
+				<script>
+					function showDiv(id) {
+						var activeButton = activePhotoset + "Button";
+						var activeGallery = activePhotoset + "Gallery";
+					
+						var button = document.getElementById(activeButton);
+						button.className = "btn btn-secondary my-2";
+
+						var div = document.getElementById(activeGallery);
+						div.style.display = "none";
+						
+
+						var newButton = id + "Button";
+						var newGallery = id + "Gallery";
+					
+						var button = document.getElementById(newButton);
+						button.className = "btn btn-primary my-2";
+
+						var div = document.getElementById(newGallery);
+						div.style.display = "block";
+						
+						activePhotoset = id;
+					}
+				</script></p>
+			</div>
+		</section>
+				<div class="galleryButtons">
+					<button class="btn btn-primary my-2" id="wildlifeButton" onclick="showDiv('JWST')">JWST</button> 
+				</div>
+		<div class="album py-5 bg-light" id="wildlifeGallery">
+			<div class="container-lg">
+				<h2 class="heading-text">JWST <span>AI Art</span></h2>
+				<div class="image-gallery">
+					<div class="column">
+						<div class="image-item">
+							<a data-lightbox="image-1" href="images/ai/1110817655.png"><img alt="image-1" class="card-img-top" src="images/ai/1110817655.png"></a>
+						</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="text-muted" style="padding: 2rem;">
+		<div class="container">
+			<p class="float-right"><a href="#">Back to top</a></p>
+		</div>
+	</footer>
+	<script src="./js/lightbox.js">
+	</script>
+</body>
+</html>
