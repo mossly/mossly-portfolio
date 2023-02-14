@@ -33,16 +33,7 @@
 			<div class="container-fluid" style="max-width:900px; margin: 0 auto;">
 				<h1 class="jumbotron-heading">Web Design<br>
 				<span style="font-weight: 100;">Portfolio</span></h1>
-				<p>Lorum Ipsom.</p>
-				<p>Lorum Ipsom.</p>
-				<figure>
-					<blockquote class="blockquote">
-						<p class="mb-0">"Lorum Ipsom."</p>
-					</blockquote>
-					<figcaption class="blockquote-footer">
-						Lorum Ipsom in <cite title="Source Title">Lorum, 2000</cite>
-					</figcaption>
-				</figure>
+					
 				<script>
 				                function showDiv(id) {
 				                    var activeButton = activePhotoset + "Button";
@@ -72,8 +63,10 @@
 		</section>
 		<div class="galleryButtons">
 			<button class="btn btn-primary my-2" id="wireframeButton" onclick="showDiv('wireframe')">wireframe</button>
+			<button class="btn btn-secondary my-2" id="flowchartButton" onclick="showDiv('flowchart')">flowchart</button>
+			<button class="btn btn-secondary my-2" id="pageButton" onclick="showDiv('page')">page</button>
 		</div>
-		<div class="album py-5 bg-light" id="wildlifeGallery">
+		<div class="album py-5 bg-light" id="wireframeGallery">
 			<div class="container-lg">
 				<h2 class="heading-text">wireframe <span>Designs</span></h2>
 				<div class="image-gallery">
@@ -106,6 +99,50 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="album py-5 bg-light" id="flowchartGallery">
+			<div class="container-lg">
+				<h2 class="heading-text">flowchart <span>Designs</span></h2>
+				<div class="image-gallery">
+					<div class="column">
+						<div class="image-item">
+							<a data-lightbox="flowchart1" href="images/flowcharts/ProcessMapv3.png"><img alt="image-1" class="card-img-top" src="images/flowcharts/ProcessMapv3.png"></a>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-item">
+							<a data-lightbox="flowchart2" href="images/flowcharts/Sitemapv1.png"><img alt="image-1" class="card-img-top" src="images/flowcharts/Sitemapv1.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="album py-5 bg-light" id="pageGallery">
+			<div class="container-lg">
+				<h2 class="heading-text">page <span>Designs</span></h2>
+				<div class="image-gallery">
+					<div class="column">
+						<div class="image-item">
+							<a data-lightbox="page1" href="images/pages/homepage.png"><img alt="image-1" class="card-img-top" src="images/pages/homepage.png"></a>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-item">
+							<a data-lightbox="page2" href="images/pages/store.png"><img alt="image-1" class="card-img-top" src="images/pages/store.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="container" style="padding-top: 2rem">		
+			<figure>
+				<blockquote class="blockquote">
+					<p class="mb-0">"It's not just what it looks like and feels like. Design is how it works."</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+					Steve Jobs in <cite title="Source Title">The New York Times, 2003</cite>
+				</figcaption>
+			</figure>
 		</div>
 	</main>
 	<footer class="text-muted" style="padding: 2rem;">

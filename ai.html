@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html>	
 <head>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
@@ -26,75 +26,79 @@
 		</script>
 	</header>
 	<main role="main">
-		<script>
-		                var activePhotoset = "astro"; 
-		</script>
 		<section class="jumbotron text-center">
 			<div class="container-fluid" style="max-width:900px; margin: 0 auto;">
 				<h1 class="jumbotron-heading">AI Art<br>
 				<span style="font-weight: 100;">Portfolio</span></h1>
-				<p>Ever since the groundbreaking paper 'A Neural Algorithm of Artistic Style' was published in 2015, I have been enthusiastically exploring applications of machine learning to the creative arts. From generative adversarial networks to large language models, I have eagerly followed the developments in this field that culminated in the open-source release of Stable Diffusion.</p>
-				<p>With a deep and abiding love for both photography and artificial intelligence, I have learned to train models that create extraordinary one-of-a-kind works of art. My art is a product of a fascination with the unlimited potential of AI, and I'm constantly learning new techniques and methods to push results to the cutting edge.</p>
-				<figure>
-					<blockquote class="blockquote">
-						<p class="mb-0">"You might not think that programmers are artists, but programming is an extremely creative profession. It’s logic-based creativity."</p>
-					</blockquote>
-					<figcaption class="blockquote-footer">
-						John Romero in <cite title="Source Title">Forbes, 2006</cite>
-					</figcaption>
-				</figure>
-				<script>
-				                function showDiv(id) {
-				                    var activeButton = activePhotoset + "Button";
-				                    var activeGallery = activePhotoset + "Gallery";
-				                
-				                    var button = document.getElementById(activeButton);
-				                    button.className = "btn btn-secondary my-2";
-
-				                    var div = document.getElementById(activeGallery);
-				                    div.style.display = "none";
-				                    
-
-				                    var newButton = id + "Button";
-				                    var newGallery = id + "Gallery";
-				                
-				                    var button = document.getElementById(newButton);
-				                    button.className = "btn btn-primary my-2";
-
-				                    var div = document.getElementById(newGallery);
-				                    div.style.display = "block";
-				                    
-				                    activePhotoset = id;
-				                }
-				</script>
+				Ever since the groundbreaking paper 'A Neural Algorithm of Artistic Style' was published in 2015, I have been enthusiastically exploring applications of machine learning to the creative arts. From generative adversarial networks to large language models, I have eagerly followed the developments in this field that culminated in the open-source release of Stable Diffusion.<br><br>
+				With a deep and abiding love for both photography and artificial intelligence, I have learned to train models that create extraordinary one-of-a-kind works of art. My art is a product of a fascination with the unlimited potential of AI, and I'm constantly learning new techniques and methods to push results to the cutting edge.
 				<p></p>
 			</div>
 		</section>
-		<div class="galleryButtons">
-			<button class="btn btn-primary my-2" id="astroButton" onclick="showDiv('astro')">astro</button>
-		</div>
 		<div class="album py-5 bg-light" id="wildlifeGallery">
 			<div class="container-lg">
-				<h2 class="heading-text">astro <span>AI Art</span></h2>
-				<div class="image-gallery">
+				<h2 class="heading-text"><span>AI Art</span></h2>
+				
+				<div class="image-gallery" style=padding-bottom:2rem;>	
+					<div class="image-item">
+						<video playsinline="playsinline" autoplay="autoplay" height="300px" muted="muted" loop="loop">
+							<source src="20221118013226.mp4" type="video/mp4">
+						</video>
+					</div>
+					<div class="image-item">
+						<video playsinline="playsinline" autoplay="autoplay" height="300px" muted="muted" loop="loop">
+							<source src="skull512.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				
+				<div class="image-gallery">			
 					<div class="column">
 						<div class="image-item">
 							<a data-lightbox="image-1" href="images/ai/1110817655.png"><img alt="image-1" class="card-img-top" src="images/ai/1110817655.png"></a>
 						</div>
-					</div>
-					<div class="column">
 						<div class="image-item">
 							<a data-lightbox="image-1" href="images/ai/1215082915.png"><img alt="image-1" class="card-img-top" src="images/ai/1215082915.png"></a>
 						</div>
-					</div>
-					<div class="column">
 						<div class="image-item">
 							<a data-lightbox="image-1" href="images/ai/1619258363.png"><img alt="image-1" class="card-img-top" src="images/ai/1619258363.png"></a>
 						</div>
 					</div>
+					<div class="column">
+						<div class="image-item">
+							<a data-lightbox="image-1" href="images/ai/571330624.png"><img alt="image-1" class="card-img-top" src="images/ai/571330624.png"></a>
+						</div>
+						<div class="image-item">
+							<a data-lightbox="image-1" href="images/ai/1044393378.png"><img alt="image-1" class="card-img-top" src="images/ai/1044393378.png"></a>
+						</div>
+						<div class="image-item">
+							<a data-lightbox="image-1" href="images/ai/239720698.png"><img alt="image-1" class="card-img-top" src="images/ai/239720698.png"></a>
+						</div>
+					</div>
+					<div class="column">
+						<div class="image-item">
+							<a data-lightbox="image-1" href="images/selfportrait/mosssuit.png"><img alt="image-1" class="card-img-top" src="images/selfportrait/mosssuit.png"></a>
+						</div>
+						<div class="image-item">
+							<a data-lightbox="image-1" href="images/selfportrait/mosspinkhair.png"><img alt="image-1" class="card-img-top" src="images/selfportrait/mosspinkhair.png"></a>
+						</div>
+						<div class="image-item">
+							<a data-lightbox="image-1" href="images/selfportrait/mossvangough.png"><img alt="image-1" class="card-img-top" src="images/selfportrait/mossvangough.png"></a>
+						</div>
+					</div>					
 				</div>
 			</div>
 		</div>
+		<div class="container" style="padding-top: 2rem">		
+			<figure>
+				<blockquote class="blockquote">
+					<p class="mb-0">"You might not think that programmers are artists, but programming is an extremely creative profession. It’s logic-based creativity."</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+					John Romero in <cite title="Source Title">Forbes, 2006</cite>
+				</figcaption>
+			</figure>
+		</div>		
 	</main>
 	<footer class="text-muted" style="padding: 2rem;">
 		<div class="container">
