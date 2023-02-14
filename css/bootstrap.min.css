@@ -19,10 +19,6 @@ Responsive Image gallery Style rules
   box-sizing: border-box;
 }
 
-.container {
-  padding: 40px 5%;
-}
-
 .heading-text {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 2rem;
@@ -58,7 +54,7 @@ Responsive Image gallery Style rules
 
 @media only screen and (min-width: 768px) {
   .image-gallery {
-    flex-direction: row;
+    flex-direction: row; 
   }
 }
 
@@ -94,7 +90,7 @@ Responsive Image gallery Style rules
 }
 
 .jumbotron {
-	padding: 2rem;
+	padding: 3vw;
 	background-color: #f2f2f2;
 	border-radius: 0.3rem;
 	text-align: center;
@@ -102,7 +98,7 @@ Responsive Image gallery Style rules
 }
 
 .jumbotron-heading {
-	font-size: 3rem;
+	font-size: 5vw;
 }
 
 .galleryButtons {
