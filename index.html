@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
 	</script>
 	<script src="./js/bootstrap.js">
@@ -17,60 +18,51 @@
 </head>
 <body>
 	<header>
-<div id="nav-placeholder">
-</div>
-<script>
-$(function(){
-  $("#nav-placeholder").load("nav.html");
-});
-</script>
+		<div id="nav-placeholder"></div>
+		<script>
+		$(function(){
+		$("#nav-placeholder").load("nav.html");
+		});
+		</script>
 	</header>
 	<main role="main">
 		<script>
-		          var activePhotoset = "wildlife";
+		                var activePhotoset = "wildlife";
 		</script>
 		<section class="jumbotron text-center">
 			<div class="container-fluid" style="max-width:700px; margin: 0 auto;">
 				<h1 class="jumbotron-heading">Photography <span style="font-weight: 100;">Portfolio</span></h1>
-				<p >I approach every shot with an adventurous spirit, always seeking out the unexpected angle, the play of light, and the unique behaviours of my subjects.</p>
+				<p>I approach every shot with an adventurous spirit, always seeking out the unexpected angle, the play of light, and the unique behaviours of my subjects.</p>
 				<script>
-					function showDiv(id) {
-						var activeButton = activePhotoset + "Button";
-						var activeGallery = activePhotoset + "Gallery";
-					
-						var button = document.getElementById(activeButton);
-						button.className = "btn btn-secondary my-2";
+				                function showDiv(id) {
+				                    var activeButton = activePhotoset + "Button";
+				                    var activeGallery = activePhotoset + "Gallery";
+				                
+				                    var button = document.getElementById(activeButton);
+				                    button.className = "btn btn-secondary my-2";
 
-						var div = document.getElementById(activeGallery);
-						div.style.display = "none";
-						
+				                    var div = document.getElementById(activeGallery);
+				                    div.style.display = "none";
+				                    
 
-						var newButton = id + "Button";
-						var newGallery = id + "Gallery";
-					
-						var button = document.getElementById(newButton);
-						button.className = "btn btn-primary my-2";
+				                    var newButton = id + "Button";
+				                    var newGallery = id + "Gallery";
+				                
+				                    var button = document.getElementById(newButton);
+				                    button.className = "btn btn-primary my-2";
 
-						var div = document.getElementById(newGallery);
-						div.style.display = "block";
-						
-						activePhotoset = id;
-					}
-				</script></p>
+				                    var div = document.getElementById(newGallery);
+				                    div.style.display = "block";
+				                    
+				                    activePhotoset = id;
+				                }
+				</script>
+				<p></p>
 			</div>
 		</section>
-				<div class="galleryButtons">
-					<button class="btn btn-primary my-2" id="wildlifeButton" onclick="showDiv('wildlife')">Wildlife</button> 
-					<button class="btn btn-secondary my-2" id="landscapeButton" onclick="showDiv('landscape')">Landscape</button> 
-					<button class="btn btn-secondary my-2" id="portraitButton" onclick="showDiv('portrait')">Portrait</button> 
-					<button class="btn btn-secondary my-2" id="concertButton" onclick="showDiv('concert')">Concert</button> 
-					<button class="btn btn-secondary my-2" id="architectureButton" onclick="showDiv('architecture')">Architecture</button>
-					<button class="btn btn-secondary my-2" id="natureButton" onclick="showDiv('nature')">Nature</button> 
-					<button class="btn btn-secondary my-2" id="productButton" onclick="showDiv('product')">Product</button> 
-					<button class="btn btn-secondary my-2" id="astronomicalButton" onclick="showDiv('astronomical')">Astronomical</button> 
-					<button class="btn btn-secondary my-2" id="sportsButton" onclick="showDiv('sports')">Sports</button> 		
-					<button class="btn btn-secondary my-2" id="catButton" onclick="showDiv('cat')">Cat</button> 
-				</div>
+		<div class="galleryButtons">
+			<button class="btn btn-primary my-2" id="wildlifeButton" onclick="showDiv('wildlife')">Wildlife</button> <button class="btn btn-secondary my-2" id="landscapeButton" onclick="showDiv('landscape')">Landscape</button> <button class="btn btn-secondary my-2" id="portraitButton" onclick="showDiv('portrait')">Portrait</button> <button class="btn btn-secondary my-2" id="concertButton" onclick="showDiv('concert')">Concert</button> <button class="btn btn-secondary my-2" id="architectureButton" onclick="showDiv('architecture')">Architecture</button> <button class="btn btn-secondary my-2" id="natureButton" onclick="showDiv('nature')">Nature</button> <button class="btn btn-secondary my-2" id="productButton" onclick="showDiv('product')">Product</button> <button class="btn btn-secondary my-2" id="astronomicalButton" onclick="showDiv('astronomical')">Astronomical</button> <button class="btn btn-secondary my-2" id="sportsButton" onclick="showDiv('sports')">Sports</button> <button class="btn btn-secondary my-2" id="catButton" onclick="showDiv('cat')">Cat</button>
+		</div>
 		<div class="album py-5 bg-light" id="wildlifeGallery">
 			<div class="container-lg">
 				<h2 class="heading-text">Wildlife <span>Photography</span></h2>
@@ -176,7 +168,7 @@ $(function(){
 						</div>
 						<div class="image-item">
 							<a data-lightbox="image-1" href="images/portrait/T30N2243.jpg"><img alt="image-1" class="card-img-top" src="images/portrait/T30N2243.jpg"></a>
-						</div>						
+						</div>
 					</div>
 				</div>
 			</div>
@@ -323,18 +315,16 @@ $(function(){
 				</div>
 			</div>
 		</div>
-	<div class="container" style="padding-top: 2rem">
-	<figure>
-  <blockquote class="blockquote">
-    <p class="mb-0">“It’s marvelous, marvelous. Nothing will ever be as much fun. I’m going to photograph everything, <i>everything!</i>”</p>
-  
- </blockquote>
-  <figcaption class="blockquote-footer">
-    Jacques-Henri Lartigue<cite title="Source Title"> (1902)</cite>
-  </figcaption>
-</figure>
-	</div>
-		
+		<div class="container" style="padding-top: 2rem">
+			<figure>
+				<blockquote class="blockquote">
+					<p class="mb-0">“It’s marvelous, marvelous. Nothing will ever be as much fun. I’m going to photograph everything, <i>everything!</i>”</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+					Jacques-Henri Lartigue <cite title="Source Title">(1902)</cite>
+				</figcaption>
+			</figure>
+		</div>
 	</main>
 	<footer class="text-muted" style="padding: 2rem;">
 		<div class="container">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
 	</script>
 	<script src="./js/bootstrap.js">
@@ -17,92 +18,64 @@
 </head>
 <body>
 	<header>
-		<div class="navbar navbar-expand-lg static-top navbar-dark bg-dark box-shadow">
-		  <div class="container d-flex justify-content-between">
-			<a href="https://mossly.github.io/" class="navbar-brand">Aaron Moss</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="navbar-collapse collapse show" id="navbarResponsive" style="">
-			  <ul class="navbar-nav">
-				<li class="nav-item">
-				  <a class="nav-link" href="index.html">Photography</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="webdesign.html">Web Design</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="ai.html">AI Art</a>
-				</li>
-			  </ul>
-			  <ul class="navbar-nav ms-md-auto">
-			  	<li class="nav-item">
-				  <a target="_blank" rel="noopener" class="nav-link" href="aaron-moss-cv.pdf">CV</a>
-				</li>				  
-				<li class="nav-item">
-				  <a target="_blank" rel="noopener" class="nav-link" href="https://www.linkedin.com/in/aaron-f-moss/">LinkedIn</a>
-				</li>			  
-				<li class="nav-item">
-				  <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/mossly">GitHub</a>
-				</li>
-			  </ul>
-			</div>
-		  </div>
-		</div>
+		<div id="nav-placeholder"></div>
+		<script>
+		$(function(){
+		$("#nav-placeholder").load("nav.html");
+		});
+		</script>
 	</header>
 	<main role="main">
 		<script>
-		          var activePhotoset = "wireframe"; 
+		                var activePhotoset = "wireframe"; 
 		</script>
 		<section class="jumbotron text-center">
 			<div class="container-fluid" style="max-width:900px; margin: 0 auto;">
-				<h1 class="jumbotron-heading">Web Design <br><span style="font-weight: 100;">Portfolio</span></h1>
+				<h1 class="jumbotron-heading">Web Design<br>
+				<span style="font-weight: 100;">Portfolio</span></h1>
 				<p>Lorum Ipsom.</p>
-
 				<p>Lorum Ipsom.</p>
-				
 				<figure>
-  <blockquote class="blockquote">
-    <p class="mb-0">"Lorum Ipsom."</p>
-  
-  </blockquote>
-  <figcaption class="blockquote-footer">
-    Lorum Ipsom in <cite title="Source Title">Lorum, 2000</cite>
-  </figcaption>
-</figure>
-
+					<blockquote class="blockquote">
+						<p class="mb-0">"Lorum Ipsom."</p>
+					</blockquote>
+					<figcaption class="blockquote-footer">
+						Lorum Ipsom in <cite title="Source Title">Lorum, 2000</cite>
+					</figcaption>
+				</figure>
 				<script>
-					function showDiv(id) {
-						var activeButton = activePhotoset + "Button";
-						var activeGallery = activePhotoset + "Gallery";
-					
-						var button = document.getElementById(activeButton);
-						button.className = "btn btn-secondary my-2";
+				                function showDiv(id) {
+				                    var activeButton = activePhotoset + "Button";
+				                    var activeGallery = activePhotoset + "Gallery";
+				                
+				                    var button = document.getElementById(activeButton);
+				                    button.className = "btn btn-secondary my-2";
 
-						var div = document.getElementById(activeGallery);
-						div.style.display = "none";
-						
+				                    var div = document.getElementById(activeGallery);
+				                    div.style.display = "none";
+				                    
 
-						var newButton = id + "Button";
-						var newGallery = id + "Gallery";
-					
-						var button = document.getElementById(newButton);
-						button.className = "btn btn-primary my-2";
+				                    var newButton = id + "Button";
+				                    var newGallery = id + "Gallery";
+				                
+				                    var button = document.getElementById(newButton);
+				                    button.className = "btn btn-primary my-2";
 
-						var div = document.getElementById(newGallery);
-						div.style.display = "block";
-						
-						activePhotoset = id;
-					}
-				</script></p>
+				                    var div = document.getElementById(newGallery);
+				                    div.style.display = "block";
+				                    
+				                    activePhotoset = id;
+				                }
+				</script>
+				<p></p>
 			</div>
 		</section>
-				<div class="galleryButtons">
-					<button class="btn btn-primary my-2" id="wireframeButton" onclick="showDiv('wireframe')">wireframe</button> 
-				</div>
+		<div class="galleryButtons">
+			<button class="btn btn-primary my-2" id="wireframeButton" onclick="showDiv('wireframe')">wireframe</button>
+		</div>
 		<div class="album py-5 bg-light" id="wildlifeGallery">
 			<div class="container-lg">
-				<h2 class="heading-text">wireframe<span> Designs</span></h2>
+				<h2 class="heading-text">wireframe <span>Designs</span></h2>
 				<div class="image-gallery">
 					<div class="column">
 						<div class="image-item">
@@ -113,8 +86,7 @@
 						</div>
 						<div class="image-item">
 							<a data-lightbox="wireframe3" href="images/wireframe/wireframe3.png"><img alt="image-1" class="card-img-top" src="images/wireframe/wireframe3.png"></a>
-						</div>						
-						
+						</div>
 					</div>
 					<div class="column">
 						<div class="image-item">
@@ -122,16 +94,16 @@
 						</div>
 						<div class="image-item">
 							<a data-lightbox="wireframe4" href="images/wireframe/wireframe4.png"><img alt="image-1" class="card-img-top" src="images/wireframe/wireframe4.png"></a>
-						</div>						
+						</div>
 					</div>
-					<div class="column">	
+					<div class="column">
 						<div class="image-item">
 							<a data-lightbox="wireframe6" href="images/wireframe/wireframe6.png"><img alt="image-1" class="card-img-top" src="images/wireframe/wireframe6.png"></a>
-						</div>	
+						</div>
 						<div class="image-item">
 							<a data-lightbox="wireframe7" href="images/wireframe/wireframe7.png"><img alt="image-1" class="card-img-top" src="images/wireframe/wireframe7.png"></a>
-						</div>						
-					</div>						
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
