@@ -18,7 +18,10 @@
 <body>
 	<header>
 		<div id="nav-placeholder"></div>
-		<script> $('#main .card-img-top').lazyload(); </script>
+		<script>
+			let images = document.querySelectorAll(".card-img-top'");
+			lazyload(images);
+		</script>
 		<script>
 		$(function(){
 		$("#nav-placeholder").load("nav.html");
