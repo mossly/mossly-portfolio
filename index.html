@@ -16,11 +16,6 @@
 	<header>
 		<div id="nav-placeholder"></div>
 		<script>
-			$("#image").ready(function(){
-			$("#card-img-top").fadeIn(1000);
-			});
-		</script>
-		<script>
 		$(function(){
 		$("#nav-placeholder").load("nav.html");
 		});
@@ -28,7 +23,7 @@
 	</header>
 	<main role="main">
 		<script>
-		    var activePhotoset = "wildlife";
+		                var activePhotoset = "wildlife";
 		</script>
 		<section class="jumbotron text-center">
 			<div class="container-fluid" style="max-width:700px; margin: 0 auto;">
@@ -60,10 +55,10 @@
 				</script>
 			</div>
 		</section>
-		<div class="galleryButtons" style="padding-bottom:1rem">
+		<div class="galleryButtons">
 			<button class="btn btn-primary my-2" id="wildlifeButton" onclick="showDiv('wildlife')">Wildlife</button> <button class="btn btn-secondary my-2" id="landscapeButton" onclick="showDiv('landscape')">Landscape</button> <button class="btn btn-secondary my-2" id="portraitButton" onclick="showDiv('portrait')">Portrait</button> <button class="btn btn-secondary my-2" id="concertButton" onclick="showDiv('concert')">Concert</button> <button class="btn btn-secondary my-2" id="architectureButton" onclick="showDiv('architecture')">Architecture</button> <button class="btn btn-secondary my-2" id="natureButton" onclick="showDiv('nature')">Nature</button> <button class="btn btn-secondary my-2" id="productButton" onclick="showDiv('product')">Product</button> <button class="btn btn-secondary my-2" id="astroButton" onclick="showDiv('astro')">astro</button> <button class="btn btn-secondary my-2" id="sportsButton" onclick="showDiv('sports')">Sports</button> <button class="btn btn-secondary my-2" id="catButton" onclick="showDiv('cat')">Cat</button>
 		</div>
-		<div class="album py-5" id="wildlifeGallery">
+		<div class="album py-5 bg-light" id="wildlifeGallery">
 			<div class="container-lg">
 				<h2 class="heading-text">Wildlife <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -124,7 +119,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="landscapeGallery" style="display:none">
+		<div class="album py-5 bg-light" id="landscapeGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Landscape <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -147,7 +142,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="portraitGallery" style="display:none">
+		<div class="album py-5 bg-light" id="portraitGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Portrait <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -173,7 +168,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="architectureGallery" style="display:none">
+		<div class="album py-5 bg-light" id="architectureGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Architecture <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -204,7 +199,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="natureGallery" style="display:none">
+		<div class="album py-5 bg-light" id="natureGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Nature <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -226,7 +221,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="astroGallery" style="display:none">
+		<div class="album py-5 bg-light" id="astroGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Astro <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -241,7 +236,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="productGallery" style="display:none">
+		<div class="album py-5 bg-light" id="productGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Product <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -256,7 +251,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="sportsGallery" style="display:none">
+		<div class="album py-5 bg-light" id="sportsGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Sports <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -268,7 +263,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="concertGallery" style="display:none">
+		<div class="album py-5 bg-light" id="concertGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Concert <span>Photography</span></h2>
 				<div class="image-gallery">
@@ -294,7 +289,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="album py-5" id="catGallery" style="display:none">
+		<div class="album py-5 bg-light" id="catGallery" style="display:none">
 			<div class="container-lg">
 				<h2 class="heading-text">Cat <span>Photography</span></h2>
 				<div class="image-gallery">
