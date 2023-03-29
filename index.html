@@ -3,7 +3,6 @@
 <head>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/findAspectRatio.js"></script>
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -65,11 +64,7 @@
 				<div class="image-gallery">
 					<div class="column">
 						<div class="image-item">
-						  <div class="image-placeholder">
-						    <a data-lightbox="wildlife" href="images/wildlife/DSCF0963.jpg">
-						      <img alt="image-1" class="card-img-top lazy" src="images/wildlife/DSCF0963.webp" onload="setAspectRatio(this)" loading="lazy" />
-						    </a>
-						  </div>
+							<a data-lightbox="wildlife" href="images/wildlife/DSCF0963.jpg"><img alt="image-1" class="card-img-top" src="images/wildlife/DSCF0963.webp" width:"100%" height:"100%" loading="eager" fetchpriority="high">
 						</div>
 						<div class="image-item">
 							<a data-lightbox="wildlife" href="images/wildlife/DSCF2539.jpg"><img alt="image-1" class="card-img-top" src="images/wildlife/DSCF2539.webp" width:"100%" height:"100%" loading="eager"></a>
