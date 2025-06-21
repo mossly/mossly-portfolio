@@ -1,0 +1,53 @@
+{
+  "name": "mossly-portfolio",
+  "version": "2.0.0",
+  "description": "Aaron Moss Photography Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "process-images": "tsx scripts/process-images.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mossly/mossly-portfolio.git"
+  },
+  "keywords": [
+    "photography",
+    "portfolio",
+    "vite",
+    "typescript",
+    "tailwind"
+  ],
+  "author": "Aaron Moss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mossly/mossly-portfolio/issues"
+  },
+  "homepage": "https://mossly.org",
+  "dependencies": {
+    "daisyui": "^5.0.43",
+    "photoswipe": "^5.4.4",
+    "sharp": "^0.34.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^24.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.29.0",
+    "exifr": "^7.1.3",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.20.3"
+  }
+}
