@@ -15,6 +15,7 @@ export const GALLERY_CONFIG = {
   astro: { displayName: 'ASTRO' },
   sports: { displayName: 'SPORTS' },
   cat: { displayName: 'CAT' },
+  street: { displayName: 'STREET' },
   wildlife: { displayName: 'WILDLIFE' },
 } as const
 
