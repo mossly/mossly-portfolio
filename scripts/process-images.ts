@@ -173,6 +173,17 @@ async function processImage(
 async function processAllImages() {
   console.log('🖼️  Starting image processing...')
   
+  // Clear existing processed folder
+  try {
+    await fs.rm(PROCESSED_IMAGE_DIR, { recursive: true, force: true })
+    console.log('🗑️  Cleared existing processed images')
+  } catch (error) {
+    console.log('📁 No existing processed folder to clear')
+  }
+  
+  // Ensure processed directory exists
+  await ensureDirectoryExists(PROCESSED_IMAGE_DIR)
+  
   const processedImages: ProcessedImage[] = []
   const categories = await fs.readdir(SOURCE_IMAGE_DIR)
   
@@ -212,8 +223,8 @@ async function processAllImages() {
   // Sort each category by capture date (newest first)
   for (const category in photosByCategory) {
     photosByCategory[category].sort((a, b) => {
-      const dateA = new Date(a.metadata.dateTaken)
-      const dateB = new Date(b.metadata.dateTaken)
+      const dateA = new Date(a.metadata.dateTaken || 0)
+      const dateB = new Date(b.metadata.dateTaken || 0)
       return dateB.getTime() - dateA.getTime() // Newest first
     })
   }
