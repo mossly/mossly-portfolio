@@ -29,6 +29,7 @@ function restoreProperTitle(sanitizedName: string): string {
     'Kokako': 'Kōkako',
     'Kotuku': 'Kōtuku',
     'Piwakawaka': 'Pīwakawaka',
+    'Torea Pango': 'Tōrea pango',
     'Tui and Kowhai': 'Tui and Kōwhai',
   }
   
