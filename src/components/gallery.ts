@@ -157,10 +157,11 @@ export class GalleryComponent {
     
     container.innerHTML = galleriesHTML
     
-    // Update lazy loader to process new content
+    // Reinitialize lazy loader after DOM replacement
     if (this.lazyLoader) {
-      this.lazyLoader.update()
+      this.lazyLoader.destroy()
     }
+    this.setupLazyLoader()
   }
 
   private renderGalleryContent(photos: Photo[]): string {
