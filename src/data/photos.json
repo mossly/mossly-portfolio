@@ -365,10 +365,10 @@
       "aspectRatio": 1
     },
     {
-      "id": "7c40caa9d10b17fb3a039f46d24b7bb8",
-      "filename": "Tui and Kōwhai.jpg",
+      "id": "e206844ed7576ed24b94b6a139c12964",
+      "filename": "Tui and Kowhai.jpg",
       "category": "bird",
-      "title": "Tui and Kōwhai",
+      "title": "Tui and Kowhai",
       "metadata": {
         "dateTaken": "2023-09-03T00:56:00.000Z",
         "camera": "FUJIFILM X-T5",
@@ -380,13 +380,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Tui and Kōwhai.webp",
+          "url": "/processed/bird/medium/Tui and Kowhai.webp",
           "width": 1200,
           "height": 1200,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Tui and Kōwhai.jpg",
+          "url": "/images/bird/Tui and Kowhai.jpg",
           "width": 4500,
           "height": 4500,
           "format": "jpg"
@@ -427,10 +427,10 @@
       "aspectRatio": 1.4998749061796348
     },
     {
-      "id": "c90fb0e38b64933b449da1d5aa7a16dc",
-      "filename": "Pīwakawaka.jpg",
+      "id": "2ffd69c06dbc9333bee533e030eba48d",
+      "filename": "Piwakawaka.jpg",
       "category": "bird",
-      "title": "Pīwakawaka",
+      "title": "Piwakawaka",
       "metadata": {
         "dateTaken": "2023-05-22T01:57:41.000Z",
         "camera": "FUJIFILM X-T3",
@@ -442,13 +442,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Pīwakawaka.webp",
+          "url": "/processed/bird/medium/Piwakawaka.webp",
           "width": 1200,
           "height": 800,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Pīwakawaka.jpg",
+          "url": "/images/bird/Piwakawaka.jpg",
           "width": 5966,
           "height": 3978,
           "format": "jpg"
@@ -458,10 +458,10 @@
       "aspectRatio": 1.4997486173956762
     },
     {
-      "id": "2134aba4e01b52c8e768b7435244cc4b",
-      "filename": "Kererū.jpg",
+      "id": "533834c642be0787cfd68422f893d9ff",
+      "filename": "Kereru.jpg",
       "category": "bird",
-      "title": "Kererū",
+      "title": "Kereru",
       "metadata": {
         "dateTaken": "2023-05-13T02:51:59.000Z",
         "camera": "FUJIFILM X-T3",
@@ -473,13 +473,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kererū.webp",
+          "url": "/processed/bird/medium/Kereru.webp",
           "width": 800,
           "height": 1200,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Kererū.jpg",
+          "url": "/images/bird/Kereru.jpg",
           "width": 4160,
           "height": 6240,
           "format": "jpg"
@@ -520,10 +520,10 @@
       "aspectRatio": 1.5
     },
     {
-      "id": "7a12de85e16b1e49e9b7f56c1d1d0f25",
-      "filename": "Kākāriki.jpg",
+      "id": "cf73af9d6461677a7b6c2b2700b860e1",
+      "filename": "Kakariki.jpg",
       "category": "bird",
-      "title": "Kākāriki",
+      "title": "Kakariki",
       "metadata": {
         "dateTaken": "2023-01-24T01:32:12.000Z",
         "camera": "FUJIFILM X-T3",
@@ -535,13 +535,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kākāriki.webp",
+          "url": "/processed/bird/medium/Kakariki.webp",
           "width": 1200,
           "height": 1200,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Kākāriki.jpg",
+          "url": "/images/bird/Kakariki.jpg",
           "width": 3388,
           "height": 3388,
           "format": "jpg"
@@ -706,10 +706,10 @@
       "aspectRatio": 1.4998676898650436
     },
     {
-      "id": "853964cba294bfd4f74de8b7a5bb7361",
-      "filename": "Kākā in Flight.jpg",
+      "id": "9c16a999cd6d9498cc375c14d4a9a6bc",
+      "filename": "Kaka in Flight.jpg",
       "category": "bird",
-      "title": "Kākā in Flight",
+      "title": "Kaka in Flight",
       "metadata": {
         "dateTaken": "2022-12-13T16:59:38.000Z",
         "camera": "FUJIFILM X-T3",
@@ -721,13 +721,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kākā in Flight.webp",
+          "url": "/processed/bird/medium/Kaka in Flight.webp",
           "width": 1200,
           "height": 1200,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Kākā in Flight.jpg",
+          "url": "/images/bird/Kaka in Flight.jpg",
           "width": 4256,
           "height": 4256,
           "format": "jpg"
@@ -830,10 +830,10 @@
       "aspectRatio": 1
     },
     {
-      "id": "c0de632f96825e42c87435ebc9048998",
-      "filename": "Kōkako.jpg",
+      "id": "9df3cc43c788d638f2e0acbe85cb7575",
+      "filename": "Kokako.jpg",
       "category": "bird",
-      "title": "Kōkako",
+      "title": "Kokako",
       "metadata": {
         "dateTaken": "2022-01-02T23:56:07.000Z",
         "camera": "FUJIFILM X-T3",
@@ -845,13 +845,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kōkako.webp",
+          "url": "/processed/bird/medium/Kokako.webp",
           "width": 1200,
           "height": 675,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Kōkako.jpg",
+          "url": "/images/bird/Kokako.jpg",
           "width": 5293,
           "height": 2977,
           "format": "jpg"
@@ -892,10 +892,10 @@
       "aspectRatio": 1.5001986491855384
     },
     {
-      "id": "a5b1700f87a0e462ac53c6392d3e319f",
-      "filename": "Kākā.jpg",
+      "id": "be5f950bafdf9d685e66e445074cd716",
+      "filename": "Kaka.jpg",
       "category": "bird",
-      "title": "Kākā",
+      "title": "Kaka",
       "metadata": {
         "dateTaken": "2020-08-13T03:09:40.000Z",
         "camera": "FUJIFILM X-T1",
@@ -907,13 +907,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kākā.webp",
+          "url": "/processed/bird/medium/Kaka.webp",
           "width": 1200,
           "height": 960,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Kākā.jpg",
+          "url": "/images/bird/Kaka.jpg",
           "width": 4080,
           "height": 3264,
           "format": "jpg"
@@ -923,10 +923,10 @@
       "aspectRatio": 1.25
     },
     {
-      "id": "a0a3cb8e245750b4a1c99cffd5d63e15",
-      "filename": "Kākā Duo.jpg",
+      "id": "5bd6730d1540b2fdee25a4c7e814e1b6",
+      "filename": "Kaka Duo.jpg",
       "category": "bird",
-      "title": "Kākā Duo",
+      "title": "Kaka Duo",
       "metadata": {
         "dateTaken": "2020-05-16T23:02:00.000Z",
         "camera": "FUJIFILM X-T1",
@@ -938,13 +938,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kākā Duo.webp",
+          "url": "/processed/bird/medium/Kaka Duo.webp",
           "width": 1200,
           "height": 510,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Kākā Duo.jpg",
+          "url": "/images/bird/Kaka Duo.jpg",
           "width": 3954,
           "height": 1683,
           "format": "jpg"

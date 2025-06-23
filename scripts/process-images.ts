@@ -3,6 +3,20 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import crypto from 'crypto'
 import exifr from 'exifr'
+
+function sanitizeFilename(filename: string): string {
+  return filename
+    .replace(/ā/g, 'a')
+    .replace(/ē/g, 'e') 
+    .replace(/ī/g, 'i')
+    .replace(/ō/g, 'o')
+    .replace(/ū/g, 'u')
+    .replace(/Ā/g, 'A')
+    .replace(/Ē/g, 'E')
+    .replace(/Ī/g, 'I') 
+    .replace(/Ō/g, 'O')
+    .replace(/Ū/g, 'U')
+}
 import { 
   IMAGE_SIZES, 
   IMAGE_FORMATS, 
@@ -97,9 +111,21 @@ async function processImage(
     
     const id = crypto.createHash('md5').update(`${category}-${filename}`).digest('hex')
     const baseFilename = path.parse(filename).name
+    const sanitizedFilename = sanitizeFilename(baseFilename)
     const categoryDir = path.join(PROCESSED_IMAGE_DIR, category)
     
+    
     await ensureDirectoryExists(categoryDir)
+    
+    // Rename original file if it contains macrons
+    let actualFilename = filename
+    if (baseFilename !== sanitizedFilename) {
+      const sanitizedOriginalFilename = `${sanitizedFilename}${path.extname(filename)}`
+      const sanitizedOriginalPath = path.join(path.dirname(sourcePath), sanitizedOriginalFilename)
+      await fs.rename(sourcePath, sanitizedOriginalPath)
+      sourcePath = sanitizedOriginalPath
+      actualFilename = sanitizedOriginalFilename
+    }
     
     const variants: Photo['variants'] = {
       medium: {} as ImageVariant,
@@ -112,7 +138,7 @@ async function processImage(
       await ensureDirectoryExists(sizeDir)
       
       // Process WebP version (primary format)
-      const webpFilename = `${baseFilename}.webp`
+      const webpFilename = `${sanitizedFilename}.webp`
       const webpPath = path.join(sizeDir, webpFilename)
       
       await sharp(sourcePath)
@@ -133,12 +159,12 @@ async function processImage(
       }
     }
     
-    // Reference original from source directory instead of copying
+    // Reference original with actual filename (now sanitized)
     variants.original = {
-      url: `/images/${category}/${filename}`,
+      url: `/images/${category}/${actualFilename}`,
       width: metadata.width,
       height: metadata.height,
-      format: path.extname(filename).slice(1).toLowerCase() as 'jpg' | 'png'
+      format: path.extname(actualFilename).slice(1).toLowerCase() as 'jpg' | 'png'
     }
     
     // Generate blur placeholder
@@ -146,9 +172,9 @@ async function processImage(
     
     const photo: Photo = {
       id,
-      filename,
+      filename: actualFilename,
       category,
-      title: baseFilename.replace(/_/g, ' ').replace(/-/g, ' '),
+      title: baseFilename.replace(/_/g, ' ').replace(/-/g, ' '), // Keep original title with macrons
       metadata: {
         dateTaken: metadata.dateTaken,
         camera: metadata.camera,
