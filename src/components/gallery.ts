@@ -157,11 +157,35 @@ export class GalleryComponent {
     
     container.innerHTML = galleriesHTML
     
-    // Reinitialize lazy loader after DOM replacement
-    if (this.lazyLoader) {
-      this.lazyLoader.destroy()
-    }
-    this.setupLazyLoader()
+    // Initialize lazy loader for all galleries
+    this.lazyLoader = new LazyLoad({
+      elements_selector: '.lazy',
+      threshold: 0,
+      class_loading: 'image-is-loading', // Avoid conflict with DaisyUI's .loading spinner
+      callback_enter: () => {
+        // Image is about to be loaded
+      },
+      callback_loaded: (element) => {
+        // Remove image-loading class and add fade-in animation
+        element.classList.remove('image-loading')
+        element.classList.add('animate-fade-in')
+        // Remove loading class from parent placeholder
+        const placeholder = element.closest('.image-placeholder')
+        if (placeholder) {
+          placeholder.classList.remove('skeleton')
+        }
+      },
+      callback_error: (element) => {
+        // Handle load error - remove image-loading but show error state
+        element.classList.remove('image-loading')
+        // Remove loading class from parent placeholder
+        const placeholder = element.closest('.image-placeholder')
+        if (placeholder) {
+          placeholder.classList.remove('skeleton')
+        }
+        console.error('Failed to load image:', element)
+      }
+    })
   }
 
   private renderGalleryContent(photos: Photo[]): string {
