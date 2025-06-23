@@ -17,6 +17,23 @@ function sanitizeFilename(filename: string): string {
     .replace(/Ō/g, 'O')
     .replace(/Ū/g, 'U')
 }
+
+function restoreProperTitle(sanitizedName: string): string {
+  // Restore proper Māori names with macrons
+  const titleMap: Record<string, string> = {
+    'Kaka': 'Kākā',
+    'Kaka Duo': 'Kākā Duo', 
+    'Kaka in Flight': 'Kākā in Flight',
+    'Kakariki': 'Kākāriki',
+    'Kereru': 'Kererū',
+    'Kokako': 'Kōkako',
+    'Kotaku': 'Kōtaku',
+    'Piwakawaka': 'Pīwakawaka',
+    'Tui and Kowhai': 'Tui and Kōwhai',
+  }
+  
+  return titleMap[sanitizedName] || sanitizedName
+}
 import { 
   IMAGE_SIZES, 
   IMAGE_FORMATS, 
@@ -174,7 +191,7 @@ async function processImage(
       id,
       filename: actualFilename,
       category,
-      title: baseFilename.replace(/_/g, ' ').replace(/-/g, ' '), // Keep original title with macrons
+      title: restoreProperTitle(baseFilename.replace(/_/g, ' ').replace(/-/g, ' ')), // Restore proper Māori names
       metadata: {
         dateTaken: metadata.dateTaken,
         camera: metadata.camera,
