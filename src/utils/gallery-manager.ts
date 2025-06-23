@@ -40,7 +40,7 @@ export class GalleryManager {
     // Return categories in the original website order
     const orderedCategories: PhotoCategory[] = [
       'bird', 'landscape', 'portrait', 'concert', 
-      'architecture', 'nature', 'product', 'astro', 'sports', 'cat', 'wildlife'
+      'architecture', 'nature', 'product', 'astro', 'sports', 'cat', 'street', 'wildlife'
     ]
     return orderedCategories.filter(category => this.galleries.has(category))
   }
