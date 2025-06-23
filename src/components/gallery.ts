@@ -18,7 +18,6 @@ export class GalleryComponent {
     
     this.container = container
     this.lightbox = new LightboxComponent()
-    this.setupLazyLoader()
     this.setupResizeObserver()
     this.render()
     this.attachEventListeners()
@@ -215,7 +214,10 @@ export class GalleryComponent {
       
       // Update lazy loader to check newly visible images
       if (this.lazyLoader) {
-        this.lazyLoader.update()
+        // Small delay to ensure DOM visibility changes are applied
+        setTimeout(() => {
+          this.lazyLoader.update()
+        }, 10)
       }
     }
   }
