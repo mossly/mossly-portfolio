@@ -26,6 +26,37 @@
       "aspectRatio": 1.499828473413379
     },
     {
+      "id": "f338beb37a28df5e7c1e5e1a06656ec2",
+      "filename": "Sanctuary of Truth.jpg",
+      "category": "architecture",
+      "title": "Sanctuary of Truth",
+      "metadata": {
+        "dateTaken": "2024-12-05T03:55:43.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "TAMRON 35-150mm F/2-2.8 Di III VXD A058Z",
+        "iso": 720,
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/80s",
+        "focalLength": "52mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/architecture/medium/Sanctuary of Truth.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/architecture/Sanctuary of Truth.jpg",
+          "width": 5413,
+          "height": 8120,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQI/8QAHhAAAgEDBQAAAAAAAAAAAAAAAQIAAwQFBhETImH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGREAAwADAAAAAAAAAAAAAAAAAAECEkFR/9oADAMBAAIRAxEAPwCzD66xGTvru150prRPR2OwYRM0KxVCVJB8MQONaYl3PD//2Q==",
+      "aspectRatio": 0.6666256157635468
+    },
+    {
       "id": "a05b5b82ede7126094a9e9d44c61e962",
       "filename": "Takapau.jpg",
       "category": "architecture",
@@ -861,10 +892,10 @@
       "aspectRatio": 1.7779643936849177
     },
     {
-      "id": "ab92381018dc8462615e9165b73adbea",
-      "filename": "Kōtuku.jpg",
+      "id": "a2882d4644421a2ea3e40a688cdb4dc0",
+      "filename": "Kotuku.jpg",
       "category": "bird",
-      "title": "Kōtuku",
+      "title": "Kōtuku",
       "metadata": {
         "dateTaken": "2022-01-01T03:39:09.000Z",
         "camera": "FUJIFILM X-T3",
@@ -876,13 +907,13 @@
       },
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kōtuku.webp",
+          "url": "/processed/bird/medium/Kotuku.webp",
           "width": 1200,
           "height": 800,
           "format": "webp"
         },
         "original": {
-          "url": "/images/bird/Kōtuku.jpg",
+          "url": "/images/bird/Kotuku.jpg",
           "width": 3776,
           "height": 2517,
           "format": "jpg"
@@ -1286,6 +1317,68 @@
         }
       },
       "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAEFEQMGkST/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABoRAAICAwAAAAAAAAAAAAAAAAACATEDERL/2gAMAwEAAhEDEQA/AM5itmmXVyOfqLi2KXpe/N0As41jmgrM27P/2Q==",
+      "aspectRatio": 3
+    },
+    {
+      "id": "810da3e5d969f978af298bb0f62fb78c",
+      "filename": "Pattaya.jpg",
+      "category": "landscape",
+      "title": "Pattaya",
+      "metadata": {
+        "dateTaken": "2024-12-07T02:25:25.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "TAMRON 35-150mm F/2-2.8 Di III VXD A058Z",
+        "iso": 64,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/500s",
+        "focalLength": "35mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/landscape/medium/Pattaya.webp",
+          "width": 1200,
+          "height": 300,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/landscape/Pattaya.jpg",
+          "width": 19360,
+          "height": 4840,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMG/8QAHRAAAQQCAwAAAAAAAAAAAAAAAQACAwUEESRxkf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAZEQADAAMAAAAAAAAAAAAAAAAAAQIREjH/2gAMAwEAAhEDEQA/AMphXdk5zicyUntXN/a7POm9REN3WegSlqj/2Q==",
+      "aspectRatio": 4
+    },
+    {
+      "id": "8d43c8b17af4c05760415fce7227dfdd",
+      "filename": "Da Lat.jpg",
+      "category": "landscape",
+      "title": "Da Lat",
+      "metadata": {
+        "dateTaken": "2024-10-23T22:52:37.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 24-120mm f/4 S",
+        "iso": 140,
+        "aperture": "f/8",
+        "shutterSpeed": "1/400s",
+        "focalLength": "47mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/landscape/medium/Da Lat.webp",
+          "width": 1200,
+          "height": 400,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/landscape/Da Lat.jpg",
+          "width": 13278,
+          "height": 4426,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAHxAAAQMDBQAAAAAAAAAAAAAAAAECAwQFBhIWVHGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIRAxEAPwDP0eQ3Z2lXV0yr2XbguvOm9AAWAv/Z",
       "aspectRatio": 3
     },
     {
@@ -1694,7 +1787,164 @@
       "aspectRatio": 0.8001237623762376
     }
   ],
+  "street": [
+    {
+      "id": "7a0a4242d9af87f359d7e0638c34c8ca",
+      "filename": "Tran Quang Dieu.jpg",
+      "category": "street",
+      "title": "Tran Quang Dieu",
+      "metadata": {
+        "dateTaken": "2024-11-24T05:47:26.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 24-120mm f/4 S",
+        "iso": 560,
+        "aperture": "f/4",
+        "shutterSpeed": "1/60s",
+        "focalLength": "120mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/street/medium/Tran Quang Dieu.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/street/Tran Quang Dieu.jpg",
+          "width": 8256,
+          "height": 5504,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHBAAAQUBAQEAAAAAAAAAAAAAAQACBAURAxIx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARIx/9oADAMBAAIRAxEAPwDO7C4rrZjpkmIPThgAHxSLu0L0c5OzURWrAx//2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "88596029d2664f8163e1281907db39b3",
+      "filename": "Da Lat.jpg",
+      "category": "street",
+      "title": "Da Lat",
+      "metadata": {
+        "dateTaken": "2024-10-23T03:53:34.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 24-120mm f/4 S",
+        "iso": 5000,
+        "aperture": "f/4",
+        "shutterSpeed": "1/80s",
+        "focalLength": "79mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/street/medium/Da Lat.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/street/Da Lat.jpg",
+          "width": 4972,
+          "height": 7458,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHRAAAgICAwEAAAAAAAAAAAAAAQIAAwQFERNBIf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDCtit2ZoaLshgvUQgX2JPZ2Ouq5Yn76Ygf/9k=",
+      "aspectRatio": 0.6666666666666666
+    }
+  ],
   "wildlife": [
+    {
+      "id": "bc8683cac0c331c3a02797cf827915c0",
+      "filename": "Papilio Polytes - Common Mormon.jpg",
+      "category": "wildlife",
+      "title": "Papilio Polytes   Common Mormon",
+      "metadata": {
+        "dateTaken": "2024-10-31T23:31:11.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 180-600mm f/5.6-6.3 VR",
+        "iso": 8000,
+        "aperture": "f/6.3",
+        "shutterSpeed": "1/2000s",
+        "focalLength": "600mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/wildlife/medium/Papilio Polytes - Common Mormon.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/wildlife/Papilio Polytes - Common Mormon.jpg",
+          "width": 1533,
+          "height": 2300,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHRABAAMAAQUAAAAAAAAAAAAAAQACAwQFFCFBYf/EABUBAQEAAAAAAAAAAAAAAAAAAAIF/8QAFREBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhEDEQA/AMy598O0oObtt4W56iSdeWuqVUPkQLSVL//Z",
+      "aspectRatio": 0.6665217391304348
+    },
+    {
+      "id": "6f89c478809fd8f303e306fa5b3883d4",
+      "filename": "Green Iguana.jpg",
+      "category": "wildlife",
+      "title": "Green Iguana",
+      "metadata": {
+        "dateTaken": "2024-09-16T21:45:29.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 180-600mm f/5.6-6.3 VR",
+        "iso": 180,
+        "aperture": "f/8",
+        "shutterSpeed": "1/200s",
+        "focalLength": "600mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/wildlife/medium/Green Iguana.webp",
+          "width": 1200,
+          "height": 900,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/wildlife/Green Iguana.jpg",
+          "width": 6509,
+          "height": 4882,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMF/8QAIBAAAAUDBQAAAAAAAAAAAAAAAAECBREDBBIWISIx4f/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAYEQACAwAAAAAAAAAAAAAAAAACAwABEf/aAAwDAQACEQMRAD8ApYuDi8XikN9E8E9kNLTT2rlgkp3ifQADWoSrYdaRIduf/9k=",
+      "aspectRatio": 1.3332650553052028
+    },
+    {
+      "id": "a69adaf706be399907c92184950ae054",
+      "filename": "Snow Leopard.jpg",
+      "category": "wildlife",
+      "title": "Snow Leopard",
+      "metadata": {
+        "dateTaken": "2024-06-16T03:37:23.000Z",
+        "camera": "FUJIFILM X-T5",
+        "lens": "Canon EF 300mm f/2.8 L IS USM",
+        "iso": 2000,
+        "aperture": "f/4",
+        "shutterSpeed": "1/125s",
+        "focalLength": "300mm"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/wildlife/medium/Snow Leopard.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/wildlife/Snow Leopard.jpg",
+          "width": 5091,
+          "height": 5091,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAIF/8QAIRAAAgEEAgIDAAAAAAAAAAAAAQIDAAQRIRIxBRMjMkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhH/2gAMAwEAAhEDEQA/AG+buHhuWDXWHJ+PA0BUpPc8FzGDrvHdHiVZLGUuAx5DZGa3IVX0pofUflW67AX/2Q==",
+      "aspectRatio": 1
+    },
     {
       "id": "dfbd7a3237e18214da4c3eb87c992b84",
       "filename": "Kekeno.jpg",
