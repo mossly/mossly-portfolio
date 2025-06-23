@@ -26,7 +26,7 @@ export interface ImageVariant {
   url: string
   width: number
   height: number
-  format: 'webp' | 'avif' | 'jpg'
+  format: 'webp' | 'avif' | 'jpg' | 'jpeg' | 'png'
 }
 
 export interface Photo {
@@ -37,10 +37,7 @@ export interface Photo {
   description?: string
   metadata: PhotoMetadata
   variants: {
-    thumbnail: ImageVariant
-    small: ImageVariant
     medium: ImageVariant
-    large: ImageVariant
     original: ImageVariant
   }
   blurDataUrl?: string

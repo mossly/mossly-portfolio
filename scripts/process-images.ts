@@ -102,10 +102,7 @@ async function processImage(
     await ensureDirectoryExists(categoryDir)
     
     const variants: Photo['variants'] = {
-      thumbnail: {} as ImageVariant,
-      small: {} as ImageVariant,
       medium: {} as ImageVariant,
-      large: {} as ImageVariant,
       original: {} as ImageVariant,
     }
     
@@ -136,17 +133,12 @@ async function processImage(
       }
     }
     
-    // Copy original
-    const originalDir = path.join(categoryDir, 'original')
-    await ensureDirectoryExists(originalDir)
-    const originalPath = path.join(originalDir, filename)
-    await fs.copyFile(sourcePath, originalPath)
-    
+    // Reference original from source directory instead of copying
     variants.original = {
-      url: `/processed/${category}/original/${filename}`,
+      url: `/images/${category}/${filename}`,
       width: metadata.width,
       height: metadata.height,
-      format: 'jpg'
+      format: path.extname(filename).slice(1).toLowerCase() as 'jpg' | 'png'
     }
     
     // Generate blur placeholder
