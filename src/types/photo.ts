@@ -1,5 +1,6 @@
 export type PhotoCategory = 
   | 'wildlife'
+  | 'bird'
   | 'landscape'
   | 'portrait'
   | 'concert'

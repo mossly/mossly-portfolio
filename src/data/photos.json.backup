@@ -1,0 +1,3128 @@
+{
+  "architecture": [
+    {
+      "id": "b4b1b9cb211aac4121bfde43d5557a67",
+      "filename": "LenLye.jpg",
+      "category": "architecture",
+      "title": "LenLye",
+      "metadata": {
+        "dateTaken": "2025-06-21T06:33:46.709Z"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/architecture/thumbnail/LenLye.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/architecture/small/LenLye.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/architecture/medium/LenLye.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/architecture/large/LenLye.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/architecture/original/LenLye.jpg",
+          "width": 4372,
+          "height": 2915,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMF/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAwQGERIxQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC1rPbByk9eNox9ZbseanwHYv0yIg//2Q==",
+      "aspectRatio": 1.499828473413379
+    },
+    {
+      "id": "0e1e0986a56ae831c85c6f79ac162d6b",
+      "filename": "T30N3469.jpg",
+      "category": "architecture",
+      "title": "T30N3469",
+      "metadata": {
+        "dateTaken": "2022-12-18T06:08:29.000Z",
+        "camera": "FUJIFILM X-T30",
+        "lens": "4 mm f/--",
+        "iso": 2500,
+        "aperture": "f/1",
+        "shutterSpeed": "1/4s",
+        "focalLength": "4mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/architecture/thumbnail/T30N3469.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/architecture/small/T30N3469.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/architecture/medium/T30N3469.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/architecture/large/T30N3469.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/architecture/original/T30N3469.jpg",
+          "width": 3549,
+          "height": 3549,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQcI/8QAJRAAAQMDAwMFAAAAAAAAAAAAAQIDBAAFBgcRIRIiMTNBQlFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAQEBAQAAAAAAAAAAAAAAAAEAEVH/2gAMAwEAAhEDEQA/AHsYtyWMWhR7Xb2zbnEd589X6anErDsTMp4reaSsrO6eocHfxTWlsh86WSyXnCUoOxKjxx7VnqZIeMx8l5z1FfI/dGbMpy//2Q==",
+      "aspectRatio": 1
+    },
+    {
+      "id": "bf75d47bbabd50d057b3c291b6b2b39d",
+      "filename": "DSCF3113.jpg",
+      "category": "architecture",
+      "title": "DSCF3113",
+      "metadata": {
+        "dateTaken": "2022-11-29T01:42:23.000Z",
+        "camera": "FUJIFILM X-T30",
+        "lens": "4 mm f/--",
+        "iso": 640,
+        "aperture": "f/1",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "4mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/architecture/thumbnail/DSCF3113.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/architecture/small/DSCF3113.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/architecture/medium/DSCF3113.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/architecture/large/DSCF3113.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/architecture/original/DSCF3113.jpg",
+          "width": 3562,
+          "height": 3562,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgYH/8QAIxAAAQIFAwUAAAAAAAAAAAAAAQIDAAQGESEFEkETFiIxQv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oADAMBAAIRAxEAPwAUppdM9htSkw2yS4k3JOYxacp/SUzb4Q6NoWoDPF4Ui86KYYs4vF/oxFOuudVfmv2eYKtWBf/Z",
+      "aspectRatio": 1
+    },
+    {
+      "id": "33f88e8240c2fb18ddcb69705728f815",
+      "filename": "XT3N1327.jpg",
+      "category": "architecture",
+      "title": "XT3N1327",
+      "metadata": {
+        "dateTaken": "2022-08-12T01:29:38.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 6400,
+        "aperture": "f/8",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/architecture/thumbnail/XT3N1327.webp",
+          "width": 266,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/architecture/small/XT3N1327.webp",
+          "width": 533,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/architecture/medium/XT3N1327.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/architecture/large/XT3N1327.webp",
+          "width": 1280,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/architecture/original/XT3N1327.jpg",
+          "width": 4150,
+          "height": 6225,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIBAAAgEEAQUAAAAAAAAAAAAAAQIAAwQFEgYRFCFBUf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEXx2Kbh1K5os3elwHJ9RJndhaIoY6/OviIF//2Q==",
+      "aspectRatio": 0.6666666666666666
+    },
+    {
+      "id": "1a8a7ebab5225bc82a94aae6fce45514",
+      "filename": "DSCF4005.jpg",
+      "category": "architecture",
+      "title": "DSCF4005",
+      "metadata": {
+        "dateTaken": "2021-12-30T06:01:53.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF16-55mmF2.8 R LM WR",
+        "iso": 640,
+        "aperture": "f/4",
+        "shutterSpeed": "1/600s",
+        "focalLength": "40.1mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/architecture/thumbnail/DSCF4005.webp",
+          "width": 266,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/architecture/small/DSCF4005.webp",
+          "width": 533,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/architecture/medium/DSCF4005.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/architecture/large/DSCF4005.webp",
+          "width": 1280,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/architecture/original/DSCF4005.jpg",
+          "width": 3990,
+          "height": 5985,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAHRAAAgIBBQAAAAAAAAAAAAAAAQIAAwQFBhExQf/EABQBAQAAAAAAAAAAAAAAAAAAAAX/xAAYEQACAwAAAAAAAAAAAAAAAAABAgADBf/aAAwDAQACEQMRAD8AtVx6rFAdWTrkGJltqszafjFmJJX0xDm07kYgRJcul1BM/9k=",
+      "aspectRatio": 0.6666666666666666
+    },
+    {
+      "id": "66021c59f884c68e8beddf6412426e9f",
+      "filename": "IMG_5391.jpg",
+      "category": "architecture",
+      "title": "IMG 5391",
+      "metadata": {
+        "dateTaken": "2020-08-21T02:55:00.000Z",
+        "camera": "Canon Canon EOS 5D",
+        "lens": "EF70-200mm f/2.8L USM",
+        "iso": 800,
+        "aperture": "f/4",
+        "shutterSpeed": "1/400s",
+        "focalLength": "85mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/architecture/thumbnail/IMG_5391.webp",
+          "width": 263,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/architecture/small/IMG_5391.webp",
+          "width": 526,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/architecture/medium/IMG_5391.webp",
+          "width": 789,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/architecture/large/IMG_5391.webp",
+          "width": 1262,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/architecture/original/IMG_5391.jpg",
+          "width": 2749,
+          "height": 4182,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMF/8QAGxAAAgEFAAAAAAAAAAAAAAAAAAEEERIhI1H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AvJk7E69BlSm71kAf/9k=",
+      "aspectRatio": 0.6573409851745576
+    }
+  ],
+  "astro": [
+    {
+      "id": "fa052967375f121721f34bc9de4b32e7",
+      "filename": "XT5N5854.jpg",
+      "category": "astro",
+      "title": "XT5N5854",
+      "metadata": {
+        "dateTaken": "2023-07-08T09:49:00.000Z",
+        "camera": "FUJIFILM X-T5",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 160,
+        "aperture": "f/8",
+        "shutterSpeed": "1/60s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/astro/thumbnail/XT5N5854.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/astro/small/XT5N5854.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/astro/medium/XT5N5854.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/astro/large/XT5N5854.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/astro/original/XT5N5854.jpg",
+          "width": 3840,
+          "height": 2560,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUI/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAECAwUGERIhQv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AzfW8MtOT5RueWcun5SIu4BB//9k=",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "9f2e4925e70dad55fd0ddc91f0ac23d3",
+      "filename": "XT5N5110.jpg",
+      "category": "astro",
+      "title": "XT5N5110",
+      "metadata": {
+        "dateTaken": "2023-06-26T10:48:04.000Z",
+        "camera": "FUJIFILM X-T5",
+        "lens": "-- mm f/--",
+        "iso": 2000,
+        "aperture": "f/1",
+        "shutterSpeed": "30s",
+        "focalLength": "21mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/astro/thumbnail/XT5N5110.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/astro/small/XT5N5110.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/astro/medium/XT5N5110.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/astro/large/XT5N5110.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/astro/original/XT5N5110.jpg",
+          "width": 2578,
+          "height": 2578,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIRAAAgEEAQUBAAAAAAAAAAAAAQIDAAQFESEGIjFBUVL/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABkRAQACAwAAAAAAAAAAAAAAAAEAAgMRIf/aAAwDAQACEQMRAD8AOY29hdFIYbHvfFWx1HjVAU30QI4PdWA4+4mGKlImk3r9GjzSyFjt28/aoMzU5Cm5/9k=",
+      "aspectRatio": 1
+    }
+  ],
+  "cat": [
+    {
+      "id": "beb065909327113c2f63372c0dfea3c6",
+      "filename": "XT3N1400.jpg",
+      "category": "cat",
+      "title": "XT3N1400",
+      "metadata": {
+        "dateTaken": "2022-10-10T01:06:04.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 640,
+        "aperture": "f/2",
+        "shutterSpeed": "1/1800s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/cat/thumbnail/XT3N1400.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/cat/small/XT3N1400.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/cat/medium/XT3N1400.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/cat/large/XT3N1400.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/cat/original/XT3N1400.jpg",
+          "width": 6225,
+          "height": 4150,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAQMFAQEAAAAAAAAAAAAAAgABBQMHERIhBDH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAAv/aAAwDAQACEQMRAD8AqyEaFvIIvdA1THU9jYvhNxZErqFUJzKi2SfL8REF5YZQSpv/2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "a4c31fb58f87f0442442b788e8430aa7",
+      "filename": "XT3N2134.jpg",
+      "category": "cat",
+      "title": "XT3N2134",
+      "metadata": {
+        "dateTaken": "2022-09-10T00:43:36.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 2500,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/500s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/cat/thumbnail/XT3N2134.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/cat/small/XT3N2134.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/cat/medium/XT3N2134.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/cat/large/XT3N2134.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/cat/original/XT3N2134.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgIBBQEAAAAAAAAAAAAAAQIABAMFBhESIVH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABgRAAMBAQAAAAAAAAAAAAAAAAABAhIx/9oADAMBAAIRAxEAPwDGbaqYm0OzcuDsXXwD5Ji1q7AMMY4PsRILrHETlH//2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "06ebf9b2d70c2e74a18be4434ce229b3",
+      "filename": "XT3N0984.jpg",
+      "category": "cat",
+      "title": "XT3N0984",
+      "metadata": {
+        "dateTaken": "2022-09-09T02:41:56.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 640,
+        "aperture": "f/5",
+        "shutterSpeed": "1/500s",
+        "focalLength": "158.8mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/cat/thumbnail/XT3N0984.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/cat/small/XT3N0984.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/cat/medium/XT3N0984.webp",
+          "width": 1200,
+          "height": 799,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/cat/large/XT3N0984.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/cat/original/XT3N0984.jpg",
+          "width": 6040,
+          "height": 4027,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHxAAAQQBBQEAAAAAAAAAAAAAAQACAwQFBhEhIjFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQT/xAAYEQEBAQEBAAAAAAAAAAAAAAABAgADEf/aAAwDAQACEQMRAD8AlYOlUsaanzeQhDjGOoHwrHuuQvcXgEB3IG3iIousEgGCnzf/2Q==",
+      "aspectRatio": 1.4998758380928732
+    }
+  ],
+  "concert": [
+    {
+      "id": "3d0c2739bf06b89749f7097210232ef5",
+      "filename": "C0063.00_02_44_01.Still015.jpg",
+      "category": "concert",
+      "title": "C0063.00 02 44 01.Still015",
+      "metadata": {
+        "dateTaken": "2025-06-21T06:33:45.843Z"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/concert/thumbnail/C0063.00_02_44_01.Still015.webp",
+          "width": 400,
+          "height": 225,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/concert/small/C0063.00_02_44_01.Still015.webp",
+          "width": 800,
+          "height": 450,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/concert/medium/C0063.00_02_44_01.Still015.webp",
+          "width": 1200,
+          "height": 675,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/concert/large/C0063.00_02_44_01.Still015.webp",
+          "width": 1920,
+          "height": 1080,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/concert/original/C0063.00_02_44_01.Still015.jpg",
+          "width": 3840,
+          "height": 2160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHxAAAQMDBQAAAAAAAAAAAAAAAwABAhESIQQFExRR/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABkRAAIDAQAAAAAAAAAAAAAAAAIDAAEREv/aAAwDAQACEQMRAD8AxHaogKPUco7p21i/ij7xWxV8YRE7BrkYq2mG83k//9k=",
+      "aspectRatio": 1.7777777777777777
+    },
+    {
+      "id": "267961659c15708c913f339395afac9f",
+      "filename": "T30N1169.jpg",
+      "category": "concert",
+      "title": "T30N1169",
+      "metadata": {
+        "dateTaken": "2022-10-02T10:10:51.000Z",
+        "camera": "FUJIFILM X-T30",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 12800,
+        "aperture": "f/5",
+        "shutterSpeed": "1/250s",
+        "focalLength": "100mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/concert/thumbnail/T30N1169.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/concert/small/T30N1169.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/concert/medium/T30N1169.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/concert/large/T30N1169.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/concert/original/T30N1169.jpg",
+          "width": 5537,
+          "height": 3691,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAHxAAAgIBBAMAAAAAAAAAAAAAAQMAAgQFBgcRMUJh/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAbEQACAgMBAAAAAAAAAAAAAAABAgARAwQSE//aAAwDAQACEQMRAD8ApG9VaVTDVm5b3afeva0inkfZrFclbWCqA4DOwB6mIk3OPRumNmL2Dbz/2Q==",
+      "aspectRatio": 1.500135464643728
+    },
+    {
+      "id": "71c1d9579a6ed8426b4caaf0ebfadb35",
+      "filename": "T30N0451.jpg",
+      "category": "concert",
+      "title": "T30N0451",
+      "metadata": {
+        "dateTaken": "2022-10-02T07:32:07.000Z",
+        "camera": "FUJIFILM X-T30",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 6400,
+        "aperture": "f/2",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/concert/thumbnail/T30N0451.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/concert/small/T30N0451.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/concert/medium/T30N0451.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/concert/large/T30N0451.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/concert/original/T30N0451.jpg",
+          "width": 5902,
+          "height": 3934,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHhAAAQMEAwAAAAAAAAAAAAAAAQACBAMGERIFFCH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQIAA//aAAwDAQACEQMRAD8AlLavqHGtuTDoQW6akZeMlZ3V5aI6q89FvpJREOeci592ob//2Q==",
+      "aspectRatio": 1.5002541942043721
+    },
+    {
+      "id": "85e2091d9f766f6495cf517f40ee5912",
+      "filename": "DSCF5516.jpg",
+      "category": "concert",
+      "title": "DSCF5516",
+      "metadata": {
+        "dateTaken": "2021-03-21T07:37:23.000Z",
+        "camera": "FUJIFILM X-T1",
+        "lens": "70 mm f/--",
+        "iso": 5000,
+        "aperture": "f/1",
+        "shutterSpeed": "1/500s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/concert/thumbnail/DSCF5516.webp",
+          "width": 267,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/concert/small/DSCF5516.webp",
+          "width": 533,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/concert/medium/DSCF5516.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/concert/large/DSCF5516.webp",
+          "width": 1280,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/concert/original/DSCF5516.jpg",
+          "width": 3264,
+          "height": 4896,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIhAAAAUCBwEAAAAAAAAAAAAAAAECAwQFBggRExQjMTJS/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAYEQEAAwEAAAAAAAAAAAAAAAABAAIhE//aAAwDAQACEQMRAD8Azyo2OuyITa61F13ZGRoIj6IBV4innNtSuRfn6MBbpauDGqJpP//Z",
+      "aspectRatio": 0.6666666666666666
+    },
+    {
+      "id": "e189669dd2142d51a927d02cb2fd85f5",
+      "filename": "DSCF5161.jpg",
+      "category": "concert",
+      "title": "DSCF5161",
+      "metadata": {
+        "dateTaken": "2021-03-21T07:12:30.000Z",
+        "camera": "FUJIFILM X-T1",
+        "lens": "70.0 mm",
+        "iso": 200,
+        "aperture": "f/1",
+        "shutterSpeed": "1/60s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/concert/thumbnail/DSCF5161.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/concert/small/DSCF5161.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/concert/medium/DSCF5161.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/concert/large/DSCF5161.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/concert/original/DSCF5161.jpg",
+          "width": 4896,
+          "height": 3264,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIAAwURUQQx/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABsRAAICAwEAAAAAAAAAAAAAAAECAAMEERJB/9oADAMBAAIRAxEAPwDPc1kn92ZoSxFal13U5+64ZO2GqLEmsbJ7ERObcysCPYmhBZvqf//Z",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "39f04f510afed61a563cce6049d9f72e",
+      "filename": "IMG_4932.jpg",
+      "category": "concert",
+      "title": "IMG 4932",
+      "metadata": {
+        "dateTaken": "2018-01-02T09:14:34.000Z",
+        "camera": "Canon Canon EOS 700D",
+        "lens": "1-65535mm",
+        "iso": 100,
+        "aperture": "f/1.4",
+        "shutterSpeed": "1/200s",
+        "focalLength": "65535mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/concert/thumbnail/IMG_4932.webp",
+          "width": 400,
+          "height": 320,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/concert/small/IMG_4932.webp",
+          "width": 800,
+          "height": 640,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/concert/medium/IMG_4932.webp",
+          "width": 1200,
+          "height": 960,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/concert/large/IMG_4932.webp",
+          "width": 1920,
+          "height": 1536,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/concert/original/IMG_4932.jpg",
+          "width": 2700,
+          "height": 2160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHRAAAgIBBQAAAAAAAAAAAAAAAQMAAgQFERIxUf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAZEQADAAMAAAAAAAAAAAAAAAAAAQIDERL/2gAMAwEAAhEDEQA/AMfy8VTNPUsW4toN6j2QihgPQiIMT6W2GKdSqZ//2Q==",
+      "aspectRatio": 1.25
+    }
+  ],
+  "landscape": [
+    {
+      "id": "4fb0c69d3c60efaf62366239dbca7bbc",
+      "filename": "DSF0136.jpg",
+      "category": "landscape",
+      "title": "DSF0136",
+      "metadata": {
+        "dateTaken": "2025-06-21T06:33:46.746Z"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/landscape/thumbnail/DSF0136.webp",
+          "width": 400,
+          "height": 133,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/landscape/small/DSF0136.webp",
+          "width": 800,
+          "height": 267,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/landscape/medium/DSF0136.webp",
+          "width": 1200,
+          "height": 400,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/landscape/large/DSF0136.webp",
+          "width": 1920,
+          "height": 640,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/landscape/original/DSF0136.jpg",
+          "width": 7200,
+          "height": 2400,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAEFEQMGkST/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABoRAAICAwAAAAAAAAAAAAAAAAACATEDERL/2gAMAwEAAhEDEQA/AM5itmmXVyOfqLi2KXpe/N0As41jmgrM27P/2Q==",
+      "aspectRatio": 3
+    },
+    {
+      "id": "90f6d3d33c2fe388a9eece93cf861a91",
+      "filename": "Z8N_2654.jpg",
+      "category": "landscape",
+      "title": "Z8N 2654",
+      "metadata": {
+        "dateTaken": "2024-10-17T05:48:28.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "TT ARTISAN 11MM f/2.8 FISHEYE",
+        "iso": 8000,
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/60s",
+        "focalLength": "11mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/landscape/thumbnail/Z8N_2654.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/landscape/small/Z8N_2654.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/landscape/medium/Z8N_2654.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/landscape/large/Z8N_2654.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/landscape/original/Z8N_2654.jpg",
+          "width": 4861,
+          "height": 3240,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEH/8QAHRAAAgEEAwAAAAAAAAAAAAAAAAIFAQMEESMxM//EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIRAxEAPwDHY6ae1jtxruvRKz9zfkoA60oFwj//2Q==",
+      "aspectRatio": 1.5003086419753087
+    },
+    {
+      "id": "674949fc18d86c50da22e4cab93cf35e",
+      "filename": "XT3N7341.jpg",
+      "category": "landscape",
+      "title": "XT3N7341",
+      "metadata": {
+        "dateTaken": "2022-12-30T07:02:11.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF16-55mmF2.8 R LM WR",
+        "iso": 160,
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/52s",
+        "focalLength": "16mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/landscape/thumbnail/XT3N7341.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/landscape/small/XT3N7341.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/landscape/medium/XT3N7341.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/landscape/large/XT3N7341.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/landscape/original/XT3N7341.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIRAAAQEHBQAAAAAAAAAAAAAAAgABAwQFBiHRExQXMVH/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/EABgRAQEBAQEAAAAAAAAAAAAAAAECABED/9oADAMBAAIRAxEAPwDMaXm1MwzwXky1zDwRbhVfIFBDbYxdrdNwiIq7p606o9WDkhv/2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "9c9e784b60b8b52f11b67f65ac37b95d",
+      "filename": "XT3N3662.jpg",
+      "category": "landscape",
+      "title": "XT3N3662",
+      "metadata": {
+        "dateTaken": "2022-08-16T20:46:24.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 640,
+        "aperture": "f/8",
+        "shutterSpeed": "1/5800s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/landscape/thumbnail/XT3N3662.webp",
+          "width": 400,
+          "height": 225,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/landscape/small/XT3N3662.webp",
+          "width": 800,
+          "height": 450,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/landscape/medium/XT3N3662.webp",
+          "width": 1200,
+          "height": 675,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/landscape/large/XT3N3662.webp",
+          "width": 1920,
+          "height": 1080,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/landscape/original/XT3N3662.jpg",
+          "width": 6084,
+          "height": 3422,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAIBBQMRFSNCcf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAECITH/2gAMAwEAAhEDEQA/ALK28XI8cTaemtuCz0kAregRdH//2Q==",
+      "aspectRatio": 1.777907656341321
+    },
+    {
+      "id": "f8ba43cc9d89fe956dad27e1c77631d2",
+      "filename": "DSCF4327.jpg",
+      "category": "landscape",
+      "title": "DSCF4327",
+      "metadata": {
+        "dateTaken": "2021-02-04T05:13:49.000Z",
+        "camera": "FUJIFILM X-T1",
+        "lens": "70.0 mm",
+        "iso": 400,
+        "aperture": "f/1",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/landscape/thumbnail/DSCF4327.webp",
+          "width": 400,
+          "height": 225,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/landscape/small/DSCF4327.webp",
+          "width": 800,
+          "height": 450,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/landscape/medium/DSCF4327.webp",
+          "width": 1200,
+          "height": 675,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/landscape/large/DSCF4327.webp",
+          "width": 1920,
+          "height": 1080,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/landscape/original/DSCF4327.jpg",
+          "width": 4896,
+          "height": 2754,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMH/8QAIBAAAQMCBwAAAAAAAAAAAAAAAgABAwUGERIUITFBUf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAGBEAAgMAAAAAAAAAAAAAAAAAAQIAAyH/2gAMAwEAAhEDEQA/AL3BXh0UpSxE/WzrNzrQZywGbn1ES9iGyShQV2f/2Q==",
+      "aspectRatio": 1.7777777777777777
+    },
+    {
+      "id": "5a791ba6582bafc15b77ba0cac538cfb",
+      "filename": "IMG_7336.jpg",
+      "category": "landscape",
+      "title": "IMG 7336",
+      "metadata": {
+        "dateTaken": "2021-01-30T02:48:42.000Z",
+        "camera": "Canon Canon EOS 5D",
+        "lens": "EF70-200mm f/2.8L USM",
+        "iso": 400,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/landscape/thumbnail/IMG_7336.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/landscape/small/IMG_7336.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/landscape/medium/IMG_7336.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/landscape/large/IMG_7336.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/landscape/original/IMG_7336.jpg",
+          "width": 3856,
+          "height": 2571,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgEDBQAAAAAAAAAAAAAAAQIABAUGERMiMbH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGBEAAgMAAAAAAAAAAAAAAAAAAQIAAxH/2gAMAwEAAhEDEQA/ALtryatyG7ttHkF1Ct7NelvrSoJqSCR1EQ1rlWwRFSh10z//2Q==",
+      "aspectRatio": 1.499805523142746
+    },
+    {
+      "id": "ca119cfd0291b4e6767291f77abe1788",
+      "filename": "IMG_7331.jpg",
+      "category": "landscape",
+      "title": "IMG 7331",
+      "metadata": {
+        "dateTaken": "2021-01-30T02:45:46.000Z",
+        "camera": "Canon Canon EOS 5D",
+        "lens": "EF70-200mm f/2.8L USM",
+        "iso": 400,
+        "aperture": "f/8",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "200mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/landscape/thumbnail/IMG_7331.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/landscape/small/IMG_7331.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/landscape/medium/IMG_7331.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/landscape/large/IMG_7331.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/landscape/original/IMG_7331.jpg",
+          "width": 4368,
+          "height": 2912,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgEEAwEAAAAAAAAAAAAAAQIABREUIQMEEzH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABkRAAMBAQEAAAAAAAAAAAAAAAECAwARIf/aAAwDAQACEQMRAD8AyPTqfBUmTOUhmNiQPst+NLGsFDbV4iKDMUHTp7RQN4N//9k=",
+      "aspectRatio": 1.5
+    }
+  ],
+  "nature": [
+    {
+      "id": "7898281a5832380325a747e6d619e64f",
+      "filename": "XT3N6638.jpg",
+      "category": "nature",
+      "title": "XT3N6638",
+      "metadata": {
+        "dateTaken": "2022-12-29T21:12:12.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF200mmF2 R LM OIS WR + 1.4X TC F2 WR",
+        "iso": 320,
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/750s",
+        "focalLength": "280mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/nature/thumbnail/XT3N6638.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/nature/small/XT3N6638.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/nature/medium/XT3N6638.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/nature/large/XT3N6638.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/nature/original/XT3N6638.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHhAAAgEDBQAAAAAAAAAAAAAAAQIAAwQRBRIhMVH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBf/EABkRAQACAwAAAAAAAAAAAAAAAAEAAhESIf/aAAwDAQACEQMRAD8A0ClahLd6Fu5QnjPkiNpb7jmoCc9xEl5b9YV1ACf/2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "3cf75b8002232e0b0f897d17a4c714bc",
+      "filename": "T30N0076.jpg",
+      "category": "nature",
+      "title": "T30N0076",
+      "metadata": {
+        "dateTaken": "2022-09-27T03:42:05.000Z",
+        "camera": "FUJIFILM X-T30",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 2000,
+        "aperture": "f/8",
+        "shutterSpeed": "1/125s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/nature/thumbnail/T30N0076.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/nature/small/T30N0076.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/nature/medium/T30N0076.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/nature/large/T30N0076.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/nature/original/T30N0076.jpg",
+          "width": 6225,
+          "height": 4150,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHBABAAIDAAMAAAAAAAAAAAAAAQIDAAQRBiFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMo8To1dqhlKiLKmK9frlMqttkpcAvo5jGB//9k=",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "4c5b438b1bdffb30f62b215a6473e536",
+      "filename": "XT3N0413.jpg",
+      "category": "nature",
+      "title": "XT3N0413",
+      "metadata": {
+        "dateTaken": "2022-08-30T02:33:40.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 2000,
+        "aperture": "f/5",
+        "shutterSpeed": "1/250s",
+        "focalLength": "226.6mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/nature/thumbnail/XT3N0413.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/nature/small/XT3N0413.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/nature/medium/XT3N0413.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/nature/large/XT3N0413.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/nature/original/XT3N0413.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAAwQxBRNh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AMMeQtzgl+UqmxhvyRNiMWJ7NmIk8Hj/2Q==",
+      "aspectRatio": 1.5
+    }
+  ],
+  "portrait": [
+    {
+      "id": "72cac544df5324bb28d036225ee4cada",
+      "filename": "XT5N7974.jpeg",
+      "category": "portrait",
+      "title": "XT5N7974",
+      "metadata": {
+        "dateTaken": "2023-09-08T21:10:49.000Z",
+        "camera": "FUJIFILM X-T5",
+        "lens": "300 mm f/--",
+        "iso": 320,
+        "aperture": "f/1",
+        "shutterSpeed": "1/2000s",
+        "focalLength": "300mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/portrait/thumbnail/XT5N7974.webp",
+          "width": 300,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/portrait/small/XT5N7974.webp",
+          "width": 600,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/portrait/medium/XT5N7974.webp",
+          "width": 900,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/portrait/large/XT5N7974.webp",
+          "width": 1440,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/portrait/original/XT5N7974.jpeg",
+          "width": 2000,
+          "height": 2666,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAHxAAAQMDBQAAAAAAAAAAAAAAAQACAwQFBhESISNB/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAMAwEAAhEDEQA/AJbXk8Md9lomhxcDt58KLA2Uk5zLqSe5ESGyHb//2Q==",
+      "aspectRatio": 0.7501875468867217
+    },
+    {
+      "id": "2a2c7489bab557d844d802b9cc777ff1",
+      "filename": "DSCF0844.jpg",
+      "category": "portrait",
+      "title": "DSCF0844",
+      "metadata": {
+        "dateTaken": "2023-07-19T04:38:57.000Z",
+        "camera": "FUJIFILM X-T30",
+        "lens": "Sigma 30mm F1.4 DC DN | C (Fujifilm X)",
+        "iso": 4000,
+        "aperture": "f/1.4",
+        "shutterSpeed": "1/420s",
+        "focalLength": "30mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/portrait/thumbnail/DSCF0844.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/portrait/small/DSCF0844.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/portrait/medium/DSCF0844.webp",
+          "width": 1200,
+          "height": 799,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/portrait/large/DSCF0844.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/portrait/original/DSCF0844.jpg",
+          "width": 6317,
+          "height": 4211,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAIRAAAQMDBAMAAAAAAAAAAAAAAQADBAIGEQUSITEiI4H/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERAv/aAAwDAQACEQMRAD8ApaTfk6675kQ4kh2lhwbg3X0APq2xvsx/TVGyW/AnPeOERG8K0dach//Z",
+      "aspectRatio": 1.5001187366421278
+    },
+    {
+      "id": "ba0191f5777a956341ebca4a19222c75",
+      "filename": "XT3N6953.jpg",
+      "category": "portrait",
+      "title": "XT3N6953",
+      "metadata": {
+        "dateTaken": "2022-12-30T00:13:47.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF200mmF2 R LM OIS WR + 1.4X TC F2 WR",
+        "iso": 320,
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/1100s",
+        "focalLength": "280mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/portrait/thumbnail/XT3N6953.webp",
+          "width": 267,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/portrait/small/XT3N6953.webp",
+          "width": 533,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/portrait/medium/XT3N6953.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/portrait/large/XT3N6953.webp",
+          "width": 1280,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/portrait/original/XT3N6953.jpg",
+          "width": 4160,
+          "height": 6240,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAHRAAAQQDAQEAAAAAAAAAAAAAAgABBBEDBRIhQf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAGREAAgMBAAAAAAAAAAAAAAAAAAEDESEx/9oADAMBAAIRAxEAPwCQk7SLqqCCcZ+vMNXSLU+RPK3YsXn1rRSXKu0Fc7ykf//Z",
+      "aspectRatio": 0.6666666666666666
+    },
+    {
+      "id": "3a1f561cacff3117d6d32121117fb35a",
+      "filename": "XT3N5194.jpg",
+      "category": "portrait",
+      "title": "XT3N5194",
+      "metadata": {
+        "dateTaken": "2022-12-27T18:57:13.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF200mmF2 R LM OIS WR",
+        "iso": 320,
+        "aperture": "f/2",
+        "shutterSpeed": "1/1100s",
+        "focalLength": "200mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/portrait/thumbnail/XT3N5194.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/portrait/small/XT3N5194.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/portrait/medium/XT3N5194.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/portrait/large/XT3N5194.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/portrait/original/XT3N5194.jpg",
+          "width": 6177,
+          "height": 4118,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAHxAAAQMEAwEAAAAAAAAAAAAAAgABAwQFBhEHEyEx/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABoRAAEFAQAAAAAAAAAAAAAAAAEAAgMEEiP/2gAMAwEAAhEDEQA/AKxSyUhXOeSvB2ppS6xEfXZaQPFmOkLFqb1t/URFp9AdJN2NsZAaF//Z",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "f63f4b55179c074ac92c5000ac64e15a",
+      "filename": "T30N2243.jpg",
+      "category": "portrait",
+      "title": "T30N2243",
+      "metadata": {
+        "dateTaken": "2022-11-06T02:52:42.000Z",
+        "camera": "FUJIFILM X-T30",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 320,
+        "aperture": "f/2",
+        "shutterSpeed": "1/3000s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/portrait/thumbnail/T30N2243.webp",
+          "width": 266,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/portrait/small/T30N2243.webp",
+          "width": 533,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/portrait/medium/T30N2243.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/portrait/large/T30N2243.webp",
+          "width": 1280,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/portrait/original/T30N2243.jpg",
+          "width": 4150,
+          "height": 6225,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHxAAAgICAQUAAAAAAAAAAAAAAgMAAQQGERIVISJh/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABoRAAICAwAAAAAAAAAAAAAAAAACAQMRMVH/2gAMAwEAAhEDEQA/AJOXp+t9yWjOf0IEPUhvzEz7Jaww5Nhlf0ruIVVbGwUXzw//2Q==",
+      "aspectRatio": 0.6666666666666666
+    },
+    {
+      "id": "11f35224047ae7f594e86ebffdb0b8fc",
+      "filename": "XT3N2258.jpg",
+      "category": "portrait",
+      "title": "XT3N2258",
+      "metadata": {
+        "dateTaken": "2022-09-19T01:05:35.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 160,
+        "aperture": "f/2",
+        "shutterSpeed": "1/550s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/portrait/thumbnail/XT3N2258.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/portrait/small/XT3N2258.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/portrait/medium/XT3N2258.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/portrait/large/XT3N2258.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/portrait/original/XT3N2258.jpg",
+          "width": 6225,
+          "height": 4150,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAHxAAAgICAQUAAAAAAAAAAAAAAQMAAgQRIQUGB2GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAYEQADAQEAAAAAAAAAAAAAAAAAAQIREv/aAAwDAQACEQMRAD8An7w8kuxuolFCzVNAeyTrmbuPk0fjqbZfLKix+jcRJXC5Q9Xh/9k=",
+      "aspectRatio": 1.5
+    }
+  ],
+  "product": [
+    {
+      "id": "fa5fab303cf678cf760859435da6979d",
+      "filename": "DSCF7865.png",
+      "category": "product",
+      "title": "DSCF7865",
+      "metadata": {
+        "dateTaken": "2025-06-21T06:33:46.035Z"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/product/thumbnail/DSCF7865.webp",
+          "width": 400,
+          "height": 215,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/product/small/DSCF7865.webp",
+          "width": 800,
+          "height": 431,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/product/medium/DSCF7865.webp",
+          "width": 832,
+          "height": 448,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/product/large/DSCF7865.webp",
+          "width": 832,
+          "height": 448,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/product/original/DSCF7865.png",
+          "width": 832,
+          "height": 448,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAACXBIWXMAACTpAAAk6QFQJOf4AAAA2ElEQVR4nAHNADL/AOvl3yPr5uBA8e3offPv67jz8O3m9PHu7fTx78rz8O6Q7+vnTOnj3iQA5+Ldaefh3XHt6OSX8u7qwfPv7Ozz7+308+/t0+/r6Kbm4t513tnVXwDf2taq4tzYpOrl4avx7emv8+/swfPv7MPz7+yt7urmnuPe2pTa1dGbANrV0pba1dGQ3tnVmOTf26Hn4+C25+PgueXh3abg3NeZ2dTQkdTPzJoA0MvIX9TPy3/X086g29fTq97a17De29iy3NnVrtrW0qvV0c2V0MvIgRxmopFTntkkAAAAAElFTkSuQmCC",
+      "aspectRatio": 1.8571428571428572
+    },
+    {
+      "id": "20590adb5ffaed3b1d80ad206125b082",
+      "filename": "DSC_1376.jpg",
+      "category": "product",
+      "title": "DSC 1376",
+      "metadata": {
+        "dateTaken": "2024-09-10T01:07:59.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 24-120mm f/4 S",
+        "iso": 1600,
+        "aperture": "f/4",
+        "shutterSpeed": "1/200s",
+        "focalLength": "61mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/product/thumbnail/DSC_1376.webp",
+          "width": 400,
+          "height": 300,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/product/small/DSC_1376.webp",
+          "width": 800,
+          "height": 600,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/product/medium/DSC_1376.webp",
+          "width": 1200,
+          "height": 900,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/product/large/DSC_1376.webp",
+          "width": 1920,
+          "height": 1440,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/product/original/DSC_1376.jpg",
+          "width": 7122,
+          "height": 5341,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAdEAABBQEAAwAAAAAAAAAAAAABAAIDBAURIjFB/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAZEQADAAMAAAAAAAAAAAAAAAAAAQIEEjL/2gAMAwEAAhEDEQA/AKum+5k6NqxWnPHO8m9+K1Fsl0THGM9IB9oin462ltj65k//2Q==",
+      "aspectRatio": 1.3334581539037633
+    },
+    {
+      "id": "178ebe309c8cb528a2ae5fa8bf89f1b1",
+      "filename": "XT3N3143.jpg",
+      "category": "product",
+      "title": "XT3N3143",
+      "metadata": {
+        "dateTaken": "2022-11-20T09:05:34.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF16-55mmF2.8 R LM WR",
+        "iso": 160,
+        "aperture": "f/16",
+        "shutterSpeed": "1.8s",
+        "focalLength": "16mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/product/thumbnail/XT3N3143.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/product/small/XT3N3143.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/product/medium/XT3N3143.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/product/large/XT3N3143.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/product/original/XT3N3143.jpg",
+          "width": 4303,
+          "height": 4303,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQEH/8QAJBAAAgECBAcBAAAAAAAAAAAAAQIDAAQFBhEhBxITIjEyUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwCZkzpjtvxBXDopnSy6oUKFO43rZo7lTGhJ30FFY1aWxvo5DbwmTX2KDX9p1EXkXtXx8qqP/9k=",
+      "aspectRatio": 1
+    }
+  ],
+  "sports": [
+    {
+      "id": "40fc31f42a84b57731673abd91c87ef4",
+      "filename": "DSCF7859.jpg",
+      "category": "sports",
+      "title": "DSCF7859",
+      "metadata": {
+        "dateTaken": "2019-12-18T03:08:04.000Z",
+        "camera": "FUJIFILM X-T1",
+        "lens": "70.0 mm",
+        "iso": 1600,
+        "aperture": "f/1",
+        "shutterSpeed": "1/2000s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/sports/thumbnail/DSCF7859.webp",
+          "width": 320,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/sports/small/DSCF7859.webp",
+          "width": 640,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/sports/medium/DSCF7859.webp",
+          "width": 960,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/sports/large/DSCF7859.webp",
+          "width": 1536,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/sports/original/DSCF7859.jpg",
+          "width": 2586,
+          "height": 3232,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIRAAAQMCBwEAAAAAAAAAAAAAAgABBAMFERQVITJBUXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A1aFdK9unxraxjlQo4i7duimZJFqdDd+Pv1EH/9k=",
+      "aspectRatio": 0.8001237623762376
+    }
+  ],
+  "wildlife": [
+    {
+      "id": "b530b6e4820c4bade73ccebf83b839c9",
+      "filename": "T30N1277.jpg",
+      "category": "wildlife",
+      "title": "T30N1277",
+      "metadata": {
+        "dateTaken": "2025-06-21T06:33:46.083Z"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/T30N1277.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/T30N1277.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/T30N1277.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/T30N1277.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/T30N1277.jpg",
+          "width": 2381,
+          "height": 2381,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQI/8QAIRAAAgEEAAcAAAAAAAAAAAAAAQIDAAQGEQUHEiEiQXH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABoRAQACAwEAAAAAAAAAAAAAAAEAAgMREiH/2gAMAwEAAhEDEQA/AI7jK7vKeIWbwzPGzMAyKPHVJUeM2xReuPbaG/tF3JFEeSIsqsd+xutDADQ7CprJd9Ispy6J/9k=",
+      "aspectRatio": 1
+    },
+    {
+      "id": "2be556f9baeed4cfb7ea632c73fe96e9",
+      "filename": "Z8N_3700.jpg",
+      "category": "wildlife",
+      "title": "Z8N 3700",
+      "metadata": {
+        "dateTaken": "2024-10-24T01:12:09.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 180-600mm f/5.6-6.3 VR",
+        "iso": 800,
+        "aperture": "f/6.3",
+        "shutterSpeed": "1/1250s",
+        "focalLength": "430mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/Z8N_3700.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/Z8N_3700.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/Z8N_3700.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/Z8N_3700.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/Z8N_3700.jpg",
+          "width": 2400,
+          "height": 2400,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQH/8QAHxABAAIBAwUAAAAAAAAAAAAAAQACBAMFERMUITFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAYEQADAQEAAAAAAAAAAAAAAAAAAQIDEf/aAAwDAQACEQMRAD8AxrDxu+QXpH3UYF8C9b2DU5B4GUberieV9xZPvVy+IUz/2Q==",
+      "aspectRatio": 1
+    },
+    {
+      "id": "8c291fe6fc894bf67f12bd9cac276639",
+      "filename": "Z8N_3078.jpg",
+      "category": "wildlife",
+      "title": "Z8N 3078",
+      "metadata": {
+        "dateTaken": "2024-10-23T23:57:16.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 180-600mm f/5.6-6.3 VR",
+        "iso": 5000,
+        "aperture": "f/6.3",
+        "shutterSpeed": "1/800s",
+        "focalLength": "600mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/Z8N_3078.webp",
+          "width": 266,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/Z8N_3078.webp",
+          "width": 533,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/Z8N_3078.webp",
+          "width": 799,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/Z8N_3078.webp",
+          "width": 1279,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/Z8N_3078.jpg",
+          "width": 1843,
+          "height": 2767,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAQMAAgQRMSH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABkRAAIDAQAAAAAAAAAAAAAAAAACARETYf/aAAwDAQACEQMRAD8A1gMenLaoBmyd+ciVmJShx1E1qSR0iJHm1RTBluH/2Q==",
+      "aspectRatio": 0.6660643295988435
+    },
+    {
+      "id": "a81774b2ca24fdf751071e751c7a39f6",
+      "filename": "Z8N_2814.jpg",
+      "category": "wildlife",
+      "title": "Z8N 2814",
+      "metadata": {
+        "dateTaken": "2024-10-18T23:49:32.000Z",
+        "camera": "NIKON CORPORATION NIKON Z 8",
+        "lens": "NIKKOR Z 180-600mm f/5.6-6.3 VR",
+        "iso": 100,
+        "aperture": "f/6.3",
+        "shutterSpeed": "1/800s",
+        "focalLength": "600mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/Z8N_2814.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/Z8N_2814.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/Z8N_2814.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/Z8N_2814.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/Z8N_2814.jpg",
+          "width": 3638,
+          "height": 3638,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAHxAAAgIBBAMAAAAAAAAAAAAAAQIABCMDBhIxMkJx/8QAFAEBAAAAAAAAAAAAAAAAAAAABf/EABgRAAMBAQAAAAAAAAAAAAAAAAERIQAE/9oADAMBAAIRAxEAPwDV7xu1LrKown3ktrVjkco7irdJI0lAgdvI/Yzygou4vpNCm//Z",
+      "aspectRatio": 1
+    },
+    {
+      "id": "95ce096468291b9ea54469e1e8d13aa7",
+      "filename": "XT5N7707.jpg",
+      "category": "wildlife",
+      "title": "XT5N7707",
+      "metadata": {
+        "dateTaken": "2023-09-03T00:56:00.000Z",
+        "camera": "FUJIFILM X-T5",
+        "lens": "300 mm f/--",
+        "iso": 500,
+        "aperture": "f/1",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "300mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT5N7707.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT5N7707.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT5N7707.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT5N7707.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT5N7707.jpg",
+          "width": 4500,
+          "height": 4500,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAHhAAAQQDAAMAAAAAAAAAAAAAAQIDBBEAISIFMZH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABgRAQADAQAAAAAAAAAAAAAAAAEAAgNh/9oADAMBAAIRAxEAPwDX1yZKp7TUJsLZJq79YjEd0gd4b8XpSK1rKBWqz0fuTU3QXsS2Qz//2Q==",
+      "aspectRatio": 1
+    },
+    {
+      "id": "e70f209b0917a72632fc3d0179045fa9",
+      "filename": "XT5N4909.jpg",
+      "category": "wildlife",
+      "title": "XT5N4909",
+      "metadata": {
+        "dateTaken": "2023-06-17T22:10:51.000Z",
+        "camera": "FUJIFILM X-T5",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 5000,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/500s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT5N4909.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT5N4909.webp",
+          "width": 800,
+          "height": 534,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT5N4909.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT5N4909.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT5N4909.jpg",
+          "width": 5995,
+          "height": 3997,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAeEAACAgICAwAAAAAAAAAAAAABAgADBAYFIREVMf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECIUH/2gAMAwEAAhEDEQA/AL+s8z6/Apqx6wwPbu30ykd+wkJU0v5XqIkyOoF25WH/2Q==",
+      "aspectRatio": 1.4998749061796348
+    },
+    {
+      "id": "ca7d2105303bdb0418e56dda1a6da557",
+      "filename": "XT3N0459.jpg",
+      "category": "wildlife",
+      "title": "XT3N0459",
+      "metadata": {
+        "dateTaken": "2023-05-22T01:57:41.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 2000,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/250s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N0459.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N0459.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N0459.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N0459.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N0459.jpg",
+          "width": 5966,
+          "height": 3978,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAcEAABBAMBAAAAAAAAAAAAAAABAAIDEgQFIUH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACUf/aAAwDAQACEQMRAD8AtSQ7I48vI3CzQD4pO1jLHpRE5WNBy//Z",
+      "aspectRatio": 1.4997486173956762
+    },
+    {
+      "id": "a2d771f1103338bc6c6f5990c40354c3",
+      "filename": "XT3N0181.jpg",
+      "category": "wildlife",
+      "title": "XT3N0181",
+      "metadata": {
+        "dateTaken": "2023-05-13T02:51:59.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 2000,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/250s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N0181.webp",
+          "width": 267,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N0181.webp",
+          "width": 533,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N0181.webp",
+          "width": 800,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N0181.webp",
+          "width": 1280,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N0181.jpg",
+          "width": 4160,
+          "height": 6240,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAdEAABBAMBAQAAAAAAAAAAAAABAAIEBQMRISJR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQT/xAAYEQEBAAMAAAAAAAAAAAAAAAABAAIRQf/aAAwDAQACEQMRAD8AjhAjCgj562Q1ud59jfQik6/I8Vx09w79RSZDx1Bf/9k=",
+      "aspectRatio": 0.6666666666666666
+    },
+    {
+      "id": "719aeec75f2280fa5b2268677a0580f8",
+      "filename": "XT3N9692.jpg",
+      "category": "wildlife",
+      "title": "XT3N9692",
+      "metadata": {
+        "dateTaken": "2023-03-12T03:23:28.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 4000,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/500s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N9692.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N9692.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N9692.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N9692.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N9692.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAHhAAAQQCAwEAAAAAAAAAAAAAAgABAwQRIQUSFDH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAECBBH/2gAMAwEAAhEDEQA/ANCl5ixXvv6Y+0J6DBfFZU6Rk5OJZLaIiqzPAp//2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "b5ac00cb450ca42d35f00fc15182c368",
+      "filename": "XT3N9138.jpg",
+      "category": "wildlife",
+      "title": "XT3N9138",
+      "metadata": {
+        "dateTaken": "2023-01-24T02:39:49.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 2000,
+        "aperture": "f/8",
+        "shutterSpeed": "1/340s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N9138.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N9138.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N9138.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N9138.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N9138.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgIBBQEAAAAAAAAAAAAAAQIAAwUEBhEUIiH/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABgRAQADAQAAAAAAAAAAAAAAAAEAAhEx/9oADAMBAAIRAxEAPwDU6LELh6m6iK9Vvpy3wkyc+8bK3ZBUPJ4iJKotjWOXOT//2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "a120f533be48c9feee07e354b1ad1a35",
+      "filename": "XT3N9044.jpg",
+      "category": "wildlife",
+      "title": "XT3N9044",
+      "metadata": {
+        "dateTaken": "2023-01-24T01:51:56.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 3200,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/320s",
+        "focalLength": "312mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N9044.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N9044.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N9044.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N9044.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N9044.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAcEAACAgMBAQAAAAAAAAAAAAABAgAEAwURIUL/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABgRAAMBAQAAAAAAAAAAAAAAAAABAhFx/9oADAMBAAIRAxEAPwCftLd3UjO2awz1yPVH1JC7lGUEYhwjoiJOpB7W5w//2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "1d65fa69259f509d6d5f1e801a8a20ee",
+      "filename": "XT3N9002.jpg",
+      "category": "wildlife",
+      "title": "XT3N9002",
+      "metadata": {
+        "dateTaken": "2023-01-24T01:32:12.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 640,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/200s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N9002.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N9002.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N9002.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N9002.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N9002.jpg",
+          "width": 3388,
+          "height": 3388,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFB//EACEQAAIBAwMFAAAAAAAAAAAAAAECEQADBAUhIhIVQpHw/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAXEQEBAQEAAAAAAAAAAAAAAAACAAER/9oADAMBAAIRAxEAPwDK7WmW7NpTnkI3iVMyaO8ZCcBkPC7fbVJwrjuF63ZoO0maZKrJ4j1U5GQrqv/Z",
+      "aspectRatio": 1
+    },
+    {
+      "id": "14a60c37b10881e1e4cfadc4e5857a4a",
+      "filename": "XT3N7882.jpg",
+      "category": "wildlife",
+      "title": "XT3N7882",
+      "metadata": {
+        "dateTaken": "2023-01-13T00:47:22.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 640,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/500s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N7882.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N7882.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N7882.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N7882.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N7882.jpg",
+          "width": 3536,
+          "height": 3536,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAABf/EACYQAAIBAgMIAwAAAAAAAAAAAAECAwAEBRFBEhMUFSEiIzJCUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBf/EABgRAAMBAQAAAAAAAAAAAAAAAAABAgMR/9oADAMBAAIRAxEAPwBTDsN4uzW4v81nLeCM/AfVJ8ntx0a5hDajao7CmZoISzEnLU0LO7b+TuPsdf2pF70kgK0cpcP/2Q==",
+      "aspectRatio": 1
+    },
+    {
+      "id": "db1a52f7be1c438cfbc251940542f1bb",
+      "filename": "XT3N7050.jpg",
+      "category": "wildlife",
+      "title": "XT3N7050",
+      "metadata": {
+        "dateTaken": "2022-12-30T02:03:46.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR + 1.4x F2",
+        "iso": 2000,
+        "aperture": "f/10",
+        "shutterSpeed": "1/500s",
+        "focalLength": "560mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N7050.webp",
+          "width": 320,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N7050.webp",
+          "width": 640,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N7050.webp",
+          "width": 960,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N7050.webp",
+          "width": 1536,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N7050.jpg",
+          "width": 3200,
+          "height": 4000,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAdEAAABgMBAAAAAAAAAAAAAAAAAQIDBBEFEhMx/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABgRAAIDAAAAAAAAAAAAAAAAAAABAxES/9oADAMBAAIRAxEAPwBEk1jUykuoKUR6m34Apx2WqdPmi+d3qQAlHpWO5Muj/9k=",
+      "aspectRatio": 0.8
+    },
+    {
+      "id": "72e7d26991fc67646a311eef246102fd",
+      "filename": "XT3N6815.jpg",
+      "category": "wildlife",
+      "title": "XT3N6815",
+      "metadata": {
+        "dateTaken": "2022-12-29T22:00:08.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF200mmF2 R LM OIS WR + 1.4X TC F2 WR",
+        "iso": 320,
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/480s",
+        "focalLength": "280mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N6815.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N6815.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N6815.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N6815.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N6815.jpg",
+          "width": 3735,
+          "height": 3735,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBv/EAB4QAQABBAIDAAAAAAAAAAAAAAECAAMEEQUhMUFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgX/xAAZEQACAwEAAAAAAAAAAAAAAAACAwABETH/2gAMAwEAAhEDEQA/AJTLEW4WJTlA++qI5/FkQcZU8uzukRAscjoOt6rP7qQPNgWsWBt1P//Z",
+      "aspectRatio": 1
+    },
+    {
+      "id": "8187ec667b53cc859f7879f5642cb4b6",
+      "filename": "XT3N4430.jpg",
+      "category": "wildlife",
+      "title": "XT3N4430",
+      "metadata": {
+        "dateTaken": "2022-12-26T05:52:17.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR + 1.4x F2",
+        "iso": 2000,
+        "aperture": "f/8",
+        "shutterSpeed": "1/2000s",
+        "focalLength": "560mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N4430.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N4430.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N4430.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N4430.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N4430.jpg",
+          "width": 2340,
+          "height": 2340,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBP/EAB4QAAIBBAMBAAAAAAAAAAAAAAECABITMVEDERQh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEQMRAD8A32VuFSgpA+ND5eLSxATTk4k+zuNRoX//2Q==",
+      "aspectRatio": 1
+    },
+    {
+      "id": "4e2280b4dfecc9f29d884eb60a2f03c0",
+      "filename": "XT3N4376.jpg",
+      "category": "wildlife",
+      "title": "XT3N4376",
+      "metadata": {
+        "dateTaken": "2022-12-26T05:50:59.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR + 1.4x F2",
+        "iso": 2000,
+        "aperture": "f/8",
+        "shutterSpeed": "1/2000s",
+        "focalLength": "560mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N4376.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N4376.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N4376.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N4376.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N4376.jpg",
+          "width": 5668,
+          "height": 3779,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAECAxIhI2H/xAAUAQEAAAAAAAAAAAAAAAAAAAAF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAEDEUFhkf/aAAwDAQACEQMRAD8A3qrrJUyUksmtEnbwAMUmlwQcd5Z//9k=",
+      "aspectRatio": 1.4998676898650436
+    },
+    {
+      "id": "6ec0e20f218b913d1cb87c3ff06d0d09",
+      "filename": "XT3N3338.jpg",
+      "category": "wildlife",
+      "title": "XT3N3338",
+      "metadata": {
+        "dateTaken": "2022-12-13T16:59:38.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 400,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/2000s",
+        "focalLength": "301.1mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N3338.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N3338.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N3338.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N3338.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N3338.jpg",
+          "width": 4256,
+          "height": 4256,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAgX/xAAeEAABBAEFAAAAAAAAAAAAAAADAAECBAURIkFDcf/EABQBAQAAAAAAAAAAAAAAAAAAAAb/xAAZEQEAAgMAAAAAAAAAAAAAAAABAAIDEUH/2gAMAwEAAhEDEQA/AKF49seZqjAGUwSbe/DKtoj3N4ml2KqNnfYXy2Eqa5P/2Q==",
+      "aspectRatio": 1
+    },
+    {
+      "id": "90459317fd8a004b37fe1e2cd0b3363b",
+      "filename": "XT3N2866.jpg",
+      "category": "wildlife",
+      "title": "XT3N2866",
+      "metadata": {
+        "dateTaken": "2022-11-11T22:29:20.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 640,
+        "aperture": "f/2",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N2866.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N2866.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N2866.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N2866.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N2866.jpg",
+          "width": 4150,
+          "height": 4150,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAB//EACIQAAECBQQDAAAAAAAAAAAAAAECAwAEBQYRByExQRQyYf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACEiH/2gAMAwEAAhEDEQA/AGC5L6nKJeTFMdbbXLPEAY5EIyHAtCVDgjMBGoQB1HBIBIxjPW8MEopXis7n0T38iNbukjThP//Z",
+      "aspectRatio": 1
+    },
+    {
+      "id": "61b9dc450cafba079734a3630d190e7b",
+      "filename": "XT3N1272.jpg",
+      "category": "wildlife",
+      "title": "XT3N1272",
+      "metadata": {
+        "dateTaken": "2022-08-11T22:24:57.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 640,
+        "aperture": "f/8",
+        "shutterSpeed": "1/250s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/XT3N1272.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/XT3N1272.webp",
+          "width": 800,
+          "height": 534,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/XT3N1272.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/XT3N1272.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/XT3N1272.jpg",
+          "width": 5286,
+          "height": 3524,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAfEAABAwMFAAAAAAAAAAAAAAABAAIDBRESBBMxMnH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABkRAQACAwAAAAAAAAAAAAAAAAIAAQMRIf/aAAwDAQACEQMRAD8Aj9cp9MZNI+aDb02JsGcgqdyMAe7Drc28RE5KorkkrZn/2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "ff1831f8ab440178c2cb058e08f1515e",
+      "filename": "DSF1144.jpg",
+      "category": "wildlife",
+      "title": "DSF1144",
+      "metadata": {
+        "dateTaken": "2022-08-11T00:36:07.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "Fujifilm Fujinon XF90mmF2 R LM WR",
+        "iso": 2500,
+        "aperture": "f/2",
+        "shutterSpeed": "1/3200s",
+        "focalLength": "90mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/DSF1144.webp",
+          "width": 400,
+          "height": 400,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/DSF1144.webp",
+          "width": 800,
+          "height": 800,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/DSF1144.webp",
+          "width": 1200,
+          "height": 1200,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/DSF1144.webp",
+          "width": 1920,
+          "height": 1920,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/DSF1144.jpg",
+          "width": 2848,
+          "height": 2848,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQG/8QAJBAAAgECBQQDAAAAAAAAAAAAAQIDAAQFBhEUIRIXIkExQrH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACEv/aAAwDAQACEQMRAD8AszXimMwXO1tJ4WvGIVySBqtHDHXQBZIrAuvDeQ+fdDZlkfuUR1tpofdZe7J3c3P3b9oOACDW0v/Z",
+      "aspectRatio": 1
+    },
+    {
+      "id": "765f4bf9dcfc8bde0f152bc3522ae018",
+      "filename": "DSF0219.jpg",
+      "category": "wildlife",
+      "title": "DSF0219",
+      "metadata": {
+        "dateTaken": "2022-07-29T01:25:55.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 640,
+        "aperture": "f/8",
+        "shutterSpeed": "1/125s",
+        "focalLength": "270.6mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/DSF0219.webp",
+          "width": 400,
+          "height": 267,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/DSF0219.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/DSF0219.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/DSF0219.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/DSF0219.jpg",
+          "width": 6240,
+          "height": 4160,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAIBAAAAUDBQAAAAAAAAAAAAAAAAECBhIDBSEEESMkMf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQEBAQEAAAAAAAAAAAAAAAABAAIS/9oADAMBAAIRAxEAPwCJeW7p3D2amyYYiRekMqtiW6auWoWQAAaWfkv/2Q==",
+      "aspectRatio": 1.5
+    },
+    {
+      "id": "00414cc5bb958b340f32d8733fda74e6",
+      "filename": "DSCF5294.jpg",
+      "category": "wildlife",
+      "title": "DSCF5294",
+      "metadata": {
+        "dateTaken": "2022-01-02T23:56:07.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 5000,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/500s",
+        "focalLength": "218.7mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/DSCF5294.webp",
+          "width": 400,
+          "height": 225,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/DSCF5294.webp",
+          "width": 800,
+          "height": 450,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/DSCF5294.webp",
+          "width": 1200,
+          "height": 675,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/DSCF5294.webp",
+          "width": 1920,
+          "height": 1080,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/DSCF5294.jpg",
+          "width": 5293,
+          "height": 2977,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAcEAACAgIDAAAAAAAAAAAAAAABAgADBBEFMZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAGREAAgMBAAAAAAAAAAAAAAAAAAECAxEh/9oADAMBAAIRAxEAPwCxbk5K8vWq3sKGGyglsZa66f0REGmqDiuBbh//2Q==",
+      "aspectRatio": 1.7779643936849177
+    },
+    {
+      "id": "4081633125ac8a0778617a2d84c6fb41",
+      "filename": "DSCF4648.jpg",
+      "category": "wildlife",
+      "title": "DSCF4648",
+      "metadata": {
+        "dateTaken": "2022-01-01T03:39:09.000Z",
+        "camera": "FUJIFILM X-T3",
+        "lens": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "iso": 1600,
+        "aperture": "f/5.6",
+        "shutterSpeed": "1/4400s",
+        "focalLength": "400mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/DSCF4648.webp",
+          "width": 400,
+          "height": 266,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/DSCF4648.webp",
+          "width": 800,
+          "height": 533,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/DSCF4648.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/DSCF4648.webp",
+          "width": 1920,
+          "height": 1280,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/DSCF4648.jpg",
+          "width": 3776,
+          "height": 2517,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAIhAAAAQEBwAAAAAAAAAAAAAAAAECAwQFBzIGERIiMZHh/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwCCPrqetSpbDK3Jtc4IxnzrtiPOxjrwACha/9k=",
+      "aspectRatio": 1.5001986491855384
+    },
+    {
+      "id": "f4a135b891ce731a8130ec1df589efe0",
+      "filename": "DSCF2539.jpg",
+      "category": "wildlife",
+      "title": "DSCF2539",
+      "metadata": {
+        "dateTaken": "2020-08-13T03:09:40.000Z",
+        "camera": "FUJIFILM X-T1",
+        "lens": "70.0 mm",
+        "iso": 6400,
+        "aperture": "f/1",
+        "shutterSpeed": "1/1000s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/DSCF2539.webp",
+          "width": 400,
+          "height": 320,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/DSCF2539.webp",
+          "width": 800,
+          "height": 640,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/DSCF2539.webp",
+          "width": 1200,
+          "height": 960,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/DSCF2539.webp",
+          "width": 1920,
+          "height": 1536,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/DSCF2539.jpg",
+          "width": 4080,
+          "height": 3264,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMH/8QAHxAAAgIBBAMAAAAAAAAAAAAAAgMAAQQFBhFBEyGB/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABgRAQEAAwAAAAAAAAAAAAAAAAEAAiEx/9oADAMBAAIRAxEAPwCuo44q0scEci1l4bpJh1fHcyFu4dzoaaqzG8LKxr56iIUA4ScNl//Z",
+      "aspectRatio": 1.25
+    },
+    {
+      "id": "ba693c72867efca1181824a43409c2ee",
+      "filename": "DSCF0963.jpg",
+      "category": "wildlife",
+      "title": "DSCF0963",
+      "metadata": {
+        "dateTaken": "2020-05-16T23:02:00.000Z",
+        "camera": "FUJIFILM X-T1",
+        "lens": "70.0 mm",
+        "iso": 640,
+        "aperture": "f/1",
+        "shutterSpeed": "1/500s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/DSCF0963.webp",
+          "width": 400,
+          "height": 170,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/DSCF0963.webp",
+          "width": 800,
+          "height": 340,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/DSCF0963.webp",
+          "width": 1200,
+          "height": 510,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/DSCF0963.webp",
+          "width": 1920,
+          "height": 817,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/DSCF0963.jpg",
+          "width": 3954,
+          "height": 1683,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAEAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMG/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIABAMFERIh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwX/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQIS/9oADAMBAAIRAxEAPwCFXCqbJMSlgic4PRmnOnoMSTWQk/TESfQdpZR//9k=",
+      "aspectRatio": 2.3493761140819966
+    },
+    {
+      "id": "60f56f35a4d22d6d1fd6e2a535d25ae1",
+      "filename": "DSCF9144.jpg",
+      "category": "wildlife",
+      "title": "DSCF9144",
+      "metadata": {
+        "dateTaken": "2020-02-03T20:42:21.000Z",
+        "camera": "FUJIFILM X-T1",
+        "lens": "70 mm f/--",
+        "iso": 6400,
+        "aperture": "f/1",
+        "shutterSpeed": "1/500s",
+        "focalLength": "70mm"
+      },
+      "variants": {
+        "thumbnail": {
+          "url": "/processed/wildlife/thumbnail/DSCF9144.webp",
+          "width": 400,
+          "height": 300,
+          "format": "webp"
+        },
+        "small": {
+          "url": "/processed/wildlife/small/DSCF9144.webp",
+          "width": 800,
+          "height": 600,
+          "format": "webp"
+        },
+        "medium": {
+          "url": "/processed/wildlife/medium/DSCF9144.webp",
+          "width": 1200,
+          "height": 900,
+          "format": "webp"
+        },
+        "large": {
+          "url": "/processed/wildlife/large/DSCF9144.webp",
+          "width": 1920,
+          "height": 1440,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/processed/wildlife/original/DSCF9144.jpg",
+          "width": 7110,
+          "height": 5332,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHhAAAQQCAwEAAAAAAAAAAAAAAQACAwQGEQUUMXH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwDGcKp0zjlvv8eyQvG2TO9HxRM1eITPDSdBx0iK0f/Z",
+      "aspectRatio": 1.3334583645911477
+    }
+  ]
+}

@@ -42,3 +42,7 @@ lerna-debug.log*
 
 # OS files
 Thumbs.db
+
+# Claude AI
+CLAUDE.md
+.claude/

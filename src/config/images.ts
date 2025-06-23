@@ -8,7 +8,7 @@ export const IMAGE_SIZES = {
 export const IMAGE_FORMATS = ['webp', 'avif'] as const
 
 export const GALLERY_CONFIG = {
-  wildlife: { displayName: 'BIRD' },
+  bird: { displayName: 'BIRD' },
   landscape: { displayName: 'LANDSCAPE' },
   portrait: { displayName: 'PORTRAIT' },
   concert: { displayName: 'CONCERT' },
@@ -18,6 +18,7 @@ export const GALLERY_CONFIG = {
   astro: { displayName: 'ASTRO' },
   sports: { displayName: 'SPORTS' },
   cat: { displayName: 'CAT' },
+  wildlife: { displayName: 'WILDLIFE' },
 } as const
 
 export const SOURCE_IMAGE_DIR = './public/images'

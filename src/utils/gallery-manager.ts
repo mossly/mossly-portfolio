@@ -5,7 +5,7 @@ import photosData from '../data/photos.json'
 export class GalleryManager {
   private photos: Record<PhotoCategory, Photo[]>
   private galleries: Map<PhotoCategory, Gallery>
-  private currentCategory: PhotoCategory = 'wildlife'
+  private currentCategory: PhotoCategory = 'bird'
   private listeners: Set<(category: PhotoCategory) => void> = new Set()
 
   constructor() {
@@ -17,17 +17,32 @@ export class GalleryManager {
   private initializeGalleries() {
     for (const [category, photos] of Object.entries(this.photos)) {
       const config = GALLERY_CONFIG[category as PhotoCategory]
+      const shuffledPhotos = this.shuffleArray([...photos as Photo[]])
       this.galleries.set(category as PhotoCategory, {
         category: category as PhotoCategory,
         displayName: config.displayName,
-        photos: photos as Photo[],
-        coverPhoto: photos[0] as Photo,
+        photos: shuffledPhotos,
+        coverPhoto: shuffledPhotos[0] as Photo,
       })
     }
   }
 
+  private shuffleArray<T>(array: T[]): T[] {
+    const shuffled = [...array]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
+  }
+
   getCategories(): PhotoCategory[] {
-    return Array.from(this.galleries.keys())
+    // Return categories in the original website order
+    const orderedCategories: PhotoCategory[] = [
+      'bird', 'landscape', 'portrait', 'concert', 
+      'architecture', 'nature', 'product', 'astro', 'sports', 'cat', 'wildlife'
+    ]
+    return orderedCategories.filter(category => this.galleries.has(category))
   }
 
   getGallery(category: PhotoCategory): Gallery | undefined {

@@ -5,34 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aaron Moss Photography Portfolio - Wildlife, Landscape, Portrait, and More">
   <meta name="author" content="Aaron Moss">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#191e24">
   <link rel="icon" href="/favicon.ico">
   <title>Aaron Moss - Photography Portfolio</title>
 </head>
-<body data-theme="light">
+<body data-theme="dark">
   <div id="app">
     <!-- Navigation -->
-    <header class="navbar bg-base-100 shadow-lg">
+    <header class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
       <div class="navbar-start">
         <div class="dropdown">
-          <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
-          </label>
+          </div>
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a href="#photography">Photography</a></li>
-            <li><a href="/aaron-moss-cv.pdf" target="_blank">CV</a></li>
-            <li><a href="https://www.linkedin.com/in/aaron-f-moss/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/mossly" target="_blank">GitHub</a></li>
+            <li>
+              <a>Photography</a>
+              <ul class="p-2">
+                <li><a href="#bird" data-nav-category="bird">Bird</a></li>
+                <li><a href="#landscape" data-nav-category="landscape">Landscape</a></li>
+                <li><a href="#portrait" data-nav-category="portrait">Portrait</a></li>
+                <li><a href="#concert" data-nav-category="concert">Concert</a></li>
+                <li><a href="#architecture" data-nav-category="architecture">Architecture</a></li>
+                <li><a href="#nature" data-nav-category="nature">Nature</a></li>
+                <li><a href="#product" data-nav-category="product">Product</a></li>
+                <li><a href="#astro" data-nav-category="astro">Astro</a></li>
+                <li><a href="#sports" data-nav-category="sports">Sports</a></li>
+                <li><a href="#cat" data-nav-category="cat">Cat</a></li>
+                <li><a href="#wildlife" data-nav-category="wildlife">Wildlife</a></li>
+              </ul>
+            </li>
+            <li class="menu-title">
+              <span>Social</span>
+            </li>
+            <li><a href="/aaron-moss-cv.pdf" target="_blank" class="hover:bg-primary hover:text-white">CV</a></li>
+            <li><a href="https://www.linkedin.com/in/aaron-f-moss/" target="_blank" class="hover:bg-primary hover:text-white">LinkedIn</a></li>
+            <li><a href="https://github.com/mossly" target="_blank" class="hover:bg-primary hover:text-white">GitHub</a></li>
           </ul>
         </div>
-        <a class="btn btn-ghost text-xl">Aaron Moss</a>
+        <a href="/" class="btn btn-ghost text-xl">Aaron Moss</a>
+        
+        <!-- Desktop Photography dropdown -->
+        <div class="hidden lg:block ml-4">
+          <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-sm">Photography</div>
+            <ul tabindex="0" class="dropdown-content z-[10] p-2 shadow-lg menu bg-base-100 rounded-box w-52">
+              <li><a href="#wildlife" data-nav-category="wildlife">Wildlife</a></li>
+              <li><a href="#landscape" data-nav-category="landscape">Landscape</a></li>
+              <li><a href="#portrait" data-nav-category="portrait">Portrait</a></li>
+              <li><a href="#concert" data-nav-category="concert">Concert</a></li>
+              <li><a href="#architecture" data-nav-category="architecture">Architecture</a></li>
+              <li><a href="#nature" data-nav-category="nature">Nature</a></li>
+              <li><a href="#product" data-nav-category="product">Product</a></li>
+              <li><a href="#astro" data-nav-category="astro">Astro</a></li>
+              <li><a href="#sports" data-nav-category="sports">Sports</a></li>
+              <li><a href="#cat" data-nav-category="cat">Cat</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          <li><a href="#photography">Photography</a></li>
-        </ul>
+        <!-- Center section now empty -->
       </div>
       <div class="navbar-end hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -45,23 +80,52 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
-      <section class="text-center mb-8">
+      <section id="photography" class="text-center mb-8">
         <h1 class="text-4xl font-bold mb-2">Photography <span class="font-light">Portfolio</span></h1>
-        <p class="text-gray-600">2015–2025</p>
+        <p class="text-base-content/60">2015–2025</p>
       </section>
 
       <!-- Category Tabs -->
-      <div class="flex flex-wrap justify-center gap-2 mb-8">
-        <button class="btn btn-primary btn-sm">Wildlife</button>
-        <button class="btn btn-ghost btn-sm">Landscape</button>
-        <button class="btn btn-ghost btn-sm">Portrait</button>
-        <button class="btn btn-ghost btn-sm">Concert</button>
-        <button class="btn btn-ghost btn-sm">Architecture</button>
-        <button class="btn btn-ghost btn-sm">Nature</button>
-        <button class="btn btn-ghost btn-sm">Product</button>
-        <button class="btn btn-ghost btn-sm">Astro</button>
-        <button class="btn btn-ghost btn-sm">Sports</button>
-        <button class="btn btn-ghost btn-sm">Cat</button>
+      <div class="mb-8">
+        <!-- Mobile: Dropdown menu -->
+        <div class="flex justify-center sm:hidden">
+          <div class="dropdown dropdown-bottom">
+            <div tabindex="0" role="button" class="btn btn-sm">
+              <span id="selected-category">Bird</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a data-category="bird" class="category-dropdown-item active">Bird</a></li>
+            <li><a data-category="landscape" class="category-dropdown-item">Landscape</a></li>
+            <li><a data-category="portrait" class="category-dropdown-item">Portrait</a></li>
+            <li><a data-category="concert" class="category-dropdown-item">Concert</a></li>
+            <li><a data-category="architecture" class="category-dropdown-item">Architecture</a></li>
+            <li><a data-category="nature" class="category-dropdown-item">Nature</a></li>
+            <li><a data-category="product" class="category-dropdown-item">Product</a></li>
+            <li><a data-category="astro" class="category-dropdown-item">Astro</a></li>
+            <li><a data-category="sports" class="category-dropdown-item">Sports</a></li>
+            <li><a data-category="cat" class="category-dropdown-item">Cat</a></li>
+            <li><a data-category="wildlife" class="category-dropdown-item">Wildlife</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Tablet/Desktop: Horizontal buttons -->
+        <div class="hidden sm:flex flex-wrap justify-center gap-2">
+          <button class="btn btn-primary btn-sm" data-category="bird">Bird</button>
+          <button class="btn btn-ghost btn-sm" data-category="landscape">Landscape</button>
+          <button class="btn btn-ghost btn-sm" data-category="portrait">Portrait</button>
+          <button class="btn btn-ghost btn-sm" data-category="concert">Concert</button>
+          <button class="btn btn-ghost btn-sm" data-category="architecture">Architecture</button>
+          <button class="btn btn-ghost btn-sm" data-category="nature">Nature</button>
+          <button class="btn btn-ghost btn-sm" data-category="product">Product</button>
+          <button class="btn btn-ghost btn-sm" data-category="astro">Astro</button>
+          <button class="btn btn-ghost btn-sm" data-category="sports">Sports</button>
+          <button class="btn btn-ghost btn-sm" data-category="cat">Cat</button>
+          <button class="btn btn-ghost btn-sm" data-category="wildlife">Wildlife</button>
+        </div>
       </div>
 
       <!-- Gallery Grid -->
@@ -70,18 +134,30 @@
       </div>
     </main>
 
-    <!-- Theme Toggle -->
-    <div class="fixed bottom-4 right-4">
-      <label class="swap swap-rotate btn btn-circle btn-primary">
-        <input type="checkbox" class="theme-controller" value="dark" />
-        <svg class="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
-        </svg>
-        <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
-        </svg>
-      </label>
+    <!-- Divider -->
+    <hr class="border-[#4A5568] my-8">
+
+    <!-- Quote Section -->
+    <div class="container mx-auto px-4 pt-2">
+      <figure>
+        <blockquote class="pl-5 border-l-4 border-[#4A5568] text-lg mb-2">
+          <p class="mb-0">"It's marvelous, marvelous. Nothing will ever be as much fun. I'm going to photograph everything, <em>everything!</em>"</p>
+        </blockquote>
+        <figcaption class="pl-5 text-base-content/60">
+          — Jacques-Henri Lartigue <cite class="not-italic">(1902)</cite>
+        </figcaption>
+      </figure>
     </div>
+
+    <!-- Footer -->
+    <footer class="text-base-content/60 pt-4 pb-8">
+      <div class="container mx-auto px-4">
+        <p class="text-right">
+          <a href="#" class="text-base-content/60 hover:text-base-content">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
   </div>
   
   <script type="module" src="/src/main.ts"></script>

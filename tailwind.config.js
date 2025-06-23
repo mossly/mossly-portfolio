@@ -30,31 +30,6 @@ export default {
     require('@tailwindcss/aspect-ratio'),
   ],
   daisyui: {
-    themes: [
-      {
-        light: {
-          "primary": "#1d4ed8",
-          "secondary": "#7c3aed",
-          "accent": "#f59e0b",
-          "neutral": "#3d4451",
-          "base-100": "#ffffff",
-          "info": "#3abff8",
-          "success": "#36d399",
-          "warning": "#fbbd23",
-          "error": "#f87272",
-        },
-        dark: {
-          "primary": "#60a5fa",
-          "secondary": "#a78bfa",
-          "accent": "#fbbf24",
-          "neutral": "#191d24",
-          "base-100": "#2a303c",
-          "info": "#3abff8",
-          "success": "#36d399",
-          "warning": "#fbbd23",
-          "error": "#f87272",
-        },
-      },
-    ],
+    themes: ["light", "dark"],
   },
 }

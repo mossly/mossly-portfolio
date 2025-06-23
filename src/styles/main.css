@@ -9,37 +9,90 @@
   }
   
   body {
-    @apply antialiased text-gray-800;
+    @apply antialiased text-base-content;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 }
 
 @layer components {
-  /* Masonry-style grid for original aspect ratios */
-  .gallery-grid {
-    column-count: 1;
-    column-gap: 1rem;
+  /* Hybrid masonry layout - CSS columns on mobile, flexbox columns on desktop */
+  .image-gallery {
     @apply px-4;
   }
   
+  /* Mobile/tablet: Use CSS masonry for proper ordering */
+  .image-gallery.masonry-mode {
+    column-count: 1;
+    column-gap: 0.5rem;
+  }
+  
   @screen sm {
-    .gallery-grid {
+    .image-gallery.masonry-mode {
       column-count: 2;
     }
   }
   
-  @screen lg {
-    .gallery-grid {
-      column-count: 3;
+  @screen md {
+    .image-gallery.masonry-mode {
+      column-count: 2;
+      column-gap: 0.75rem;
     }
   }
   
-  .image-card {
-    @apply relative overflow-hidden mb-4 break-inside-avoid;
+  /* Desktop: Use flexbox columns like archive */
+  .image-gallery.column-mode {
+    @apply flex flex-wrap gap-2 justify-center;
   }
   
-  .image-card img {
-    @apply w-full h-auto block;
+  .column {
+    @apply flex-1 flex flex-col gap-2;
+    min-width: 300px;
+  }
+  
+  .image-item {
+    @apply relative overflow-hidden cursor-pointer mb-2 break-inside-avoid;
+  }
+  
+  .image-placeholder {
+    @apply relative w-full overflow-hidden;
+  }
+  
+  /* Ensure skeleton class doesn't get overridden */
+  .image-placeholder.skeleton {
+    @apply bg-base-200;
+  }
+  
+  /* Ensure no DaisyUI loading spinner appears */
+  .image-placeholder.loading {
+    mask: none !important;
+    -webkit-mask: none !important;
+  }
+  
+  .image-item img {
+    @apply absolute inset-0 w-full h-full object-cover transition-all duration-300;
+  }
+  
+  .image-item img:hover {
+    @apply scale-[1.02];
+  }
+  
+  /* Hide image completely while loading */
+  .image-loading {
+    opacity: 0;
+  }
+  
+  /* Fade in animation for loaded images */
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   .nav-link-active {
@@ -53,6 +106,44 @@
   
   .category-btn-active {
     @apply bg-gray-900 text-white hover:bg-gray-800 border-gray-900;
+  }
+  
+  /* Mobile-friendly scrollable category tabs */
+  @layer utilities {
+    .overflow-x-auto {
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    
+    .overflow-x-auto::-webkit-scrollbar {
+      height: 4px;
+    }
+    
+    .overflow-x-auto::-webkit-scrollbar-track {
+      @apply bg-gray-200 rounded;
+    }
+    
+    .overflow-x-auto::-webkit-scrollbar-thumb {
+      @apply bg-gray-400 rounded;
+    }
+  }
+  
+  /* Category dropdown styling */
+  .category-dropdown-item.active {
+    @apply bg-primary text-white;
+  }
+  
+  .category-dropdown-item:hover {
+    @apply bg-primary bg-opacity-10;
+  }
+  
+  .category-dropdown-item.active:hover {
+    @apply bg-primary text-white;
+  }
+  
+  /* Fix navbar dropdown hover gap */
+  .dropdown-hover .dropdown-content {
+    @apply mt-0;
   }
 }
 
