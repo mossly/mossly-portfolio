@@ -23,7 +23,7 @@
   /* Mobile/tablet: Use CSS masonry for proper ordering */
   .image-gallery.masonry-mode {
     column-count: 1;
-    column-gap: 0.5rem;
+    column-gap: 1.5rem;
   }
   
   @screen sm {
@@ -35,22 +35,27 @@
   @screen md {
     .image-gallery.masonry-mode {
       column-count: 2;
-      column-gap: 0.75rem;
+      column-gap: 1.5rem;
     }
   }
   
   /* Desktop: Use flexbox columns like archive */
   .image-gallery.column-mode {
-    @apply flex flex-wrap gap-2 justify-center;
+    @apply flex flex-wrap gap-6 justify-center;
   }
   
   .column {
-    @apply flex-1 flex flex-col gap-2;
+    @apply flex-1 flex flex-col gap-6;
     min-width: 300px;
   }
   
   .image-item {
-    @apply relative overflow-hidden cursor-pointer mb-2 break-inside-avoid;
+    @apply relative overflow-hidden cursor-pointer break-inside-avoid;
+  }
+  
+  /* Add consistent spacing for masonry mode */
+  .image-gallery.masonry-mode .image-item {
+    @apply mb-6;
   }
   
   .image-placeholder {
