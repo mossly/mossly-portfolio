@@ -17,6 +17,7 @@ export const GALLERY_CONFIG = {
   cat: { displayName: 'CAT' },
   street: { displayName: 'STREET' },
   wildlife: { displayName: 'WILDLIFE' },
+  about: { displayName: 'ABOUT' },
 } as const
 
 export const SOURCE_IMAGE_DIR = './public/images'

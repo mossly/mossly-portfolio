@@ -11,6 +11,7 @@ export type PhotoCategory =
   | 'sports'
   | 'cat'
   | 'street'
+  | 'about'
 
 export interface PhotoMetadata {
   camera?: string

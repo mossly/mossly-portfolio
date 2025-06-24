@@ -84,9 +84,9 @@
     @apply scale-[1.02];
   }
   
-  /* Hide image completely while loading */
+  /* Show image immediately - no hiding while loading */
   .image-loading {
-    opacity: 0;
+    opacity: 1;
   }
   
   /* Fade in animation for loaded images */
@@ -152,6 +152,20 @@
   /* Fix navbar dropdown hover gap */
   .dropdown-hover .dropdown-content {
     @apply mt-0;
+  }
+  
+  /* Gallery transition states */
+  .gallery-grid {
+    /* Start with opacity 0 for initial fade-in */
+    opacity: 0;
+  }
+  
+  .gallery-grid.fade-out {
+    transition: opacity 0.25s ease-in; /* Slow start, fast end */
+  }
+  
+  .gallery-grid.fade-in {
+    transition: opacity 0.15s ease-out; /* Fast start, slow end - quicker */
   }
 }
 

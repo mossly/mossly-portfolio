@@ -8,77 +8,29 @@
   <meta name="theme-color" content="#191e24">
   <link rel="icon" href="/favicon.ico">
   <title>Aaron Moss - Photography Portfolio</title>
+  
+  <!-- Critical CSS to prevent FOUC -->
+  <style>
+    html{visibility:hidden;opacity:0}html.ready{visibility:visible;opacity:1}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;min-height:100vh}#navigation{min-height:64px}[data-theme=lofi]{background-color:#fff;color:#000}.nav-skeleton{height:64px;background-color:#f3f4f6;position:sticky;top:0;z-index:50}button:focus{outline:none}button{border:none;background:transparent;padding:0}.btn{outline:none;border:none}.btn-sm{height:2rem;padding:0 0.75rem;font-size:0.875rem}.btn-ghost{background:transparent;border:1px solid transparent}.btn-primary{background:#000;color:#fff;border:1px solid #000}.dropdown{position:relative}.dropdown-content{display:none}img{font-size:0;color:transparent}img::before{content:"";display:block;position:absolute;inset:0;background:#f3f4f6}img::after{display:none}
+  </style>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  
+  <!-- Fallback for users with JS disabled -->
+  <noscript>
+    <style>
+      html { visibility: visible !important; opacity: 1 !important; }
+    </style>
+  </noscript>
 </head>
 <body data-theme="lofi">
   <div id="app">
     <!-- Navigation -->
-    <header class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-              <a>Photography</a>
-              <ul class="p-2">
-                <li><a href="#bird" data-nav-category="bird">Bird</a></li>
-                <li><a href="#landscape" data-nav-category="landscape">Landscape</a></li>
-                <li><a href="#portrait" data-nav-category="portrait">Portrait</a></li>
-                <li><a href="#concert" data-nav-category="concert">Concert</a></li>
-                <li><a href="#architecture" data-nav-category="architecture">Architecture</a></li>
-                <li><a href="#nature" data-nav-category="nature">Nature</a></li>
-                <li><a href="#product" data-nav-category="product">Product</a></li>
-                <li><a href="#astro" data-nav-category="astro">Astro</a></li>
-                <li><a href="#sports" data-nav-category="sports">Sports</a></li>
-                <li><a href="#cat" data-nav-category="cat">Cat</a></li>
-                <li><a href="#street" data-nav-category="street">Street</a></li>
-                <li><a href="#wildlife" data-nav-category="wildlife">Wildlife</a></li>
-              </ul>
-            </li>
-            <li class="menu-title">
-              <span>Social</span>
-            </li>
-            <li><a href="/aaron-moss-cv.pdf" target="_blank" class="hover:bg-primary hover:text-white">CV</a></li>
-            <li><a href="https://www.linkedin.com/in/aaron-f-moss/" target="_blank" class="hover:bg-primary hover:text-white">LinkedIn</a></li>
-            <li><a href="https://github.com/mossly" target="_blank" class="hover:bg-primary hover:text-white">GitHub</a></li>
-          </ul>
-        </div>
-        <a href="/" class="btn btn-ghost text-xl">Aaron Moss</a>
-        
-        <!-- Desktop Photography dropdown -->
-        <div class="hidden lg:block ml-4">
-          <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="btn btn-ghost">Photography</div>
-            <ul tabindex="0" class="dropdown-content z-[10] p-2 shadow-lg menu bg-base-100 rounded-box w-52">
-              <li><a href="#wildlife" data-nav-category="wildlife">Wildlife</a></li>
-              <li><a href="#landscape" data-nav-category="landscape">Landscape</a></li>
-              <li><a href="#portrait" data-nav-category="portrait">Portrait</a></li>
-              <li><a href="#concert" data-nav-category="concert">Concert</a></li>
-              <li><a href="#architecture" data-nav-category="architecture">Architecture</a></li>
-              <li><a href="#nature" data-nav-category="nature">Nature</a></li>
-              <li><a href="#product" data-nav-category="product">Product</a></li>
-              <li><a href="#astro" data-nav-category="astro">Astro</a></li>
-              <li><a href="#sports" data-nav-category="sports">Sports</a></li>
-              <li><a href="#cat" data-nav-category="cat">Cat</a></li>
-              <li><a href="#street" data-nav-category="street">Street</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <!-- Center section now empty -->
-      </div>
-      <div class="navbar-end hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          <li><a href="/aaron-moss-cv.pdf" target="_blank">CV</a></li>
-          <li><a href="https://www.linkedin.com/in/aaron-f-moss/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/mossly" target="_blank">GitHub</a></li>
-        </ul>
-      </div>
-    </header>
+    <div id="navigation"></div>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
@@ -138,29 +90,8 @@
       </div>
     </main>
 
-    <!-- Divider -->
-    <hr class="border-[#4A5568] my-8">
-
-    <!-- Quote Section -->
-    <div class="container mx-auto px-4 pt-2">
-      <figure>
-        <blockquote class="pl-5 border-l-4 border-[#4A5568] text-lg mb-2">
-          <p class="mb-0">"It's marvelous, marvelous. Nothing will ever be as much fun. I'm going to photograph everything, <em>everything!</em>"</p>
-        </blockquote>
-        <figcaption class="pl-5 text-base-content/60">
-          — Jacques-Henri Lartigue <cite class="not-italic">(1902)</cite>
-        </figcaption>
-      </figure>
-    </div>
-
     <!-- Footer -->
-    <footer class="text-base-content/60 pt-4 pb-8">
-      <div class="container mx-auto px-4">
-        <p class="text-right">
-          <a href="#" class="text-base-content/60 hover:text-base-content">Back to top</a>
-        </p>
-      </div>
-    </footer>
+    <div id="footer"></div>
 
   </div>
   

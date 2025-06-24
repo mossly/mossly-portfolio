@@ -34,9 +34,8 @@ export class GalleryComponent {
         // Image is about to be loaded
       },
       callback_loaded: (element) => {
-        // Remove image-loading class and add fade-in animation
+        // Remove image-loading class - no fade animation
         element.classList.remove('image-loading')
-        element.classList.add('animate-fade-in')
         // Remove loading class from parent placeholder
         const placeholder = element.closest('.image-placeholder')
         if (placeholder) {
@@ -125,7 +124,7 @@ export class GalleryComponent {
 
 
   private renderAllGalleries() {
-    const container = document.getElementById('galleries-container')
+    const container = document.querySelector('.gallery-grid')
     if (!container) return
 
     const categories = galleryManager.getCategories()
@@ -166,9 +165,8 @@ export class GalleryComponent {
         // Image is about to be loaded
       },
       callback_loaded: (element) => {
-        // Remove image-loading class and add fade-in animation
+        // Remove image-loading class - no fade animation
         element.classList.remove('image-loading')
-        element.classList.add('animate-fade-in')
         // Remove loading class from parent placeholder
         const placeholder = element.closest('.image-placeholder')
         if (placeholder) {
@@ -202,20 +200,74 @@ export class GalleryComponent {
   }
 
   private showGallery(category: PhotoCategory) {
-    // Hide all galleries
     const allGalleries = document.querySelectorAll('.gallery-section')
-    allGalleries.forEach(gallery => {
-      (gallery as HTMLElement).style.display = 'none'
-    })
-    
-    // Show selected gallery
     const selectedGallery = document.getElementById(`gallery-${category}`)
-    if (selectedGallery) {
-      selectedGallery.style.display = 'block'
+    const container = document.querySelector('.gallery-grid') as HTMLElement
+    
+    if (selectedGallery && container) {
+      // Check if this is a switch between galleries
+      const isSwitch = Array.from(allGalleries).some(
+        gallery => (gallery as HTMLElement).style.display === 'block'
+      )
       
-      // Update lazy loader to check newly visible images
-      if (this.lazyLoader) {
-        this.lazyLoader.update()
+      if (isSwitch) {
+        // Add fade-out class and trigger fade
+        container.classList.add('fade-out')
+        container.style.opacity = '0'
+        
+        setTimeout(() => {
+          // Hide all galleries
+          allGalleries.forEach(gallery => {
+            (gallery as HTMLElement).style.display = 'none'
+          })
+          
+          // Show selected gallery
+          selectedGallery.style.display = 'block'
+          
+          // Update lazy loader
+          if (this.lazyLoader) {
+            this.lazyLoader.update()
+          }
+          
+          // Switch to fade-in easing
+          container.classList.remove('fade-out')
+          container.classList.add('fade-in')
+          
+          // Force reflow
+          void container.offsetHeight
+          
+          // Fade back in
+          container.style.opacity = '1'
+          
+          // Clean up classes after transition
+          setTimeout(() => {
+            container.classList.remove('fade-in')
+          }, 150) // Match faster fade-in duration
+        }, 250) // Wait for fade out
+      } else {
+        // First load - add fade-in animation
+        allGalleries.forEach(gallery => {
+          (gallery as HTMLElement).style.display = 'none'
+        })
+        
+        selectedGallery.style.display = 'block'
+        
+        if (this.lazyLoader) {
+          this.lazyLoader.update()
+        }
+        
+        // Add fade-in class and trigger fade
+        container.classList.add('fade-in')
+        
+        // Small delay to ensure everything is ready
+        setTimeout(() => {
+          container.style.opacity = '1'
+          
+          // Clean up class after transition
+          setTimeout(() => {
+            container.classList.remove('fade-in')
+          }, 150)
+        }, 50)
       }
     }
   }

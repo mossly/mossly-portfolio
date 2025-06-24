@@ -1,4 +1,31 @@
 {
+  "about": [
+    {
+      "id": "0d76ac47bb3b036bf368157cce910e7f",
+      "filename": "Aaron Moss.jpg",
+      "category": "about",
+      "title": "Aaron Moss",
+      "metadata": {
+        "dateTaken": "2025-06-24T13:20:12.174Z"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/about/medium/Aaron Moss.webp",
+          "width": 1200,
+          "height": 781,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/about/Aaron Moss.jpg",
+          "width": 4601,
+          "height": 2995,
+          "format": "jpg"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHRAAAgIDAAMAAAAAAAAAAAAAAQIABAMFIQYiUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDKtFuq9G5hSwjA43B9ey1fy+qXYjC3T8iIH//Z",
+      "aspectRatio": 1.5362270450751252
+    }
+  ],
   "architecture": [
     {
       "id": "48a41435ace8911855ff986b05c6b35a",
