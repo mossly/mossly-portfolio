@@ -25,6 +25,36 @@ export class GalleryComponent {
     
   }
 
+  /**
+   * Properly close DaisyUI dropdowns by moving focus outside the dropdown container
+   */
+  private closeDropdown(dropdownElement: HTMLElement | null) {
+    if (!dropdownElement) return
+    
+    // Find the trigger element (button with tabindex)
+    const trigger = dropdownElement.querySelector('[tabindex="0"]') as HTMLElement
+    if (trigger) {
+      // Remove focus from trigger
+      trigger.blur()
+    }
+    
+    // Create a temporary focusable element outside all dropdowns
+    const tempFocusTarget = document.createElement('button')
+    tempFocusTarget.style.position = 'fixed'
+    tempFocusTarget.style.top = '-9999px'
+    tempFocusTarget.style.left = '-9999px'
+    tempFocusTarget.setAttribute('aria-hidden', 'true')
+    document.body.appendChild(tempFocusTarget)
+    
+    // Move focus to temporary element
+    tempFocusTarget.focus()
+    
+    // Remove temporary element after a brief delay
+    setTimeout(() => {
+      tempFocusTarget.remove()
+    }, 100)
+  }
+
   private setupLazyLoader() {
     this.lazyLoader = new LazyLoad({
       elements_selector: '.lazy',
@@ -117,6 +147,9 @@ export class GalleryComponent {
         item.addEventListener('click', (e) => {
           e.preventDefault()
           this.handleCategoryChange(category)
+          // Close the dropdown properly
+          const dropdown = document.querySelector('.dropdown-bottom') as HTMLElement | null
+          this.closeDropdown(dropdown)
         })
       }
     })
@@ -317,27 +350,24 @@ export class GalleryComponent {
       }
     })
 
-    // Navigation dropdown clicks
-    document.addEventListener('click', (e) => {
-      const navLink = (e.target as HTMLElement).closest('[data-nav-category]')
-      if (navLink) {
-        e.preventDefault()
-        const category = navLink.getAttribute('data-nav-category') as PhotoCategory
-        if (category) {
-          this.handleCategoryChange(category)
-          // Scroll to gallery section
-          const gallerySection = document.querySelector('#photography')
-          if (gallerySection) {
-            gallerySection.scrollIntoView({ behavior: 'smooth' })
-          }
-        }
-      }
-    })
-
     // Listen for category changes
     galleryManager.onCategoryChange((category) => {
       this.updateCategoryButtons(category)
       this.showGallery(category)
+    })
+    
+    // Click outside to close dropdowns
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement
+      
+      // Check if click is outside any dropdown
+      if (!target.closest('.dropdown') && !target.closest('.dropdown-hover')) {
+        // Close all open dropdowns
+        const openDropdowns = document.querySelectorAll('.dropdown:focus-within, .dropdown-hover:focus-within')
+        openDropdowns.forEach(dropdown => {
+          this.closeDropdown(dropdown as HTMLElement)
+        })
+      }
     })
   }
 

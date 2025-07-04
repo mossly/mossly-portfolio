@@ -1,19 +1,4 @@
 export class Navigation {
-  private categories = [
-    { id: 'wildlife', label: 'Wildlife' },
-    { id: 'bird', label: 'Bird' },
-    { id: 'landscape', label: 'Landscape' },
-    { id: 'portrait', label: 'Portrait' },
-    { id: 'concert', label: 'Concert' },
-    { id: 'architecture', label: 'Architecture' },
-    { id: 'nature', label: 'Nature' },
-    { id: 'product', label: 'Product' },
-    { id: 'astro', label: 'Astro' },
-    { id: 'sports', label: 'Sports' },
-    { id: 'cat', label: 'Cat' },
-    { id: 'street', label: 'Street' },
-  ]
-
   constructor() {
     this.render()
   }
@@ -23,7 +8,6 @@ export class Navigation {
     if (!navElement) return
 
     const isAboutPage = window.location.pathname.includes('about')
-    const homeUrl = isAboutPage ? '/' : '#'
 
     navElement.innerHTML = `
       <header class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
@@ -35,14 +19,7 @@ export class Navigation {
               </svg>
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                <a ${isAboutPage ? '' : 'href="#"'}>Photography</a>
-                <ul class="p-2">
-                  ${this.categories.map(cat => `
-                    <li><a href="${homeUrl}#${cat.id}" data-nav-category="${cat.id}">${cat.label}</a></li>
-                  `).join('')}
-                </ul>
-              </li>
+              <li><a href="/">Photography</a></li>
               <li><a href="/about.html" class="${isAboutPage ? 'active' : ''}">About</a></li>
               <li class="menu-title">
                 <span>Social</span>
@@ -62,14 +39,7 @@ export class Navigation {
             ${isAboutPage ? `
               <a href="/" class="btn btn-ghost">Photography</a>
             ` : `
-              <div class="dropdown dropdown-hover">
-                <div tabindex="0" role="button" class="btn btn-ghost">Photography</div>
-                <ul tabindex="0" class="dropdown-content z-[10] p-2 shadow-lg menu bg-base-100 rounded-box w-52">
-                  ${this.categories.map(cat => `
-                    <li><a href="#${cat.id}" data-nav-category="${cat.id}">${cat.label}</a></li>
-                  `).join('')}
-                </ul>
-              </div>
+              <a href="/" class="btn btn-ghost">Photography</a>
             `}
             <a href="/about.html" class="btn btn-ghost ${isAboutPage ? 'btn-active' : ''}">About</a>
           </div>

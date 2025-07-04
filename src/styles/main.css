@@ -137,16 +137,45 @@
   }
   
   /* Category dropdown styling */
+  .category-dropdown-item {
+    @apply text-base-content;
+  }
+  
   .category-dropdown-item.active {
     @apply bg-primary text-white;
   }
   
+  /* Override DaisyUI menu hover styles */
+  .menu li > .category-dropdown-item:hover,
+  .menu li > a.category-dropdown-item:hover,
   .category-dropdown-item:hover {
-    @apply bg-primary bg-opacity-10;
+    @apply bg-primary bg-opacity-10 text-base-content !important;
   }
   
+  .menu li > .category-dropdown-item.active:hover,
+  .menu li > a.category-dropdown-item.active:hover,
   .category-dropdown-item.active:hover {
-    @apply bg-primary text-white;
+    @apply bg-primary text-white !important;
+  }
+  
+  /* Navigation category items */
+  .menu li > .nav-category-item:hover,
+  .menu li > a.nav-category-item:hover {
+    @apply bg-primary bg-opacity-10 text-base-content !important;
+  }
+  
+  /* Fix lofi theme menu hover issue */
+  [data-theme="lofi"] .menu li > a:hover,
+  [data-theme="lofi"] .menu li > .category-dropdown-item:hover,
+  [data-theme="lofi"] .menu li > .nav-category-item:hover {
+    color: inherit !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  [data-theme="lofi"] .menu li > .category-dropdown-item.active:hover,
+  [data-theme="lofi"] .menu li > a.category-dropdown-item.active:hover {
+    background-color: #000 !important;
+    color: #fff !important;
   }
   
   /* Fix navbar dropdown hover gap */
