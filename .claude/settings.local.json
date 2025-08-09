@@ -10,7 +10,8 @@
       "Bash(npm run build:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
-      "Bash(npx tsx:*)"
+      "Bash(npx tsx:*)",
+      "Bash(jq:*)"
     ],
     "deny": []
   }

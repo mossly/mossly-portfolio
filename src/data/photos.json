@@ -2135,6 +2135,83 @@
       "aspectRatio": 1
     }
   ],
+  "projects": [
+    {
+      "id": "1d27eb878cb1049d59b93c0a868c676d",
+      "filename": "transcribe-locally.png",
+      "category": "projects",
+      "title": "transcribe locally",
+      "metadata": {
+        "dateTaken": "2025-08-09T09:54:27.888Z"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/projects/medium/transcribe-locally.webp",
+          "width": 1200,
+          "height": 647,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/projects/transcribe-locally.png",
+          "width": 2536,
+          "height": 1368,
+          "format": "png"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAhUlEQVR4nEXL2wrCMBCE4TyBbZLN5tDG1mIFpSBe+P6P9kvSCy8+mGVmTa4boVwpdeF9PPh+nhyvnZBmbCj4OCO5YuK0IGkmlsptW9nvG+u64DVjQ8bHqfdGYsFp7lpuvCZGr1iJuJDwWjBWEqPEbvDK4JSLlW5woWtPphVNO5pzfA7+lB/Jmj9tp4aF0QAAAABJRU5ErkJggg==",
+      "aspectRatio": 1.8538011695906433
+    },
+    {
+      "id": "852c7fe83841070fc3cf905925f77692",
+      "filename": "discordbot.png",
+      "category": "projects",
+      "title": "discordbot",
+      "metadata": {
+        "dateTaken": "2025-08-09T09:52:22.289Z"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/projects/medium/discordbot.webp",
+          "width": 1200,
+          "height": 675,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/projects/discordbot.png",
+          "width": 1280,
+          "height": 720,
+          "format": "png"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbElEQVR4nHXJxwkDMRAAQJUkbQ5a6UL/PZkzxvhjmN801mSbrA/kECuvK9dtsUmyATlykCTL02zl88x1WWzWbB1koAE5Sb57+jxynZ6bJFoH7WADP1DCYkUd6oXs7RsDrYP+NpD96Xmo1UB7AUdqJvqE1XLEAAAAAElFTkSuQmCC",
+      "aspectRatio": 1.7777777777777777
+    },
+    {
+      "id": "b2337e59d831c7f2a26f8f9181cc3f94",
+      "filename": "homepage.png",
+      "category": "projects",
+      "title": "homepage",
+      "metadata": {
+        "dateTaken": "2025-07-07T15:34:33.973Z"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/projects/medium/homepage.webp",
+          "width": 1200,
+          "height": 660,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/projects/homepage.png",
+          "width": 2980,
+          "height": 1640,
+          "format": "png"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9UlEQVR4nB3L3ysDAQDA8fsP5YXyYnvRUaJRFDNJ2eXHcTaRdOTHRR5kTOt05ueueRiuTtnyo6aYmHZ3D3euvmoPn8eP4DQauI6D53lNjuPgui6+7xOGIX9hSBAECJZVomBeYprXlCtP1Os/zfj7XaP2/spn9ZmvjyqCpq2zMJ8kpUyTPT7g0bZ4e6lQtu94KJ5TKhjY97cIicQg0UgrYlc7S+kkZ0aG4o1B7miHvc1FNFUml9lFiMdjRCMtiGIbijJJ9mSfU/2Qre1lZufGkaQRVDWFMCWN0tPbQd9AJytrMvkrnfyFzupGmqGxfmLD3czIE/wDTwO7enqd5p0AAAAASUVORK5CYII=",
+      "aspectRatio": 1.8170731707317074
+    }
+  ],
   "sports": [
     {
       "id": "311a04eb01e2d476aa3bf4d298753fba",

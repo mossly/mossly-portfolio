@@ -18,6 +18,7 @@ export const GALLERY_CONFIG = {
   street: { displayName: 'STREET' },
   wildlife: { displayName: 'WILDLIFE' },
   about: { displayName: 'ABOUT' },
+  projects: { displayName: 'PROJECTS' },
 } as const
 
 export const SOURCE_IMAGE_DIR = './public/images'
