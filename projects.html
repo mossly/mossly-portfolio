@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Aaron Moss - Web Development, Data Analysis, and Creative Work">
+  <meta name="author" content="Aaron Moss">
+  <meta name="theme-color" content="#191e24">
+  <link rel="icon" href="/favicon.ico">
+  <title>Projects | Mossly</title>
+  
+  <!-- Critical CSS to prevent FOUC -->
+  <style>
+    html{visibility:hidden;opacity:0}html.ready{visibility:visible;opacity:1}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;min-height:100vh}#navigation{min-height:64px}[data-theme=lofi]{background-color:#fff;color:#000}.nav-skeleton{height:64px;background-color:#f3f4f6;position:sticky;top:0;z-index:50}button:focus{outline:none}button{border:none;background:transparent;padding:0}.btn{outline:none;border:none}.btn-sm{height:2rem;padding:0 0.75rem;font-size:0.875rem}.btn-ghost{background:transparent;border:1px solid transparent}.btn-primary{background:#000;color:#fff;border:1px solid #000}.dropdown{position:relative}.dropdown-content{display:none}img{font-size:0;color:transparent}img::before{content:"";display:block;position:absolute;inset:0;background:#f3f4f6}img::after{display:none}
+  </style>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  
+  <!-- Fallback for users with JS disabled -->
+  <noscript>
+    <style>
+      html { visibility: visible !important; opacity: 1 !important; }
+    </style>
+  </noscript>
+</head>
+<body data-theme="lofi">
+  <div id="app">
+    <!-- Navigation -->
+    <div id="navigation"></div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16 max-w-7xl">
+      <!-- Header Section -->
+      <section class="text-center mb-12">
+        <h1 class="text-5xl font-bold mb-4">Projects</h1>
+        <p class="text-lg text-base-content/60 max-w-2xl mx-auto">
+          A collection of web development, data analysis, and creative projects showcasing automation, sustainability, and innovative solutions.
+        </p>
+      </section>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card 1 - Portfolio Website -->
+        <div class="card bg-base-100 border border-base-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <figure class="px-10 pt-10">
+            <div class="rounded-xl w-full h-48 overflow-hidden bg-gradient-to-br from-base-200 to-base-300">
+              <img src="/processed/projects/medium/homepage.webp" alt="Mossly Portfolio Homepage" class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
+            </div>
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Mossly Portfolio</h2>
+            <p class="text-base-content/70">A modern photography portfolio built with TypeScript, featuring lazy loading, lightbox galleries, and optimized image processing.</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="badge badge-ghost">TypeScript</span>
+              <span class="badge badge-ghost">Vite</span>
+              <span class="badge badge-ghost">Tailwind CSS</span>
+            </div>
+            <div class="card-actions justify-end mt-4">
+              <a href="/" class="btn btn-primary btn-sm">View Live</a>
+              <a href="https://github.com/mossly/mossly-portfolio" target="_blank" class="btn btn-ghost btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 - Discord LLM Bot -->
+        <div class="card bg-base-100 border border-base-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <figure class="px-10 pt-10">
+            <div class="rounded-xl w-full h-48 overflow-hidden bg-gradient-to-br from-base-200 to-base-300">
+              <img src="/processed/projects/medium/discordbot.webp" alt="Discord LLM Bot" class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
+            </div>
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Discord LLM Bot</h2>
+            <p class="text-base-content/70">A powerful Discord bot that integrates multiple LLM providers including OpenAI, Anthropic, and local models for intelligent chat interactions.</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="badge badge-ghost">Python</span>
+              <span class="badge badge-ghost">Discord.py</span>
+              <span class="badge badge-ghost">OpenAI API</span>
+              <span class="badge badge-ghost">Anthropic API</span>
+            </div>
+            <div class="card-actions justify-end mt-4">
+              <a href="https://github.com/mossly/discord-llm-bot" target="_blank" class="btn btn-ghost btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 - Transcribe Locally -->
+        <div class="card bg-base-100 border border-base-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <figure class="px-10 pt-10">
+            <div class="rounded-xl w-full h-48 overflow-hidden bg-gradient-to-br from-base-200 to-base-300">
+              <img src="/processed/projects/medium/transcribe-locally.webp" alt="Transcribe Locally" class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
+            </div>
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Transcribe Locally</h2>
+            <p class="text-base-content/70">A privacy-focused transcription web app that runs entirely in your browser using OpenAI's Whisper model, ensuring your audio never leaves your device.</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="badge badge-ghost">TypeScript</span>
+              <span class="badge badge-ghost">WebAssembly</span>
+              <span class="badge badge-ghost">Whisper</span>
+              <span class="badge badge-ghost">React</span>
+            </div>
+            <div class="card-actions justify-end mt-4">
+              <a href="https://transcribe.mossly.org" target="_blank" class="btn btn-primary btn-sm">View Live</a>
+              <a href="https://github.com/mossly/transcribe-locally" target="_blank" class="btn btn-ghost btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+  </div>
+
+  <script type="module" src="/src/projects.ts"></script>
+</body>
+</html>
