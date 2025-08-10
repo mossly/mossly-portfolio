@@ -2137,6 +2137,81 @@
   ],
   "projects": [
     {
+      "id": "4b5b4fce871f2d4dece3942883436481",
+      "filename": "hw-history.png",
+      "category": "projects",
+      "title": "hw history",
+      "metadata": {
+        "dateTaken": "2025-08-10T04:58:12.413Z"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/projects/medium/hw-history.webp",
+          "width": 1200,
+          "height": 658,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/projects/hw-history.png",
+          "width": 2976,
+          "height": 1632,
+          "format": "png"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAeElEQVR4nC2O2Q3DMAxDvU11xgZy2E7S/cdiIbkfDyBEUlLx+sD8htqAWodtE+YTrB2iPedmE2UFBjSNC2rB0mYD7hPVHxSWDtVoDYicYD7AcqQ27XAb2GKjZOtOwiTeMxx6cSUl/mnti1bfPE+0g/7BKBCf+NCBH9ibTWfThdcZAAAAAElFTkSuQmCC",
+      "aspectRatio": 1.8235294117647058
+    },
+    {
+      "id": "f51b18b33a2b27c43c85d9eb8d05d1a5",
+      "filename": "emissions-dashboard.png",
+      "category": "projects",
+      "title": "emissions dashboard",
+      "metadata": {
+        "dateTaken": "2025-08-10T04:54:56.686Z"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/projects/medium/emissions-dashboard.webp",
+          "width": 1200,
+          "height": 681,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/projects/emissions-dashboard.png",
+          "width": 1600,
+          "height": 908,
+          "format": "png"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwklEQVR4nB3E0QrBUBgA4PNE5hG8wh5BSbJc7UaIyYU74kYxEztTSl6AGssuFkrjFjubbbbzn/MMor4+lJXrOaUr9od5bVpczEtYlwxcNnQJY0nHSKg2xN5ANpbD3XZkmePjQbWtn6M1sQ5IaDULmqbuzYv3cENyi/x7HNzjwA39a0BQttOuYLx2HELTkEPI4DcHH6iXJkhoKRXd2DjnN2UR4xH8Z/wNjKSAMrWmNMMr+/SI6TOBVwIkZYRyL2HPD3wBD0CCVFLqnUUAAAAASUVORK5CYII=",
+      "aspectRatio": 1.7621145374449338
+    },
+    {
+      "id": "f6ce3d0cbb48a6f000492c12afd082ea",
+      "filename": "electricity-dashboard.png",
+      "category": "projects",
+      "title": "electricity dashboard",
+      "metadata": {
+        "dateTaken": "2025-08-10T04:53:25.646Z"
+      },
+      "variants": {
+        "medium": {
+          "url": "/processed/projects/medium/electricity-dashboard.webp",
+          "width": 1200,
+          "height": 655,
+          "format": "webp"
+        },
+        "original": {
+          "url": "/images/projects/electricity-dashboard.png",
+          "width": 1600,
+          "height": 873,
+          "format": "png"
+        }
+      },
+      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAIAAADzBuo/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeElEQVR4nBXJWw7DIAwFUfa/ylZKacojiU0wxr5IVaT5OhPyKb86YhmxyCePLes7zVeyeFhlCydrIU2XFpoHP5TJE/nRvIkH6nMn2y6PhNpB8tQEXTEmgkyr3XfGl5/dFDKX+QIW1gpqoLHyvSJjZ6+3s/iYMIcDf/MHjvoWcho/AAAAAElFTkSuQmCC",
+      "aspectRatio": 1.8327605956471935
+    },
+    {
       "id": "1d27eb878cb1049d59b93c0a868c676d",
       "filename": "transcribe-locally.png",
       "category": "projects",
