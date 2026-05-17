@@ -29,9 +29,11 @@
   },
   "homepage": "https://mossly.org",
   "dependencies": {
+    "@types/sortablejs": "^1.15.9",
     "daisyui": "^5.0.43",
     "photoswipe": "^5.4.4",
     "sharp": "^0.34.2",
+    "sortablejs": "^1.15.7",
     "typescript": "^5.8.3",
     "vanilla-lazyload": "^19.1.3",
     "vite": "^6.3.5"

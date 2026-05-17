@@ -1,15 +1,20 @@
 import type { Photo, PhotoCategory, Gallery } from '../types/photo'
 import { GALLERY_CONFIG } from '../config/images'
 import photosData from '../data/photos.json'
+import photoOrderData from '../data/photo-order.json'
+
+type PhotoOrder = Partial<Record<PhotoCategory, string[]>>
 
 export class GalleryManager {
   private photos: Record<PhotoCategory, Photo[]>
+  private order: PhotoOrder
   private galleries: Map<PhotoCategory, Gallery>
   private currentCategory: PhotoCategory = 'bird'
   private listeners: Set<(category: PhotoCategory) => void> = new Set()
 
   constructor() {
     this.photos = photosData as Record<PhotoCategory, Photo[]>
+    this.order = photoOrderData as PhotoOrder
     this.galleries = new Map()
     this.initializeGalleries()
   }
@@ -17,23 +22,49 @@ export class GalleryManager {
   private initializeGalleries() {
     for (const [category, photos] of Object.entries(this.photos)) {
       const config = GALLERY_CONFIG[category as PhotoCategory]
-      const shuffledPhotos = this.shuffleArray([...photos as Photo[]])
+      const ordered = this.applyOrder(category as PhotoCategory, photos as Photo[])
       this.galleries.set(category as PhotoCategory, {
         category: category as PhotoCategory,
         displayName: config.displayName,
-        photos: shuffledPhotos,
-        coverPhoto: shuffledPhotos[0] as Photo,
+        photos: ordered,
+        coverPhoto: ordered[0] as Photo,
       })
     }
   }
 
-  private shuffleArray<T>(array: T[]): T[] {
-    const shuffled = [...array]
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  /**
+   * Sort photos by the saved order list (by id). Photos not in the list keep
+   * their source-file order at the end, so newly processed photos show up
+   * automatically without needing to edit the order file.
+   */
+  private applyOrder(category: PhotoCategory, photos: Photo[]): Photo[] {
+    const idOrder = this.order[category]
+    if (!idOrder || idOrder.length === 0) return [...photos]
+    const rank = new Map(idOrder.map((id, i) => [id, i]))
+    return [...photos].sort((a, b) => {
+      const ra = rank.has(a.id) ? rank.get(a.id)! : Number.POSITIVE_INFINITY
+      const rb = rank.has(b.id) ? rank.get(b.id)! : Number.POSITIVE_INFINITY
+      return ra - rb
+    })
+  }
+
+  /**
+   * Replace the order for a category (dev-only). Persists via the Vite
+   * /__order endpoint and updates the in-memory gallery.
+   */
+  async saveOrder(category: PhotoCategory, ids: string[]): Promise<void> {
+    this.order = { ...this.order, [category]: ids }
+    const gallery = this.galleries.get(category)
+    if (gallery) {
+      gallery.photos = this.applyOrder(category, this.photos[category] || [])
+      gallery.coverPhoto = gallery.photos[0]
     }
-    return shuffled
+    const res = await fetch('/__order', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ [category]: ids }),
+    })
+    if (!res.ok) throw new Error(`save failed: ${res.status} ${await res.text()}`)
   }
 
   getCategories(): PhotoCategory[] {

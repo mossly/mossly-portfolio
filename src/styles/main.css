@@ -18,47 +18,60 @@
 }
 
 @layer components {
-  /* Hybrid masonry layout - CSS columns on mobile, flexbox columns on desktop */
+  /* Justified-rows layout: photos packed left-to-right in given order,
+     each row scaled so heights match and the row fills the container width.
+     Aspect ratios preserved exactly. */
   .image-gallery {
     @apply px-4;
   }
-  
-  /* Mobile/tablet: Use CSS masonry for proper ordering */
-  .image-gallery.masonry-mode {
-    column-count: 1;
-    column-gap: 1.5rem;
+
+  .image-gallery.justified-mode {
+    @apply flex flex-col;
+    gap: 8px;
   }
-  
-  @screen sm {
-    .image-gallery.masonry-mode {
-      column-count: 2;
-    }
+
+  .justified-row {
+    @apply flex;
   }
-  
-  @screen md {
-    .image-gallery.masonry-mode {
-      column-count: 2;
-      column-gap: 1.5rem;
-    }
-  }
-  
-  /* Desktop: Use flexbox columns like archive */
-  .image-gallery.column-mode {
-    @apply flex flex-wrap gap-6 justify-center;
-  }
-  
-  .column {
-    @apply flex-1 flex flex-col gap-6;
-    min-width: 300px;
-  }
-  
+
   .image-item {
-    @apply relative overflow-hidden cursor-pointer break-inside-avoid;
+    @apply relative overflow-hidden cursor-pointer;
   }
-  
-  /* Add consistent spacing for masonry mode */
-  .image-gallery.masonry-mode .image-item {
-    @apply mb-6;
+
+  /* Drag-to-reorder cues (dev only — Sortable adds these classes during drag) */
+  .sortable-ghost {
+    opacity: 0.3;
+  }
+  .sortable-chosen {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  .sortable-drag {
+    opacity: 0.9;
+  }
+
+  .gallery-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: rgba(20, 20, 20, 0.92);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  .gallery-toast.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .gallery-toast-error {
+    background: rgba(180, 30, 30, 0.95);
   }
   
   .image-placeholder {

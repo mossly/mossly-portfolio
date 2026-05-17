@@ -3,14 +3,17 @@ import { GALLERY_CONFIG } from '../config/images'
 import type { Photo, PhotoCategory } from '../types/photo'
 import { LightboxComponent } from './lightbox'
 import LazyLoad from 'vanilla-lazyload'
+import type Sortable from 'sortablejs'
 
 export class GalleryComponent {
   private container: HTMLElement
   private categoryButtons: Map<PhotoCategory, HTMLButtonElement> = new Map()
   private lightbox: LightboxComponent
   private resizeObserver!: ResizeObserver
-  private currentLayoutMode: 'masonry' | 'column' = 'masonry'
+  private lastRenderedWidth = 0
   private lazyLoader: any | null = null
+  private sortables: Sortable[] = []
+  private loadedPhotos = new Set<string>()
 
   constructor(containerId: string) {
     const container = document.getElementById(containerId)
@@ -55,34 +58,30 @@ export class GalleryComponent {
     }, 100)
   }
 
-  private setupLazyLoader() {
-    this.lazyLoader = new LazyLoad({
+  private lazyLoadOptions() {
+    return {
       elements_selector: '.lazy',
       threshold: 0,
-      class_loading: 'image-is-loading', // Avoid conflict with DaisyUI's .loading spinner
-      callback_enter: () => {
-        // Image is about to be loaded
-      },
-      callback_loaded: (element) => {
-        // Remove image-loading class - no fade animation
+      class_loading: 'image-is-loading',
+      callback_loaded: (element: HTMLElement) => {
         element.classList.remove('image-loading')
-        // Remove loading class from parent placeholder
         const placeholder = element.closest('.image-placeholder')
-        if (placeholder) {
-          placeholder.classList.remove('skeleton')
-        }
+        if (placeholder) placeholder.classList.remove('skeleton')
+        const item = element.closest('[data-photo-id]') as HTMLElement | null
+        const id = item?.getAttribute('data-photo-id')
+        if (id) this.loadedPhotos.add(id)
       },
-      callback_error: (element) => {
-        // Handle load error - remove image-loading but show error state
+      callback_error: (element: HTMLElement) => {
         element.classList.remove('image-loading')
-        // Remove loading class from parent placeholder
         const placeholder = element.closest('.image-placeholder')
-        if (placeholder) {
-          placeholder.classList.remove('skeleton')
-        }
+        if (placeholder) placeholder.classList.remove('skeleton')
         console.error('Failed to load image:', element)
-      }
-    })
+      },
+    }
+  }
+
+  private setupLazyLoader() {
+    this.lazyLoader = new LazyLoad(this.lazyLoadOptions())
   }
 
   private setupResizeObserver() {
@@ -90,30 +89,36 @@ export class GalleryComponent {
     this.resizeObserver = new ResizeObserver(() => {
       clearTimeout(resizeTimeout)
       resizeTimeout = setTimeout(() => {
-        this.updateLayoutMode()
-      }, 100) // Debounce resize events
+        const width = this.getContainerWidth()
+        // Only re-layout if width changed by more than a couple pixels
+        if (Math.abs(width - this.lastRenderedWidth) > 2) {
+          this.renderAllGalleries()
+          this.showGallery(galleryManager.getCurrentCategory())
+        }
+      }, 100)
     })
     this.resizeObserver.observe(document.body)
   }
 
-  private getLayoutMode(): 'masonry' | 'column' {
-    // Use column mode on large screens (1024px+), masonry on smaller screens
-    return window.innerWidth >= 1024 ? 'column' : 'masonry'
+  private getContainerWidth(): number {
+    const container = document.querySelector('.gallery-grid') as HTMLElement | null
+    if (!container) return window.innerWidth
+    const styles = getComputedStyle(container)
+    const padX = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight)
+    // Account for the .image-gallery's own px-4 padding (1rem each side = 32px)
+    const galleryPad = 32
+    const w = container.clientWidth - padX - galleryPad
+    return w > 0 ? w : window.innerWidth - galleryPad
   }
 
-  private updateLayoutMode() {
-    const newMode = this.getLayoutMode()
-    if (newMode !== this.currentLayoutMode) {
-      this.currentLayoutMode = newMode
-      // Re-render all galleries with new layout
-      this.renderAllGalleries()
-      this.showGallery(galleryManager.getCurrentCategory())
-    }
+  private getTargetRowHeight(): number {
+    const w = window.innerWidth
+    if (w < 640) return 180
+    if (w < 1024) return 240
+    return 320
   }
 
   private render() {
-    this.currentLayoutMode = this.getLayoutMode()
-    
     // Find the gallery grid container - it should already exist in the HTML
     const galleriesContainer = document.querySelector('.gallery-grid')
     if (galleriesContainer) {
@@ -161,75 +166,150 @@ export class GalleryComponent {
     if (!container) return
 
     const categories = galleryManager.getCategories()
-    
+    const containerWidth = this.getContainerWidth()
+    this.lastRenderedWidth = containerWidth
+    const targetHeight = this.getTargetRowHeight()
+
     // Build all galleries HTML
     let galleriesHTML = ''
-    
+
     categories.forEach(category => {
       const gallery = galleryManager.getGallery(category)
       if (!gallery) return
-      
-      const galleryClass = this.currentLayoutMode === 'column' ? 'image-gallery column-mode' : 'image-gallery masonry-mode'
-      
+
       galleriesHTML += `
         <div id="gallery-${category}" class="gallery-section" style="display: none;">
-          <!-- Gallery title commented out for future use
-          <div class="mb-6">
-            <h2 class="text-lg font-semibold uppercase tracking-wider text-center">
-              ${gallery.displayName} <span class="font-normal">PHOTOGRAPHY</span>
-            </h2>
-          </div>
-          -->
-          <div class="${galleryClass}">
-            ${this.renderGalleryContent(gallery.photos)}
+          <div class="image-gallery justified-mode">
+            ${this.renderJustified(gallery.photos, containerWidth, targetHeight)}
           </div>
         </div>
       `
     })
-    
+
     container.innerHTML = galleriesHTML
-    
-    // Initialize lazy loader for all galleries
-    this.lazyLoader = new LazyLoad({
-      elements_selector: '.lazy',
-      threshold: 0,
-      class_loading: 'image-is-loading', // Avoid conflict with DaisyUI's .loading spinner
-      callback_enter: () => {
-        // Image is about to be loaded
-      },
-      callback_loaded: (element) => {
-        // Remove image-loading class - no fade animation
-        element.classList.remove('image-loading')
-        // Remove loading class from parent placeholder
-        const placeholder = element.closest('.image-placeholder')
-        if (placeholder) {
-          placeholder.classList.remove('skeleton')
-        }
-      },
-      callback_error: (element) => {
-        // Handle load error - remove image-loading but show error state
-        element.classList.remove('image-loading')
-        // Remove loading class from parent placeholder
-        const placeholder = element.closest('.image-placeholder')
-        if (placeholder) {
-          placeholder.classList.remove('skeleton')
-        }
-        console.error('Failed to load image:', element)
+
+    if (import.meta.env.DEV) {
+      this.attachSortable()
+    }
+
+    this.lazyLoader = new LazyLoad(this.lazyLoadOptions())
+  }
+
+  private renderJustified(photos: Photo[], containerWidth: number, targetHeight: number): string {
+    const GAP = 8
+    type Row = { photos: Photo[]; height: number }
+    const rows: Row[] = []
+    let current: Photo[] = []
+    let sumAR = 0
+
+    for (const photo of photos) {
+      const ar = photo.aspectRatio || 1.5
+      current.push(photo)
+      sumAR += ar
+      const gapsTotal = (current.length - 1) * GAP
+      const projectedHeight = (containerWidth - gapsTotal) / sumAR
+      if (projectedHeight <= targetHeight) {
+        rows.push({ photos: current, height: projectedHeight })
+        current = []
+        sumAR = 0
       }
+    }
+    // Last partial row: keep at target height (don't stretch a single image full width)
+    if (current.length > 0) {
+      rows.push({ photos: current, height: targetHeight })
+    }
+
+    return rows
+      .map(row => {
+        const items = row.photos
+          .map(photo => {
+            const ar = photo.aspectRatio || 1.5
+            const w = Math.round(ar * row.height)
+            return this.createPhotoCard(photo, w, Math.round(row.height))
+          })
+          .join('')
+        return `<div class="justified-row" style="gap:${GAP}px;">${items}</div>`
+      })
+      .join('')
+  }
+
+  private async attachSortable() {
+    // Tear down any existing instances first
+    this.sortables.forEach(s => s.destroy())
+    this.sortables = []
+
+    const { default: Sortable } = await import('sortablejs')
+    const sections = document.querySelectorAll<HTMLElement>('.gallery-section')
+    sections.forEach(section => {
+      const category = section.id.replace(/^gallery-/, '') as PhotoCategory
+      const rows = section.querySelectorAll<HTMLElement>('.justified-row')
+      rows.forEach(row => {
+        const s = Sortable.create(row, {
+          group: `gallery-${category}`,
+          animation: 150,
+          ghostClass: 'sortable-ghost',
+          chosenClass: 'sortable-chosen',
+          dragClass: 'sortable-drag',
+          forceFallback: true,
+          onEnd: () => this.handleReorder(category, section),
+        })
+        this.sortables.push(s)
+      })
     })
   }
 
-  private renderGalleryContent(photos: Photo[]): string {
-    if (this.currentLayoutMode === 'column') {
-      const columns = this.distributePhotosIntoColumns(photos, 3)
-      return columns.map(columnPhotos => 
-        `<div class="column">
-          ${columnPhotos.map(photo => this.createPhotoCard(photo)).join('')}
-        </div>`
-      ).join('')
-    } else {
-      return photos.map(photo => this.createPhotoCard(photo)).join('')
+  private async handleReorder(category: PhotoCategory, section: HTMLElement) {
+    const ids = Array.from(section.querySelectorAll<HTMLElement>('.image-item'))
+      .map(el => el.getAttribute('data-photo-id'))
+      .filter((id): id is string => !!id)
+
+    try {
+      await galleryManager.saveOrder(category, ids)
+      this.showToast('Saved')
+      this.rerenderGalleryInPlace(category)
+    } catch (err) {
+      console.error('Failed to save order:', err)
+      this.showToast('Save failed', true)
     }
+  }
+
+  /**
+   * Re-compute the justified layout for a single gallery section without
+   * touching the fade transition on .gallery-grid (which would flash white).
+   */
+  private rerenderGalleryInPlace(category: PhotoCategory) {
+    const section = document.getElementById(`gallery-${category}`)
+    if (!section) return
+    const inner = section.querySelector<HTMLElement>('.image-gallery.justified-mode')
+    if (!inner) return
+
+    const gallery = galleryManager.getGallery(category)
+    if (!gallery) return
+
+    const containerWidth = this.getContainerWidth()
+    this.lastRenderedWidth = containerWidth
+    const targetHeight = this.getTargetRowHeight()
+
+    inner.innerHTML = this.renderJustified(gallery.photos, containerWidth, targetHeight)
+
+    if (import.meta.env.DEV) {
+      this.attachSortable()
+    }
+    if (this.lazyLoader) {
+      this.lazyLoader.update()
+    }
+  }
+
+  private showToast(message: string, error = false) {
+    const toast = document.createElement('div')
+    toast.textContent = message
+    toast.className = `gallery-toast${error ? ' gallery-toast-error' : ''}`
+    document.body.appendChild(toast)
+    requestAnimationFrame(() => toast.classList.add('visible'))
+    setTimeout(() => {
+      toast.classList.remove('visible')
+      setTimeout(() => toast.remove(), 200)
+    }, 1500)
   }
 
   private showGallery(category: PhotoCategory) {
@@ -307,35 +387,28 @@ export class GalleryComponent {
 
 
 
-  private createPhotoCard(photo: Photo): string {
+  private createPhotoCard(photo: Photo, width: number, height: number): string {
     const mediumUrl = photo.variants.medium.url
-    const aspectRatio = photo.aspectRatio || 1.5
-    const paddingBottom = (1 / aspectRatio) * 100
-    
+    const alreadyLoaded = this.loadedPhotos.has(photo.id)
+    // For images already in the browser cache, render with src directly so the
+    // re-render after a drag doesn't flash an empty skeleton for a frame.
+    const imgAttrs = alreadyLoaded
+      ? `src="${mediumUrl}" class="image-loading"`
+      : `data-src="${mediumUrl}" class="lazy image-loading"`
+    const placeholderClass = alreadyLoaded ? 'image-placeholder' : 'image-placeholder skeleton'
+
     return `
-      <div class="image-item" data-photo-id="${photo.id}">
-        <div class="image-placeholder skeleton" style="padding-bottom: ${paddingBottom}%;">
+      <div class="image-item" data-photo-id="${photo.id}" style="width:${width}px;height:${height}px;flex:0 0 ${width}px;">
+        <div class="${placeholderClass}" style="height:100%;">
           <img
-            data-src="${mediumUrl}"
+            ${imgAttrs}
             alt="${photo.title || photo.filename}"
-            class="lazy image-loading"
             width="${photo.variants.medium.width}"
             height="${photo.variants.medium.height}"
           />
         </div>
       </div>
     `
-  }
-
-  private distributePhotosIntoColumns(photos: Photo[], columnCount: number): Photo[][] {
-    const columns: Photo[][] = Array.from({ length: columnCount }, () => [])
-    
-    // Distribute photos sequentially into columns (like the archive)
-    photos.forEach((photo, index) => {
-      columns[index % columnCount].push(photo)
-    })
-    
-    return columns
   }
 
   private attachEventListeners() {
@@ -414,6 +487,8 @@ export class GalleryComponent {
     if (this.lazyLoader) {
       this.lazyLoader.destroy()
     }
+    this.sortables.forEach(s => s.destroy())
+    this.sortables = []
     this.resizeObserver.disconnect()
     this.lightbox.destroy()
   }
