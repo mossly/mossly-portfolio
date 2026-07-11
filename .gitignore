@@ -6,6 +6,8 @@ node_modules/
 # Production
 dist/
 build/
+.vite/
+.wrangler/
 
 # Testing
 coverage/

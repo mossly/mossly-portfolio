@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint src",
     "format": "prettier --write .",
     "process-images": "tsx scripts/process-images.ts"
   },
@@ -29,19 +29,16 @@
   },
   "homepage": "https://mossly.org",
   "dependencies": {
-    "@types/sortablejs": "^1.15.9",
     "daisyui": "^5.0.43",
     "photoswipe": "^5.4.4",
-    "sharp": "^0.34.2",
     "sortablejs": "^1.15.7",
-    "typescript": "^5.8.3",
-    "vanilla-lazyload": "^19.1.3",
-    "vite": "^6.3.5"
+    "vanilla-lazyload": "^19.1.3"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^24.0.3",
+    "@types/sortablejs": "^1.15.9",
     "@typescript-eslint/eslint-plugin": "^8.34.1",
     "@typescript-eslint/parser": "^8.34.1",
     "autoprefixer": "^10.4.21",
@@ -50,7 +47,10 @@
     "jsdom": "^26.1.0",
     "postcss": "^8.5.6",
     "prettier": "^3.5.3",
+    "sharp": "^0.34.2",
     "tailwindcss": "^3.4.17",
-    "tsx": "^4.20.3"
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }

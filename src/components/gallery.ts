@@ -15,6 +15,20 @@ export class GalleryComponent {
   private sortables: Sortable[] = []
   private loadedPhotos = new Set<string>()
 
+  // Bound so the exact same reference can be added and removed as a listener.
+  private onDocumentClick = (e: MouseEvent) => {
+    const target = e.target as HTMLElement
+
+    // Check if click is outside any dropdown
+    if (!target.closest('.dropdown') && !target.closest('.dropdown-hover')) {
+      // Close all open dropdowns
+      const openDropdowns = document.querySelectorAll('.dropdown:focus-within, .dropdown-hover:focus-within')
+      openDropdowns.forEach(dropdown => {
+        this.closeDropdown(dropdown as HTMLElement)
+      })
+    }
+  }
+
   constructor(containerId: string) {
     const container = document.getElementById(containerId)
     if (!container) throw new Error(`Container ${containerId} not found`)
@@ -192,6 +206,9 @@ export class GalleryComponent {
       this.attachSortable()
     }
 
+    // Exactly one live LazyLoad at a time: tear down the previous instance
+    // (including the one from setupLazyLoader) before creating a new one.
+    if (this.lazyLoader) this.lazyLoader.destroy()
     this.lazyLoader = new LazyLoad(this.lazyLoadOptions())
   }
 
@@ -398,7 +415,7 @@ export class GalleryComponent {
     const placeholderClass = alreadyLoaded ? 'image-placeholder' : 'image-placeholder skeleton'
 
     return `
-      <div class="image-item" data-photo-id="${photo.id}" style="width:${width}px;height:${height}px;flex:0 0 ${width}px;">
+      <div class="image-item" data-photo-id="${photo.id}" tabindex="0" role="button" aria-label="${photo.title || photo.filename}" style="width:${width}px;height:${height}px;flex:0 0 ${width}px;">
         <div class="${placeholderClass}" style="height:100%;">
           <img
             ${imgAttrs}
@@ -423,25 +440,27 @@ export class GalleryComponent {
       }
     })
 
+    // Keyboard activation for photo cards (Enter/Space opens the lightbox)
+    this.container.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return
+      const card = (e.target as HTMLElement).closest('[data-photo-id]')
+      if (card) {
+        const photoId = card.getAttribute('data-photo-id')
+        if (photoId) {
+          if (e.key === ' ' || e.key === 'Spacebar') e.preventDefault()
+          this.openLightbox(photoId)
+        }
+      }
+    })
+
     // Listen for category changes
     galleryManager.onCategoryChange((category) => {
       this.updateCategoryButtons(category)
       this.showGallery(category)
     })
-    
+
     // Click outside to close dropdowns
-    document.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement
-      
-      // Check if click is outside any dropdown
-      if (!target.closest('.dropdown') && !target.closest('.dropdown-hover')) {
-        // Close all open dropdowns
-        const openDropdowns = document.querySelectorAll('.dropdown:focus-within, .dropdown-hover:focus-within')
-        openDropdowns.forEach(dropdown => {
-          this.closeDropdown(dropdown as HTMLElement)
-        })
-      }
-    })
+    document.addEventListener('click', this.onDocumentClick)
   }
 
   private handleCategoryChange(category: PhotoCategory) {
@@ -490,6 +509,7 @@ export class GalleryComponent {
     this.sortables.forEach(s => s.destroy())
     this.sortables = []
     this.resizeObserver.disconnect()
+    document.removeEventListener('click', this.onDocumentClick)
     this.lightbox.destroy()
   }
 }

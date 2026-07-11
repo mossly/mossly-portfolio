@@ -13,8 +13,6 @@ setTimeout(() => {
 }, 500)
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('About page loaded')
-  
   try {
     // Initialize navigation
     new Navigation()
