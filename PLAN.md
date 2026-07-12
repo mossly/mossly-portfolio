@@ -136,9 +136,9 @@ The four independently deployable units: **2A–2C** (Worker skeleton + R2 stand
 ### 2C. R2 key layout (id-only, immutable)
 Keys are **ID-only** (no category in the path), so re-categorizing in Phase 3 never moves objects. All objects written with `Cache-Control: public, max-age=31536000, immutable` + correct `contentType` at `put` time.
 ```
-photos/<id>/medium.webp        # ~1200px  (migrated from public/processed)
-photos/<id>/large.webp         # ~2560px  (NEW — lightbox target)
-photos/<id>/original.<ext>     # untouched source bytes (jpg/png) — archive + future-format regeneration
+photos/<id>/medium.webp        # ~1200px  (grid + lightbox placeholder/msrc)
+photos/<id>/large.webp         # ~2560px  (NEW — optional responsive srcset rung)
+photos/<id>/original.<ext>     # untouched source bytes — LIGHTBOX SOURCE (quality) + archive/regeneration
 posts/<post-id>/cover.webp     # Phase 4  (keyed by post id, not slug — see schema)
 posts/<post-id>/img-<n>.webp   # Phase 4 inline body images
 ```
@@ -151,18 +151,18 @@ Runs from the operator's machine while `public/images/` is still present. Reuses
 3. Generate `large` (2560px webp, q≈80); reuse the existing `medium` from `public/processed/<category>/medium/*.webp` (or regenerate at 1200px q≈75 for consistency).
 4. `put` both variants to R2 at `photos/<id>/{medium,large}.webp` with immutable cache + `contentType: image/webp`, **plus the untouched original at `photos/<id>/original.<ext>`** (correct `image/jpeg`/`image/png` contentType), via the S3 API (`@aws-sdk/client-s3` or `aws4fetch`, used only in this Node script — not shipped) or `wrangler r2 object put`.
 5. Emit **two** files, so no admin-only field ships to the browser:
-   - `src/data/photos.json` (**public shape, replaces the old one**): variants nested under `variants.{medium,large}` with absolute `images.mossly.org` URLs, `aspectRatio`, `metadata`. **No `content_hash`, no `blurDataUrl`, no `variants.original`.**
+   - `src/data/photos.json` (**public shape, replaces the old one**): variants nested under `variants.{medium,large,original}` with absolute `images.mossly.org` URLs, `aspectRatio`, `metadata`. Includes `variants.original` (url + dims — the lightbox source). **No `content_hash`, no `blurDataUrl`.**
    - `src/data/photos.seed.json` (**Phase-3 D1 seed only, not imported by the front-end**): adds `content_hash`, `sort_order` per category (derived from `photo-order.json` index, source-order fallback mirroring `gallery-manager.ts:40-49`), and variant dimensions.
 
 **Idempotency.** Re-runnable: `put` overwrites (strongly consistent); same keys every run. Run against **local Miniflare R2 first** (`wrangler dev`), eyeball a few images, then `--remote`.
 
 ### 2E. Repoint the front-end (minimal diff, still static, ~2–3h)
 - Replace `src/data/photos.json` with the generated public file — `gallery-manager.ts` **still imports it at build time**; only the data content (URLs) changes, not the mechanism.
-- Update `src/types/photo.ts`: `variants` becomes `{ medium, large }`; drop `original` and `blurDataUrl`. (`content_hash` is **not** on the public type — it lives only in `photos.seed.json`.)
-- `lightbox.ts:154-160`: build `dataSource` from `photo.variants.large.url` (was `.original.url`) — the single line that fixes multi-MB JPEG downloads.
+- Update `src/types/photo.ts`: `variants` becomes `{ medium, large, original }`; drop `blurDataUrl`. (`content_hash` is **not** on the public type — it lives only in `photos.seed.json`.) **`original` is retained on the public type** — the lightbox serves it (owner decision: image quality is a priority; full-res originals are the lightbox source, acceptable now that R2's zero-egress CDN carries the bytes and the repo is debloated).
+- `lightbox.ts:154-160`: keep building `dataSource.src` from `photo.variants.original.url` (full resolution), but **load it cleanly**: set `msrc: photo.variants.medium.url` so PhotoSwipe shows the already-cached grid image instantly as a placeholder while the original streams in (no blank multi-MB wait). Optionally add `srcset` (`large` 2560w + `original`) with `sizes` so phones/small viewports can fetch `large` instead of a 20–40 MB original while capable displays and zoom still get the original — a bandwidth nicety, not a quality downgrade on desktop. **`large` therefore becomes an optional responsive/srcset rung rather than the lightbox target** (still generated in 2D; skippable if we accept originals-everywhere).
 - `gallery.ts:391,396-397`: `mediumUrl` is now already absolute; verify no code assumes a leading `/`.
 
-**Acceptance.** Gallery grid loads mediums from `images.mossly.org`; lightbox opens `large` webp (hundreds of KB, not multi-MB); DevTools shows all image requests to `images.mossly.org` and none carrying a `content_hash` field.
+**Acceptance.** Gallery grid loads mediums from `images.mossly.org`; lightbox shows the medium instantly then swaps to the **full-resolution original** (sharp on zoom); DevTools shows all image requests to `images.mossly.org` and none carrying a `content_hash` field.
 
 ### 2F. Cutover sequence (careful part, ~1–2h)
 1. **Precondition:** 2D verified on `*.workers.dev`.
@@ -187,7 +187,7 @@ Use `copy`, **never** `sync --delete`. MEGA S4 doesn't preserve mtime (`X-Amz-Me
 ### 2H. Deletions (after 2F verified + 48h soak)
 - `git rm -r public/images` and `public/processed` — **safe because the `pre-r2-cutover` tag in git history holds the bytes**; MEGA completion is not required first.
 - `scripts/process-images.ts` + the `process-images` npm script are **kept** until Phase 3 proves the browser pipeline; delete the *originals* now, the *script* in Phase 3.
-- `variants.original` + `blurDataUrl` already dropped in 2E.
+- `blurDataUrl` already dropped in 2E. **`variants.original` is kept** (the lightbox source).
 - Do **NOT** purge originals from git history (no `filter-branch`/BFG) until well after Phase 3 — history is the ultimate rollback.
 
 **CV pdf, logo, favicon stay in `public/`** (tiny, not part of the image migration).
@@ -410,8 +410,9 @@ Same-origin on `mossly.org`. `run_worker_first` makes listed paths hit Worker co
   "title": "Aaron Moss",
   "aspectRatio": 1.536,
   "variants": {
-    "medium": { "url": "https://images.mossly.org/photos/0d76.../medium.webp", "width":1200, "height":781 },
-    "large":  { "url": "https://images.mossly.org/photos/0d76.../large.webp",  "width":2560, "height":1666 }
+    "medium":   { "url": "https://images.mossly.org/photos/0d76.../medium.webp",  "width":1200, "height":781 },
+    "large":    { "url": "https://images.mossly.org/photos/0d76.../large.webp",   "width":2560, "height":1666 },
+    "original": { "url": "https://images.mossly.org/photos/0d76.../original.jpg", "width":6000, "height":3904 }
   },
   "metadata": { "dateTaken":"2025-06-24T13:20:12.174Z", "camera":null, "iso":null }
 }
@@ -506,7 +507,7 @@ Non-secret config (`ACCESS_TEAM_DOMAIN`, `ACCESS_AUD`) in `wrangler.jsonc` `[var
 | `IMAGE_FORMATS` avif entry | 1E | never generated |
 | duplicated category list (3 TS sites) | 1F | single source of truth |
 | duplicated category markup in `index.html` | 3G | retired when gallery goes dynamic |
-| `variants.original`, `blurDataUrl` (physical) | 2E | originals not web-served |
+| `blurDataUrl` (physical) | 2E | unused (originals kept — lightbox source) |
 | `public/images/` (299 MB), `public/processed/` (11 MB) | 2H | → R2 + git-history/MEGA (after 48h soak) |
 | `scripts/process-images.ts` + `process-images` script | 3I | replaced by browser pipeline |
 | `sharp` (dep) | 3I | pipeline retired |

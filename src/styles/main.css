@@ -15,6 +15,17 @@
 }
 
 @layer components {
+  /* Theme toggle: show the moon in light mode, the sun in dark mode */
+  .theme-icon-dark {
+    display: none;
+  }
+  [data-theme='dark'] .theme-icon-light {
+    display: none;
+  }
+  [data-theme='dark'] .theme-icon-dark {
+    display: inline-block;
+  }
+
   /* Justified-rows layout: photos packed left-to-right in given order,
      each row scaled so heights match and the row fills the container width.
      Aspect ratios preserved exactly. */

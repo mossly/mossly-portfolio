@@ -1,6 +1,20 @@
+import { initThemeToggle } from './theme-toggle'
+
+const THEME_TOGGLE_BUTTON = `
+  <button data-theme-toggle type="button" class="btn btn-ghost btn-circle" aria-label="Toggle light/dark theme" aria-pressed="false">
+    <svg class="theme-icon-light h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+    </svg>
+    <svg class="theme-icon-dark h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+    </svg>
+  </button>
+`
+
 export class Navigation {
   constructor() {
     this.render()
+    initThemeToggle()
   }
 
   private render() {
@@ -46,10 +60,13 @@ export class Navigation {
         <div class="navbar-center hidden lg:flex">
           <!-- Center section now empty -->
         </div>
-        <div class="navbar-end hidden lg:flex gap-1">
-          <a href="/aaron-moss-cv.pdf" target="_blank" class="btn btn-ghost">CV</a>
-          <a href="https://www.linkedin.com/in/aaron-f-moss/" target="_blank" class="btn btn-ghost">LinkedIn</a>
-          <a href="https://github.com/mossly" target="_blank" class="btn btn-ghost">GitHub</a>
+        <div class="navbar-end gap-1">
+          <div class="hidden lg:flex gap-1">
+            <a href="/aaron-moss-cv.pdf" target="_blank" class="btn btn-ghost">CV</a>
+            <a href="https://www.linkedin.com/in/aaron-f-moss/" target="_blank" class="btn btn-ghost">LinkedIn</a>
+            <a href="https://github.com/mossly" target="_blank" class="btn btn-ghost">GitHub</a>
+          </div>
+          ${THEME_TOGGLE_BUTTON}
         </div>
       </header>
     `
