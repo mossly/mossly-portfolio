@@ -26,7 +26,7 @@ Absolute repo root: `C:\Users\mossa\Desktop\programming\mossly-portfolio`.
 **Tasks.**
 - `npx wrangler whoami` then `npx wrangler pages project list` — confirm the active CF account/token and the Pages project. If unauthenticated, read the equivalent facts from the dashboard instead.
 - Dashboard → Workers & Pages: record project name, production branch, and the **DNS/custom-domain binding for `mossly.org` and `www`** (which CNAME/proxy points where). Screenshot it.
-- Record the **account plan tier** (Free vs Pro) — fixes the Worker request-body limit (100 MB on Free/Pro; brief B §2/§5) and whether WAF/HMAC is available (Pro only).
+- Account plan tier: **Workers Paid ($5/mo)** — 100 MB Worker request-body limit, 30s CPU, higher D1 limits. Zone is not on Pro ($20), so no WAF/HMAC private R2 (irrelevant — image bucket is public by design).
 - Record account ID + zone.
 
 **Acceptance.** A short note (`docs/deploy.md`, or the Phase-1 commit body) states: platform, build cmd, output dir, branch, plan tier, and the current apex/www binding.
@@ -550,7 +550,7 @@ Non-secret config (`ACCESS_TEAM_DOMAIN`, `ACCESS_AUD`) in `wrangler.jsonc` `[var
 
 ## Open questions for the owner (genuinely owner-level decisions)
 
-1. **Deployment substrate (Phase 0):** confirm the site is Cloudflare **Pages-from-GitHub** and the account **plan tier** (Free vs Pro), and report the exact `mossly.org`/`www` custom-domain binding. Blocks the Phase-2 cutover shape and its rollback.
+1. **Deployment substrate (Phase 0) — RESOLVED:** Cloudflare **Pages-from-GitHub** (confirmed by the Pages check on PRs). Account is on the **Workers Paid ($5/mo)** plan → 100 MB Worker body limit, 30s CPU, generous D1 limits; through-Worker uploads are fine. The *zone* is not on Pro ($20), so no WAF/HMAC private-R2 — irrelevant since the image bucket is public by design. R2 bucket `mossly-images` + `images.mossly.org` are provisioned and serving. Still to confirm at cutover: the exact `mossly.org`/`www` custom-domain binding on the Pages project (for the 2F rollback path).
 2. **HEIC uploads — RESOLVED:** owner will mostly upload JPEG. No `libheif-js`; the 3E feature-detect + "convert to JPEG" message covers the stray HEIC. Revisit only if the HDR era (see Out of Scope) makes HEIC/gain-map sources routine.
 3. **R2 object versioning:** enable on `mossly-images` for undo-safety on admin overwrites/deletes? Small storage cost, stronger DR.
 4. **MEGA S4 region + keys (non-blocking):** which endpoint is nearest (`eu-central-1` Amsterdam, `eu-central-2` Bettembourg, `ca-central-1` Montreal, `ca-west-1` Vancouver)? You mint the S4 access key/secret in the MEGA console. This archive does not gate the cutover.
