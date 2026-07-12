@@ -8,22 +8,24 @@
       "metadata": {
         "dateTaken": "2025-06-24T13:20:12.174Z"
       },
+      "aspectRatio": 1.5362270450751252,
       "variants": {
         "medium": {
-          "url": "/processed/about/medium/Aaron Moss.webp",
+          "url": "https://images.mossly.org/photos/0d76ac47bb3b036bf368157cce910e7f/medium.webp",
           "width": 1200,
-          "height": 781,
-          "format": "webp"
+          "height": 781
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/0d76ac47bb3b036bf368157cce910e7f/large.webp",
+          "width": 2560,
+          "height": 1666
         },
         "original": {
-          "url": "/images/about/Aaron Moss.jpg",
+          "url": "https://images.mossly.org/photos/0d76ac47bb3b036bf368157cce910e7f/original.jpg",
           "width": 4601,
-          "height": 2995,
-          "format": "jpg"
+          "height": 2995
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHRAAAgIDAAMAAAAAAAAAAAAAAQIABAMFIQYiUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDKtFuq9G5hSwjA43B9ey1fy+qXYjC3T8iIH//Z",
-      "aspectRatio": 1.5362270450751252
+      }
     }
   ],
   "architecture": [
@@ -35,22 +37,24 @@
       "metadata": {
         "dateTaken": "2025-06-23T08:26:28.297Z"
       },
+      "aspectRatio": 1.499828473413379,
       "variants": {
         "medium": {
-          "url": "/processed/architecture/medium/Len Lye Centre.webp",
+          "url": "https://images.mossly.org/photos/48a41435ace8911855ff986b05c6b35a/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/48a41435ace8911855ff986b05c6b35a/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/architecture/Len Lye Centre.jpg",
+          "url": "https://images.mossly.org/photos/48a41435ace8911855ff986b05c6b35a/original.jpg",
           "width": 4372,
-          "height": 2915,
-          "format": "jpg"
+          "height": 2915
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMF/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAwQGERIxQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC1rPbByk9eNox9ZbseanwHYv0yIg//2Q==",
-      "aspectRatio": 1.499828473413379
+      }
     },
     {
       "id": "f338beb37a28df5e7c1e5e1a06656ec2",
@@ -66,22 +70,24 @@
         "shutterSpeed": "1/80s",
         "focalLength": "52mm"
       },
+      "aspectRatio": 0.6666256157635468,
       "variants": {
         "medium": {
-          "url": "/processed/architecture/medium/Sanctuary of Truth.webp",
+          "url": "https://images.mossly.org/photos/f338beb37a28df5e7c1e5e1a06656ec2/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/f338beb37a28df5e7c1e5e1a06656ec2/large.webp",
+          "width": 1706,
+          "height": 2560
         },
         "original": {
-          "url": "/images/architecture/Sanctuary of Truth.jpg",
+          "url": "https://images.mossly.org/photos/f338beb37a28df5e7c1e5e1a06656ec2/original.jpg",
           "width": 5413,
-          "height": 8120,
-          "format": "jpg"
+          "height": 8120
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQI/8QAHhAAAgEDBQAAAAAAAAAAAAAAAQIAAwQFBhETImH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGREAAwADAAAAAAAAAAAAAAAAAAECEkFR/9oADAMBAAIRAxEAPwCzD66xGTvru150prRPR2OwYRM0KxVCVJB8MQONaYl3PD//2Q==",
-      "aspectRatio": 0.6666256157635468
+      }
     },
     {
       "id": "a05b5b82ede7126094a9e9d44c61e962",
@@ -97,22 +103,24 @@
         "shutterSpeed": "1/4s",
         "focalLength": "4mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/architecture/medium/Takapau.webp",
+          "url": "https://images.mossly.org/photos/a05b5b82ede7126094a9e9d44c61e962/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/a05b5b82ede7126094a9e9d44c61e962/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/architecture/Takapau.jpg",
+          "url": "https://images.mossly.org/photos/a05b5b82ede7126094a9e9d44c61e962/original.jpg",
           "width": 3549,
-          "height": 3549,
-          "format": "jpg"
+          "height": 3549
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQcI/8QAJRAAAQMDAwMFAAAAAAAAAAAAAQIDBAAFBgcRIRIiMTNBQlFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAQEBAQAAAAAAAAAAAAAAAAEAEVH/2gAMAwEAAhEDEQA/AHsYtyWMWhR7Xb2zbnEd589X6anErDsTMp4reaSsrO6eocHfxTWlsh86WSyXnCUoOxKjxx7VnqZIeMx8l5z1FfI/dGbMpy//2Q==",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "21c1f250817359e25b78315fe9987ede",
@@ -128,22 +136,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "4mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/architecture/medium/Protoplasm and MLC Building.webp",
+          "url": "https://images.mossly.org/photos/21c1f250817359e25b78315fe9987ede/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/21c1f250817359e25b78315fe9987ede/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/architecture/Protoplasm and MLC Building.jpg",
+          "url": "https://images.mossly.org/photos/21c1f250817359e25b78315fe9987ede/original.jpg",
           "width": 3562,
-          "height": 3562,
-          "format": "jpg"
+          "height": 3562
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgYH/8QAIxAAAQIFAwUAAAAAAAAAAAAAAQIDAAQGESEFEkETFiIxQv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oADAMBAAIRAxEAPwAUppdM9htSkw2yS4k3JOYxacp/SUzb4Q6NoWoDPF4Ui86KYYs4vF/oxFOuudVfmv2eYKtWBf/Z",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "f9a146b236b985ae4e45154d3451ec32",
@@ -159,22 +169,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "90mm"
       },
+      "aspectRatio": 0.6666666666666666,
       "variants": {
         "medium": {
-          "url": "/processed/architecture/medium/Turnbull House.webp",
+          "url": "https://images.mossly.org/photos/f9a146b236b985ae4e45154d3451ec32/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/f9a146b236b985ae4e45154d3451ec32/large.webp",
+          "width": 1707,
+          "height": 2560
         },
         "original": {
-          "url": "/images/architecture/Turnbull House.jpg",
+          "url": "https://images.mossly.org/photos/f9a146b236b985ae4e45154d3451ec32/original.jpg",
           "width": 4150,
-          "height": 6225,
-          "format": "jpg"
+          "height": 6225
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIBAAAgEEAQUAAAAAAAAAAAAAAQIAAwQFEgYRFCFBUf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEXx2Kbh1K5os3elwHJ9RJndhaIoY6/OviIF//2Q==",
-      "aspectRatio": 0.6666666666666666
+      }
     },
     {
       "id": "c0cef9654bbf185362e51304567ded0e",
@@ -190,22 +202,24 @@
         "shutterSpeed": "1/600s",
         "focalLength": "40.1mm"
       },
+      "aspectRatio": 0.6666666666666666,
       "variants": {
         "medium": {
-          "url": "/processed/architecture/medium/MLC Building.webp",
+          "url": "https://images.mossly.org/photos/c0cef9654bbf185362e51304567ded0e/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/c0cef9654bbf185362e51304567ded0e/large.webp",
+          "width": 1707,
+          "height": 2560
         },
         "original": {
-          "url": "/images/architecture/MLC Building.jpg",
+          "url": "https://images.mossly.org/photos/c0cef9654bbf185362e51304567ded0e/original.jpg",
           "width": 3990,
-          "height": 5985,
-          "format": "jpg"
+          "height": 5985
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAHRAAAgIBBQAAAAAAAAAAAAAAAQIAAwQFBhExQf/EABQBAQAAAAAAAAAAAAAAAAAAAAX/xAAYEQACAwAAAAAAAAAAAAAAAAABAgADBf/aAAwDAQACEQMRAD8AtVx6rFAdWTrkGJltqszafjFmJJX0xDm07kYgRJcul1BM/9k=",
-      "aspectRatio": 0.6666666666666666
+      }
     },
     {
       "id": "5f4c966301310682bf1343051b5fcad8",
@@ -221,22 +235,24 @@
         "shutterSpeed": "1/400s",
         "focalLength": "85mm"
       },
+      "aspectRatio": 0.6573409851745576,
       "variants": {
         "medium": {
-          "url": "/processed/architecture/medium/Westpac Building.webp",
+          "url": "https://images.mossly.org/photos/5f4c966301310682bf1343051b5fcad8/medium.webp",
           "width": 789,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/5f4c966301310682bf1343051b5fcad8/large.webp",
+          "width": 1683,
+          "height": 2560
         },
         "original": {
-          "url": "/images/architecture/Westpac Building.jpg",
+          "url": "https://images.mossly.org/photos/5f4c966301310682bf1343051b5fcad8/original.jpg",
           "width": 2749,
-          "height": 4182,
-          "format": "jpg"
+          "height": 4182
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMF/8QAGxAAAgEFAAAAAAAAAAAAAAAAAAEEERIhI1H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AvJk7E69BlSm71kAf/9k=",
-      "aspectRatio": 0.6573409851745576
+      }
     }
   ],
   "astro": [
@@ -248,22 +264,24 @@
       "metadata": {
         "dateTaken": "2025-06-23T13:26:22.891Z"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/astro/medium/Carinan Nebula.webp",
+          "url": "https://images.mossly.org/photos/d0749c76e2e23c2acdaa6d7114e696d2/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/d0749c76e2e23c2acdaa6d7114e696d2/large.webp",
+          "width": 2205,
+          "height": 1470
         },
         "original": {
-          "url": "/images/astro/Carinan Nebula.jpg",
+          "url": "https://images.mossly.org/photos/d0749c76e2e23c2acdaa6d7114e696d2/original.jpg",
           "width": 2205,
-          "height": 1470,
-          "format": "jpg"
+          "height": 1470
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAGhAAAgMBAQAAAAAAAAAAAAAAAQIAAwQRIf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oADAMBAAIRAxEAPwDB6LMtmSx9Ssb+cUiRyx6fYiGquhf/2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "ed885a0d215b663cb28c563226d68bdc",
@@ -273,22 +291,24 @@
       "metadata": {
         "dateTaken": "2025-06-23T13:25:47.264Z"
       },
+      "aspectRatio": 0.7998259355961705,
       "variants": {
         "medium": {
-          "url": "/processed/astro/medium/Orion Nebula.webp",
+          "url": "https://images.mossly.org/photos/ed885a0d215b663cb28c563226d68bdc/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/ed885a0d215b663cb28c563226d68bdc/large.webp",
+          "width": 1838,
+          "height": 2298
         },
         "original": {
-          "url": "/images/astro/Orion Nebula.jpg",
+          "url": "https://images.mossly.org/photos/ed885a0d215b663cb28c563226d68bdc/original.jpg",
           "width": 1838,
-          "height": 2298,
-          "format": "jpg"
+          "height": 2298
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHRAAAQQDAQEAAAAAAAAAAAAAAQACAwQFESESJP/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oADAMBAAIRAxEAPwDLq8GMjwLbEjvpdwNRTdlzjDEPR0BwbRFXX//Z",
-      "aspectRatio": 0.7998259355961705
+      }
     },
     {
       "id": "c7c8bedbb1da1d306154682a780cf5ec",
@@ -304,22 +324,24 @@
         "shutterSpeed": "20s",
         "focalLength": "35mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/astro/medium/Milky Way Galactic Centre.webp",
+          "url": "https://images.mossly.org/photos/c7c8bedbb1da1d306154682a780cf5ec/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/c7c8bedbb1da1d306154682a780cf5ec/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/astro/Milky Way Galactic Centre.jpg",
+          "url": "https://images.mossly.org/photos/c7c8bedbb1da1d306154682a780cf5ec/original.jpg",
           "width": 4128,
-          "height": 2752,
-          "format": "jpg"
+          "height": 2752
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHRAAAQQDAQEAAAAAAAAAAAAAAQACAxEEBSESFP/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAMAwEAAhEDEQA/AMT1vyYWG4ztLpCOUpztjH6NR8tET4K1/9k=",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "cb027d8c5f48fcdf4b91a69b9786bc52",
@@ -335,22 +357,24 @@
         "shutterSpeed": "1/60s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/astro/medium/Moon.webp",
+          "url": "https://images.mossly.org/photos/cb027d8c5f48fcdf4b91a69b9786bc52/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/cb027d8c5f48fcdf4b91a69b9786bc52/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/astro/Moon.jpg",
+          "url": "https://images.mossly.org/photos/cb027d8c5f48fcdf4b91a69b9786bc52/original.jpg",
           "width": 3840,
-          "height": 2560,
-          "format": "jpg"
+          "height": 2560
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUI/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAECAwUGERIhQv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AzfW8MtOT5RueWcun5SIu4BB//9k=",
-      "aspectRatio": 1.5
+      }
     }
   ],
   "bird": [
@@ -362,22 +386,24 @@
       "metadata": {
         "dateTaken": "2025-06-23T08:26:28.558Z"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Toutouwai.webp",
+          "url": "https://images.mossly.org/photos/713ea1f9ff56d3dc9d13438e7e202366/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/713ea1f9ff56d3dc9d13438e7e202366/large.webp",
+          "width": 2381,
+          "height": 2381
         },
         "original": {
-          "url": "/images/bird/Toutouwai.jpg",
+          "url": "https://images.mossly.org/photos/713ea1f9ff56d3dc9d13438e7e202366/original.jpg",
           "width": 2381,
-          "height": 2381,
-          "format": "jpg"
+          "height": 2381
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQI/8QAIRAAAgEEAAcAAAAAAAAAAAAAAQIDAAQGEQUHEiEiQXH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABoRAQACAwEAAAAAAAAAAAAAAAEAAgMREiH/2gAMAwEAAhEDEQA/AI7jK7vKeIWbwzPGzMAyKPHVJUeM2xReuPbaG/tF3JFEeSIsqsd+xutDADQ7CprJd9Ispy6J/9k=",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "55076e6ff96854788b68c2cbf293d0c8",
@@ -393,22 +419,24 @@
         "shutterSpeed": "1/1250s",
         "focalLength": "430mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Black Kite with East Asian Bullfrog.webp",
+          "url": "https://images.mossly.org/photos/55076e6ff96854788b68c2cbf293d0c8/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/55076e6ff96854788b68c2cbf293d0c8/large.webp",
+          "width": 2400,
+          "height": 2400
         },
         "original": {
-          "url": "/images/bird/Black Kite with East Asian Bullfrog.jpg",
+          "url": "https://images.mossly.org/photos/55076e6ff96854788b68c2cbf293d0c8/original.jpg",
           "width": 2400,
-          "height": 2400,
-          "format": "jpg"
+          "height": 2400
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQH/8QAHxABAAIBAwUAAAAAAAAAAAAAAQACBAMFERMUITFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAYEQADAQEAAAAAAAAAAAAAAAAAAQIDEf/aAAwDAQACEQMRAD8AxrDxu+QXpH3UYF8C9b2DU5B4GUberieV9xZPvVy+IUz/2Q==",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "284b73586ef9529748ecb4e64f282e27",
@@ -424,22 +452,24 @@
         "shutterSpeed": "1/800s",
         "focalLength": "600mm"
       },
+      "aspectRatio": 0.6660643295988435,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Hill Prinia.webp",
+          "url": "https://images.mossly.org/photos/284b73586ef9529748ecb4e64f282e27/medium.webp",
           "width": 799,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/284b73586ef9529748ecb4e64f282e27/large.webp",
+          "width": 1705,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Hill Prinia.jpg",
+          "url": "https://images.mossly.org/photos/284b73586ef9529748ecb4e64f282e27/original.jpg",
           "width": 1843,
-          "height": 2767,
-          "format": "jpg"
+          "height": 2767
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAQMAAgQRMSH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABkRAAIDAQAAAAAAAAAAAAAAAAACARETYf/aAAwDAQACEQMRAD8A1gMenLaoBmyd+ciVmJShx1E1qSR0iJHm1RTBluH/2Q==",
-      "aspectRatio": 0.6660643295988435
+      }
     },
     {
       "id": "88e48a3ba69f04a23cfb909ea5ea34f3",
@@ -455,22 +485,24 @@
         "shutterSpeed": "1/800s",
         "focalLength": "600mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Little Egret.webp",
+          "url": "https://images.mossly.org/photos/88e48a3ba69f04a23cfb909ea5ea34f3/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/88e48a3ba69f04a23cfb909ea5ea34f3/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Little Egret.jpg",
+          "url": "https://images.mossly.org/photos/88e48a3ba69f04a23cfb909ea5ea34f3/original.jpg",
           "width": 3638,
-          "height": 3638,
-          "format": "jpg"
+          "height": 3638
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAHxAAAgIBBAMAAAAAAAAAAAAAAQIABCMDBhIxMkJx/8QAFAEBAAAAAAAAAAAAAAAAAAAABf/EABgRAAMBAQAAAAAAAAAAAAAAAAERIQAE/9oADAMBAAIRAxEAPwDV7xu1LrKown3ktrVjkco7irdJI0lAgdvI/Yzygou4vpNCm//Z",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "e206844ed7576ed24b94b6a139c12964",
@@ -486,22 +518,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "300mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Tui and Kowhai.webp",
+          "url": "https://images.mossly.org/photos/e206844ed7576ed24b94b6a139c12964/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/e206844ed7576ed24b94b6a139c12964/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Tui and Kowhai.jpg",
+          "url": "https://images.mossly.org/photos/e206844ed7576ed24b94b6a139c12964/original.jpg",
           "width": 4500,
-          "height": 4500,
-          "format": "jpg"
+          "height": 4500
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAHhAAAQQDAAMAAAAAAAAAAAAAAQIDBBEAISIFMZH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABgRAQADAQAAAAAAAAAAAAAAAAEAAgNh/9oADAMBAAIRAxEAPwDX1yZKp7TUJsLZJq79YjEd0gd4b8XpSK1rKBWqz0fuTU3QXsS2Qz//2Q==",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "a919feb686849d544b64ecd81d5a6c84",
@@ -517,22 +551,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.4998749061796348,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Hihi.webp",
+          "url": "https://images.mossly.org/photos/a919feb686849d544b64ecd81d5a6c84/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/a919feb686849d544b64ecd81d5a6c84/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/bird/Hihi.jpg",
+          "url": "https://images.mossly.org/photos/a919feb686849d544b64ecd81d5a6c84/original.jpg",
           "width": 5995,
-          "height": 3997,
-          "format": "jpg"
+          "height": 3997
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAeEAACAgICAwAAAAAAAAAAAAABAgADBAYFIREVMf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECIUH/2gAMAwEAAhEDEQA/AL+s8z6/Apqx6wwPbu30ykd+wkJU0v5XqIkyOoF25WH/2Q==",
-      "aspectRatio": 1.4998749061796348
+      }
     },
     {
       "id": "2ffd69c06dbc9333bee533e030eba48d",
@@ -548,22 +584,24 @@
         "shutterSpeed": "1/250s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.4997486173956762,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Piwakawaka.webp",
+          "url": "https://images.mossly.org/photos/2ffd69c06dbc9333bee533e030eba48d/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/2ffd69c06dbc9333bee533e030eba48d/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/bird/Piwakawaka.jpg",
+          "url": "https://images.mossly.org/photos/2ffd69c06dbc9333bee533e030eba48d/original.jpg",
           "width": 5966,
-          "height": 3978,
-          "format": "jpg"
+          "height": 3978
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAcEAABBAMBAAAAAAAAAAAAAAABAAIDEgQFIUH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACUf/aAAwDAQACEQMRAD8AtSQ7I48vI3CzQD4pO1jLHpRE5WNBy//Z",
-      "aspectRatio": 1.4997486173956762
+      }
     },
     {
       "id": "533834c642be0787cfd68422f893d9ff",
@@ -579,22 +617,24 @@
         "shutterSpeed": "1/250s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 0.6666666666666666,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kereru.webp",
+          "url": "https://images.mossly.org/photos/533834c642be0787cfd68422f893d9ff/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/533834c642be0787cfd68422f893d9ff/large.webp",
+          "width": 1707,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Kereru.jpg",
+          "url": "https://images.mossly.org/photos/533834c642be0787cfd68422f893d9ff/original.jpg",
           "width": 4160,
-          "height": 6240,
-          "format": "jpg"
+          "height": 6240
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAdEAABBAMBAQAAAAAAAAAAAAABAAIEBQMRISJR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQT/xAAYEQEBAAMAAAAAAAAAAAAAAAABAAIRQf/aAAwDAQACEQMRAD8AjhAjCgj562Q1ud59jfQik6/I8Vx09w79RSZDx1Bf/9k=",
-      "aspectRatio": 0.6666666666666666
+      }
     },
     {
       "id": "8df319d893b89a4b69fa6641d7d8e965",
@@ -610,22 +650,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Australian Magpie.webp",
+          "url": "https://images.mossly.org/photos/8df319d893b89a4b69fa6641d7d8e965/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/8df319d893b89a4b69fa6641d7d8e965/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/bird/Australian Magpie.jpg",
+          "url": "https://images.mossly.org/photos/8df319d893b89a4b69fa6641d7d8e965/original.jpg",
           "width": 6240,
-          "height": 4160,
-          "format": "jpg"
+          "height": 4160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAHhAAAQQCAwEAAAAAAAAAAAAAAgABAwQRIQUSFDH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAECBBH/2gAMAwEAAhEDEQA/ANCl5ixXvv6Y+0J6DBfFZU6Rk5OJZLaIiqzPAp//2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "cf73af9d6461677a7b6c2b2700b860e1",
@@ -641,22 +683,24 @@
         "shutterSpeed": "1/200s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kakariki.webp",
+          "url": "https://images.mossly.org/photos/cf73af9d6461677a7b6c2b2700b860e1/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/cf73af9d6461677a7b6c2b2700b860e1/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Kakariki.jpg",
+          "url": "https://images.mossly.org/photos/cf73af9d6461677a7b6c2b2700b860e1/original.jpg",
           "width": 3388,
-          "height": 3388,
-          "format": "jpg"
+          "height": 3388
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFB//EACEQAAIBAwMFAAAAAAAAAAAAAAECEQADBAUhIhIVQpHw/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAXEQEBAQEAAAAAAAAAAAAAAAACAAER/9oADAMBAAIRAxEAPwDK7WmW7NpTnkI3iVMyaO8ZCcBkPC7fbVJwrjuF63ZoO0maZKrJ4j1U5GQrqv/Z",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "709d9c8aac0e9a317daa9816ed851795",
@@ -672,22 +716,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Tauhou.webp",
+          "url": "https://images.mossly.org/photos/709d9c8aac0e9a317daa9816ed851795/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/709d9c8aac0e9a317daa9816ed851795/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Tauhou.jpg",
+          "url": "https://images.mossly.org/photos/709d9c8aac0e9a317daa9816ed851795/original.jpg",
           "width": 3536,
-          "height": 3536,
-          "format": "jpg"
+          "height": 3536
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAABf/EACYQAAIBAgMIAwAAAAAAAAAAAAECAwAEBRFBEhMUFSEiIzJCUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBf/EABgRAAMBAQAAAAAAAAAAAAAAAAABAgMR/9oADAMBAAIRAxEAPwBTDsN4uzW4v81nLeCM/AfVJ8ntx0a5hDajao7CmZoISzEnLU0LO7b+TuPsdf2pF70kgK0cpcP/2Q==",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "c484fd318b70c5c773f44d6a527e484e",
@@ -703,22 +749,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "560mm"
       },
+      "aspectRatio": 0.8,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Tara.webp",
+          "url": "https://images.mossly.org/photos/c484fd318b70c5c773f44d6a527e484e/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/c484fd318b70c5c773f44d6a527e484e/large.webp",
+          "width": 2048,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Tara.jpg",
+          "url": "https://images.mossly.org/photos/c484fd318b70c5c773f44d6a527e484e/original.jpg",
           "width": 3200,
-          "height": 4000,
-          "format": "jpg"
+          "height": 4000
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAdEAAABgMBAAAAAAAAAAAAAAAAAQIDBBEFEhMx/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABgRAAIDAAAAAAAAAAAAAAAAAAABAxES/9oADAMBAAIRAxEAPwBEk1jUykuoKUR6m34Apx2WqdPmi+d3qQAlHpWO5Muj/9k=",
-      "aspectRatio": 0.8
+      }
     },
     {
       "id": "d98b86503ce7ec12b1657bed76b3ef70",
@@ -734,22 +782,24 @@
         "shutterSpeed": "1/480s",
         "focalLength": "280mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Weka.webp",
+          "url": "https://images.mossly.org/photos/d98b86503ce7ec12b1657bed76b3ef70/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/d98b86503ce7ec12b1657bed76b3ef70/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Weka.jpg",
+          "url": "https://images.mossly.org/photos/d98b86503ce7ec12b1657bed76b3ef70/original.jpg",
           "width": 3735,
-          "height": 3735,
-          "format": "jpg"
+          "height": 3735
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBv/EAB4QAQABBAIDAAAAAAAAAAAAAAECAAMEEQUhMUFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgX/xAAZEQACAwEAAAAAAAAAAAAAAAACAwABETH/2gAMAwEAAhEDEQA/AJTLEW4WJTlA++qI5/FkQcZU8uzukRAscjoOt6rP7qQPNgWsWBt1P//Z",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "3895a4034348cef776a407f4a12d664c",
@@ -765,22 +815,24 @@
         "shutterSpeed": "1/2000s",
         "focalLength": "560mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kuaka in Flight.webp",
+          "url": "https://images.mossly.org/photos/3895a4034348cef776a407f4a12d664c/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/3895a4034348cef776a407f4a12d664c/large.webp",
+          "width": 2340,
+          "height": 2340
         },
         "original": {
-          "url": "/images/bird/Kuaka in Flight.jpg",
+          "url": "https://images.mossly.org/photos/3895a4034348cef776a407f4a12d664c/original.jpg",
           "width": 2340,
-          "height": 2340,
-          "format": "jpg"
+          "height": 2340
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBP/EAB4QAAIBBAMBAAAAAAAAAAAAAAECABITMVEDERQh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEQMRAD8A32VuFSgpA+ND5eLSxATTk4k+zuNRoX//2Q==",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "a7ddf1b8fb657bfb66d82a2e5459371c",
@@ -796,22 +848,24 @@
         "shutterSpeed": "1/2000s",
         "focalLength": "560mm"
       },
+      "aspectRatio": 1.4998676898650436,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kuaka.webp",
+          "url": "https://images.mossly.org/photos/a7ddf1b8fb657bfb66d82a2e5459371c/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/a7ddf1b8fb657bfb66d82a2e5459371c/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/bird/Kuaka.jpg",
+          "url": "https://images.mossly.org/photos/a7ddf1b8fb657bfb66d82a2e5459371c/original.jpg",
           "width": 5668,
-          "height": 3779,
-          "format": "jpg"
+          "height": 3779
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAECAxIhI2H/xAAUAQEAAAAAAAAAAAAAAAAAAAAF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAEDEUFhkf/aAAwDAQACEQMRAD8A3qrrJUyUksmtEnbwAMUmlwQcd5Z//9k=",
-      "aspectRatio": 1.4998676898650436
+      }
     },
     {
       "id": "9c16a999cd6d9498cc375c14d4a9a6bc",
@@ -827,22 +881,24 @@
         "shutterSpeed": "1/2000s",
         "focalLength": "301.1mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kaka in Flight.webp",
+          "url": "https://images.mossly.org/photos/9c16a999cd6d9498cc375c14d4a9a6bc/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/9c16a999cd6d9498cc375c14d4a9a6bc/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Kaka in Flight.jpg",
+          "url": "https://images.mossly.org/photos/9c16a999cd6d9498cc375c14d4a9a6bc/original.jpg",
           "width": 4256,
-          "height": 4256,
-          "format": "jpg"
+          "height": 4256
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAgX/xAAeEAABBAEFAAAAAAAAAAAAAAADAAECBAURIkFDcf/EABQBAQAAAAAAAAAAAAAAAAAAAAb/xAAZEQEAAgMAAAAAAAAAAAAAAAABAAIDEUH/2gAMAwEAAhEDEQA/AKF49seZqjAGUwSbe/DKtoj3N4ml2KqNnfYXy2Eqa5P/2Q==",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "301b3a4ff148f82b0de4e7d1579f2346",
@@ -858,22 +914,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "90mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kea.webp",
+          "url": "https://images.mossly.org/photos/301b3a4ff148f82b0de4e7d1579f2346/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/301b3a4ff148f82b0de4e7d1579f2346/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Kea.jpg",
+          "url": "https://images.mossly.org/photos/301b3a4ff148f82b0de4e7d1579f2346/original.jpg",
           "width": 4150,
-          "height": 4150,
-          "format": "jpg"
+          "height": 4150
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAB//EACIQAAECBQQDAAAAAAAAAAAAAAECAwAEBQYRByExQRQyYf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACEiH/2gAMAwEAAhEDEQA/AGC5L6nKJeTFMdbbXLPEAY5EIyHAtCVDgjMBGoQB1HBIBIxjPW8MEopXis7n0T38iNbukjThP//Z",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "c913d7258ddc4a08626611eaf6b41101",
@@ -889,22 +947,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Torea pango.webp",
+          "url": "https://images.mossly.org/photos/c913d7258ddc4a08626611eaf6b41101/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/c913d7258ddc4a08626611eaf6b41101/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/bird/Torea pango.jpg",
+          "url": "https://images.mossly.org/photos/c913d7258ddc4a08626611eaf6b41101/original.jpg",
           "width": 6240,
-          "height": 4160,
-          "format": "jpg"
+          "height": 4160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAQQBBQAAAAAAAAAAAAAAAwABAgQFFSExU5H/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACEv/aAAwDAQACEQMRAD8A0BbGcPdEYVgUKjbyG3LqjqN7qH6iJDTHyX//2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "0552cbeb16edb960b13b9c21675d4197",
@@ -920,22 +980,24 @@
         "shutterSpeed": "1/250s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Takahe.webp",
+          "url": "https://images.mossly.org/photos/0552cbeb16edb960b13b9c21675d4197/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/0552cbeb16edb960b13b9c21675d4197/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/bird/Takahe.jpg",
+          "url": "https://images.mossly.org/photos/0552cbeb16edb960b13b9c21675d4197/original.jpg",
           "width": 5286,
-          "height": 3524,
-          "format": "jpg"
+          "height": 3524
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAfEAABAwMFAAAAAAAAAAAAAAABAAIDBRESBBMxMnH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABkRAQACAwAAAAAAAAAAAAAAAAIAAQMRIf/aAAwDAQACEQMRAD8Aj9cp9MZNI+aDb02JsGcgqdyMAe7Drc28RE5KorkkrZn/2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "51bd88121e55a85ed99e203e55ad1ed3",
@@ -951,22 +1013,24 @@
         "shutterSpeed": "1/3200s",
         "focalLength": "90mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Tui.webp",
+          "url": "https://images.mossly.org/photos/51bd88121e55a85ed99e203e55ad1ed3/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/51bd88121e55a85ed99e203e55ad1ed3/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/bird/Tui.jpg",
+          "url": "https://images.mossly.org/photos/51bd88121e55a85ed99e203e55ad1ed3/original.jpg",
           "width": 2848,
-          "height": 2848,
-          "format": "jpg"
+          "height": 2848
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQG/8QAJBAAAgECBQQDAAAAAAAAAAAAAQIDAAQFBhEUIRIXIkExQrH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACEv/aAAwDAQACEQMRAD8AszXimMwXO1tJ4WvGIVySBqtHDHXQBZIrAuvDeQ+fdDZlkfuUR1tpofdZe7J3c3P3b9oOACDW0v/Z",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "9df3cc43c788d638f2e0acbe85cb7575",
@@ -982,22 +1046,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "218.7mm"
       },
+      "aspectRatio": 1.7779643936849177,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kokako.webp",
+          "url": "https://images.mossly.org/photos/9df3cc43c788d638f2e0acbe85cb7575/medium.webp",
           "width": 1200,
-          "height": 675,
-          "format": "webp"
+          "height": 675
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/9df3cc43c788d638f2e0acbe85cb7575/large.webp",
+          "width": 2560,
+          "height": 1440
         },
         "original": {
-          "url": "/images/bird/Kokako.jpg",
+          "url": "https://images.mossly.org/photos/9df3cc43c788d638f2e0acbe85cb7575/original.jpg",
           "width": 5293,
-          "height": 2977,
-          "format": "jpg"
+          "height": 2977
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAcEAACAgIDAAAAAAAAAAAAAAABAgADBBEFMZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAGREAAgMBAAAAAAAAAAAAAAAAAAECAxEh/9oADAMBAAIRAxEAPwCxbk5K8vWq3sKGGyglsZa66f0REGmqDiuBbh//2Q==",
-      "aspectRatio": 1.7779643936849177
+      }
     },
     {
       "id": "a2882d4644421a2ea3e40a688cdb4dc0",
@@ -1013,22 +1079,24 @@
         "shutterSpeed": "1/4400s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.5001986491855384,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kotuku.webp",
+          "url": "https://images.mossly.org/photos/a2882d4644421a2ea3e40a688cdb4dc0/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/a2882d4644421a2ea3e40a688cdb4dc0/large.webp",
+          "width": 2560,
+          "height": 1706
         },
         "original": {
-          "url": "/images/bird/Kotuku.jpg",
+          "url": "https://images.mossly.org/photos/a2882d4644421a2ea3e40a688cdb4dc0/original.jpg",
           "width": 3776,
-          "height": 2517,
-          "format": "jpg"
+          "height": 2517
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAIhAAAAQEBwAAAAAAAAAAAAAAAAECAwQFBzIGERIiMZHh/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwCCPrqetSpbDK3Jtc4IxnzrtiPOxjrwACha/9k=",
-      "aspectRatio": 1.5001986491855384
+      }
     },
     {
       "id": "be5f950bafdf9d685e66e445074cd716",
@@ -1044,22 +1112,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 1.25,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kaka.webp",
+          "url": "https://images.mossly.org/photos/be5f950bafdf9d685e66e445074cd716/medium.webp",
           "width": 1200,
-          "height": 960,
-          "format": "webp"
+          "height": 960
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/be5f950bafdf9d685e66e445074cd716/large.webp",
+          "width": 2560,
+          "height": 2048
         },
         "original": {
-          "url": "/images/bird/Kaka.jpg",
+          "url": "https://images.mossly.org/photos/be5f950bafdf9d685e66e445074cd716/original.jpg",
           "width": 4080,
-          "height": 3264,
-          "format": "jpg"
+          "height": 3264
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMH/8QAHxAAAgIBBAMAAAAAAAAAAAAAAgMAAQQFBhFBEyGB/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABgRAQEAAwAAAAAAAAAAAAAAAAEAAiEx/9oADAMBAAIRAxEAPwCuo44q0scEci1l4bpJh1fHcyFu4dzoaaqzG8LKxr56iIUA4ScNl//Z",
-      "aspectRatio": 1.25
+      }
     },
     {
       "id": "5bd6730d1540b2fdee25a4c7e814e1b6",
@@ -1075,22 +1145,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 2.3493761140819966,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/Kaka Duo.webp",
+          "url": "https://images.mossly.org/photos/5bd6730d1540b2fdee25a4c7e814e1b6/medium.webp",
           "width": 1200,
-          "height": 510,
-          "format": "webp"
+          "height": 510
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/5bd6730d1540b2fdee25a4c7e814e1b6/large.webp",
+          "width": 2560,
+          "height": 1090
         },
         "original": {
-          "url": "/images/bird/Kaka Duo.jpg",
+          "url": "https://images.mossly.org/photos/5bd6730d1540b2fdee25a4c7e814e1b6/original.jpg",
           "width": 3954,
-          "height": 1683,
-          "format": "jpg"
+          "height": 1683
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAEAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMG/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIABAMFERIh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwX/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQIS/9oADAMBAAIRAxEAPwCFXCqbJMSlgic4PRmnOnoMSTWQk/TESfQdpZR//9k=",
-      "aspectRatio": 2.3493761140819966
+      }
     },
     {
       "id": "6a74793da508047c182ef09d7751afb7",
@@ -1106,22 +1178,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 1.3334583645911477,
       "variants": {
         "medium": {
-          "url": "/processed/bird/medium/African Grey.webp",
+          "url": "https://images.mossly.org/photos/6a74793da508047c182ef09d7751afb7/medium.webp",
           "width": 1200,
-          "height": 900,
-          "format": "webp"
+          "height": 900
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/6a74793da508047c182ef09d7751afb7/large.webp",
+          "width": 2560,
+          "height": 1920
         },
         "original": {
-          "url": "/images/bird/African Grey.jpg",
+          "url": "https://images.mossly.org/photos/6a74793da508047c182ef09d7751afb7/original.jpg",
           "width": 7110,
-          "height": 5332,
-          "format": "jpg"
+          "height": 5332
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHhAAAQQCAwEAAAAAAAAAAAAAAQACAwQGEQUUMXH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwDGcKp0zjlvv8eyQvG2TO9HxRM1eITPDSdBx0iK0f/Z",
-      "aspectRatio": 1.3334583645911477
+      }
     }
   ],
   "cat": [
@@ -1139,22 +1213,24 @@
         "shutterSpeed": "1/1800s",
         "focalLength": "90mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/cat/medium/Siberian.webp",
+          "url": "https://images.mossly.org/photos/3dc4bb9e36ae46faa19792c1613ecc3f/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/3dc4bb9e36ae46faa19792c1613ecc3f/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/cat/Siberian.jpg",
+          "url": "https://images.mossly.org/photos/3dc4bb9e36ae46faa19792c1613ecc3f/original.jpg",
           "width": 6225,
-          "height": 4150,
-          "format": "jpg"
+          "height": 4150
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAQMFAQEAAAAAAAAAAAAAAgABBQMHERIhBDH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAAv/aAAwDAQACEQMRAD8AqyEaFvIIvdA1THU9jYvhNxZErqFUJzKi2SfL8REF5YZQSpv/2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "6d804977c2a3b759ed5587500400a8a9",
@@ -1170,22 +1246,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "400mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/cat/medium/Oscar.webp",
+          "url": "https://images.mossly.org/photos/6d804977c2a3b759ed5587500400a8a9/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/6d804977c2a3b759ed5587500400a8a9/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/cat/Oscar.jpg",
+          "url": "https://images.mossly.org/photos/6d804977c2a3b759ed5587500400a8a9/original.jpg",
           "width": 6240,
-          "height": 4160,
-          "format": "jpg"
+          "height": 4160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgIBBQEAAAAAAAAAAAAAAQIABAMFBhESIVH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABgRAAMBAQAAAAAAAAAAAAAAAAABAhIx/9oADAMBAAIRAxEAPwDGbaqYm0OzcuDsXXwD5Ji1q7AMMY4PsRILrHETlH//2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "3aeaedae0f5c098e632230b6ea9da061",
@@ -1201,22 +1279,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "158.8mm"
       },
+      "aspectRatio": 1.4998758380928732,
       "variants": {
         "medium": {
-          "url": "/processed/cat/medium/Ollie.webp",
+          "url": "https://images.mossly.org/photos/3aeaedae0f5c098e632230b6ea9da061/medium.webp",
           "width": 1200,
-          "height": 799,
-          "format": "webp"
+          "height": 799
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/3aeaedae0f5c098e632230b6ea9da061/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/cat/Ollie.jpg",
+          "url": "https://images.mossly.org/photos/3aeaedae0f5c098e632230b6ea9da061/original.jpg",
           "width": 6040,
-          "height": 4027,
-          "format": "jpg"
+          "height": 4027
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHxAAAQQBBQEAAAAAAAAAAAAAAQACAwQFBhEhIjFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQT/xAAYEQEBAQEBAAAAAAAAAAAAAAABAgADEf/aAAwDAQACEQMRAD8AlYOlUsaanzeQhDjGOoHwrHuuQvcXgEB3IG3iIousEgGCnzf/2Q==",
-      "aspectRatio": 1.4998758380928732
+      }
     }
   ],
   "concert": [
@@ -1228,22 +1308,24 @@
       "metadata": {
         "dateTaken": "2025-06-23T08:26:28.352Z"
       },
+      "aspectRatio": 1.7777777777777777,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/Tiki Taane.webp",
+          "url": "https://images.mossly.org/photos/2bed7b87375c560bd3447b5f3de6557e/medium.webp",
           "width": 1200,
-          "height": 675,
-          "format": "webp"
+          "height": 675
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/2bed7b87375c560bd3447b5f3de6557e/large.webp",
+          "width": 2560,
+          "height": 1440
         },
         "original": {
-          "url": "/images/concert/Tiki Taane.jpg",
+          "url": "https://images.mossly.org/photos/2bed7b87375c560bd3447b5f3de6557e/original.jpg",
           "width": 3840,
-          "height": 2160,
-          "format": "jpg"
+          "height": 2160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHxAAAQMDBQAAAAAAAAAAAAAAAwABAhESIQQFExRR/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABkRAAIDAQAAAAAAAAAAAAAAAAIDAAEREv/aAAwDAQACEQMRAD8AxHaogKPUco7p21i/ij7xWxV8YRE7BrkYq2mG83k//9k=",
-      "aspectRatio": 1.7777777777777777
+      }
     },
     {
       "id": "d28402ce2d5a0ec81221b953dd315d51",
@@ -1259,22 +1341,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "78mm"
       },
+      "aspectRatio": 0.799866577718479,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/Aarradhna.webp",
+          "url": "https://images.mossly.org/photos/d28402ce2d5a0ec81221b953dd315d51/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/d28402ce2d5a0ec81221b953dd315d51/large.webp",
+          "width": 2048,
+          "height": 2560
         },
         "original": {
-          "url": "/images/concert/Aarradhna.jpg",
+          "url": "https://images.mossly.org/photos/d28402ce2d5a0ec81221b953dd315d51/original.jpg",
           "width": 2398,
-          "height": 2998,
-          "format": "jpg"
+          "height": 2998
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAIBAAAQMDBQEAAAAAAAAAAAAAAQACBAMFBhESMkFRcf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAcEQABBAMBAAAAAAAAAAAAAAADAAEEBQIRURL/2gAMAwEAAhEDEQA/AM3b8mkRIbDMfqKnEeIpeWta200C1oB29D6iTDszHH7y66VMqo4iaZuL/9k=",
-      "aspectRatio": 0.799866577718479
+      }
     },
     {
       "id": "7f4c70d9185ce3bd0152e9d6a62ee194",
@@ -1290,22 +1374,24 @@
         "shutterSpeed": "1/640s",
         "focalLength": "150mm"
       },
+      "aspectRatio": 0.8,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/Tristan Deck.webp",
+          "url": "https://images.mossly.org/photos/7f4c70d9185ce3bd0152e9d6a62ee194/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/7f4c70d9185ce3bd0152e9d6a62ee194/large.webp",
+          "width": 2048,
+          "height": 2560
         },
         "original": {
-          "url": "/images/concert/Tristan Deck.jpg",
+          "url": "https://images.mossly.org/photos/7f4c70d9185ce3bd0152e9d6a62ee194/original.jpg",
           "width": 2552,
-          "height": 3190,
-          "format": "jpg"
+          "height": 3190
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAHRAAAQQDAQEAAAAAAAAAAAAAAgABAwQGERIhMf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAQIRAP/aAAwDAQACEQMRAD8Akgvk9w57sQNVnbnqP5tFj8fkM8ODsyLUnm32irpHWgTFKDf/2Q==",
-      "aspectRatio": 0.8
+      }
     },
     {
       "id": "9ffd237d43d05a59f92e049b337ea8ab",
@@ -1321,22 +1407,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "150mm"
       },
+      "aspectRatio": 0.8,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/Benjamin Sinclair .webp",
+          "url": "https://images.mossly.org/photos/9ffd237d43d05a59f92e049b337ea8ab/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/9ffd237d43d05a59f92e049b337ea8ab/large.webp",
+          "width": 2048,
+          "height": 2560
         },
         "original": {
-          "url": "/images/concert/Benjamin Sinclair .jpg",
+          "url": "https://images.mossly.org/photos/9ffd237d43d05a59f92e049b337ea8ab/original.jpg",
           "width": 3404,
-          "height": 4255,
-          "format": "jpg"
+          "height": 4255
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgEEAwEAAAAAAAAAAAAAAQIDAAQFEQYVIWH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABsRAAIBBQAAAAAAAAAAAAAAAAABAgMREiIx/9oADAMBAAIRAxEAPwCLgMBb4PqLuKRXkLacA72flKxvFp5nawDyyMA/gLE6pSpw16VJ5XP/2Q==",
-      "aspectRatio": 0.8
+      }
     },
     {
       "id": "3210f9eee20ac1565ea5c1b6fa8e3fde",
@@ -1352,22 +1440,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "150mm"
       },
+      "aspectRatio": 0.8000745990302126,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/Jonathan Pearce .webp",
+          "url": "https://images.mossly.org/photos/3210f9eee20ac1565ea5c1b6fa8e3fde/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/3210f9eee20ac1565ea5c1b6fa8e3fde/large.webp",
+          "width": 2048,
+          "height": 2560
         },
         "original": {
-          "url": "/images/concert/Jonathan Pearce .jpg",
+          "url": "https://images.mossly.org/photos/3210f9eee20ac1565ea5c1b6fa8e3fde/original.jpg",
           "width": 4290,
-          "height": 5362,
-          "format": "jpg"
+          "height": 5362
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAfEAABAwMFAAAAAAAAAAAAAAABAAQFAwYRAhIhQqH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGREAAgMBAAAAAAAAAAAAAAAAAyEAAQIR/9oADAMBAAIRAxEAPwCLva3ohy1eVYZoWlNvUxp3dkVPNgGGkcgHjPiIgyJVGaHXXP/Z",
-      "aspectRatio": 0.8000745990302126
+      }
     },
     {
       "id": "c95504e97f75609633692daa30e173fa",
@@ -1383,22 +1473,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "150mm"
       },
+      "aspectRatio": 0.8,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/Elizabeth Stokes.webp",
+          "url": "https://images.mossly.org/photos/c95504e97f75609633692daa30e173fa/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/c95504e97f75609633692daa30e173fa/large.webp",
+          "width": 2048,
+          "height": 2560
         },
         "original": {
-          "url": "/images/concert/Elizabeth Stokes.jpg",
+          "url": "https://images.mossly.org/photos/c95504e97f75609633692daa30e173fa/original.jpg",
           "width": 3796,
-          "height": 4745,
-          "format": "jpg"
+          "height": 4745
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIBAAAQMDBQEAAAAAAAAAAAAAAQACAwQFEQcSEzFxgf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAGhEBAAEFAAAAAAAAAAAAAAAAAQACBAUUIf/aAAwDAQACEQMRAD8AzCW3VZtMVXNT8cJdgynrCKmcS7SVm4k+/ER9WhJcctcC9n//2Q==",
-      "aspectRatio": 0.8
+      }
     },
     {
       "id": "71c1d9579a6ed8426b4caaf0ebfadb35",
@@ -1414,22 +1506,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "90mm"
       },
+      "aspectRatio": 1.5002541942043721,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/T30N0451.webp",
+          "url": "https://images.mossly.org/photos/71c1d9579a6ed8426b4caaf0ebfadb35/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/71c1d9579a6ed8426b4caaf0ebfadb35/large.webp",
+          "width": 2560,
+          "height": 1706
         },
         "original": {
-          "url": "/images/concert/T30N0451.jpg",
+          "url": "https://images.mossly.org/photos/71c1d9579a6ed8426b4caaf0ebfadb35/original.jpg",
           "width": 5902,
-          "height": 3934,
-          "format": "jpg"
+          "height": 3934
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHhAAAQMEAwAAAAAAAAAAAAAAAQACBAMGERIFFCH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQIAA//aAAwDAQACEQMRAD8AlLavqHGtuTDoQW6akZeMlZ3V5aI6q89FvpJREOeci592ob//2Q==",
-      "aspectRatio": 1.5002541942043721
+      }
     },
     {
       "id": "85e2091d9f766f6495cf517f40ee5912",
@@ -1445,22 +1539,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 0.6666666666666666,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/DSCF5516.webp",
+          "url": "https://images.mossly.org/photos/85e2091d9f766f6495cf517f40ee5912/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/85e2091d9f766f6495cf517f40ee5912/large.webp",
+          "width": 1707,
+          "height": 2560
         },
         "original": {
-          "url": "/images/concert/DSCF5516.jpg",
+          "url": "https://images.mossly.org/photos/85e2091d9f766f6495cf517f40ee5912/original.jpg",
           "width": 3264,
-          "height": 4896,
-          "format": "jpg"
+          "height": 4896
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIhAAAAUCBwEAAAAAAAAAAAAAAAECAwQFBggRExQjMTJS/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAYEQEAAwEAAAAAAAAAAAAAAAABAAIhE//aAAwDAQACEQMRAD8Azyo2OuyITa61F13ZGRoIj6IBV4innNtSuRfn6MBbpauDGqJpP//Z",
-      "aspectRatio": 0.6666666666666666
+      }
     },
     {
       "id": "e189669dd2142d51a927d02cb2fd85f5",
@@ -1476,22 +1572,24 @@
         "shutterSpeed": "1/60s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/DSCF5161.webp",
+          "url": "https://images.mossly.org/photos/e189669dd2142d51a927d02cb2fd85f5/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/e189669dd2142d51a927d02cb2fd85f5/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/concert/DSCF5161.jpg",
+          "url": "https://images.mossly.org/photos/e189669dd2142d51a927d02cb2fd85f5/original.jpg",
           "width": 4896,
-          "height": 3264,
-          "format": "jpg"
+          "height": 3264
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIAAwURUQQx/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABsRAAICAwEAAAAAAAAAAAAAAAECAAMEERJB/9oADAMBAAIRAxEAPwDPc1kn92ZoSxFal13U5+64ZO2GqLEmsbJ7ERObcysCPYmhBZvqf//Z",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "f51f9f3e90a42b1d0b4af1317799a45c",
@@ -1507,22 +1605,24 @@
         "shutterSpeed": "1/200s",
         "focalLength": "65535mm"
       },
+      "aspectRatio": 1.25,
       "variants": {
         "medium": {
-          "url": "/processed/concert/medium/John Paul Moss.webp",
+          "url": "https://images.mossly.org/photos/f51f9f3e90a42b1d0b4af1317799a45c/medium.webp",
           "width": 1200,
-          "height": 960,
-          "format": "webp"
+          "height": 960
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/f51f9f3e90a42b1d0b4af1317799a45c/large.webp",
+          "width": 2560,
+          "height": 2048
         },
         "original": {
-          "url": "/images/concert/John Paul Moss.jpg",
+          "url": "https://images.mossly.org/photos/f51f9f3e90a42b1d0b4af1317799a45c/original.jpg",
           "width": 2700,
-          "height": 2160,
-          "format": "jpg"
+          "height": 2160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHRAAAgIBBQAAAAAAAAAAAAAAAQMAAgQFERIxUf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAZEQADAAMAAAAAAAAAAAAAAAAAAQIDERL/2gAMAwEAAhEDEQA/AMfy8VTNPUsW4toN6j2QihgPQiIMT6W2GKdSqZ//2Q==",
-      "aspectRatio": 1.25
+      }
     }
   ],
   "landscape": [
@@ -1534,22 +1634,24 @@
       "metadata": {
         "dateTaken": "2025-06-23T08:26:28.384Z"
       },
+      "aspectRatio": 3,
       "variants": {
         "medium": {
-          "url": "/processed/landscape/medium/Tararua.webp",
+          "url": "https://images.mossly.org/photos/5fae833ac1c4c9fbe9e4a53f3bbdea5a/medium.webp",
           "width": 1200,
-          "height": 400,
-          "format": "webp"
+          "height": 400
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/5fae833ac1c4c9fbe9e4a53f3bbdea5a/large.webp",
+          "width": 2560,
+          "height": 853
         },
         "original": {
-          "url": "/images/landscape/Tararua.jpg",
+          "url": "https://images.mossly.org/photos/5fae833ac1c4c9fbe9e4a53f3bbdea5a/original.jpg",
           "width": 7200,
-          "height": 2400,
-          "format": "jpg"
+          "height": 2400
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAEFEQMGkST/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABoRAAICAwAAAAAAAAAAAAAAAAACATEDERL/2gAMAwEAAhEDEQA/AM5itmmXVyOfqLi2KXpe/N0As41jmgrM27P/2Q==",
-      "aspectRatio": 3
+      }
     },
     {
       "id": "810da3e5d969f978af298bb0f62fb78c",
@@ -1565,22 +1667,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "35mm"
       },
+      "aspectRatio": 4,
       "variants": {
         "medium": {
-          "url": "/processed/landscape/medium/Pattaya.webp",
+          "url": "https://images.mossly.org/photos/810da3e5d969f978af298bb0f62fb78c/medium.webp",
           "width": 1200,
-          "height": 300,
-          "format": "webp"
+          "height": 300
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/810da3e5d969f978af298bb0f62fb78c/large.webp",
+          "width": 2560,
+          "height": 640
         },
         "original": {
-          "url": "/images/landscape/Pattaya.jpg",
+          "url": "https://images.mossly.org/photos/810da3e5d969f978af298bb0f62fb78c/original.jpg",
           "width": 19360,
-          "height": 4840,
-          "format": "jpg"
+          "height": 4840
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMG/8QAHRAAAQQCAwAAAAAAAAAAAAAAAQACAwUEESRxkf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAZEQADAAMAAAAAAAAAAAAAAAAAAQIREjH/2gAMAwEAAhEDEQA/AMphXdk5zicyUntXN/a7POm9REN3WegSlqj/2Q==",
-      "aspectRatio": 4
+      }
     },
     {
       "id": "8d43c8b17af4c05760415fce7227dfdd",
@@ -1596,22 +1700,24 @@
         "shutterSpeed": "1/400s",
         "focalLength": "47mm"
       },
+      "aspectRatio": 3,
       "variants": {
         "medium": {
-          "url": "/processed/landscape/medium/Da Lat.webp",
+          "url": "https://images.mossly.org/photos/8d43c8b17af4c05760415fce7227dfdd/medium.webp",
           "width": 1200,
-          "height": 400,
-          "format": "webp"
+          "height": 400
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/8d43c8b17af4c05760415fce7227dfdd/large.webp",
+          "width": 2560,
+          "height": 853
         },
         "original": {
-          "url": "/images/landscape/Da Lat.jpg",
+          "url": "https://images.mossly.org/photos/8d43c8b17af4c05760415fce7227dfdd/original.jpg",
           "width": 13278,
-          "height": 4426,
-          "format": "jpg"
+          "height": 4426
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAHxAAAQMDBQAAAAAAAAAAAAAAAAECAwQFBhIWVHGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIRAxEAPwDP0eQ3Z2lXV0yr2XbguvOm9AAWAv/Z",
-      "aspectRatio": 3
+      }
     },
     {
       "id": "7fee8142570c0f0b122e6af9343ab4bd",
@@ -1627,22 +1733,24 @@
         "shutterSpeed": "1/60s",
         "focalLength": "11mm"
       },
+      "aspectRatio": 1.5003086419753087,
       "variants": {
         "medium": {
-          "url": "/processed/landscape/medium/Saigon.webp",
+          "url": "https://images.mossly.org/photos/7fee8142570c0f0b122e6af9343ab4bd/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/7fee8142570c0f0b122e6af9343ab4bd/large.webp",
+          "width": 2560,
+          "height": 1706
         },
         "original": {
-          "url": "/images/landscape/Saigon.jpg",
+          "url": "https://images.mossly.org/photos/7fee8142570c0f0b122e6af9343ab4bd/original.jpg",
           "width": 4861,
-          "height": 3240,
-          "format": "jpg"
+          "height": 3240
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEH/8QAHRAAAgEEAwAAAAAAAAAAAAAAAAIFAQMEESMxM//EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIRAxEAPwDHY6ae1jtxruvRKz9zfkoA60oFwj//2Q==",
-      "aspectRatio": 1.5003086419753087
+      }
     },
     {
       "id": "a83fa2290040d54ce5bd580a1bd201e6",
@@ -1658,22 +1766,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "12mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/landscape/medium/Blackpool Beach.webp",
+          "url": "https://images.mossly.org/photos/a83fa2290040d54ce5bd580a1bd201e6/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/a83fa2290040d54ce5bd580a1bd201e6/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/landscape/Blackpool Beach.jpg",
+          "url": "https://images.mossly.org/photos/a83fa2290040d54ce5bd580a1bd201e6/original.jpg",
           "width": 7728,
-          "height": 5152,
-          "format": "jpg"
+          "height": 5152
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIBAAAgIBAwUAAAAAAAAAAAAAAQIAEQQDBQYHIVLB4f/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAYEQACAwAAAAAAAAAAAAAAAAABAgADEf/aAAwDAQACEQMRAD8Ayri3OsTbkZVxgGrszC/RlNuo2WWJCaNX4/IiBYgLaY1bkLgn/9k=",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "a45c2015883ecd7a21734bb0874be3af",
@@ -1689,22 +1799,24 @@
         "shutterSpeed": "1/5800s",
         "focalLength": "90mm"
       },
+      "aspectRatio": 1.777907656341321,
       "variants": {
         "medium": {
-          "url": "/processed/landscape/medium/Ruapehu.webp",
+          "url": "https://images.mossly.org/photos/a45c2015883ecd7a21734bb0874be3af/medium.webp",
           "width": 1200,
-          "height": 675,
-          "format": "webp"
+          "height": 675
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/a45c2015883ecd7a21734bb0874be3af/large.webp",
+          "width": 2560,
+          "height": 1440
         },
         "original": {
-          "url": "/images/landscape/Ruapehu.jpg",
+          "url": "https://images.mossly.org/photos/a45c2015883ecd7a21734bb0874be3af/original.jpg",
           "width": 6084,
-          "height": 3422,
-          "format": "jpg"
+          "height": 3422
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAIBBQMRFSNCcf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAECITH/2gAMAwEAAhEDEQA/ALK28XI8cTaemtuCz0kAregRdH//2Q==",
-      "aspectRatio": 1.777907656341321
+      }
     },
     {
       "id": "d445a6b8d91387bb4c81f9a660e9e276",
@@ -1720,22 +1832,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "200mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/landscape/medium/Red Rocks.webp",
+          "url": "https://images.mossly.org/photos/d445a6b8d91387bb4c81f9a660e9e276/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/d445a6b8d91387bb4c81f9a660e9e276/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/landscape/Red Rocks.jpg",
+          "url": "https://images.mossly.org/photos/d445a6b8d91387bb4c81f9a660e9e276/original.jpg",
           "width": 4368,
-          "height": 2912,
-          "format": "jpg"
+          "height": 2912
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgEEAwEAAAAAAAAAAAAAAQIABREUIQMEEzH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABkRAAMBAQEAAAAAAAAAAAAAAAECAwARIf/aAAwDAQACEQMRAD8AyPTqfBUmTOUhmNiQPst+NLGsFDbV4iKDMUHTp7RQN4N//9k=",
-      "aspectRatio": 1.5
+      }
     }
   ],
   "nature": [
@@ -1753,22 +1867,24 @@
         "shutterSpeed": "1/750s",
         "focalLength": "280mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/nature/medium/Lagunaria.webp",
+          "url": "https://images.mossly.org/photos/1f80f65de26b3286aebfbba167e0ba6f/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/1f80f65de26b3286aebfbba167e0ba6f/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/nature/Lagunaria.jpg",
+          "url": "https://images.mossly.org/photos/1f80f65de26b3286aebfbba167e0ba6f/original.jpg",
           "width": 6240,
-          "height": 4160,
-          "format": "jpg"
+          "height": 4160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHhAAAgEDBQAAAAAAAAAAAAAAAQIAAwQRBRIhMVH/xAAVAQEBAAAAAAAAAAAAAAAAAAACBf/EABkRAQACAwAAAAAAAAAAAAAAAAEAAhESIf/aAAwDAQACEQMRAD8A0ClahLd6Fu5QnjPkiNpb7jmoCc9xEl5b9YV1ACf/2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "95a7f5c918ac421a570f21f17333f1d8",
@@ -1784,22 +1900,24 @@
         "shutterSpeed": "1/125s",
         "focalLength": "90mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/nature/medium/Cobwebbed Acacia.webp",
+          "url": "https://images.mossly.org/photos/95a7f5c918ac421a570f21f17333f1d8/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/95a7f5c918ac421a570f21f17333f1d8/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/nature/Cobwebbed Acacia.jpg",
+          "url": "https://images.mossly.org/photos/95a7f5c918ac421a570f21f17333f1d8/original.jpg",
           "width": 6225,
-          "height": 4150,
-          "format": "jpg"
+          "height": 4150
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHBABAAIDAAMAAAAAAAAAAAAAAQIDAAQRBiFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMo8To1dqhlKiLKmK9frlMqttkpcAvo5jGB//9k=",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "50197829dc88985f6425b32ae6ccaf18",
@@ -1815,22 +1933,24 @@
         "shutterSpeed": "1/250s",
         "focalLength": "226.6mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/nature/medium/Fern.webp",
+          "url": "https://images.mossly.org/photos/50197829dc88985f6425b32ae6ccaf18/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/50197829dc88985f6425b32ae6ccaf18/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/nature/Fern.jpg",
+          "url": "https://images.mossly.org/photos/50197829dc88985f6425b32ae6ccaf18/original.jpg",
           "width": 6240,
-          "height": 4160,
-          "format": "jpg"
+          "height": 4160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAAwQxBRNh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AMMeQtzgl+UqmxhvyRNiMWJ7NmIk8Hj/2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "fa5a7cabdc3c709b468860167f255e72",
@@ -1840,22 +1960,24 @@
       "metadata": {
         "dateTaken": "2021-11-27T03:32:53.000Z"
       },
+      "aspectRatio": 1.7776456599286563,
       "variants": {
         "medium": {
-          "url": "/processed/nature/medium/Cobwebs.webp",
+          "url": "https://images.mossly.org/photos/fa5a7cabdc3c709b468860167f255e72/medium.webp",
           "width": 1200,
-          "height": 675,
-          "format": "webp"
+          "height": 675
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/fa5a7cabdc3c709b468860167f255e72/large.webp",
+          "width": 2560,
+          "height": 1440
         },
         "original": {
-          "url": "/images/nature/Cobwebs.jpg",
+          "url": "https://images.mossly.org/photos/fa5a7cabdc3c709b468860167f255e72/original.jpg",
           "width": 4485,
-          "height": 2523,
-          "format": "jpg"
+          "height": 2523
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIAAwURIQQx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAXEQADAQAAAAAAAAAAAAAAAAAAARED/9oADAMBAAIRAxEAPwDIe/GulpuW0b3rskYQsAxsXvfkRItm6FD/2Q==",
-      "aspectRatio": 1.7776456599286563
+      }
     },
     {
       "id": "d33a0353e32f9ebddde78b1b6b066053",
@@ -1871,22 +1993,24 @@
         "shutterSpeed": "1/1000s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 1.7777777777777777,
       "variants": {
         "medium": {
-          "url": "/processed/nature/medium/Kelp.webp",
+          "url": "https://images.mossly.org/photos/d33a0353e32f9ebddde78b1b6b066053/medium.webp",
           "width": 1200,
-          "height": 675,
-          "format": "webp"
+          "height": 675
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/d33a0353e32f9ebddde78b1b6b066053/large.webp",
+          "width": 2560,
+          "height": 1440
         },
         "original": {
-          "url": "/images/nature/Kelp.jpg",
+          "url": "https://images.mossly.org/photos/d33a0353e32f9ebddde78b1b6b066053/original.jpg",
           "width": 4896,
-          "height": 2754,
-          "format": "jpg"
+          "height": 2754
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMH/8QAIBAAAQMCBwAAAAAAAAAAAAAAAgABAwUGERIUITFBUf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAGBEAAgMAAAAAAAAAAAAAAAAAAQIAAyH/2gAMAwEAAhEDEQA/AL3BXh0UpSxE/WzrNzrQZywGbn1ES9iGyShQV2f/2Q==",
-      "aspectRatio": 1.7777777777777777
+      }
     }
   ],
   "portrait": [
@@ -1904,22 +2028,24 @@
         "shutterSpeed": "1/4000s",
         "focalLength": "300mm"
       },
+      "aspectRatio": 0.6670332355816226,
       "variants": {
         "medium": {
-          "url": "/processed/portrait/medium/Chinami.webp",
+          "url": "https://images.mossly.org/photos/12a9637364aee84dcd87cac448633222/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/12a9637364aee84dcd87cac448633222/large.webp",
+          "width": 1707,
+          "height": 2560
         },
         "original": {
-          "url": "/images/portrait/Chinami.jpg",
+          "url": "https://images.mossly.org/photos/12a9637364aee84dcd87cac448633222/original.jpg",
           "width": 5459,
-          "height": 8184,
-          "format": "jpg"
+          "height": 8184
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHxAAAQMDBQAAAAAAAAAAAAAAAQACBAMFIQYREiNB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQIDIjH/2gAMAwEAAhEDEQA/AJMaVqt4FeC91SU8do3yEW6shLbtX4kjHiKau/PBSimz/9k=",
-      "aspectRatio": 0.6670332355816226
+      }
     },
     {
       "id": "3ed55ab0579ce2343256ec0030d4ffdd",
@@ -1935,22 +2061,24 @@
         "shutterSpeed": "1/2000s",
         "focalLength": "300mm"
       },
+      "aspectRatio": 0.7501875468867217,
       "variants": {
         "medium": {
-          "url": "/processed/portrait/medium/Singer.webp",
+          "url": "https://images.mossly.org/photos/3ed55ab0579ce2343256ec0030d4ffdd/medium.webp",
           "width": 900,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/3ed55ab0579ce2343256ec0030d4ffdd/large.webp",
+          "width": 1920,
+          "height": 2560
         },
         "original": {
-          "url": "/images/portrait/Singer.jpeg",
+          "url": "https://images.mossly.org/photos/3ed55ab0579ce2343256ec0030d4ffdd/original.jpeg",
           "width": 2000,
-          "height": 2666,
-          "format": "jpeg"
+          "height": 2666
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQG/8QAHxAAAQMDBQAAAAAAAAAAAAAAAQACAwQFBhESISNB/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAMAwEAAhEDEQA/AJbXk8Md9lomhxcDt58KLA2Uk5zLqSe5ESGyHb//2Q==",
-      "aspectRatio": 0.7501875468867217
+      }
     },
     {
       "id": "e2f4d4d1d22c5693d966fce9009bc9db",
@@ -1966,22 +2094,24 @@
         "shutterSpeed": "1/420s",
         "focalLength": "30mm"
       },
+      "aspectRatio": 1.5001187366421278,
       "variants": {
         "medium": {
-          "url": "/processed/portrait/medium/Teanau Tuiono and James Shaw.webp",
+          "url": "https://images.mossly.org/photos/e2f4d4d1d22c5693d966fce9009bc9db/medium.webp",
           "width": 1200,
-          "height": 799,
-          "format": "webp"
+          "height": 799
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/e2f4d4d1d22c5693d966fce9009bc9db/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/portrait/Teanau Tuiono and James Shaw.jpg",
+          "url": "https://images.mossly.org/photos/e2f4d4d1d22c5693d966fce9009bc9db/original.jpg",
           "width": 6317,
-          "height": 4211,
-          "format": "jpg"
+          "height": 4211
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAIRAAAQMDBAMAAAAAAAAAAAAAAQADBAIGEQUSITEiI4H/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERAv/aAAwDAQACEQMRAD8ApaTfk6675kQ4kh2lhwbg3X0APq2xvsx/TVGyW/AnPeOERG8K0dach//Z",
-      "aspectRatio": 1.5001187366421278
+      }
     },
     {
       "id": "559a1cb0d112810a559799ca7916e3f2",
@@ -1997,22 +2127,24 @@
         "shutterSpeed": "1/640s",
         "focalLength": "200mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/portrait/medium/Te Hinemoa.webp",
+          "url": "https://images.mossly.org/photos/559a1cb0d112810a559799ca7916e3f2/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/559a1cb0d112810a559799ca7916e3f2/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/portrait/Te Hinemoa.jpg",
+          "url": "https://images.mossly.org/photos/559a1cb0d112810a559799ca7916e3f2/original.jpg",
           "width": 6192,
-          "height": 4128,
-          "format": "jpg"
+          "height": 4128
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAgEAABAwMFAQAAAAAAAAAAAAABAAMRAgQFBgcSITJx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwX/xAAZEQACAwEAAAAAAAAAAAAAAAACAwABESH/2gAMAwEAAhEDEQA/ALTrDLO37WSru6wSJDY8wrzubmJ64R8RFHc9gZhRyGuT/9k=",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "5926c92e75d19d481ef720e0623c3bd5",
@@ -2028,22 +2160,24 @@
         "shutterSpeed": "1/500s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 1.4998169168802635,
       "variants": {
         "medium": {
-          "url": "/processed/portrait/medium/Jesse.webp",
+          "url": "https://images.mossly.org/photos/5926c92e75d19d481ef720e0623c3bd5/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/5926c92e75d19d481ef720e0623c3bd5/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/portrait/Jesse.jpg",
+          "url": "https://images.mossly.org/photos/5926c92e75d19d481ef720e0623c3bd5/original.jpg",
           "width": 4096,
-          "height": 2731,
-          "format": "jpg"
+          "height": 2731
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIH/8QAIBAAAgIBAwUAAAAAAAAAAAAAAQQAAiEDBREHEhMy8f/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAGxEBAAICAwAAAAAAAAAAAAAAAQACAxEEMUH/2gAMAwEAAhEDEQA/AJffpodPl2Xybss4qAORwfszo7anY93hpnPrEQmQ10yXzbK1N+E//9k=",
-      "aspectRatio": 1.4998169168802635
+      }
     }
   ],
   "product": [
@@ -2055,22 +2189,24 @@
       "metadata": {
         "dateTaken": "2025-06-23T08:26:28.498Z"
       },
+      "aspectRatio": 1.8571428571428572,
       "variants": {
         "medium": {
-          "url": "/processed/product/medium/Medicalert.webp",
+          "url": "https://images.mossly.org/photos/59397322521f480d964ac2e954442860/medium.webp",
           "width": 832,
-          "height": 448,
-          "format": "webp"
+          "height": 448
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/59397322521f480d964ac2e954442860/large.webp",
+          "width": 832,
+          "height": 448
         },
         "original": {
-          "url": "/images/product/Medicalert.png",
+          "url": "https://images.mossly.org/photos/59397322521f480d964ac2e954442860/original.png",
           "width": 832,
-          "height": 448,
-          "format": "png"
+          "height": 448
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAACXBIWXMAACTpAAAk6QFQJOf4AAAA2ElEQVR4nAHNADL/AOvl3yPr5uBA8e3offPv67jz8O3m9PHu7fTx78rz8O6Q7+vnTOnj3iQA5+Ldaefh3XHt6OSX8u7qwfPv7Ozz7+308+/t0+/r6Kbm4t513tnVXwDf2taq4tzYpOrl4avx7emv8+/swfPv7MPz7+yt7urmnuPe2pTa1dGbANrV0pba1dGQ3tnVmOTf26Hn4+C25+PgueXh3abg3NeZ2dTQkdTPzJoA0MvIX9TPy3/X086g29fTq97a17De29iy3NnVrtrW0qvV0c2V0MvIgRxmopFTntkkAAAAAElFTkSuQmCC",
-      "aspectRatio": 1.8571428571428572
+      }
     },
     {
       "id": "2a491452855a9b25b56de94c4a68e7ff",
@@ -2086,22 +2222,24 @@
         "shutterSpeed": "1/200s",
         "focalLength": "61mm"
       },
+      "aspectRatio": 1.3334581539037633,
       "variants": {
         "medium": {
-          "url": "/processed/product/medium/Platter.webp",
+          "url": "https://images.mossly.org/photos/2a491452855a9b25b56de94c4a68e7ff/medium.webp",
           "width": 1200,
-          "height": 900,
-          "format": "webp"
+          "height": 900
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/2a491452855a9b25b56de94c4a68e7ff/large.webp",
+          "width": 2560,
+          "height": 1920
         },
         "original": {
-          "url": "/images/product/Platter.jpg",
+          "url": "https://images.mossly.org/photos/2a491452855a9b25b56de94c4a68e7ff/original.jpg",
           "width": 7122,
-          "height": 5341,
-          "format": "jpg"
+          "height": 5341
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAdEAABBQEAAwAAAAAAAAAAAAABAAIDBAURIjFB/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAZEQADAAMAAAAAAAAAAAAAAAAAAQIEEjL/2gAMAwEAAhEDEQA/AKum+5k6NqxWnPHO8m9+K1Fsl0THGM9IB9oin462ltj65k//2Q==",
-      "aspectRatio": 1.3334581539037633
+      }
     },
     {
       "id": "ffa2995d36b6ac8e819c86ed579b1ee7",
@@ -2117,22 +2255,24 @@
         "shutterSpeed": "1.8s",
         "focalLength": "16mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/product/medium/SL600M.webp",
+          "url": "https://images.mossly.org/photos/ffa2995d36b6ac8e819c86ed579b1ee7/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/ffa2995d36b6ac8e819c86ed579b1ee7/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/product/SL600M.jpg",
+          "url": "https://images.mossly.org/photos/ffa2995d36b6ac8e819c86ed579b1ee7/original.jpg",
           "width": 4303,
-          "height": 4303,
-          "format": "jpg"
+          "height": 4303
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQEH/8QAJBAAAgECBAcBAAAAAAAAAAAAAQIDAAQFBhEhBxITIjEyUZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwCZkzpjtvxBXDopnSy6oUKFO43rZo7lTGhJ30FFY1aWxvo5DbwmTX2KDX9p1EXkXtXx8qqP/9k=",
-      "aspectRatio": 1
+      }
     }
   ],
   "projects": [
@@ -2144,22 +2284,24 @@
       "metadata": {
         "dateTaken": "2025-08-10T04:58:12.413Z"
       },
+      "aspectRatio": 1.8235294117647058,
       "variants": {
         "medium": {
-          "url": "/processed/projects/medium/hw-history.webp",
+          "url": "https://images.mossly.org/photos/4b5b4fce871f2d4dece3942883436481/medium.webp",
           "width": 1200,
-          "height": 658,
-          "format": "webp"
+          "height": 658
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/4b5b4fce871f2d4dece3942883436481/large.webp",
+          "width": 2560,
+          "height": 1404
         },
         "original": {
-          "url": "/images/projects/hw-history.png",
+          "url": "https://images.mossly.org/photos/4b5b4fce871f2d4dece3942883436481/original.png",
           "width": 2976,
-          "height": 1632,
-          "format": "png"
+          "height": 1632
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAeElEQVR4nC2O2Q3DMAxDvU11xgZy2E7S/cdiIbkfDyBEUlLx+sD8htqAWodtE+YTrB2iPedmE2UFBjSNC2rB0mYD7hPVHxSWDtVoDYicYD7AcqQ27XAb2GKjZOtOwiTeMxx6cSUl/mnti1bfPE+0g/7BKBCf+NCBH9ibTWfThdcZAAAAAElFTkSuQmCC",
-      "aspectRatio": 1.8235294117647058
+      }
     },
     {
       "id": "f51b18b33a2b27c43c85d9eb8d05d1a5",
@@ -2169,22 +2311,24 @@
       "metadata": {
         "dateTaken": "2025-08-10T04:54:56.686Z"
       },
+      "aspectRatio": 1.7621145374449338,
       "variants": {
         "medium": {
-          "url": "/processed/projects/medium/emissions-dashboard.webp",
+          "url": "https://images.mossly.org/photos/f51b18b33a2b27c43c85d9eb8d05d1a5/medium.webp",
           "width": 1200,
-          "height": 681,
-          "format": "webp"
+          "height": 681
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/f51b18b33a2b27c43c85d9eb8d05d1a5/large.webp",
+          "width": 1600,
+          "height": 908
         },
         "original": {
-          "url": "/images/projects/emissions-dashboard.png",
+          "url": "https://images.mossly.org/photos/f51b18b33a2b27c43c85d9eb8d05d1a5/original.png",
           "width": 1600,
-          "height": 908,
-          "format": "png"
+          "height": 908
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwklEQVR4nB3E0QrBUBgA4PNE5hG8wh5BSbJc7UaIyYU74kYxEztTSl6AGssuFkrjFjubbbbzn/MMor4+lJXrOaUr9od5bVpczEtYlwxcNnQJY0nHSKg2xN5ANpbD3XZkmePjQbWtn6M1sQ5IaDULmqbuzYv3cENyi/x7HNzjwA39a0BQttOuYLx2HELTkEPI4DcHH6iXJkhoKRXd2DjnN2UR4xH8Z/wNjKSAMrWmNMMr+/SI6TOBVwIkZYRyL2HPD3wBD0CCVFLqnUUAAAAASUVORK5CYII=",
-      "aspectRatio": 1.7621145374449338
+      }
     },
     {
       "id": "f6ce3d0cbb48a6f000492c12afd082ea",
@@ -2194,22 +2338,24 @@
       "metadata": {
         "dateTaken": "2025-08-10T04:53:25.646Z"
       },
+      "aspectRatio": 1.8327605956471935,
       "variants": {
         "medium": {
-          "url": "/processed/projects/medium/electricity-dashboard.webp",
+          "url": "https://images.mossly.org/photos/f6ce3d0cbb48a6f000492c12afd082ea/medium.webp",
           "width": 1200,
-          "height": 655,
-          "format": "webp"
+          "height": 655
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/f6ce3d0cbb48a6f000492c12afd082ea/large.webp",
+          "width": 1600,
+          "height": 873
         },
         "original": {
-          "url": "/images/projects/electricity-dashboard.png",
+          "url": "https://images.mossly.org/photos/f6ce3d0cbb48a6f000492c12afd082ea/original.png",
           "width": 1600,
-          "height": 873,
-          "format": "png"
+          "height": 873
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAIAAADzBuo/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeElEQVR4nBXJWw7DIAwFUfa/ylZKacojiU0wxr5IVaT5OhPyKb86YhmxyCePLes7zVeyeFhlCydrIU2XFpoHP5TJE/nRvIkH6nMn2y6PhNpB8tQEXTEmgkyr3XfGl5/dFDKX+QIW1gpqoLHyvSJjZ6+3s/iYMIcDf/MHjvoWcho/AAAAAElFTkSuQmCC",
-      "aspectRatio": 1.8327605956471935
+      }
     },
     {
       "id": "1d27eb878cb1049d59b93c0a868c676d",
@@ -2219,22 +2365,24 @@
       "metadata": {
         "dateTaken": "2025-08-09T09:54:27.888Z"
       },
+      "aspectRatio": 1.8538011695906433,
       "variants": {
         "medium": {
-          "url": "/processed/projects/medium/transcribe-locally.webp",
+          "url": "https://images.mossly.org/photos/1d27eb878cb1049d59b93c0a868c676d/medium.webp",
           "width": 1200,
-          "height": 647,
-          "format": "webp"
+          "height": 647
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/1d27eb878cb1049d59b93c0a868c676d/large.webp",
+          "width": 2536,
+          "height": 1368
         },
         "original": {
-          "url": "/images/projects/transcribe-locally.png",
+          "url": "https://images.mossly.org/photos/1d27eb878cb1049d59b93c0a868c676d/original.png",
           "width": 2536,
-          "height": 1368,
-          "format": "png"
+          "height": 1368
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAhUlEQVR4nEXL2wrCMBCE4TyBbZLN5tDG1mIFpSBe+P6P9kvSCy8+mGVmTa4boVwpdeF9PPh+nhyvnZBmbCj4OCO5YuK0IGkmlsptW9nvG+u64DVjQ8bHqfdGYsFp7lpuvCZGr1iJuJDwWjBWEqPEbvDK4JSLlW5woWtPphVNO5pzfA7+lB/Jmj9tp4aF0QAAAABJRU5ErkJggg==",
-      "aspectRatio": 1.8538011695906433
+      }
     },
     {
       "id": "852c7fe83841070fc3cf905925f77692",
@@ -2244,22 +2392,24 @@
       "metadata": {
         "dateTaken": "2025-08-09T09:52:22.289Z"
       },
+      "aspectRatio": 1.7777777777777777,
       "variants": {
         "medium": {
-          "url": "/processed/projects/medium/discordbot.webp",
+          "url": "https://images.mossly.org/photos/852c7fe83841070fc3cf905925f77692/medium.webp",
           "width": 1200,
-          "height": 675,
-          "format": "webp"
+          "height": 675
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/852c7fe83841070fc3cf905925f77692/large.webp",
+          "width": 1280,
+          "height": 720
         },
         "original": {
-          "url": "/images/projects/discordbot.png",
+          "url": "https://images.mossly.org/photos/852c7fe83841070fc3cf905925f77692/original.png",
           "width": 1280,
-          "height": 720,
-          "format": "png"
+          "height": 720
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbElEQVR4nHXJxwkDMRAAQJUkbQ5a6UL/PZkzxvhjmN801mSbrA/kECuvK9dtsUmyATlykCTL02zl88x1WWzWbB1koAE5Sb57+jxynZ6bJFoH7WADP1DCYkUd6oXs7RsDrYP+NpD96Xmo1UB7AUdqJvqE1XLEAAAAAElFTkSuQmCC",
-      "aspectRatio": 1.7777777777777777
+      }
     },
     {
       "id": "b2337e59d831c7f2a26f8f9181cc3f94",
@@ -2269,22 +2419,24 @@
       "metadata": {
         "dateTaken": "2025-07-07T15:34:33.973Z"
       },
+      "aspectRatio": 1.8170731707317074,
       "variants": {
         "medium": {
-          "url": "/processed/projects/medium/homepage.webp",
+          "url": "https://images.mossly.org/photos/b2337e59d831c7f2a26f8f9181cc3f94/medium.webp",
           "width": 1200,
-          "height": 660,
-          "format": "webp"
+          "height": 660
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/b2337e59d831c7f2a26f8f9181cc3f94/large.webp",
+          "width": 2560,
+          "height": 1409
         },
         "original": {
-          "url": "/images/projects/homepage.png",
+          "url": "https://images.mossly.org/photos/b2337e59d831c7f2a26f8f9181cc3f94/original.png",
           "width": 2980,
-          "height": 1640,
-          "format": "png"
+          "height": 1640
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9UlEQVR4nB3L3ysDAQDA8fsP5YXyYnvRUaJRFDNJ2eXHcTaRdOTHRR5kTOt05ueueRiuTtnyo6aYmHZ3D3euvmoPn8eP4DQauI6D53lNjuPgui6+7xOGIX9hSBAECJZVomBeYprXlCtP1Os/zfj7XaP2/spn9ZmvjyqCpq2zMJ8kpUyTPT7g0bZ4e6lQtu94KJ5TKhjY97cIicQg0UgrYlc7S+kkZ0aG4o1B7miHvc1FNFUml9lFiMdjRCMtiGIbijJJ9mSfU/2Qre1lZufGkaQRVDWFMCWN0tPbQd9AJytrMvkrnfyFzupGmqGxfmLD3czIE/wDTwO7enqd5p0AAAAASUVORK5CYII=",
-      "aspectRatio": 1.8170731707317074
+      }
     }
   ],
   "sports": [
@@ -2302,22 +2454,24 @@
         "shutterSpeed": "1/2000s",
         "focalLength": "70mm"
       },
+      "aspectRatio": 0.8001237623762376,
       "variants": {
         "medium": {
-          "url": "/processed/sports/medium/Slacklining.webp",
+          "url": "https://images.mossly.org/photos/311a04eb01e2d476aa3bf4d298753fba/medium.webp",
           "width": 960,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/311a04eb01e2d476aa3bf4d298753fba/large.webp",
+          "width": 2048,
+          "height": 2560
         },
         "original": {
-          "url": "/images/sports/Slacklining.jpg",
+          "url": "https://images.mossly.org/photos/311a04eb01e2d476aa3bf4d298753fba/original.jpg",
           "width": 2586,
-          "height": 3232,
-          "format": "jpg"
+          "height": 3232
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIRAAAQMCBwEAAAAAAAAAAAAAAgABBAMFERQVITJBUXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A1aFdK9unxraxjlQo4i7duimZJFqdDd+Pv1EH/9k=",
-      "aspectRatio": 0.8001237623762376
+      }
     }
   ],
   "street": [
@@ -2335,22 +2489,24 @@
         "shutterSpeed": "1/60s",
         "focalLength": "120mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/street/medium/Tran Quang Dieu.webp",
+          "url": "https://images.mossly.org/photos/7a0a4242d9af87f359d7e0638c34c8ca/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/7a0a4242d9af87f359d7e0638c34c8ca/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/street/Tran Quang Dieu.jpg",
+          "url": "https://images.mossly.org/photos/7a0a4242d9af87f359d7e0638c34c8ca/original.jpg",
           "width": 8256,
-          "height": 5504,
-          "format": "jpg"
+          "height": 5504
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAHBAAAQUBAQEAAAAAAAAAAAAAAQACBAURAxIx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARIx/9oADAMBAAIRAxEAPwDO7C4rrZjpkmIPThgAHxSLu0L0c5OzURWrAx//2Q==",
-      "aspectRatio": 1.5
+      }
     },
     {
       "id": "88596029d2664f8163e1281907db39b3",
@@ -2366,22 +2522,24 @@
         "shutterSpeed": "1/80s",
         "focalLength": "79mm"
       },
+      "aspectRatio": 0.6666666666666666,
       "variants": {
         "medium": {
-          "url": "/processed/street/medium/Da Lat.webp",
+          "url": "https://images.mossly.org/photos/88596029d2664f8163e1281907db39b3/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/88596029d2664f8163e1281907db39b3/large.webp",
+          "width": 1707,
+          "height": 2560
         },
         "original": {
-          "url": "/images/street/Da Lat.jpg",
+          "url": "https://images.mossly.org/photos/88596029d2664f8163e1281907db39b3/original.jpg",
           "width": 4972,
-          "height": 7458,
-          "format": "jpg"
+          "height": 7458
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHRAAAgICAwEAAAAAAAAAAAAAAQIAAwQFERNBIf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDCtit2ZoaLshgvUQgX2JPZ2Ouq5Yn76Ygf/9k=",
-      "aspectRatio": 0.6666666666666666
+      }
     }
   ],
   "wildlife": [
@@ -2399,22 +2557,24 @@
         "shutterSpeed": "1/2000s",
         "focalLength": "600mm"
       },
+      "aspectRatio": 0.6665217391304348,
       "variants": {
         "medium": {
-          "url": "/processed/wildlife/medium/Papilio Polytes - Common Mormon.webp",
+          "url": "https://images.mossly.org/photos/bc8683cac0c331c3a02797cf827915c0/medium.webp",
           "width": 800,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/bc8683cac0c331c3a02797cf827915c0/large.webp",
+          "width": 1533,
+          "height": 2300
         },
         "original": {
-          "url": "/images/wildlife/Papilio Polytes - Common Mormon.jpg",
+          "url": "https://images.mossly.org/photos/bc8683cac0c331c3a02797cf827915c0/original.jpg",
           "width": 1533,
-          "height": 2300,
-          "format": "jpg"
+          "height": 2300
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQH/8QAHRABAAMAAQUAAAAAAAAAAAAAAQACAwQFFCFBYf/EABUBAQEAAAAAAAAAAAAAAAAAAAIF/8QAFREBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhEDEQA/AMy598O0oObtt4W56iSdeWuqVUPkQLSVL//Z",
-      "aspectRatio": 0.6665217391304348
+      }
     },
     {
       "id": "6f89c478809fd8f303e306fa5b3883d4",
@@ -2430,22 +2590,24 @@
         "shutterSpeed": "1/200s",
         "focalLength": "600mm"
       },
+      "aspectRatio": 1.3332650553052028,
       "variants": {
         "medium": {
-          "url": "/processed/wildlife/medium/Green Iguana.webp",
+          "url": "https://images.mossly.org/photos/6f89c478809fd8f303e306fa5b3883d4/medium.webp",
           "width": 1200,
-          "height": 900,
-          "format": "webp"
+          "height": 900
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/6f89c478809fd8f303e306fa5b3883d4/large.webp",
+          "width": 2560,
+          "height": 1920
         },
         "original": {
-          "url": "/images/wildlife/Green Iguana.jpg",
+          "url": "https://images.mossly.org/photos/6f89c478809fd8f303e306fa5b3883d4/original.jpg",
           "width": 6509,
-          "height": 4882,
-          "format": "jpg"
+          "height": 4882
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMF/8QAIBAAAAUDBQAAAAAAAAAAAAAAAAECBREDBBIWISIx4f/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAYEQACAwAAAAAAAAAAAAAAAAACAwABEf/aAAwDAQACEQMRAD8ApYuDi8XikN9E8E9kNLTT2rlgkp3ifQADWoSrYdaRIduf/9k=",
-      "aspectRatio": 1.3332650553052028
+      }
     },
     {
       "id": "a69adaf706be399907c92184950ae054",
@@ -2461,22 +2623,24 @@
         "shutterSpeed": "1/125s",
         "focalLength": "300mm"
       },
+      "aspectRatio": 1,
       "variants": {
         "medium": {
-          "url": "/processed/wildlife/medium/Snow Leopard.webp",
+          "url": "https://images.mossly.org/photos/a69adaf706be399907c92184950ae054/medium.webp",
           "width": 1200,
-          "height": 1200,
-          "format": "webp"
+          "height": 1200
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/a69adaf706be399907c92184950ae054/large.webp",
+          "width": 2560,
+          "height": 2560
         },
         "original": {
-          "url": "/images/wildlife/Snow Leopard.jpg",
+          "url": "https://images.mossly.org/photos/a69adaf706be399907c92184950ae054/original.jpg",
           "width": 5091,
-          "height": 5091,
-          "format": "jpg"
+          "height": 5091
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAIF/8QAIRAAAgEEAgIDAAAAAAAAAAAAAQIDAAQRIRIxBRMjMkH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhH/2gAMAwEAAhEDEQA/AG+buHhuWDXWHJ+PA0BUpPc8FzGDrvHdHiVZLGUuAx5DZGa3IVX0pofUflW67AX/2Q==",
-      "aspectRatio": 1
+      }
     },
     {
       "id": "dfbd7a3237e18214da4c3eb87c992b84",
@@ -2492,22 +2656,24 @@
         "shutterSpeed": "1/125s",
         "focalLength": "270.6mm"
       },
+      "aspectRatio": 1.5,
       "variants": {
         "medium": {
-          "url": "/processed/wildlife/medium/Kekeno.webp",
+          "url": "https://images.mossly.org/photos/dfbd7a3237e18214da4c3eb87c992b84/medium.webp",
           "width": 1200,
-          "height": 800,
-          "format": "webp"
+          "height": 800
+        },
+        "large": {
+          "url": "https://images.mossly.org/photos/dfbd7a3237e18214da4c3eb87c992b84/large.webp",
+          "width": 2560,
+          "height": 1707
         },
         "original": {
-          "url": "/images/wildlife/Kekeno.jpg",
+          "url": "https://images.mossly.org/photos/dfbd7a3237e18214da4c3eb87c992b84/original.jpg",
           "width": 6240,
-          "height": 4160,
-          "format": "jpg"
+          "height": 4160
         }
-      },
-      "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAIBAAAAUDBQAAAAAAAAAAAAAAAAECBhIDBSEEESMkMf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQEBAQEAAAAAAAAAAAAAAAABAAIS/9oADAMBAAIRAxEAPwCJeW7p3D2amyYYiRekMqtiW6auWoWQAAaWfkv/2Q==",
-      "aspectRatio": 1.5
+      }
     }
   ]
 }
