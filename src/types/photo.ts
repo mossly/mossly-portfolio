@@ -41,6 +41,7 @@ export interface Photo {
   metadata: PhotoMetadata
   variants: {
     medium: ImageVariant
+    large: ImageVariant
     original: ImageVariant
   }
   aspectRatio: number

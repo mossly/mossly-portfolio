@@ -155,6 +155,7 @@ export class LightboxComponent {
       src: photo.variants.original.url,
       width: photo.variants.original.width,
       height: photo.variants.original.height,
+      msrc: photo.variants.medium.url,
       alt: photo.title || photo.filename,
       id: photo.id,
     }))

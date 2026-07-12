@@ -50,3 +50,7 @@ CLAUDE.md
 .claude/
 # Playwright MCP scratch
 .playwright-mcp/
+
+# stray screenshots at repo root
+/*.jpeg
+/*.png
