@@ -10,7 +10,9 @@
     "lint": "eslint src",
     "format": "prettier --write .",
     "process-images": "tsx scripts/process-images.ts",
-    "migrate-to-r2": "tsx scripts/migrate-to-r2.ts"
+    "migrate-to-r2": "tsx scripts/migrate-to-r2.ts",
+    "cf:deploy": "npm run build && wrangler deploy",
+    "cf:dev": "npm run build && wrangler dev"
   },
   "repository": {
     "type": "git",
@@ -53,6 +55,7 @@
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "wrangler": "^4"
   }
 }
