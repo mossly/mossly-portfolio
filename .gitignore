@@ -6,6 +6,8 @@ node_modules/
 # Production
 dist/
 build/
+.vite/
+.wrangler/
 
 # Testing
 coverage/
@@ -46,3 +48,5 @@ Thumbs.db
 # Claude AI
 CLAUDE.md
 .claude/
+# Playwright MCP scratch
+.playwright-mcp/

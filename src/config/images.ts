@@ -1,8 +1,17 @@
+import type { PhotoCategory } from '../types/photo'
+
 export const IMAGE_SIZES = {
   medium: { width: 1200, height: 1200 },
 } as const
 
-export const IMAGE_FORMATS = ['webp', 'avif'] as const
+export const IMAGE_FORMATS = ['webp'] as const
+
+// Single source of truth for the ordered category list (runtime).
+// The PhotoCategory union in types/photo.ts is the compile-time source.
+export const CATEGORY_ORDER: PhotoCategory[] = [
+  'bird', 'landscape', 'portrait', 'concert',
+  'architecture', 'nature', 'product', 'astro', 'sports', 'cat', 'street', 'wildlife',
+]
 
 export const GALLERY_CONFIG = {
   bird: { displayName: 'BIRD' },

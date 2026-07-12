@@ -43,8 +43,6 @@ export interface Photo {
     medium: ImageVariant
     original: ImageVariant
   }
-  blurDataUrl?: string
-  dominantColor?: string
   aspectRatio: number
 }
 

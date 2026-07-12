@@ -12,8 +12,6 @@ setTimeout(() => {
 }, 500)
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Projects page loaded')
-  
   try {
     // Initialize navigation
     new Navigation()

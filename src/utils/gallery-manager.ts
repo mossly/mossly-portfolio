@@ -1,5 +1,5 @@
 import type { Photo, PhotoCategory, Gallery } from '../types/photo'
-import { GALLERY_CONFIG } from '../config/images'
+import { GALLERY_CONFIG, CATEGORY_ORDER } from '../config/images'
 import photosData from '../data/photos.json'
 import photoOrderData from '../data/photo-order.json'
 
@@ -68,12 +68,8 @@ export class GalleryManager {
   }
 
   getCategories(): PhotoCategory[] {
-    // Return categories in the original website order
-    const orderedCategories: PhotoCategory[] = [
-      'bird', 'landscape', 'portrait', 'concert', 
-      'architecture', 'nature', 'product', 'astro', 'sports', 'cat', 'street', 'wildlife'
-    ]
-    return orderedCategories.filter(category => this.galleries.has(category))
+    // Return categories in the original website order (single source: CATEGORY_ORDER)
+    return CATEGORY_ORDER.filter(category => this.galleries.has(category))
   }
 
   getGallery(category: PhotoCategory): Gallery | undefined {
