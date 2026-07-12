@@ -48,3 +48,5 @@ Thumbs.db
 # Claude AI
 CLAUDE.md
 .claude/
+# Playwright MCP scratch
+.playwright-mcp/
