@@ -1,19 +1,47 @@
 /// <reference types="@cloudflare/workers-types" />
 
+import { isValidAccessRequest } from './auth'
+
 interface Env {
   ASSETS: { fetch: (request: Request) => Promise<Response> }
   IMAGES: unknown // R2 bucket binding, used in later phases
   IMAGES_BASE: string
   DB: D1Database
+  ACCESS_AUD: string
+  ACCESS_TEAM_DOMAIN: string
 }
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url)
+
+    if (url.pathname.startsWith('/api/admin/')) {
+      // Local-dev bypass: only when the request's own hostname is localhost/127.0.0.1.
+      // This is a per-request check (hostname varies per request), not a startup-time
+      // one -- a public request can never carry a localhost hostname, so this cannot
+      // leak into production regardless of env vars.
+      const isLocalDev = url.hostname === 'localhost' || url.hostname === '127.0.0.1'
+
+      if (!isLocalDev) {
+        const authorized = await isValidAccessRequest(
+          request,
+          env.ACCESS_TEAM_DOMAIN,
+          env.ACCESS_AUD,
+        )
+        if (!authorized) {
+          return Response.json({ ok: false, error: 'forbidden' }, { status: 403 })
+        }
+      }
+
+      // Placeholder for Phase 3E+ admin API routes -- auth passed, no business logic yet.
+      return Response.json({ ok: true, stub: true, path: url.pathname }, { status: 501 })
+    }
+
     if (url.pathname.startsWith('/api/')) {
-      // Placeholder for Phase 3+ API routes.
+      // Placeholder for Phase 3+ public API routes.
       return Response.json({ ok: true, stub: true, path: url.pathname }, { status: 200 })
     }
+
     // Non-/api/* requests are served from static assets (run_worker_first only lists /api/*),
     // but keep this fallback so the Worker is correct if invoked for any other path.
     return env.ASSETS.fetch(request)
