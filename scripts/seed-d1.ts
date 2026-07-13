@@ -18,7 +18,7 @@ import publicPhotos from '../src/data/photos.json'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..')
-const OUTPUT_PATH = path.join(REPO_ROOT, 'migrations', 'seed.sql')
+const OUTPUT_PATH = path.join(REPO_ROOT, 'scripts', 'seed.sql')
 
 interface SeedPhoto {
   id: string
@@ -36,7 +36,15 @@ interface SeedPhoto {
   large_h: number
   original_key: string
   original_bytes: number
-  metadata: Record<string, unknown> & { dateTaken?: string }
+  metadata: Record<string, unknown> & {
+    dateTaken?: string
+    camera?: string
+    lens?: string
+    iso?: number
+    aperture?: string
+    shutterSpeed?: string
+    focalLength?: string
+  }
 }
 
 interface PublicVariant {
@@ -72,6 +80,12 @@ const COLUMNS = [
   'large_h',
   'aspect_ratio',
   'date_taken',
+  'camera',
+  'lens',
+  'iso',
+  'aperture',
+  'shutter_speed',
+  'focal_length',
   'exif_json',
   'original_key',
   'original_bytes',
@@ -128,7 +142,8 @@ async function main(): Promise<void> {
       continue
     }
 
-    const dateTaken = photo.metadata?.dateTaken ?? null
+    const meta = photo.metadata ?? {}
+    const dateTaken = meta.dateTaken ?? null
 
     const values = [
       sqlString(photo.id),
@@ -146,7 +161,13 @@ async function main(): Promise<void> {
       sqlNumberOrNull(photo.large_h),
       sqlNumber(photo.aspect_ratio),
       sqlStringOrNull(dateTaken),
-      sqlString(JSON.stringify(photo.metadata ?? {})),
+      sqlStringOrNull(meta.camera),
+      sqlStringOrNull(meta.lens),
+      sqlNumberOrNull(meta.iso),
+      sqlStringOrNull(meta.aperture),
+      sqlStringOrNull(meta.shutterSpeed),
+      sqlStringOrNull(meta.focalLength),
+      sqlString(JSON.stringify(meta)),
       sqlStringOrNull(photo.original_key),
       sqlNumberOrNull(photo.original_bytes),
       sqlNumber(dims.width),
@@ -179,9 +200,12 @@ async function main(): Promise<void> {
 -- REPLACE keyed on the \`id\` primary key, so re-applying this file is safe
 -- and simply overwrites existing rows with the same content.
 --
--- This file is NOT applied automatically. Apply it explicitly, e.g.:
---   wrangler d1 execute mossly-content --local --file=migrations/seed.sql
---   wrangler d1 execute mossly-content --remote --file=migrations/seed.sql
+-- This file lives OUTSIDE migrations/ on purpose: wrangler's
+-- migrations_dir is "migrations", so a seed there would be swept up by
+-- \`wrangler d1 migrations apply\`. Apply the seed explicitly via --file,
+-- NEVER via migrations apply, e.g.:
+--   wrangler d1 execute mossly-content --local --file=scripts/seed.sql
+--   wrangler d1 execute mossly-content --remote --file=scripts/seed.sql
 `
 
   const sql = `${header}\nBEGIN;\n\n${rows.join('\n\n')}\n\nCOMMIT;\n`
