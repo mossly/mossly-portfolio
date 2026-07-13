@@ -208,7 +208,9 @@ async function main(): Promise<void> {
 --   wrangler d1 execute mossly-content --remote --file=scripts/seed.sql
 `
 
-  const sql = `${header}\nBEGIN;\n\n${rows.join('\n\n')}\n\nCOMMIT;\n`
+  // No BEGIN/COMMIT wrapper: D1's `wrangler d1 execute --file` runs the whole file
+  // atomically and rejects explicit BEGIN/SAVEPOINT statements on --remote.
+  const sql = `${header}\n${rows.join('\n\n')}\n`
 
   await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
   await fs.writeFile(OUTPUT_PATH, sql, 'utf8')

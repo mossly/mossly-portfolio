@@ -15,8 +15,7 @@
     {
       "binding": "DB",
       "database_name": "mossly-content",
-      // TODO: replace with the real database_id after running `wrangler d1 create mossly-content`
-      "database_id": "PLACEHOLDER_SET_AFTER_wrangler_d1_create",
+      "database_id": "11f56e26-dc8c-47bf-ab61-fde1e1367c61",
       "migrations_dir": "migrations"
     }
   ]

@@ -13,8 +13,6 @@
 --   wrangler d1 execute mossly-content --local --file=scripts/seed.sql
 --   wrangler d1 execute mossly-content --remote --file=scripts/seed.sql
 
-BEGIN;
-
 INSERT OR REPLACE INTO photos (id, content_hash, category, title, filename, status, sort_order, medium_key, medium_w, medium_h, large_key, large_w, large_h, aspect_ratio, date_taken, camera, lens, iso, aperture, shutter_speed, focal_length, exif_json, original_key, original_bytes, original_w, original_h)
 VALUES ('0d76ac47bb3b036bf368157cce910e7f', 'fb6a01c32783fa77383cdc5874d00a7be4e120137da494818cb0a1940d775c91', 'about', 'Aaron Moss', 'Aaron Moss.jpg', 'published', 0, 'photos/0d76ac47bb3b036bf368157cce910e7f/medium.webp', 1200, 781, 'photos/0d76ac47bb3b036bf368157cce910e7f/large.webp', 2560, 1666, 1.5362270450751252, '2025-06-24T13:20:12.174Z', NULL, NULL, NULL, NULL, NULL, NULL, '{"dateTaken":"2025-06-24T13:20:12.174Z"}', 'photos/0d76ac47bb3b036bf368157cce910e7f/original.jpg', 5504316, 4601, 2995);
 
@@ -263,5 +261,3 @@ VALUES ('a69adaf706be399907c92184950ae054', '8fc74439d4e6e1fa67a5186e0ec718df3d0
 
 INSERT OR REPLACE INTO photos (id, content_hash, category, title, filename, status, sort_order, medium_key, medium_w, medium_h, large_key, large_w, large_h, aspect_ratio, date_taken, camera, lens, iso, aperture, shutter_speed, focal_length, exif_json, original_key, original_bytes, original_w, original_h)
 VALUES ('dfbd7a3237e18214da4c3eb87c992b84', '9e985cd27030b4ce538f1a7392b83e9908dd72e687162a7b3ad5b53bae779614', 'wildlife', 'Kekeno', 'Kekeno.jpg', 'published', 3, 'photos/dfbd7a3237e18214da4c3eb87c992b84/medium.webp', 1200, 800, 'photos/dfbd7a3237e18214da4c3eb87c992b84/large.webp', 2560, 1707, 1.5, '2022-07-29T01:25:55.000Z', 'FUJIFILM X-T3', 'XF100-400mmF4.5-5.6 R LM OIS WR', 640, 'f/8', '1/125s', '270.6mm', '{"dateTaken":"2022-07-29T01:25:55.000Z","camera":"FUJIFILM X-T3","lens":"XF100-400mmF4.5-5.6 R LM OIS WR","iso":640,"aperture":"f/8","shutterSpeed":"1/125s","focalLength":"270.6mm"}', 'photos/dfbd7a3237e18214da4c3eb87c992b84/original.jpg', 6348232, 6240, 4160);
-
-COMMIT;
