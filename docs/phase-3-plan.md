@@ -145,6 +145,13 @@ confirm the GitHub redirect works, then re-scope to `/admin` + `/api/admin`.
 
 ## 3E — Client-side image pipeline + admin (largest unit, ~8–12h)
 
+> **Detailed, workflow-ready decomposition: see [`docs/phase-3e-plan.md`](./phase-3e-plan.md).**
+> Owner decisions (2026-07-13) folded in there: **desktop-only** (pro photographer uploading curated
+> JPEG exports from a Windows workstation — all mobile/iOS-Safari/HEIC handling **dropped**, no phone
+> DoD); **fully serverless** (no TrueNAS backend — Worker + R2 + D1). Split into 3 PRs: 3E-1 Worker
+> admin API (contract) → 3E-2 management UI ‖ 3E-3 upload pipeline. The bullets below are the original
+> spec, retained for reference; the 3e doc supersedes them where they differ.
+
 - New static page `admin/index.html` → Vite input key `admin/index` (so built path is `/admin/`,
   matching the Access scope). Add `admin: path.resolve(__dirname,'admin/index.html')` to `vite.config.ts`
   `rollupOptions.input`. **Do NOT add `/admin/*` to `run_worker_first`** (Fable #7): the admin HTML/JS
@@ -174,8 +181,8 @@ confirm the GitHub redirect works, then re-scope to `/admin` + `/api/admin`.
   so retaining the objects is the undo, and for new uploads R2 is the sole server-side copy of the
   original. Optional later: a manual sweep to hard-delete truly-unwanted objects), `GET /api/admin/photos`
   (incl. drafts + soft-deleted, so they can be restored).
-  - Requires a `status` value for deleted rows: either extend the CHECK to `('draft','published','deleted')`
-    in 0001 (decide in 3A) or add a `deleted_at` timestamp column. Pick one before writing 0001_core.sql.
+  - **RESOLVED + SHIPPED:** soft-delete uses a nullable **`deleted_at`** timestamp column (already in
+    `migrations/0001_core.sql`, applied to remote D1). `status` CHECK stays `('draft','published')`.
 - Test fully offline via `wrangler dev` (Miniflare emulates D1+R2); read path via `env.IMAGES.get`
   binding (public `images.mossly.org` URL not emulated locally).
 
@@ -206,11 +213,12 @@ confirm the GitHub redirect works, then re-scope to `/admin` + `/api/admin`.
 
 **Acceptance:** public gallery renders from `/api/photos`; a photo added via admin appears **without redeploy**.
 
-## 3H — Owner definition-of-done (GATING)
+## 3H — Owner definition-of-done (GATING) — REVISED (desktop)
 
-On a phone: open `mossly.org/admin` → **GitHub login** → pick a camera-roll photo → appears in public
-gallery, **<2 min, no terminal**. If HEIC blocks it, resolve open Q2 (Most-Compatible JPEG vs bundle
-`libheif-js`). Must be exercised on **real iOS Safari** (ties to the 3E Safari resize fallback).
+Superseded by the desktop pivot (2026-07-13, see [`phase-3e-plan.md`](./phase-3e-plan.md) §DoD): from the
+**Windows workstation**, open `mossly.org/admin` → **Pocket ID passkey login** → drag exported JPEGs →
+they process in-browser + upload + appear in the public gallery (after 3G), **no terminal, no redeploy**.
+Mobile/HEIC/Safari are out of scope. Exercise in the owner's real desktop browser (Chrome/Edge).
 
 ## 3I — Deletions (after 3G verified as source of truth)
 
