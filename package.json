@@ -36,6 +36,7 @@
   "homepage": "https://mossly.org",
   "dependencies": {
     "daisyui": "^5.0.43",
+    "jose": "^6.2.3",
     "photoswipe": "^5.4.4",
     "sortablejs": "^1.15.7",
     "vanilla-lazyload": "^19.1.3"
