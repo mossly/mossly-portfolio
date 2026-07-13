@@ -146,14 +146,26 @@ async function putBlob(request: Request, env: Env, id: string, variant: string):
   if (!request.body) return jsonError('missing_body', 400)
 
   const contentType = request.headers.get('content-type') ?? 'application/octet-stream'
-  const ext = variant === 'original' ? extForOriginal(contentType) : 'webp'
+
+  let ext: string | null
+  let storedContentType: string
+  if (variant === 'original') {
+    ext = extForOriginal(contentType)
+    storedContentType = contentType
+  } else {
+    // medium/large are always client-re-encoded to webp; reject anything else
+    // so we never persist a wrong/attacker-controlled Content-Type on a key
+    // that is served publicly as image/webp.
+    ext = contentType.split(';')[0].trim().toLowerCase() === 'image/webp' ? 'webp' : null
+    storedContentType = 'image/webp'
+  }
   if (!ext) return jsonError('unsupported_content_type', 400)
 
   const key = `photos/${id}/${variant}.${ext}`
 
   await env.IMAGES.put(key, request.body, {
     httpMetadata: {
-      contentType,
+      contentType: storedContentType,
       cacheControl: 'public, max-age=31536000, immutable',
     },
   })
