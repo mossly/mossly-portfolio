@@ -11,6 +11,7 @@
     "format": "prettier --write .",
     "process-images": "tsx scripts/process-images.ts",
     "migrate-to-r2": "tsx scripts/migrate-to-r2.ts",
+    "db:seed:gen": "tsx scripts/seed-d1.ts",
     "cf:deploy": "npm run build && wrangler deploy",
     "cf:dev": "npm run build && wrangler dev"
   },
