@@ -1,7 +1,10 @@
+/// <reference types="@cloudflare/workers-types" />
+
 interface Env {
   ASSETS: { fetch: (request: Request) => Promise<Response> }
   IMAGES: unknown // R2 bucket binding, used in later phases
   IMAGES_BASE: string
+  DB: D1Database
 }
 
 export default {
