@@ -1,10 +1,11 @@
 /// <reference types="@cloudflare/workers-types" />
 
 import { isValidAccessRequest } from './auth'
+import { handleAdminApi } from './admin-api'
 
-interface Env {
+export interface Env {
   ASSETS: { fetch: (request: Request) => Promise<Response> }
-  IMAGES: unknown // R2 bucket binding, used in later phases
+  IMAGES: R2Bucket
   IMAGES_BASE: string
   DB: D1Database
   ACCESS_AUD: string
@@ -33,8 +34,8 @@ export default {
         }
       }
 
-      // Placeholder for Phase 3E+ admin API routes -- auth passed, no business logic yet.
-      return Response.json({ ok: true, stub: true, path: url.pathname }, { status: 501 })
+      // Auth passed (or localhost dev bypass) -- dispatch to the real admin router.
+      return handleAdminApi(request, env, url)
     }
 
     if (url.pathname.startsWith('/api/')) {
