@@ -21,5 +21,12 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src", "admin"],
+  // admin/upload-worker.ts runs in a DedicatedWorkerGlobalScope, whose
+  // self/postMessage typings (lib "webworker") conflict with the DOM lib used
+  // by every other file (incl. admin/main.ts) if both are type-checked in one
+  // program. It's excluded from `tsc` here; `vite build` still transpiles and
+  // bundles it (esbuild doesn't type-check), so a real syntax/reference error
+  // in it still fails `npm run build`. See admin/upload-worker.ts's file header.
+  "exclude": ["admin/upload-worker.ts"]
 }

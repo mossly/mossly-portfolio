@@ -60,6 +60,9 @@ export default defineConfig({
         main: path.resolve(__dirname, 'index.html'),
         about: path.resolve(__dirname, 'about.html'),
         projects: path.resolve(__dirname, 'projects.html'),
+        // Static asset only (built to /admin/) -- NOT added to run_worker_first
+        // in wrangler.jsonc; only /api/admin/* is Worker code (see phase-3e-plan.md).
+        admin: path.resolve(__dirname, 'admin/index.html'),
       },
       output: {
         manualChunks: {
@@ -67,6 +70,12 @@ export default defineConfig({
         },
       },
     },
+  },
+  worker: {
+    // admin/upload-worker.ts dynamically imports one of two @jsquash/webp wasm
+    // codec chunks (SIMD vs non-SIMD) at runtime -- code-splitting requires ES
+    // module output; Vite's default 'iife' worker format doesn't support it.
+    format: 'es',
   },
   server: {
     port: 3000,

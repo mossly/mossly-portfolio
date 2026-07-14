@@ -4,7 +4,9 @@ export default {
     "./index.html",
     "./about.html",
     "./projects.html",
+    "./admin/*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./admin/*.{js,ts}",
   ],
   theme: {
     extend: {

@@ -1,0 +1,194 @@
+/**
+ * Phase 3E-3: upload processing Web Worker.
+ *
+ * Runs the CPU-heavy per-file pipeline off the main thread: sha256 id, upright
+ * decode + downscale, webp encode (@jsquash/webp, WASM), EXIF extraction
+ * (exifr). See docs/phase-3e-plan.md ("3E-3") for the authoritative pipeline.
+ *
+ * NOT type-checked by the root `tsc` program (see tsconfig.json's `exclude`) --
+ * this file runs in the DedicatedWorkerGlobalScope, whose `self`/`postMessage`
+ * typings conflict with the main-thread DOM lib used by admin/main.ts if both
+ * were type-checked in the same program. `vite build` still transpiles and
+ * bundles it normally; only strict type-checking is skipped.
+ *
+ * Desktop Chromium/Firefox target only -- no Safari/HEIC fallback (see plan).
+ */
+/// <reference lib="webworker" />
+
+// Import the encode submodule directly (not the `@jsquash/webp` barrel) so
+// the unused `decode` codec (and its ~140 KB wasm) isn't pulled into the bundle.
+import encodeWebp from '@jsquash/webp/encode'
+import { parse as parseExif } from 'exifr'
+import type {
+  EncodedVariant,
+  ExtractedMetadata,
+  MainToWorkerMessage,
+  OriginalVariant,
+  ProcessedPhoto,
+  WorkerToMainMessage,
+} from './upload-types'
+
+declare const self: DedicatedWorkerGlobalScope
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const ctx: any = self
+
+const MEDIUM_WIDTH = 1200
+const MEDIUM_QUALITY = 75
+const LARGE_WIDTH = 2560
+const LARGE_QUALITY = 80
+
+function post(message: WorkerToMainMessage, transfer?: Transferable[]) {
+  if (transfer && transfer.length > 0) ctx.postMessage(message, transfer)
+  else ctx.postMessage(message)
+}
+
+async function sha256Hex(buf: ArrayBuffer): Promise<string> {
+  const digest = await crypto.subtle.digest('SHA-256', buf)
+  return Array.from(new Uint8Array(digest))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('')
+}
+
+/** Draws an upright, already-resized ImageBitmap into an OffscreenCanvas and reads back raw pixels. */
+function bitmapToImageData(bitmap: ImageBitmap): ImageData {
+  const canvas = new OffscreenCanvas(bitmap.width, bitmap.height)
+  const drawCtx = canvas.getContext('2d')
+  if (!drawCtx) throw new Error('2d context unavailable in worker')
+  drawCtx.drawImage(bitmap, 0, 0)
+  return drawCtx.getImageData(0, 0, bitmap.width, bitmap.height)
+}
+
+/**
+ * Upright decode + downscale to `targetWidth`, encode to webp at `quality`.
+ * Closes the intermediate bitmap. Logs (doesn't throw) if the decoded width
+ * drifts from the request -- Chromium/Firefox honor resizeWidth exactly in
+ * practice, but this is a cheap safety net per the plan.
+ */
+async function makeVariant(file: File, targetWidth: number, quality: number): Promise<EncodedVariant> {
+  const bitmap = await createImageBitmap(file, {
+    imageOrientation: 'from-image',
+    resizeWidth: targetWidth,
+    resizeQuality: 'high',
+  })
+  try {
+    if (Math.abs(bitmap.width - targetWidth) > 1) {
+      console.warn(`[upload-worker] resized width ${bitmap.width} != requested ${targetWidth} for ${file.name}`)
+    }
+    const imageData = bitmapToImageData(bitmap)
+    const encoded = await encodeWebp(imageData, { quality })
+    return { bytes: encoded, width: bitmap.width, height: bitmap.height }
+  } finally {
+    bitmap.close()
+  }
+}
+
+/** True (upright) pixel dimensions of the source file, for original_w/h + aspect_ratio. */
+async function readOriginalDimensions(file: File): Promise<{ width: number; height: number }> {
+  const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
+  try {
+    return { width: bitmap.width, height: bitmap.height }
+  } finally {
+    bitmap.close()
+  }
+}
+
+function extForContentType(contentType: string): string {
+  if (contentType === 'image/png') return 'png'
+  return 'jpg' // image/jpeg and any other accepted type default to .jpg
+}
+
+function formatAperture(fNumber: number | undefined): string | undefined {
+  return typeof fNumber === 'number' ? `f/${fNumber}` : undefined
+}
+
+function formatShutterSpeed(exposureTime: number | undefined): string | undefined {
+  if (typeof exposureTime !== 'number') return undefined
+  return exposureTime < 1 ? `1/${Math.round(1 / exposureTime)}s` : `${exposureTime}s`
+}
+
+function formatFocalLength(focalLength: number | undefined): string | undefined {
+  return typeof focalLength === 'number' ? `${focalLength}mm` : undefined
+}
+
+async function extractMetadata(file: File): Promise<{ metadata: ExtractedMetadata; exifJson: unknown }> {
+  try {
+    const exif = await parseExif(file, {
+      pick: ['DateTimeOriginal', 'Model', 'LensModel', 'ISO', 'FNumber', 'ExposureTime', 'FocalLength'],
+    })
+    if (!exif) return { metadata: {}, exifJson: null }
+    const metadata: ExtractedMetadata = {
+      dateTaken: exif.DateTimeOriginal ? new Date(exif.DateTimeOriginal).toISOString() : undefined,
+      camera: exif.Model || undefined,
+      lens: exif.LensModel || undefined,
+      iso: typeof exif.ISO === 'number' ? exif.ISO : undefined,
+      aperture: formatAperture(exif.FNumber),
+      shutterSpeed: formatShutterSpeed(exif.ExposureTime),
+      focalLength: formatFocalLength(exif.FocalLength),
+    }
+    return { metadata, exifJson: exif }
+  } catch (err) {
+    console.warn(`[upload-worker] EXIF parse failed for ${file.name}:`, err)
+    return { metadata: {}, exifJson: null }
+  }
+}
+
+async function processFile(file: File, existingIds: string[]): Promise<
+  { kind: 'duplicate'; id: string } | { kind: 'ok'; photo: ProcessedPhoto }
+> {
+  const buf = await file.arrayBuffer()
+  const contentHash = await sha256Hex(buf)
+  const id = contentHash.slice(0, 16)
+
+  if (existingIds.includes(id)) {
+    return { kind: 'duplicate', id }
+  }
+
+  const [medium, large, original, { metadata, exifJson }] = await Promise.all([
+    makeVariant(file, MEDIUM_WIDTH, MEDIUM_QUALITY),
+    makeVariant(file, LARGE_WIDTH, LARGE_QUALITY),
+    readOriginalDimensions(file),
+    extractMetadata(file),
+  ])
+
+  const contentType = file.type || 'image/jpeg'
+  const originalVariant: OriginalVariant = {
+    bytes: buf,
+    width: original.width,
+    height: original.height,
+    contentType,
+    ext: extForContentType(contentType),
+  }
+
+  const photo: ProcessedPhoto = {
+    id,
+    contentHash,
+    filename: file.name,
+    aspectRatio: original.width / original.height,
+    medium,
+    large,
+    original: originalVariant,
+    metadata,
+    exifJson,
+  }
+  return { kind: 'ok', photo }
+}
+
+ctx.addEventListener('message', async (event: MessageEvent<MainToWorkerMessage>) => {
+  const msg = event.data
+  if (msg.type !== 'process') return
+  const { jobId, file, existingIds } = msg
+
+  try {
+    const result = await processFile(file, existingIds)
+    if (result.kind === 'duplicate') {
+      post({ type: 'duplicate', jobId, id: result.id })
+      return
+    }
+    const { photo } = result
+    // Transfer the raw byte buffers instead of structured-cloning them.
+    const transfer: Transferable[] = [photo.medium.bytes, photo.large.bytes, photo.original.bytes]
+    post({ type: 'result', jobId, photo }, transfer)
+  } catch (err) {
+    post({ type: 'error', jobId, message: err instanceof Error ? err.message : String(err) })
+  }
+})
