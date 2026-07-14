@@ -142,22 +142,29 @@ function toPublicPhoto(row: PublicPhotoRow, imagesBase: string): Photo {
  * CDN/browser cache masking that for long.
  */
 export async function handlePublicPhotos(env: Env): Promise<Response> {
-  const { results } = await env.DB.prepare(
-    `SELECT ${PUBLIC_COLUMNS} FROM photos
-     WHERE deleted_at IS NULL AND status = 'published'
-     ORDER BY category ASC, sort_order ASC`,
-  ).all<PublicPhotoRow>()
+  try {
+    const { results } = await env.DB.prepare(
+      `SELECT ${PUBLIC_COLUMNS} FROM photos
+       WHERE deleted_at IS NULL AND status = 'published'
+       ORDER BY category ASC, sort_order ASC`,
+    ).all<PublicPhotoRow>()
 
-  const grouped: Partial<Record<PhotoCategory, Photo[]>> = {}
-  for (const row of results ?? []) {
-    const category = row.category
-    const photo = toPublicPhoto(row, env.IMAGES_BASE)
-    if (!grouped[category]) grouped[category] = []
-    grouped[category]!.push(photo)
+    const grouped: Partial<Record<PhotoCategory, Photo[]>> = {}
+    for (const row of results ?? []) {
+      const category = row.category
+      const photo = toPublicPhoto(row, env.IMAGES_BASE)
+      if (!grouped[category]) grouped[category] = []
+      grouped[category]!.push(photo)
+    }
+
+    return Response.json(grouped, {
+      status: 200,
+      headers: { 'Cache-Control': 'public, max-age=60' },
+    })
+  } catch (err) {
+    // Keep the failure a JSON 500 rather than letting a D1 error bubble up as a
+    // raw Worker 1101 exception page -- the front-end fetch path expects JSON.
+    console.error('GET /api/photos failed:', err)
+    return Response.json({ error: 'internal' }, { status: 500 })
   }
-
-  return Response.json(grouped, {
-    status: 200,
-    headers: { 'Cache-Control': 'public, max-age=60' },
-  })
 }

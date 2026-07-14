@@ -37,6 +37,10 @@ const LARGE_QUALITY = 80
 // Native resolution (no resize), higher quality tier -- crisp full-res web
 // viewing at a fraction of the original JPEG's size.
 const FULL_QUALITY = 85
+// WebP has a hard 16383px per-side limit; encoding a larger side crashes the
+// encoder. Panoramas can exceed this (e.g. one of the seeded originals is
+// 19360x4840), so the `full` variant is capped to this on its longest side.
+const WEBP_MAX_DIM = 16383
 
 function post(message: WorkerToMainMessage, transfer?: Transferable[]) {
   if (transfer && transfer.length > 0) postMessage(message, transfer)
@@ -96,13 +100,29 @@ async function makeVariant(file: File, targetWidth: number, quality: number): Pr
 }
 
 /**
- * Upright decode at NATIVE resolution (no resizeWidth), encode to webp at
- * `quality`. Used for the `full` variant -- crisp full-res web viewing.
- * Desktop Chromium target only; very large images are fine (no Safari cap
- * concern per the plan).
+ * Upright decode at native resolution, encode to webp at `quality`. Used for
+ * the `full` variant -- crisp full-res web viewing. Capped at WEBP_MAX_DIM
+ * (16383px) on the longest side, fit-inside, no upscale: an image whose
+ * longest native side exceeds that would otherwise crash the WebP encoder
+ * (e.g. a 19360x4840 panorama). The returned width/height reflect the
+ * (possibly capped) encoded dims -- the caller sends these as full_w/full_h.
  */
-async function makeFullVariant(file: File, quality: number): Promise<EncodedVariant> {
-  const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
+async function makeFullVariant(
+  file: File,
+  quality: number,
+  originalWidth: number,
+  originalHeight: number,
+): Promise<EncodedVariant> {
+  const longest = Math.max(originalWidth, originalHeight)
+  // Only pass resizeWidth when the source actually exceeds the cap; otherwise
+  // decode at native resolution (no scaling, no upscale of smaller sources).
+  const options: ImageBitmapOptions = { imageOrientation: 'from-image' }
+  if (longest > WEBP_MAX_DIM) {
+    const scale = WEBP_MAX_DIM / longest
+    options.resizeWidth = Math.round(originalWidth * scale)
+    options.resizeQuality = 'high'
+  }
+  const bitmap = await createImageBitmap(file, options)
   try {
     const imageData = bitmapToImageData(bitmap)
     const encoded = await encodeWebp(imageData, { quality })
@@ -187,7 +207,7 @@ async function processFile(file: File, existingIds: string[]): Promise<
   const [medium, large, full] = await Promise.all([
     makeVariant(file, mediumWidth, MEDIUM_QUALITY),
     makeVariant(file, largeWidth, LARGE_QUALITY),
-    makeFullVariant(file, FULL_QUALITY),
+    makeFullVariant(file, FULL_QUALITY, original.width, original.height),
   ])
 
   const contentType = file.type || 'image/jpeg'

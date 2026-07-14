@@ -86,6 +86,10 @@ const REPO_ROOT = path.resolve(__dirname, '..')
 const SQL_OUT = path.join(REPO_ROOT, 'scripts', 'backfill-full.sql')
 
 const FULL_QUALITY = 85
+// WebP has a hard 16383px per-side limit; encoding a larger side crashes the
+// encoder. One of the 83 seeded originals is 19360x4840, so cap the full
+// variant to this on its longest side (fit inside, no upscale).
+const WEBP_MAX_DIM = 16383
 
 // ---- S3 client (aws4fetch), mirrors migrate-to-r2.ts ----
 
@@ -150,8 +154,12 @@ async function backfillPhoto(photo: SeedPhoto): Promise<string> {
   // orientation tag, so a rotated original would otherwise produce a sideways
   // full.webp with swapped dimensions, diverging from the browser upload path
   // (which orients via createImageBitmap's imageOrientation:'from-image').
+  // Cap the longest side to WEBP_MAX_DIM (fit inside, no upscale) so panoramas
+  // beyond WebP's 16383px per-side limit don't crash the encoder. Sources
+  // within the limit are unaffected (encoded at native resolution).
   const { data: fullBuf, info } = await sharp(originalBuf)
     .rotate()
+    .resize(WEBP_MAX_DIM, WEBP_MAX_DIM, { fit: 'inside', withoutEnlargement: true })
     .webp({ quality: FULL_QUALITY })
     .toBuffer({ resolveWithObject: true })
 
@@ -161,13 +169,31 @@ async function backfillPhoto(photo: SeedPhoto): Promise<string> {
     throw new Error(`could not read encoded webp dimensions for ${photo.id}`)
   }
 
-  // Assert the encode matches the known upright original dims. A mismatch means
-  // wrong orientation (swapped w/h) or a resolution surprise -- abort the whole
-  // backfill before any SQL is emitted rather than persist a bad row.
-  if (width !== expected.width || height !== expected.height) {
-    throw new Error(
-      `encoded full.webp dimensions ${width}x${height} != expected original ${expected.width}x${expected.height} for ${photo.id}`,
-    )
+  // If neither original side exceeds the cap, the encode should match the known
+  // upright original dims exactly; a mismatch there means wrong orientation
+  // (swapped w/h) or a resolution surprise -- abort before any SQL is emitted.
+  // When the original was capped (longest side > WEBP_MAX_DIM), the encoded
+  // dims are legitimately smaller, so only assert the aspect ratio is preserved.
+  const wasCapped = Math.max(expected.width, expected.height) > WEBP_MAX_DIM
+  if (!wasCapped) {
+    if (width !== expected.width || height !== expected.height) {
+      throw new Error(
+        `encoded full.webp dimensions ${width}x${height} != expected original ${expected.width}x${expected.height} for ${photo.id}`,
+      )
+    }
+  } else {
+    const expectedAR = expected.width / expected.height
+    const actualAR = width / height
+    if (Math.abs(expectedAR - actualAR) > 0.01) {
+      throw new Error(
+        `capped full.webp aspect ${actualAR.toFixed(4)} (${width}x${height}) != original ${expectedAR.toFixed(4)} (${expected.width}x${expected.height}) for ${photo.id}`,
+      )
+    }
+    if (Math.max(width, height) > WEBP_MAX_DIM) {
+      throw new Error(
+        `capped full.webp longest side ${Math.max(width, height)} still exceeds ${WEBP_MAX_DIM} for ${photo.id}`,
+      )
+    }
   }
 
   const fullKey = `photos/${photo.id}/full.webp`

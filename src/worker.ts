@@ -19,7 +19,10 @@ export default {
 
     // Phase 3G: public, unauthenticated read -- mounted ahead of the
     // /api/admin/* gate below since it needs none of that gating.
-    if (url.pathname === '/api/photos' && request.method === 'GET') {
+    if (url.pathname === '/api/photos') {
+      if (request.method !== 'GET') {
+        return Response.json({ ok: false, error: 'method_not_allowed' }, { status: 405 })
+      }
       return handlePublicPhotos(env)
     }
 
