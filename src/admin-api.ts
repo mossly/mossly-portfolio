@@ -23,7 +23,13 @@ type Variant = 'medium' | 'large' | 'original'
 // header. Not a hard security boundary -- R2/Workers enforce their own limits too.
 const MAX_BLOB_BYTES = 100 * 1024 * 1024 // 100 MB, matches PLAN's "<100 MB" note
 
-const ID_RE = /^[0-9a-f]{16}$/
+// `id` is 16 lowercase hex chars for new uploads (sha256(bytes) prefix), but the
+// 83 seeded legacy rows carry their original 32-char MD5 id (see migrations/
+// 0001_core.sql's `id` column comment) -- both are valid PKs already in D1, so
+// PATCH/DELETE/blob must accept either length or every legacy photo 404s on
+// every admin mutation (found while integration-testing 3E-2 against the
+// seeded 83; fixed here since it blocks that verification entirely).
+const ID_RE = /^(?:[0-9a-f]{16}|[0-9a-f]{32})$/
 const CONTENT_HASH_RE = /^[0-9a-f]{64}$/
 
 function jsonError(error: string, status: number, extra?: Record<string, unknown>): Response {

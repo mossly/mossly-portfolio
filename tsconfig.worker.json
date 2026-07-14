@@ -1,0 +1,15 @@
+{
+  // Second `tsc` program for admin/upload-worker.ts (see its file header). It
+  // runs in a DedicatedWorkerGlobalScope, whose `self`/`postMessage`/etc.
+  // typings (lib "WebWorker") conflict with the DOM lib used by the main
+  // tsconfig.json's program (admin/main.ts included) if both were
+  // type-checked together. Extending tsconfig.json but swapping DOM for
+  // WebWorker keeps the worker file under real type-checking instead of an
+  // outright `tsc` exclusion -- `npm run build` runs both programs.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2020", "WebWorker"]
+  },
+  "include": ["admin/upload-worker.ts", "admin/upload-types.ts", "src/types/photo.ts"],
+  "exclude": []
+}

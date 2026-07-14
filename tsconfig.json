@@ -21,5 +21,12 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src", "admin"],
+  // admin/upload-worker.ts runs in a DedicatedWorkerGlobalScope, whose
+  // self/postMessage typings (lib "WebWorker") conflict with the DOM lib this
+  // program uses for every other file (incl. admin/main.ts) if both were
+  // type-checked together. It's excluded from *this* program and instead
+  // type-checked by its own tsconfig.worker.json program (see that file and
+  // admin/upload-worker.ts's header) -- `npm run build` runs both.
+  "exclude": ["admin/upload-worker.ts"]
 }

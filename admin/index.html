@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Mossly</title>
+
+  <!-- Apply saved theme before paint (authoritative over OS preference) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme')
+        document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'lofi')
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'lofi')
+      }
+    })()
+  </script>
+</head>
+<body>
+  <div class="min-h-screen bg-base-100 text-base-content">
+    <header class="border-b border-base-300 sticky top-0 z-40 bg-base-100/95 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+        <h1 class="text-xl font-bold tracking-tight">Mossly Admin</h1>
+        <div id="admin-stats" class="text-sm text-base-content/60"></div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-10">
+      <!-- Upload (3E-3) -->
+      <section id="upload-section" class="space-y-3">
+        <div class="flex items-center gap-2">
+          <label for="upload-category" class="text-sm font-medium">Upload to category</label>
+          <select id="upload-category" class="select select-sm"></select>
+        </div>
+
+        <div id="dropzone"
+             class="border-2 border-dashed border-base-300 rounded-lg p-10 text-center cursor-pointer transition-colors hover:border-primary hover:bg-base-200/40">
+          <p class="font-medium">Drag photos here, or click to choose files</p>
+          <p class="text-sm text-base-content/60 mt-1">JPEG or PNG. Multiple files OK.</p>
+          <input id="file-input" type="file" accept="image/jpeg,image/png" multiple class="hidden">
+        </div>
+
+        <ul id="upload-queue" class="space-y-1"></ul>
+      </section>
+
+      <!-- Grid (3E-2) -->
+      <section id="loading-state" class="text-center py-20 text-base-content/60">Loading photos&hellip;</section>
+      <section id="error-state" class="hidden text-center py-20 text-error"></section>
+      <div id="gallery-root" class="space-y-12"></div>
+    </main>
+  </div>
+
+  <div id="confirm-root"></div>
+
+  <script type="module" src="/admin/main.ts"></script>
+</body>
+</html>
