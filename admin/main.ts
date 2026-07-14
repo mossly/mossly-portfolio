@@ -1,7 +1,10 @@
 // Phase 3E-2 / 3E-3: admin page shell + management UI + browser upload pipeline.
-// See docs/phase-3e-plan.md ("3E-2", "3E-3") for the authoritative behavior.
+// Phase 3F: drag-to-reorder (SortableJS -> PUT /api/admin/photos/order -> D1).
+// See docs/phase-3e-plan.md ("3E-2", "3E-3") and docs/phase-3-plan.md ("3F") for
+// the authoritative behavior.
 import '../src/styles/main.css'
-import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoStatus } from '../src/types/photo'
+import Sortable from 'sortablejs'
+import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoStatus } from '../src/types/photo'
 import { CATEGORY_ORDER, GALLERY_CONFIG } from '../src/config/images'
 import type { MainToWorkerMessage, ProcessedPhoto, WorkerToMainMessage } from './upload-types'
 
@@ -42,6 +45,10 @@ const knownIds = new Set<string>()
 const queue = new Map<string, QueueItem>()
 const queueOrder: string[] = []
 let editingId: string | null = null
+/** Live Sortable instances, one per rendered category's live-photo grid --
+ * always destroyed before `render()` rebuilds the DOM, so a re-render never
+ * leaves a Sortable instance bound to a detached node. */
+let sortables: Sortable[] = []
 
 // ---------------------------------------------------------------------------
 // DOM refs
@@ -176,26 +183,123 @@ function render() {
 
   galleryRoot.innerHTML = orderedCategories
     .map(category => {
-      const items = (byCategory.get(category) ?? [])
-        .slice()
-        .sort((a, b) => {
-          // Live photos first (by sort_order), soft-deleted pushed to the end.
-          if (!!a.deleted_at !== !!b.deleted_at) return a.deleted_at ? 1 : -1
-          return a.sort_order - b.sort_order
-        })
+      const items = byCategory.get(category) ?? []
+      // Live photos are draggable (rendered in their own grid, ordered by
+      // sort_order); soft-deleted photos are pinned in a second, non-sortable
+      // grid at the end -- they're never part of the reorder.
+      const live = items.filter(p => !p.deleted_at).sort((a, b) => a.sort_order - b.sort_order)
+      const deleted = items.filter(p => p.deleted_at).sort((a, b) => a.sort_order - b.sort_order)
       return `
         <section data-category="${escapeHtml(category)}">
           <h2 class="text-lg font-bold uppercase tracking-wide mb-4">
             ${escapeHtml(categoryLabel(category as PhotoCategory))}
             <span class="text-sm font-normal text-base-content/50">(${items.length})</span>
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            ${items.map(renderCard).join('')}
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+               data-sortable-category="${escapeHtml(category)}">
+            ${live.map(renderCard).join('')}
           </div>
+          ${deleted.length > 0
+            ? `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+                 ${deleted.map(renderCard).join('')}
+               </div>`
+            : ''}
         </section>
       `
     })
     .join('')
+
+  attachSortables()
+}
+
+// ---------------------------------------------------------------------------
+// Drag-to-reorder (3F)
+// ---------------------------------------------------------------------------
+
+function destroySortables() {
+  sortables.forEach(s => s.destroy())
+  sortables = []
+}
+
+/**
+ * Creates one Sortable instance per category's live-photo grid. Called at the
+ * end of every `render()`, after old instances are torn down -- `render()`
+ * always replaces `galleryRoot.innerHTML` wholesale, so any previous Sortable
+ * instance would otherwise be left bound to now-detached DOM nodes.
+ */
+function attachSortables() {
+  destroySortables()
+  const containers = galleryRoot.querySelectorAll<HTMLElement>('[data-sortable-category]')
+  containers.forEach(container => {
+    const category = container.getAttribute('data-sortable-category') as PhotoCategory
+    const sortable = Sortable.create(container, {
+      animation: 150,
+      ghostClass: 'sortable-ghost',
+      chosenClass: 'sortable-chosen',
+      dragClass: 'sortable-drag',
+      forceFallback: true,
+      onEnd: () => void handleReorder(category, container),
+    })
+    sortables.push(sortable)
+  })
+}
+
+/**
+ * Reads the post-drop DOM order for one category's live grid, applies it
+ * optimistically to in-memory state, and persists it. On failure, reverts
+ * the in-memory `sort_order`s and re-renders (which also rebuilds the DOM
+ * back to the pre-drag order, since Sortable's own DOM mutation is discarded
+ * along with the rest of `galleryRoot.innerHTML`).
+ */
+async function handleReorder(category: PhotoCategory, container: HTMLElement) {
+  const newIds = Array.from(container.querySelectorAll<HTMLElement>('[data-photo-card]'))
+    .map(el => el.getAttribute('data-photo-card'))
+    .filter((id): id is string => !!id)
+
+  const previousOrder = new Map<string, number>()
+  for (const photo of photos) {
+    if (photo.category === category && !photo.deleted_at) previousOrder.set(photo.id, photo.sort_order)
+  }
+
+  // No-op drop (dragged and released without changing order): skip the request.
+  const previousIds = Array.from(previousOrder.keys()).sort(
+    (a, b) => (previousOrder.get(a) ?? 0) - (previousOrder.get(b) ?? 0),
+  )
+  if (newIds.length === previousIds.length && newIds.every((id, i) => id === previousIds[i])) {
+    return
+  }
+
+  // Optimistic UI: Sortable has already moved the DOM nodes for us; just
+  // bring in-memory state in line with the new order (no re-render needed).
+  newIds.forEach((id, index) => {
+    const photo = photos.find(p => p.id === id)
+    if (photo) photo.sort_order = index
+  })
+
+  try {
+    const res = await fetch('/api/admin/photos/order', {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ category, ids: newIds } satisfies PhotoOrderUpdate),
+    })
+    if (!res.ok) {
+      let detail = ''
+      try {
+        const body = (await res.json()) as { error?: string } | null
+        detail = body?.error ? `: ${body.error}` : ''
+      } catch {
+        // ignore -- non-JSON error body
+      }
+      throw new Error(`reorder failed (${res.status})${detail}`)
+    }
+  } catch (err) {
+    for (const [id, sortOrder] of previousOrder) {
+      const photo = photos.find(p => p.id === id)
+      if (photo) photo.sort_order = sortOrder
+    }
+    render()
+    showToast(err instanceof Error ? err.message : 'Reorder failed', true)
+  }
 }
 
 function renderCard(photo: AdminPhoto): string {

@@ -13,10 +13,15 @@
 // See docs/phase-3e-plan.md ("3E-1") for the authoritative route schemas.
 
 import type { Env } from './worker'
-import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoStatus } from './types/photo'
+import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoStatus } from './types/photo'
 import { CATEGORY_ORDER } from './config/images'
 
 type Variant = 'medium' | 'large' | 'original'
+
+// D1 caps bound parameters per statement/batch well above this, but batching
+// UPDATEs in chunks keeps each `env.DB.batch()` call comfortably small and
+// bounds worst-case memory/latency for very large categories.
+const ORDER_BATCH_CHUNK_SIZE = 50
 
 // R2 puts are capped well below Workers' request-body limits; this just
 // rejects obviously-wrong uploads early via the (client-supplied) Content-Length
@@ -318,6 +323,68 @@ async function updatePhoto(request: Request, env: Env, id: string): Promise<Resp
   return Response.json({ photo }, { status: 200 })
 }
 
+/**
+ * Validates a `PUT /api/admin/photos/order` body. Returns a list of
+ * human-readable error strings; an empty list means the body is valid.
+ */
+function validateOrderUpdate(body: unknown): string[] {
+  const errors: string[] = []
+  if (typeof body !== 'object' || body === null) {
+    return ['body must be a JSON object']
+  }
+  const b = body as Record<string, unknown>
+
+  if (!isValidCategory(b.category)) {
+    errors.push(`category must be one of: ${CATEGORY_ORDER.join(', ')}`)
+  }
+  if (!Array.isArray(b.ids)) {
+    errors.push('ids must be an array')
+  } else if (!b.ids.every(isNonEmptyString)) {
+    errors.push('ids must be an array of non-empty strings')
+  }
+
+  return errors
+}
+
+/**
+ * Persists a new front-to-back order for one category: `sort_order` becomes
+ * each id's index in `ids`. Runs as chunked `env.DB.batch()` calls -- each
+ * batch is a single D1 round trip with an implicit transaction. The
+ * `WHERE category = ?` guard means a stale id (already moved to another
+ * category, or never existed) simply matches zero rows rather than
+ * corrupting another category's ordering or failing the request.
+ */
+async function reorderPhotos(request: Request, env: Env): Promise<Response> {
+  let body: unknown
+  try {
+    body = await request.json()
+  } catch {
+    return jsonError('invalid_json', 400)
+  }
+
+  const errors = validateOrderUpdate(body)
+  if (errors.length > 0) {
+    return jsonError('validation', 400, { details: errors })
+  }
+  const { category, ids } = body as PhotoOrderUpdate
+
+  let updated = 0
+  for (let start = 0; start < ids.length; start += ORDER_BATCH_CHUNK_SIZE) {
+    const chunk = ids.slice(start, start + ORDER_BATCH_CHUNK_SIZE)
+    const statements = chunk.map((id, i) =>
+      env.DB.prepare(
+        `UPDATE photos
+         SET sort_order = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now')
+         WHERE id = ? AND category = ?`,
+      ).bind(start + i, id, category),
+    )
+    const results = await env.DB.batch(statements)
+    for (const result of results) updated += result.meta.changes
+  }
+
+  return Response.json({ ok: true, updated }, { status: 200 })
+}
+
 async function deletePhoto(env: Env, id: string): Promise<Response> {
   if (!isValidId(id)) return jsonError('invalid_id', 400)
 
@@ -349,6 +416,11 @@ export async function handleAdminApi(request: Request, env: Env, url: URL): Prom
   if (pathname === '/api/admin/photos') {
     if (method === 'GET') return listPhotos(env)
     if (method === 'POST') return createPhoto(request, env)
+    return jsonError('method_not_allowed', 405)
+  }
+
+  if (pathname === '/api/admin/photos/order') {
+    if (method === 'PUT') return reorderPhotos(request, env)
     return jsonError('method_not_allowed', 405)
   }
 
