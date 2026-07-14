@@ -337,7 +337,8 @@ function renderView(photo: AdminPhoto): string {
              ${photo.status === 'published' ? 'Unpublish' : 'Publish'}
            </button>
            <button type="button" class="btn btn-xs btn-error btn-outline" data-action="delete" data-id="${photo.id}">Delete</button>`
-        : ''}
+        : `<button type="button" class="btn btn-xs btn-success btn-outline" data-action="restore" data-id="${photo.id}">Restore</button>
+           <button type="button" class="btn btn-xs btn-error btn-outline" data-action="delete-permanent" data-id="${photo.id}">Delete permanently</button>`}
     </div>
   `
 }
@@ -424,6 +425,37 @@ async function deletePhotoHandler(photo: AdminPhoto) {
   }
 }
 
+async function restorePhotoHandler(photo: AdminPhoto) {
+  try {
+    const { photo: updated } = await apiFetch<{ ok: true; photo: AdminPhoto }>(
+      `/api/admin/photos/${photo.id}/restore`,
+      { method: 'POST' },
+    )
+    replacePhoto(updated)
+    render()
+    showToast('Restored')
+  } catch (err) {
+    showToast(err instanceof Error ? err.message : 'Restore failed', true)
+  }
+}
+
+async function permanentDeleteHandler(photo: AdminPhoto) {
+  const ok = await confirmDialog(
+    `Permanently delete "${photo.title || photo.filename}"? This removes the image files AND all metadata forever. It cannot be undone.`,
+    'Delete permanently',
+  )
+  if (!ok) return
+  try {
+    await apiFetch<{ ok: true }>(`/api/admin/photos/${photo.id}/permanent`, { method: 'DELETE' })
+    photos = photos.filter(p => p.id !== photo.id)
+    knownIds.delete(photo.id)
+    render()
+    showToast('Permanently deleted')
+  } catch (err) {
+    showToast(err instanceof Error ? err.message : 'Permanent delete failed', true)
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Gallery event delegation
 // ---------------------------------------------------------------------------
@@ -453,6 +485,16 @@ galleryRoot.addEventListener('click', event => {
   if (action === 'delete' && id) {
     const photo = photos.find(p => p.id === id)
     if (photo) void deletePhotoHandler(photo)
+    return
+  }
+  if (action === 'restore' && id) {
+    const photo = photos.find(p => p.id === id)
+    if (photo) void restorePhotoHandler(photo)
+    return
+  }
+  if (action === 'delete-permanent' && id) {
+    const photo = photos.find(p => p.id === id)
+    if (photo) void permanentDeleteHandler(photo)
     return
   }
 })
@@ -508,6 +550,21 @@ function setQueueState(jobId: string, state: QueueState, message?: string) {
   item.state = state
   item.message = message
   renderQueue()
+}
+
+/**
+ * Duplicate-queue-item message. When the existing photo is soft-deleted the
+ * generic "duplicate" message is a dead-end (the trashed row's content_hash
+ * blocks re-upload but the photo isn't visible as live) -- point at the two
+ * escape routes instead.
+ */
+function duplicateMessage(existingId: string | null, deletedHint?: boolean): string {
+  const existing = existingId ? photos.find(p => p.id === existingId) : undefined
+  const deleted = deletedHint ?? !!existing?.deleted_at
+  if (deleted) {
+    return `already uploaded but in Trash (photo ${existingId ?? '?'}) -- Restore it, or Delete it permanently to re-add`
+  }
+  return `matches existing photo ${existingId ?? '?'}`
 }
 
 function defaultTitleFromFilename(name: string): string {
@@ -593,7 +650,14 @@ async function uploadProcessedPhoto(item: QueueItem, photo: ProcessedPhoto) {
     })
 
     if (res.status === 409) {
-      setQueueState(item.jobId, 'duplicate', 'server: duplicate content_hash')
+      const body = (await res.json().catch(() => null)) as
+        | { existingId?: string | null; deleted?: boolean }
+        | null
+      setQueueState(
+        item.jobId,
+        'duplicate',
+        `server: ${duplicateMessage(body?.existingId ?? null, body?.deleted)}`,
+      )
       return
     }
     if (!res.ok) {
@@ -616,7 +680,7 @@ uploadWorker.addEventListener('message', (event: MessageEvent<WorkerToMainMessag
   if (!item) return
 
   if (msg.type === 'duplicate') {
-    setQueueState(msg.jobId, 'duplicate', `matches existing photo ${msg.id}`)
+    setQueueState(msg.jobId, 'duplicate', duplicateMessage(msg.id))
     return
   }
   if (msg.type === 'error') {
@@ -627,7 +691,7 @@ uploadWorker.addEventListener('message', (event: MessageEvent<WorkerToMainMessag
     // Re-check right before upload: earlier jobs in this same batch may have
     // finished (and been added to knownIds) after this job was dispatched.
     if (knownIds.has(msg.photo.id)) {
-      setQueueState(msg.jobId, 'duplicate', `matches existing photo ${msg.photo.id}`)
+      setQueueState(msg.jobId, 'duplicate', duplicateMessage(msg.photo.id))
       return
     }
     knownIds.add(msg.photo.id)
