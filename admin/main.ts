@@ -598,7 +598,7 @@ function enqueueFiles(files: FileList | File[]) {
   renderQueue()
 }
 
-async function uploadBlob(id: string, variant: 'medium' | 'large' | 'original', bytes: ArrayBuffer, contentType: string) {
+async function uploadBlob(id: string, variant: 'medium' | 'large' | 'full' | 'original', bytes: ArrayBuffer, contentType: string) {
   const res = await fetch(`/api/admin/photos/${id}/blob/${variant}`, {
     method: 'POST',
     headers: { 'content-type': contentType },
@@ -613,6 +613,7 @@ async function uploadProcessedPhoto(item: QueueItem, photo: ProcessedPhoto) {
     await Promise.all([
       uploadBlob(photo.id, 'medium', photo.medium.bytes, 'image/webp'),
       uploadBlob(photo.id, 'large', photo.large.bytes, 'image/webp'),
+      uploadBlob(photo.id, 'full', photo.full.bytes, 'image/webp'),
       uploadBlob(photo.id, 'original', photo.original.bytes, photo.original.contentType),
     ])
 
@@ -629,6 +630,9 @@ async function uploadProcessedPhoto(item: QueueItem, photo: ProcessedPhoto) {
       large_key: `photos/${photo.id}/large.webp`,
       large_w: photo.large.width,
       large_h: photo.large.height,
+      full_key: `photos/${photo.id}/full.webp`,
+      full_w: photo.full.width,
+      full_h: photo.full.height,
       original_key: `photos/${photo.id}/original.${photo.original.ext}`,
       original_bytes: photo.original.bytes.byteLength,
       original_w: photo.original.width,

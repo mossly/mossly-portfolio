@@ -83,6 +83,9 @@ export interface AdminPhoto {
   large_key: string | null
   large_w: number | null
   large_h: number | null
+  full_key: string | null
+  full_w: number | null
+  full_h: number | null
   aspect_ratio: number
 
   date_taken: string | null
@@ -121,6 +124,10 @@ export interface PhotoInsert {
   large_key: string
   large_w: number
   large_h: number
+
+  full_key?: string | null
+  full_w?: number | null
+  full_h?: number | null
 
   original_key: string
   original_bytes: number

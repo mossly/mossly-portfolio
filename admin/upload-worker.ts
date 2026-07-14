@@ -34,6 +34,9 @@ const MEDIUM_MAX_DIM = 1200
 const MEDIUM_QUALITY = 75
 const LARGE_MAX_DIM = 2560
 const LARGE_QUALITY = 80
+// Native resolution (no resize), higher quality tier -- crisp full-res web
+// viewing at a fraction of the original JPEG's size.
+const FULL_QUALITY = 85
 
 function post(message: WorkerToMainMessage, transfer?: Transferable[]) {
   if (transfer && transfer.length > 0) postMessage(message, transfer)
@@ -84,6 +87,23 @@ async function makeVariant(file: File, targetWidth: number, quality: number): Pr
     if (Math.abs(bitmap.width - targetWidth) > 1) {
       console.warn(`[upload-worker] resized width ${bitmap.width} != requested ${targetWidth} for ${file.name}`)
     }
+    const imageData = bitmapToImageData(bitmap)
+    const encoded = await encodeWebp(imageData, { quality })
+    return { bytes: encoded, width: bitmap.width, height: bitmap.height }
+  } finally {
+    bitmap.close()
+  }
+}
+
+/**
+ * Upright decode at NATIVE resolution (no resizeWidth), encode to webp at
+ * `quality`. Used for the `full` variant -- crisp full-res web viewing.
+ * Desktop Chromium target only; very large images are fine (no Safari cap
+ * concern per the plan).
+ */
+async function makeFullVariant(file: File, quality: number): Promise<EncodedVariant> {
+  const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
+  try {
     const imageData = bitmapToImageData(bitmap)
     const encoded = await encodeWebp(imageData, { quality })
     return { bytes: encoded, width: bitmap.width, height: bitmap.height }
@@ -164,9 +184,10 @@ async function processFile(file: File, existingIds: string[]): Promise<
   const mediumWidth = targetWidthFor(original.width, original.height, MEDIUM_MAX_DIM)
   const largeWidth = targetWidthFor(original.width, original.height, LARGE_MAX_DIM)
 
-  const [medium, large] = await Promise.all([
+  const [medium, large, full] = await Promise.all([
     makeVariant(file, mediumWidth, MEDIUM_QUALITY),
     makeVariant(file, largeWidth, LARGE_QUALITY),
+    makeFullVariant(file, FULL_QUALITY),
   ])
 
   const contentType = file.type || 'image/jpeg'
@@ -185,6 +206,7 @@ async function processFile(file: File, existingIds: string[]): Promise<
     aspectRatio: original.width / original.height,
     medium,
     large,
+    full,
     original: originalVariant,
     metadata,
     exifJson,
@@ -205,7 +227,12 @@ addEventListener('message', async (event: MessageEvent<MainToWorkerMessage>) => 
     }
     const { photo } = result
     // Transfer the raw byte buffers instead of structured-cloning them.
-    const transfer: Transferable[] = [photo.medium.bytes, photo.large.bytes, photo.original.bytes]
+    const transfer: Transferable[] = [
+      photo.medium.bytes,
+      photo.large.bytes,
+      photo.full.bytes,
+      photo.original.bytes,
+    ]
     post({ type: 'result', jobId, photo }, transfer)
   } catch (err) {
     post({ type: 'error', jobId, message: err instanceof Error ? err.message : String(err) })
