@@ -19,7 +19,7 @@ import type { Env } from './worker'
 import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoStatus } from './types/photo'
 import { CATEGORY_ORDER } from './config/images'
 
-type Variant = 'medium' | 'large' | 'original'
+type Variant = 'medium' | 'large' | 'full' | 'original'
 
 // D1 caps bound parameters per statement/batch well above this, but batching
 // UPDATEs in chunks keeps each `env.DB.batch()` call comfortably small and
@@ -49,7 +49,7 @@ function isValidId(id: string): boolean {
 }
 
 function isValidVariant(variant: string): variant is Variant {
-  return variant === 'medium' || variant === 'large' || variant === 'original'
+  return variant === 'medium' || variant === 'large' || variant === 'full' || variant === 'original'
 }
 
 function isValidCategory(value: unknown): value is PhotoCategory {
@@ -122,6 +122,18 @@ function validatePhotoInsert(body: unknown): string[] {
   if (!isPositiveInt(b.large_w)) errors.push('large_w must be a positive integer')
   if (!isPositiveInt(b.large_h)) errors.push('large_h must be a positive integer')
 
+  // full is optional/nullable -- backward-compatible with callers that
+  // haven't been updated to send it yet.
+  if (b.full_key !== undefined && b.full_key !== null && !isNonEmptyString(b.full_key)) {
+    errors.push('full_key must be a non-empty string or null')
+  }
+  if (b.full_w !== undefined && b.full_w !== null && !isPositiveInt(b.full_w)) {
+    errors.push('full_w must be a positive integer or null')
+  }
+  if (b.full_h !== undefined && b.full_h !== null && !isPositiveInt(b.full_h)) {
+    errors.push('full_h must be a positive integer or null')
+  }
+
   if (!isNonEmptyString(b.original_key)) errors.push('original_key must be a non-empty string')
   if (!isPositiveInt(b.original_bytes)) errors.push('original_bytes must be a positive integer')
   if (!isPositiveInt(b.original_w)) errors.push('original_w must be a positive integer')
@@ -167,9 +179,9 @@ async function putBlob(request: Request, env: Env, id: string, variant: string):
     ext = extForOriginal(contentType)
     storedContentType = contentType
   } else {
-    // medium/large are always client-re-encoded to webp; reject anything else
-    // so we never persist a wrong/attacker-controlled Content-Type on a key
-    // that is served publicly as image/webp.
+    // medium/large/full are always client-re-encoded to webp; reject anything
+    // else so we never persist a wrong/attacker-controlled Content-Type on a
+    // key that is served publicly as image/webp.
     ext = contentType.split(';')[0].trim().toLowerCase() === 'image/webp' ? 'webp' : null
     storedContentType = 'image/webp'
   }
@@ -214,10 +226,11 @@ async function createPhoto(request: Request, env: Env): Promise<Response> {
     await env.DB.prepare(
       `INSERT INTO photos (
         id, content_hash, category, title, description, filename, status, sort_order,
-        medium_key, medium_w, medium_h, large_key, large_w, large_h, aspect_ratio,
+        medium_key, medium_w, medium_h, large_key, large_w, large_h,
+        full_key, full_w, full_h, aspect_ratio,
         date_taken, camera, lens, iso, aperture, shutter_speed, focal_length, exif_json,
         original_key, original_bytes, original_w, original_h
-      ) VALUES (?,?,?,?,?,?,?,?, ?,?,?,?,?,?,?, ?,?,?,?,?,?,?,?, ?,?,?,?)`,
+      ) VALUES (?,?,?,?,?,?,?,?, ?,?,?,?,?,?, ?,?,?,?, ?,?,?,?,?,?,?,?, ?,?,?,?)`,
     )
       .bind(
         input.id,
@@ -234,6 +247,9 @@ async function createPhoto(request: Request, env: Env): Promise<Response> {
         input.large_key,
         input.large_w,
         input.large_h,
+        input.full_key ?? null,
+        input.full_w ?? null,
+        input.full_h ?? null,
         input.aspect_ratio,
         input.date_taken ?? null,
         input.camera ?? null,
@@ -447,13 +463,14 @@ async function permanentDeletePhoto(env: Env, id: string): Promise<Response> {
   if (!isValidId(id)) return jsonError('invalid_id', 400)
 
   const row = await env.DB.prepare(
-    'SELECT deleted_at, medium_key, large_key, original_key FROM photos WHERE id = ?',
+    'SELECT deleted_at, medium_key, large_key, full_key, original_key FROM photos WHERE id = ?',
   )
     .bind(id)
     .first<{
       deleted_at: string | null
       medium_key: string
       large_key: string | null
+      full_key: string | null
       original_key: string | null
     }>()
 
@@ -463,9 +480,19 @@ async function permanentDeletePhoto(env: Env, id: string): Promise<Response> {
   // R2 first, D1 second: if the R2 delete fails we still have the row (and
   // can retry); a dangling row is recoverable, orphaned-but-unreferenced R2
   // objects after a lost row would not be.
-  const keys = [row.medium_key, row.large_key, row.original_key].filter(
-    (key): key is string => !!key,
-  )
+  //
+  // Include the canonical `photos/<id>/full.webp` unconditionally (deduped),
+  // not just the DB-derived `full_key`: if the object was backfilled to R2 but
+  // its backfill-full.sql hasn't been applied yet (full_key still NULL in D1),
+  // deleting only the DB-derived keys would orphan it. A delete of a
+  // non-existent key is a harmless R2 no-op.
+  const keys = [
+    ...new Set(
+      [row.medium_key, row.large_key, row.full_key, row.original_key, `photos/${id}/full.webp`].filter(
+        (key): key is string => !!key,
+      ),
+    ),
+  ]
   if (keys.length > 0) {
     await env.IMAGES.delete(keys)
   }

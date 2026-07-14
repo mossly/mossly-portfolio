@@ -40,6 +40,8 @@ export interface ProcessedPhoto {
   aspectRatio: number
   medium: EncodedVariant
   large: EncodedVariant
+  /** Native-resolution webp (quality 85) -- crisp full-res web viewing. */
+  full: EncodedVariant
   original: OriginalVariant
   metadata: ExtractedMetadata
   /** Full parsed EXIF object (for the `exif_json` column), or null if unreadable. */
