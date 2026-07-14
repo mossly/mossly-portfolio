@@ -28,10 +28,42 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import seedPhotos from '../src/data/photos.seed.json'
+import publicPhotos from '../src/data/photos.json'
 
 interface SeedPhoto {
   id: string
   original_key: string
+}
+
+interface PublicVariant {
+  url: string
+  width: number
+  height: number
+}
+
+interface PublicPhoto {
+  id: string
+  variants: {
+    original: PublicVariant
+  }
+}
+
+type PublicPhotosByCategory = Record<string, PublicPhoto[]>
+
+/**
+ * id -> the original's true (upright) pixel dimensions, sourced from
+ * photos.json -- the SAME source seed-d1.ts joined against for original_w/h.
+ * Used to assert the re-encoded full.webp came out at the expected
+ * orientation/resolution before its UPDATE is emitted.
+ */
+const originalDimsById = new Map<string, { width: number; height: number }>()
+for (const category of Object.keys(publicPhotos as PublicPhotosByCategory)) {
+  for (const photo of (publicPhotos as PublicPhotosByCategory)[category]) {
+    const original = photo.variants?.original
+    if (original && typeof original.width === 'number' && typeof original.height === 'number') {
+      originalDimsById.set(photo.id, { width: original.width, height: original.height })
+    }
+  }
 }
 
 const R2_BUCKET = process.env.R2_BUCKET || 'mossly-images'
@@ -106,14 +138,36 @@ async function fetchOriginal(originalKey: string): Promise<Buffer> {
 }
 
 async function backfillPhoto(photo: SeedPhoto): Promise<string> {
+  const expected = originalDimsById.get(photo.id)
+  if (!expected) {
+    throw new Error(`no original dimensions in photos.json for ${photo.id} -- cannot verify the encode`)
+  }
+
   const originalBuf = await fetchOriginal(photo.original_key)
 
-  const fullBuf = await sharp(originalBuf).webp({ quality: FULL_QUALITY }).toBuffer()
-  const meta = await sharp(fullBuf).metadata()
-  const width = meta.width
-  const height = meta.height
+  // .rotate() with no args applies the EXIF orientation (no-op for
+  // orientation=1) so the pixels come out upright -- webp carries no
+  // orientation tag, so a rotated original would otherwise produce a sideways
+  // full.webp with swapped dimensions, diverging from the browser upload path
+  // (which orients via createImageBitmap's imageOrientation:'from-image').
+  const { data: fullBuf, info } = await sharp(originalBuf)
+    .rotate()
+    .webp({ quality: FULL_QUALITY })
+    .toBuffer({ resolveWithObject: true })
+
+  const width = info.width
+  const height = info.height
   if (!width || !height) {
     throw new Error(`could not read encoded webp dimensions for ${photo.id}`)
+  }
+
+  // Assert the encode matches the known upright original dims. A mismatch means
+  // wrong orientation (swapped w/h) or a resolution surprise -- abort the whole
+  // backfill before any SQL is emitted rather than persist a bad row.
+  if (width !== expected.width || height !== expected.height) {
+    throw new Error(
+      `encoded full.webp dimensions ${width}x${height} != expected original ${expected.width}x${expected.height} for ${photo.id}`,
+    )
   }
 
   const fullKey = `photos/${photo.id}/full.webp`

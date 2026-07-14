@@ -480,9 +480,19 @@ async function permanentDeletePhoto(env: Env, id: string): Promise<Response> {
   // R2 first, D1 second: if the R2 delete fails we still have the row (and
   // can retry); a dangling row is recoverable, orphaned-but-unreferenced R2
   // objects after a lost row would not be.
-  const keys = [row.medium_key, row.large_key, row.full_key, row.original_key].filter(
-    (key): key is string => !!key,
-  )
+  //
+  // Include the canonical `photos/<id>/full.webp` unconditionally (deduped),
+  // not just the DB-derived `full_key`: if the object was backfilled to R2 but
+  // its backfill-full.sql hasn't been applied yet (full_key still NULL in D1),
+  // deleting only the DB-derived keys would orphan it. A delete of a
+  // non-existent key is a harmless R2 no-op.
+  const keys = [
+    ...new Set(
+      [row.medium_key, row.large_key, row.full_key, row.original_key, `photos/${id}/full.webp`].filter(
+        (key): key is string => !!key,
+      ),
+    ),
+  ]
   if (keys.length > 0) {
     await env.IMAGES.delete(keys)
   }
