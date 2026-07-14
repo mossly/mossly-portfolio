@@ -9,6 +9,9 @@
 //   POST   /api/admin/photos                     -- insert metadata row (commit step)
 //   PATCH  /api/admin/photos/:id                 -- edit title/description/category/status
 //   DELETE /api/admin/photos/:id                 -- soft-delete (deleted_at), keeps R2 objects
+//   POST   /api/admin/photos/:id/restore          -- clear deleted_at (un-trash)
+//   DELETE /api/admin/photos/:id/permanent        -- hard-delete: R2 objects + D1 row
+//                                                    (only allowed on soft-deleted rows)
 //
 // See docs/phase-3e-plan.md ("3E-1") for the authoritative route schemas.
 
@@ -248,10 +251,15 @@ async function createPhoto(request: Request, env: Env): Promise<Response> {
       .run()
   } catch (err) {
     if (isUniqueConstraintError(err)) {
-      const existing = await env.DB.prepare('SELECT id FROM photos WHERE content_hash = ?')
+      const existing = await env.DB.prepare('SELECT id, deleted_at FROM photos WHERE content_hash = ?')
         .bind(input.content_hash)
-        .first<{ id: string }>()
-      return jsonError('duplicate', 409, { existingId: existing?.id ?? null })
+        .first<{ id: string; deleted_at: string | null }>()
+      // `deleted` tells the client whether the blocking row is in the Trash --
+      // the escape route is Restore or Delete-permanently, not re-upload.
+      return jsonError('duplicate', 409, {
+        existingId: existing?.id ?? null,
+        deleted: !!existing?.deleted_at,
+      })
     }
     throw err
   }
@@ -405,6 +413,69 @@ async function deletePhoto(env: Env, id: string): Promise<Response> {
 }
 
 /**
+ * Un-trashes a soft-deleted photo: clears `deleted_at` so the row is live
+ * again and its `content_hash` once more represents an active photo. Safe to
+ * call on a live row (no-op restore) -- only a missing id is an error.
+ */
+async function restorePhoto(env: Env, id: string): Promise<Response> {
+  if (!isValidId(id)) return jsonError('invalid_id', 400)
+
+  const result = await env.DB.prepare(
+    `UPDATE photos
+     SET deleted_at = NULL,
+         updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now')
+     WHERE id = ?`,
+  )
+    .bind(id)
+    .run()
+
+  if (result.meta.changes === 0) {
+    return jsonError('not_found', 404)
+  }
+
+  const photo = await env.DB.prepare('SELECT * FROM photos WHERE id = ?').bind(id).first<AdminPhoto>()
+  return Response.json({ ok: true, photo }, { status: 200 })
+}
+
+/**
+ * Hard-deletes a photo: removes its R2 objects AND the D1 row, freeing the
+ * `content_hash` for a clean re-upload. Only allowed on rows that are already
+ * soft-deleted -- a live photo must be trashed first (two-step guard so a
+ * single click can never irreversibly destroy a live photo).
+ */
+async function permanentDeletePhoto(env: Env, id: string): Promise<Response> {
+  if (!isValidId(id)) return jsonError('invalid_id', 400)
+
+  const row = await env.DB.prepare(
+    'SELECT deleted_at, medium_key, large_key, original_key FROM photos WHERE id = ?',
+  )
+    .bind(id)
+    .first<{
+      deleted_at: string | null
+      medium_key: string
+      large_key: string | null
+      original_key: string | null
+    }>()
+
+  if (!row) return jsonError('not_found', 404)
+  if (!row.deleted_at) return jsonError('not_trashed', 409)
+
+  // R2 first, D1 second: if the R2 delete fails we still have the row (and
+  // can retry); a dangling row is recoverable, orphaned-but-unreferenced R2
+  // objects after a lost row would not be.
+  const keys = [row.medium_key, row.large_key, row.original_key].filter(
+    (key): key is string => !!key,
+  )
+  if (keys.length > 0) {
+    await env.IMAGES.delete(keys)
+  }
+
+  await env.DB.prepare('DELETE FROM photos WHERE id = ?').bind(id).run()
+
+  return Response.json({ ok: true }, { status: 200 })
+}
+
+/**
  * Routes `/api/admin/*` requests. Called from worker.ts only after the
  * Access+JWT gate (or the localhost dev bypass) has already authorized the
  * request -- this function assumes the caller is trusted.
@@ -429,6 +500,18 @@ export async function handleAdminApi(request: Request, env: Env, url: URL): Prom
     const [, id, variant] = blobMatch
     if (method !== 'POST') return jsonError('method_not_allowed', 405)
     return putBlob(request, env, id, variant)
+  }
+
+  const restoreMatch = pathname.match(/^\/api\/admin\/photos\/([^/]+)\/restore$/)
+  if (restoreMatch) {
+    if (method !== 'POST') return jsonError('method_not_allowed', 405)
+    return restorePhoto(env, restoreMatch[1])
+  }
+
+  const permanentMatch = pathname.match(/^\/api\/admin\/photos\/([^/]+)\/permanent$/)
+  if (permanentMatch) {
+    if (method !== 'DELETE') return jsonError('method_not_allowed', 405)
+    return permanentDeletePhoto(env, permanentMatch[1])
   }
 
   const idMatch = pathname.match(/^\/api\/admin\/photos\/([^/]+)$/)
