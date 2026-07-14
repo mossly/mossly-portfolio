@@ -5,11 +5,11 @@
  * decode + downscale, webp encode (@jsquash/webp, WASM), EXIF extraction
  * (exifr). See docs/phase-3e-plan.md ("3E-3") for the authoritative pipeline.
  *
- * NOT type-checked by the root `tsc` program (see tsconfig.json's `exclude`) --
- * this file runs in the DedicatedWorkerGlobalScope, whose `self`/`postMessage`
- * typings conflict with the main-thread DOM lib used by admin/main.ts if both
- * were type-checked in the same program. `vite build` still transpiles and
- * bundles it normally; only strict type-checking is skipped.
+ * Type-checked by its own `tsc -p tsconfig.worker.json` program (see that
+ * file) -- this file runs in a DedicatedWorkerGlobalScope, whose
+ * `self`/`postMessage` typings (lib "WebWorker") conflict with the
+ * main-thread DOM lib used by admin/main.ts if both were type-checked in the
+ * same program, hence the split program instead of a same-program mix.
  *
  * Desktop Chromium/Firefox target only -- no Safari/HEIC fallback (see plan).
  */
@@ -28,18 +28,16 @@ import type {
   WorkerToMainMessage,
 } from './upload-types'
 
-declare const self: DedicatedWorkerGlobalScope
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ctx: any = self
-
-const MEDIUM_WIDTH = 1200
+// Longest-side targets (matches sharp's `.resize(maxDim, maxDim, { fit: 'inside' })`
+// used by migrate-to-r2.ts for the seeded 83), not raw widths -- see targetWidthFor().
+const MEDIUM_MAX_DIM = 1200
 const MEDIUM_QUALITY = 75
-const LARGE_WIDTH = 2560
+const LARGE_MAX_DIM = 2560
 const LARGE_QUALITY = 80
 
 function post(message: WorkerToMainMessage, transfer?: Transferable[]) {
-  if (transfer && transfer.length > 0) ctx.postMessage(message, transfer)
-  else ctx.postMessage(message)
+  if (transfer && transfer.length > 0) postMessage(message, transfer)
+  else postMessage(message)
 }
 
 async function sha256Hex(buf: ArrayBuffer): Promise<string> {
@@ -59,10 +57,22 @@ function bitmapToImageData(bitmap: ImageBitmap): ImageData {
 }
 
 /**
- * Upright decode + downscale to `targetWidth`, encode to webp at `quality`.
- * Closes the intermediate bitmap. Logs (doesn't throw) if the decoded width
- * drifts from the request -- Chromium/Firefox honor resizeWidth exactly in
- * practice, but this is a cheap safety net per the plan.
+ * Computes the resizeWidth to pass to createImageBitmap so the result matches
+ * sharp's `.resize(maxDim, maxDim, { fit: 'inside', withoutEnlargement: true })`
+ * (the behavior migrate-to-r2.ts uses for the seeded 83): scale by the longest
+ * side, and never upscale a source smaller than `maxDim`.
+ */
+function targetWidthFor(originalWidth: number, originalHeight: number, maxDim: number): number {
+  const scale = Math.min(1, maxDim / Math.max(originalWidth, originalHeight))
+  return Math.round(originalWidth * scale)
+}
+
+/**
+ * Upright decode + downscale to `targetWidth` (pre-computed by `targetWidthFor`
+ * from the true original dimensions), encode to webp at `quality`. Closes the
+ * intermediate bitmap. Logs (doesn't throw) if the decoded width drifts from
+ * the request -- Chromium/Firefox honor resizeWidth exactly in practice, but
+ * this is a cheap safety net per the plan.
  */
 async function makeVariant(file: File, targetWidth: number, quality: number): Promise<EncodedVariant> {
   const bitmap = await createImageBitmap(file, {
@@ -143,11 +153,20 @@ async function processFile(file: File, existingIds: string[]): Promise<
     return { kind: 'duplicate', id }
   }
 
-  const [medium, large, original, { metadata, exifJson }] = await Promise.all([
-    makeVariant(file, MEDIUM_WIDTH, MEDIUM_QUALITY),
-    makeVariant(file, LARGE_WIDTH, LARGE_QUALITY),
+  // Read the true upright original dimensions first so each variant's target
+  // width can be computed longest-side (matches sharp's fit:'inside') and
+  // clamped against upscaling small sources (matches withoutEnlargement).
+  const [original, { metadata, exifJson }] = await Promise.all([
     readOriginalDimensions(file),
     extractMetadata(file),
+  ])
+
+  const mediumWidth = targetWidthFor(original.width, original.height, MEDIUM_MAX_DIM)
+  const largeWidth = targetWidthFor(original.width, original.height, LARGE_MAX_DIM)
+
+  const [medium, large] = await Promise.all([
+    makeVariant(file, mediumWidth, MEDIUM_QUALITY),
+    makeVariant(file, largeWidth, LARGE_QUALITY),
   ])
 
   const contentType = file.type || 'image/jpeg'
@@ -173,7 +192,7 @@ async function processFile(file: File, existingIds: string[]): Promise<
   return { kind: 'ok', photo }
 }
 
-ctx.addEventListener('message', async (event: MessageEvent<MainToWorkerMessage>) => {
+addEventListener('message', async (event: MessageEvent<MainToWorkerMessage>) => {
   const msg = event.data
   if (msg.type !== 'process') return
   const { jobId, file, existingIds } = msg

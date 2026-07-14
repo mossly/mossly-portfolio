@@ -23,10 +23,10 @@
   },
   "include": ["src", "admin"],
   // admin/upload-worker.ts runs in a DedicatedWorkerGlobalScope, whose
-  // self/postMessage typings (lib "webworker") conflict with the DOM lib used
-  // by every other file (incl. admin/main.ts) if both are type-checked in one
-  // program. It's excluded from `tsc` here; `vite build` still transpiles and
-  // bundles it (esbuild doesn't type-check), so a real syntax/reference error
-  // in it still fails `npm run build`. See admin/upload-worker.ts's file header.
+  // self/postMessage typings (lib "WebWorker") conflict with the DOM lib this
+  // program uses for every other file (incl. admin/main.ts) if both were
+  // type-checked together. It's excluded from *this* program and instead
+  // type-checked by its own tsconfig.worker.json program (see that file and
+  // admin/upload-worker.ts's header) -- `npm run build` runs both.
   "exclude": ["admin/upload-worker.ts"]
 }
