@@ -144,3 +144,13 @@ export interface PhotoPatch {
   category?: PhotoCategory
   status?: PhotoStatus
 }
+
+/**
+ * Body of `PUT /api/admin/photos/order` (Phase 3F) — the full ordered list of
+ * live ids for one category, front-to-back. `sort_order` is set to each id's
+ * index in `ids`.
+ */
+export interface PhotoOrderUpdate {
+  category: PhotoCategory
+  ids: string[]
+}
