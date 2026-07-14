@@ -1,70 +1,71 @@
 import type { Photo, PhotoCategory, Gallery } from '../types/photo'
 import { GALLERY_CONFIG, CATEGORY_ORDER } from '../config/images'
-import photosData from '../data/photos.json'
-import photoOrderData from '../data/photo-order.json'
-
-type PhotoOrder = Partial<Record<PhotoCategory, string[]>>
 
 export class GalleryManager {
-  private photos: Record<PhotoCategory, Photo[]>
-  private order: PhotoOrder
-  private galleries: Map<PhotoCategory, Gallery>
+  private photos: Record<PhotoCategory, Photo[]> = {} as Record<PhotoCategory, Photo[]>
+  private galleries: Map<PhotoCategory, Gallery> = new Map()
   private currentCategory: PhotoCategory = 'bird'
   private listeners: Set<(category: PhotoCategory) => void> = new Set()
 
-  constructor() {
-    this.photos = photosData as Record<PhotoCategory, Photo[]>
-    this.order = photoOrderData as PhotoOrder
-    this.galleries = new Map()
+  /**
+   * Loads the gallery data from the live `/api/photos` endpoint (Phase 3G).
+   * Must be awaited before any other method is used. Order is now baked into
+   * D1 `sort_order` and the API already returns rows pre-ordered per
+   * category, so there is no client-side order merge step anymore
+   * (`applyOrder()` / `photo-order.json` are gone).
+   *
+   * On fetch failure, logs and leaves the gallery in an empty state rather
+   * than throwing -- callers get a working (if photo-less) page instead of a
+   * hard crash.
+   */
+  async init(): Promise<void> {
+    try {
+      const res = await fetch('/api/photos')
+      if (!res.ok) {
+        throw new Error(`/api/photos responded ${res.status}`)
+      }
+      this.photos = (await res.json()) as Record<PhotoCategory, Photo[]>
+    } catch (err) {
+      console.error('Failed to load photos from /api/photos:', err)
+      this.photos = {} as Record<PhotoCategory, Photo[]>
+    }
     this.initializeGalleries()
   }
 
   private initializeGalleries() {
+    this.galleries = new Map()
     for (const [category, photos] of Object.entries(this.photos)) {
       const config = GALLERY_CONFIG[category as PhotoCategory]
-      const ordered = this.applyOrder(category as PhotoCategory, photos as Photo[])
+      if (!config) continue
+      const list = photos as Photo[]
       this.galleries.set(category as PhotoCategory, {
         category: category as PhotoCategory,
         displayName: config.displayName,
-        photos: ordered,
-        coverPhoto: ordered[0] as Photo,
+        photos: list,
+        coverPhoto: list[0] as Photo,
       })
     }
   }
 
   /**
-   * Sort photos by the saved order list (by id). Photos not in the list keep
-   * their source-file order at the end, so newly processed photos show up
-   * automatically without needing to edit the order file.
+   * Dev-only, in-memory reorder used by gallery.ts's drag-and-drop grid
+   * (`import.meta.env.DEV` only). Order is now the D1 `sort_order` column
+   * (persisted via the admin `PUT /api/admin/photos/order`, Phase 3F) --
+   * this no longer writes anywhere, it just re-sorts the current session's
+   * in-memory list so the drag interaction still reflects visually. Slated
+   * for removal alongside the rest of the dev-only public-gallery sortable
+   * in Phase 3I.
    */
-  private applyOrder(category: PhotoCategory, photos: Photo[]): Photo[] {
-    const idOrder = this.order[category]
-    if (!idOrder || idOrder.length === 0) return [...photos]
-    const rank = new Map(idOrder.map((id, i) => [id, i]))
-    return [...photos].sort((a, b) => {
+  reorderInMemory(category: PhotoCategory, ids: string[]) {
+    const gallery = this.galleries.get(category)
+    if (!gallery) return
+    const rank = new Map(ids.map((id, i) => [id, i]))
+    gallery.photos = [...gallery.photos].sort((a, b) => {
       const ra = rank.has(a.id) ? rank.get(a.id)! : Number.POSITIVE_INFINITY
       const rb = rank.has(b.id) ? rank.get(b.id)! : Number.POSITIVE_INFINITY
       return ra - rb
     })
-  }
-
-  /**
-   * Replace the order for a category (dev-only). Persists via the Vite
-   * /__order endpoint and updates the in-memory gallery.
-   */
-  async saveOrder(category: PhotoCategory, ids: string[]): Promise<void> {
-    this.order = { ...this.order, [category]: ids }
-    const gallery = this.galleries.get(category)
-    if (gallery) {
-      gallery.photos = this.applyOrder(category, this.photos[category] || [])
-      gallery.coverPhoto = gallery.photos[0]
-    }
-    const res = await fetch('/__order', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ [category]: ids }),
-    })
-    if (!res.ok) throw new Error(`save failed: ${res.status} ${await res.text()}`)
+    gallery.coverPhoto = gallery.photos[0]
   }
 
   getCategories(): PhotoCategory[] {
@@ -117,5 +118,7 @@ export class GalleryManager {
   }
 }
 
-// Singleton instance
+// Singleton instance. Sync-constructed but data-empty until `init()`
+// resolves -- callers (app.ts) must `await galleryManager.init()` before
+// rendering.
 export const galleryManager = new GalleryManager()

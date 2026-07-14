@@ -2,6 +2,7 @@
 
 import { isValidAccessRequest } from './auth'
 import { handleAdminApi } from './admin-api'
+import { handlePublicPhotos } from './public-api'
 
 export interface Env {
   ASSETS: { fetch: (request: Request) => Promise<Response> }
@@ -15,6 +16,12 @@ export interface Env {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url)
+
+    // Phase 3G: public, unauthenticated read -- mounted ahead of the
+    // /api/admin/* gate below since it needs none of that gating.
+    if (url.pathname === '/api/photos' && request.method === 'GET') {
+      return handlePublicPhotos(env)
+    }
 
     if (url.pathname.startsWith('/api/admin/')) {
       // Local-dev bypass: only when the request's own hostname is localhost/127.0.0.1.

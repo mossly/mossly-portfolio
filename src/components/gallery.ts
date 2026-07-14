@@ -275,19 +275,16 @@ export class GalleryComponent {
     })
   }
 
-  private async handleReorder(category: PhotoCategory, section: HTMLElement) {
+  private handleReorder(category: PhotoCategory, section: HTMLElement) {
     const ids = Array.from(section.querySelectorAll<HTMLElement>('.image-item'))
       .map(el => el.getAttribute('data-photo-id'))
       .filter((id): id is string => !!id)
 
-    try {
-      await galleryManager.saveOrder(category, ids)
-      this.showToast('Saved')
-      this.rerenderGalleryInPlace(category)
-    } catch (err) {
-      console.error('Failed to save order:', err)
-      this.showToast('Save failed', true)
-    }
+    // Dev-only, in-session reorder (see gallery-manager.ts's reorderInMemory
+    // doc comment) -- ordering is now persisted via the admin
+    // PUT /api/admin/photos/order (Phase 3F), not this dev sandbox grid.
+    galleryManager.reorderInMemory(category, ids)
+    this.rerenderGalleryInPlace(category)
   }
 
   /**
@@ -315,18 +312,6 @@ export class GalleryComponent {
     if (this.lazyLoader) {
       this.lazyLoader.update()
     }
-  }
-
-  private showToast(message: string, error = false) {
-    const toast = document.createElement('div')
-    toast.textContent = message
-    toast.className = `gallery-toast${error ? ' gallery-toast-error' : ''}`
-    document.body.appendChild(toast)
-    requestAnimationFrame(() => toast.classList.add('visible'))
-    setTimeout(() => {
-      toast.classList.remove('visible')
-      setTimeout(() => toast.remove(), 200)
-    }, 1500)
   }
 
   private showGallery(category: PhotoCategory) {

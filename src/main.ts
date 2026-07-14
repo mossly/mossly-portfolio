@@ -9,7 +9,7 @@ preventFOUC()
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize navigation first
   new Navigation()
-  
-  // Then initialize app
-  initializeApp()
+
+  // Then initialize app (async: awaits the live /api/photos fetch)
+  void initializeApp()
 })
