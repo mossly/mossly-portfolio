@@ -150,15 +150,22 @@ export class LightboxComponent {
     const clickedIndex = gallery.photos.findIndex(p => p.id === photoId)
     if (clickedIndex === -1) return
     
-    // Prepare data source - use original JPGs for lightbox
-    const dataSource = gallery.photos.map(photo => ({
-      src: photo.variants.original.url,
-      width: photo.variants.original.width,
-      height: photo.variants.original.height,
-      msrc: photo.variants.medium.url,
-      alt: photo.title || photo.filename,
-      id: photo.id,
-    }))
+    // Prepare data source - prefer the native-res `full` webp (crisp, small
+    // download); fall back to `large`, then `original` for photos that
+    // haven't been backfilled with a `full` variant yet (full_key IS NULL).
+    // `msrc` stays the already-cached grid `medium` image so PhotoSwipe shows
+    // it instantly while the high-res source streams in.
+    const dataSource = gallery.photos.map(photo => {
+      const source = photo.variants.full || photo.variants.large || photo.variants.original
+      return {
+        src: source.url,
+        width: source.width,
+        height: source.height,
+        msrc: photo.variants.medium.url,
+        alt: photo.title || photo.filename,
+        id: photo.id,
+      }
+    })
     
     if (this.lightbox) {
       this.lightbox.options.dataSource = dataSource

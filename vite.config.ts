@@ -80,5 +80,15 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    // The public site now fetches /api/photos at runtime (Phase 3G), but the
+    // Vite dev server has no /api/* handler -- unproxied, it would return
+    // index.html and the gallery's `res.json()` would throw into an empty
+    // state. Proxy /api to a local `wrangler dev` (default :8787), which serves
+    // the real Worker + D1. So for public-site dev, run `wrangler dev`
+    // alongside `vite` (or just use `wrangler dev`, which serves the built app
+    // directly and needs no proxy).
+    proxy: {
+      '/api': 'http://localhost:8787',
+    },
   },
 })

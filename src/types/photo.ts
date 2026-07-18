@@ -29,7 +29,11 @@ export interface ImageVariant {
   url: string
   width: number
   height: number
-  format: 'webp' | 'avif' | 'jpg' | 'jpeg' | 'png'
+  // Not populated by the D1-backed /api/photos response (Phase 3G) or the
+  // legacy baked photos.json -- neither carries a per-variant format, and
+  // nothing in the front-end reads it. Kept optional rather than removed in
+  // case a future caller wants it.
+  format?: 'webp' | 'avif' | 'jpg' | 'jpeg' | 'png'
 }
 
 export interface Photo {
@@ -43,6 +47,10 @@ export interface Photo {
     medium: ImageVariant
     large: ImageVariant
     original: ImageVariant
+    // Native-resolution webp (Phase 3E-4 / 3G). Omitted by the API when the
+    // photo hasn't been backfilled with a `full` variant yet (full_key IS
+    // NULL in D1) -- callers must fall back to `large`/`original`.
+    full?: ImageVariant
   }
   aspectRatio: number
 }

@@ -1,10 +1,15 @@
 import { GalleryComponent } from './components/gallery'
 import { Footer } from './components/footer'
+import { galleryManager } from './utils/gallery-manager'
 
-export function initializeApp() {
-  // Initialize gallery - use the existing gallery-grid container
+export async function initializeApp() {
+  // Initialize gallery - use the existing gallery-grid container.
+  // galleryManager.init() fetches /api/photos (Phase 3G) and must resolve
+  // before GalleryComponent's (synchronous) constructor reads any gallery
+  // data.
   const galleryGrid = document.querySelector('.gallery-grid')
   if (galleryGrid) {
+    await galleryManager.init()
     new GalleryComponent('app')
   }
 
