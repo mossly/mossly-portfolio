@@ -156,8 +156,17 @@ export interface PhotoInsert {
 export interface PhotoPatch {
   title?: string
   description?: string | null
+  location?: string | null
   category?: PhotoCategory
   status?: PhotoStatus
+  // EXIF-ish metadata fields. `''` or `null` clears the column.
+  date_taken?: string | null
+  camera?: string | null
+  lens?: string | null
+  iso?: number | string | null
+  aperture?: string | null
+  shutter_speed?: string | null
+  focal_length?: string | null
 }
 
 /**

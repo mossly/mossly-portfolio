@@ -14,7 +14,7 @@ import type { AdminPhoto, ImageVariant, Photo, PhotoCategory, PhotoMetadata } fr
 
 // The projection pulled from D1 -- an explicit column list (not `SELECT *`)
 // so admin-only columns (content_hash, original_bytes, status, deleted_at,
-// exif_json, orientation, location, created_at/updated_at, sort_order) can
+// exif_json, orientation, created_at/updated_at, sort_order) can
 // never leak into the public response even if AdminPhoto grows a column later.
 type PublicPhotoRow = Pick<
   AdminPhoto,
@@ -43,6 +43,7 @@ type PublicPhotoRow = Pick<
   | 'aperture'
   | 'shutter_speed'
   | 'focal_length'
+  | 'location'
 >
 
 const PUBLIC_COLUMNS = [
@@ -71,6 +72,7 @@ const PUBLIC_COLUMNS = [
   'aperture',
   'shutter_speed',
   'focal_length',
+  'location',
 ].join(', ')
 
 function variantUrl(imagesBase: string, key: string): string {
@@ -119,6 +121,7 @@ function toPublicPhoto(row: PublicPhotoRow, imagesBase: string): Photo {
   if (row.aperture) metadata.aperture = row.aperture
   if (row.shutter_speed) metadata.shutterSpeed = row.shutter_speed
   if (row.focal_length) metadata.focalLength = row.focal_length
+  if (row.location) metadata.location = row.location
 
   return {
     id: row.id,

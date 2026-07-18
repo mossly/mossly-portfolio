@@ -4,9 +4,10 @@
 // the authoritative behavior.
 import '../src/styles/main.css'
 import Sortable from 'sortablejs'
-import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoStatus } from '../src/types/photo'
+import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoPatch, PhotoStatus } from '../src/types/photo'
 import { CATEGORY_ORDER, GALLERY_CONFIG } from '../src/config/images'
 import { initThemeToggle } from '../src/components/theme-toggle'
+import { initMetadataPanel } from './metadata-panel'
 import type { MainToWorkerMessage, ProcessedPhoto, WorkerToMainMessage } from './upload-types'
 
 initThemeToggle()
@@ -66,6 +67,9 @@ const fileInput = document.getElementById('file-input') as HTMLInputElement
 const categorySelect = document.getElementById('upload-category') as unknown as HTMLSelectElement
 const uploadQueueEl = document.getElementById('upload-queue') as HTMLElement
 const confirmRoot = document.getElementById('confirm-root') as HTMLElement
+const metadataRoot = document.getElementById('metadata-root') as HTMLElement
+const metadataToggle = document.getElementById('metadata-toggle') as HTMLElement
+const metadataChevron = document.getElementById('metadata-chevron') as HTMLElement
 
 // ---------------------------------------------------------------------------
 // Small utilities
@@ -332,6 +336,7 @@ function renderView(photo: AdminPhoto): string {
   return `
     <h3 class="font-semibold text-sm truncate" title="${escapeHtml(photo.title)}">${escapeHtml(photo.title || '(untitled)')}</h3>
     ${photo.description ? `<p class="text-xs text-base-content/60 line-clamp-2">${escapeHtml(photo.description)}</p>` : ''}
+    ${photo.location ? `<p class="text-xs text-base-content/60 truncate">📍 ${escapeHtml(photo.location)}</p>` : ''}
     <p class="text-xs text-base-content/40 truncate">${escapeHtml(photo.filename)}</p>
     <div class="card-actions justify-end mt-1 gap-1">
       <button type="button" class="btn btn-sm" data-action="edit" data-id="${photo.id}">Edit</button>
@@ -356,7 +361,21 @@ function renderEditForm(photo: AdminPhoto): string {
              class="input input-sm w-full" required>
       <textarea name="description" placeholder="Description"
                 class="textarea textarea-sm w-full" rows="2">${escapeHtml(photo.description ?? '')}</textarea>
+      <input type="text" name="location" value="${escapeHtml(photo.location ?? '')}" placeholder="Location"
+             class="input input-sm w-full">
       <select name="category" class="select select-sm w-full">${categoryOptions}</select>
+      <details class="text-xs">
+        <summary class="cursor-pointer text-base-content/60 py-1">EXIF metadata</summary>
+        <div class="grid grid-cols-2 gap-1 mt-1">
+          <input type="text" name="camera" value="${escapeHtml(photo.camera ?? '')}" placeholder="Camera" class="input input-xs w-full col-span-2">
+          <input type="text" name="lens" value="${escapeHtml(photo.lens ?? '')}" placeholder="Lens" class="input input-xs w-full col-span-2">
+          <input type="text" name="aperture" value="${escapeHtml(photo.aperture ?? '')}" placeholder="Aperture (f/2.8)" class="input input-xs w-full">
+          <input type="text" name="shutter_speed" value="${escapeHtml(photo.shutter_speed ?? '')}" placeholder="Shutter (1/500s)" class="input input-xs w-full">
+          <input type="text" name="focal_length" value="${escapeHtml(photo.focal_length ?? '')}" placeholder="Focal (85mm)" class="input input-xs w-full">
+          <input type="number" name="iso" value="${photo.iso ?? ''}" placeholder="ISO" min="0" class="input input-xs w-full">
+          <input type="text" name="date_taken" value="${escapeHtml(photo.date_taken ?? '')}" placeholder="Date taken (ISO)" class="input input-xs w-full col-span-2">
+        </div>
+      </details>
       <div class="card-actions justify-end gap-1">
         <button type="button" class="btn btn-sm" data-action="cancel-edit">Cancel</button>
         <button type="submit" class="btn btn-sm btn-primary">Save</button>
@@ -380,22 +399,60 @@ async function saveEdit(id: string, form: HTMLFormElement) {
   const data = new FormData(form)
   const title = String(data.get('title') ?? '').trim()
   const description = String(data.get('description') ?? '').trim()
+  const location = String(data.get('location') ?? '').trim()
   const category = String(data.get('category') ?? '') as PhotoCategory
   if (!title) {
     showToast('Title cannot be empty', true)
     return
   }
+  // EXIF fields: blank input clears the column (send null). ISO is numeric.
+  const textMeta = (name: string): string | null => {
+    const v = String(data.get(name) ?? '').trim()
+    return v === '' ? null : v
+  }
+  const isoRaw = String(data.get('iso') ?? '').trim()
+  const iso: number | null = isoRaw === '' ? null : Number(isoRaw)
+  if (iso !== null && (!Number.isInteger(iso) || iso < 0)) {
+    showToast('ISO must be a non-negative whole number', true)
+    return
+  }
+  // Immediate pending feedback -- the PATCH round-trip can be slow (cold
+  // Worker / D1 write) and an unresponsive-looking button invites re-clicks.
+  const saveBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]')
+  const cancelBtn = form.querySelector<HTMLButtonElement>('[data-action="cancel-edit"]')
+  if (saveBtn) {
+    saveBtn.disabled = true
+    saveBtn.textContent = 'Saving…'
+  }
+  if (cancelBtn) cancelBtn.disabled = true
   try {
     const { photo } = await apiFetch<{ photo: AdminPhoto }>(`/api/admin/photos/${id}`, {
       method: 'PATCH',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ title, description: description || null, category }),
+      body: JSON.stringify({
+        title,
+        description: description || null,
+        location: location || null,
+        category,
+        camera: textMeta('camera'),
+        lens: textMeta('lens'),
+        aperture: textMeta('aperture'),
+        shutter_speed: textMeta('shutter_speed'),
+        focal_length: textMeta('focal_length'),
+        iso,
+        date_taken: textMeta('date_taken'),
+      } satisfies PhotoPatch),
     })
     replacePhoto(photo)
     editingId = null
     showToast('Saved')
     render()
   } catch (err) {
+    if (saveBtn) {
+      saveBtn.disabled = false
+      saveBtn.textContent = 'Save'
+    }
+    if (cancelBtn) cancelBtn.disabled = false
     showToast(err instanceof Error ? err.message : 'Save failed', true)
   }
 }
@@ -724,6 +781,20 @@ dropzone.addEventListener('drop', event => {
   if (event.dataTransfer?.files && event.dataTransfer.files.length > 0) {
     enqueueFiles(event.dataTransfer.files)
   }
+})
+
+// ---------------------------------------------------------------------------
+// Metadata cleanup panel (collapsible)
+// ---------------------------------------------------------------------------
+
+initMetadataPanel(metadataRoot, {
+  getPhotos: () => photos,
+  reload: loadPhotos,
+})
+
+metadataToggle.addEventListener('click', () => {
+  const open = metadataRoot.classList.toggle('hidden') === false
+  metadataChevron.classList.toggle('rotate-90', open)
 })
 
 // ---------------------------------------------------------------------------
