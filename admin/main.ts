@@ -6,7 +6,10 @@ import '../src/styles/main.css'
 import Sortable from 'sortablejs'
 import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoStatus } from '../src/types/photo'
 import { CATEGORY_ORDER, GALLERY_CONFIG } from '../src/config/images'
+import { initThemeToggle } from '../src/components/theme-toggle'
 import type { MainToWorkerMessage, ProcessedPhoto, WorkerToMainMessage } from './upload-types'
+
+initThemeToggle()
 
 // Real Cloudflare custom domain in front of the R2 bucket (see wrangler.jsonc
 // `IMAGES_BASE`). NOT emulated by `wrangler dev` locally (Miniflare's R2 has
@@ -191,7 +194,7 @@ function render() {
       const deleted = items.filter(p => p.deleted_at).sort((a, b) => a.sort_order - b.sort_order)
       return `
         <section data-category="${escapeHtml(category)}">
-          <h2 class="text-lg font-bold uppercase tracking-wide mb-4">
+          <h2 class="text-2xl font-bold uppercase tracking-wide mb-4 pb-2 border-b border-base-300">
             ${escapeHtml(categoryLabel(category as PhotoCategory))}
             <span class="text-sm font-normal text-base-content/50">(${items.length})</span>
           </h2>
@@ -313,7 +316,7 @@ function renderCard(photo: AdminPhoto): string {
   `
 
   return `
-    <div class="card bg-base-200 shadow-sm ${isDeleted ? 'opacity-50' : ''}" data-photo-card="${photo.id}">
+    <div class="card bg-base-100 border border-base-300 shadow-lg hover:shadow-xl transition-all duration-300 ${isDeleted ? 'opacity-50' : ''}" data-photo-card="${photo.id}">
       <figure class="aspect-[4/3] bg-base-300">
         <img src="${escapeHtml(thumbUrl)}" alt="${escapeHtml(photo.title)}" loading="lazy" class="w-full h-full object-cover">
       </figure>
@@ -331,14 +334,14 @@ function renderView(photo: AdminPhoto): string {
     ${photo.description ? `<p class="text-xs text-base-content/60 line-clamp-2">${escapeHtml(photo.description)}</p>` : ''}
     <p class="text-xs text-base-content/40 truncate">${escapeHtml(photo.filename)}</p>
     <div class="card-actions justify-end mt-1 gap-1">
-      <button type="button" class="btn btn-xs" data-action="edit" data-id="${photo.id}">Edit</button>
+      <button type="button" class="btn btn-sm" data-action="edit" data-id="${photo.id}">Edit</button>
       ${!photo.deleted_at
-        ? `<button type="button" class="btn btn-xs" data-action="toggle-status" data-id="${photo.id}">
+        ? `<button type="button" class="btn btn-sm" data-action="toggle-status" data-id="${photo.id}">
              ${photo.status === 'published' ? 'Unpublish' : 'Publish'}
            </button>
-           <button type="button" class="btn btn-xs btn-error btn-outline" data-action="delete" data-id="${photo.id}">Delete</button>`
-        : `<button type="button" class="btn btn-xs btn-success btn-outline" data-action="restore" data-id="${photo.id}">Restore</button>
-           <button type="button" class="btn btn-xs btn-error btn-outline" data-action="delete-permanent" data-id="${photo.id}">Delete permanently</button>`}
+           <button type="button" class="btn btn-sm btn-error btn-outline" data-action="delete" data-id="${photo.id}">Delete</button>`
+        : `<button type="button" class="btn btn-sm btn-success btn-outline" data-action="restore" data-id="${photo.id}">Restore</button>
+           <button type="button" class="btn btn-sm btn-error btn-outline" data-action="delete-permanent" data-id="${photo.id}">Delete permanently</button>`}
     </div>
   `
 }
@@ -350,13 +353,13 @@ function renderEditForm(photo: AdminPhoto): string {
   return `
     <form data-action="save" data-id="${photo.id}" class="space-y-2">
       <input type="text" name="title" value="${escapeHtml(photo.title)}" placeholder="Title"
-             class="input input-xs w-full" required>
+             class="input input-sm w-full" required>
       <textarea name="description" placeholder="Description"
-                class="textarea textarea-xs w-full" rows="2">${escapeHtml(photo.description ?? '')}</textarea>
-      <select name="category" class="select select-xs w-full">${categoryOptions}</select>
+                class="textarea textarea-sm w-full" rows="2">${escapeHtml(photo.description ?? '')}</textarea>
+      <select name="category" class="select select-sm w-full">${categoryOptions}</select>
       <div class="card-actions justify-end gap-1">
-        <button type="button" class="btn btn-xs" data-action="cancel-edit">Cancel</button>
-        <button type="submit" class="btn btn-xs btn-primary">Save</button>
+        <button type="button" class="btn btn-sm" data-action="cancel-edit">Cancel</button>
+        <button type="submit" class="btn btn-sm btn-primary">Save</button>
       </div>
     </form>
   `
