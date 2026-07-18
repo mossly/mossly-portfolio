@@ -1,12 +1,15 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import PhotoSwipe from 'photoswipe'
 import 'photoswipe/style.css'
+import { Aperture, Calendar, Camera, ChevronDown, ChevronUp, MapPin } from 'lucide-static'
 import { galleryManager } from '../utils/gallery-manager'
 import type { Photo } from '../types/photo'
 
 export class LightboxComponent {
   private lightbox: PhotoSwipeLightbox | null = null
   private currentGalleryPhotos: Photo[] = []
+  /** Collapsed state of the info panel -- sticky across photo changes within a session. */
+  private infoCollapsed = false
 
   constructor() {
     this.initializeLightbox()
@@ -50,28 +53,15 @@ export class LightboxComponent {
         html: '',
         onInit: (el, pswp) => {
           this.updatePhotoInfo(el, pswp)
-          
+
           pswp.on('change', () => {
             this.updatePhotoInfo(el, pswp)
           })
-          
-          // Add event delegation for toggle buttons
+
           el.addEventListener('click', (e) => {
-            const button = (e.target as HTMLElement).closest('.pswp__details-toggle')
-            if (button) {
-              const photoIndex = button.getAttribute('data-photo-index')
-              if (photoIndex) {
-                const details = document.getElementById(photoIndex)
-                if (details) {
-                  if (details.style.display === 'none') {
-                    details.style.display = 'block'
-                    button.textContent = 'Hide info'
-                  } else {
-                    details.style.display = 'none'
-                    button.textContent = 'Show info'
-                  }
-                }
-              }
+            if ((e.target as HTMLElement).closest('.pswp__info-toggle')) {
+              this.infoCollapsed = !this.infoCollapsed
+              this.updatePhotoInfo(el, pswp)
             }
           })
         }
@@ -84,58 +74,62 @@ export class LightboxComponent {
   private updatePhotoInfo(el: HTMLElement, pswp: PhotoSwipe) {
     const currentIndex = pswp.currIndex
     const photo = this.currentGalleryPhotos[currentIndex]
-    
+
     if (!photo) return
-    
-    // Date taken
+
+    // Date taken -- include the time of day when the EXIF value carries one
+    // (legacy rows may be date-only strings).
     let dateStr = ''
     if (photo.metadata.dateTaken) {
-      dateStr = new Date(photo.metadata.dateTaken).toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
+      const date = new Date(photo.metadata.dateTaken)
+      dateStr = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
       })
-    }
-    
-    // Technical details
-    const technicalItems = []
-    
-    // Camera and lens
-    if (photo.metadata.camera) {
-      let cameraInfo = photo.metadata.camera
-      if (photo.metadata.lens) {
-        cameraInfo += ` with ${photo.metadata.lens}`
+      if (/\d{1,2}:\d{2}/.test(photo.metadata.dateTaken)) {
+        dateStr += `, ${date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}`
       }
-      technicalItems.push(cameraInfo)
     }
-    
-    // Shooting settings
+
+    let cameraStr = ''
+    if (photo.metadata.camera) {
+      cameraStr = photo.metadata.camera
+      if (photo.metadata.lens) cameraStr += ` · ${photo.metadata.lens}`
+    }
+
     const settings = []
     if (photo.metadata.focalLength) settings.push(photo.metadata.focalLength)
     if (photo.metadata.aperture) settings.push(photo.metadata.aperture)
     if (photo.metadata.shutterSpeed) settings.push(photo.metadata.shutterSpeed)
     if (photo.metadata.iso) settings.push(`ISO ${photo.metadata.iso}`)
-    
-    if (settings.length > 0) {
-      technicalItems.push(settings.join(' • '))
-    }
-    
-    const photoIndex = `photo-info-${currentIndex}`
-    
+
+    const metaRow = (icon: string, text: string) =>
+      `<p class="pswp__photo-meta"><span class="pswp__meta-icon">${icon}</span><span>${text}</span></p>`
+
+    const rows = [
+      dateStr ? metaRow(Calendar, dateStr) : '',
+      photo.metadata.location ? metaRow(MapPin, photo.metadata.location) : '',
+      cameraStr ? metaRow(Camera, cameraStr) : '',
+      settings.length > 0 ? metaRow(Aperture, settings.join(' • ')) : '',
+    ].join('')
+
+    const hasRows = rows.length > 0
     el.innerHTML = `
       <div class="pswp__overlay-content">
         <div class="pswp__info-block">
-          <h3 class="pswp__photo-title">${photo.title || photo.filename}</h3>
-          ${dateStr ? `<p class="pswp__photo-meta">${dateStr}</p>` : ''}
-          ${technicalItems.length > 0 ? `
-            <button class="pswp__details-toggle" data-photo-index="${photoIndex}">Show info</button>
-          ` : ''}
-        </div>
-        ${technicalItems.length > 0 ? `
-          <div id="${photoIndex}" class="pswp__info-block pswp__technical-details" style="display: none;">
-            ${technicalItems.map(item => `<p class="pswp__photo-meta">${item}</p>`).join('')}
+          <div class="pswp__info-header">
+            <h3 class="pswp__photo-title">${photo.title || photo.filename}</h3>
+            ${hasRows
+              ? `<button type="button" class="pswp__info-toggle"
+                         aria-expanded="${!this.infoCollapsed}"
+                         aria-label="${this.infoCollapsed ? 'Show photo info' : 'Hide photo info'}">
+                   ${this.infoCollapsed ? ChevronUp : ChevronDown}
+                 </button>`
+              : ''}
           </div>
-        ` : ''}
+          ${this.infoCollapsed ? '' : rows}
+        </div>
       </div>
     `
   }

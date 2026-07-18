@@ -44,6 +44,47 @@ function jsonError(error: string, status: number, extra?: Record<string, unknown
   return Response.json({ ok: false, error, ...extra }, { status })
 }
 
+// EXIF-ish metadata columns editable via PATCH and the bulk mapping endpoint.
+// Every entry maps a client field name to its D1 column + value kind. The
+// allowlist is the injection guard: only these names are ever interpolated
+// into SQL (as `<col> = ?`), never a client-supplied string.
+const META_FIELDS = {
+  date_taken: { column: 'date_taken', kind: 'text' },
+  camera: { column: 'camera', kind: 'text' },
+  lens: { column: 'lens', kind: 'text' },
+  iso: { column: 'iso', kind: 'int' },
+  aperture: { column: 'aperture', kind: 'text' },
+  shutter_speed: { column: 'shutter_speed', kind: 'text' },
+  focal_length: { column: 'focal_length', kind: 'text' },
+  location: { column: 'location', kind: 'text' },
+} as const satisfies Record<string, { column: string; kind: 'text' | 'int' }>
+
+type MetaField = keyof typeof META_FIELDS
+
+function isMetaField(value: unknown): value is MetaField {
+  return typeof value === 'string' && Object.prototype.hasOwnProperty.call(META_FIELDS, value)
+}
+
+/**
+ * Coerces + validates a value destined for a metadata column. Returns either
+ * the bind-ready value (`string | number | null`) or an `error` string.
+ * `null` clears the column; text fields accept any string; `iso` accepts a
+ * non-negative integer (or a numeric string, for convenience from form input).
+ */
+function coerceMetaValue(field: MetaField, value: unknown): { value: string | number | null } | { error: string } {
+  if (value === null) return { value: null }
+  const { kind } = META_FIELDS[field]
+  if (kind === 'int') {
+    const n = typeof value === 'string' && value.trim() !== '' ? Number(value) : value
+    if (typeof n !== 'number' || !Number.isInteger(n) || n < 0) {
+      return { error: `${field} must be a non-negative integer or null` }
+    }
+    return { value: n }
+  }
+  if (typeof value !== 'string') return { error: `${field} must be a string or null` }
+  return { value }
+}
+
 function isValidId(id: string): boolean {
   return ID_RE.test(id)
 }
@@ -313,6 +354,13 @@ async function updatePhoto(request: Request, env: Env, id: string): Promise<Resp
     setClauses.push('description = ?')
     values.push(patch.description)
   }
+  if ('location' in patch) {
+    if (patch.location !== null && typeof patch.location !== 'string') {
+      return jsonError('validation', 400, { details: ['location must be a string or null'] })
+    }
+    setClauses.push('location = ?')
+    values.push(patch.location)
+  }
   if ('category' in patch) {
     if (!isValidCategory(patch.category)) {
       return jsonError('validation', 400, { details: [`category must be one of: ${CATEGORY_ORDER.join(', ')}`] })
@@ -326,6 +374,22 @@ async function updatePhoto(request: Request, env: Env, id: string): Promise<Resp
     }
     setClauses.push('status = ?')
     values.push(patch.status)
+  }
+
+  // EXIF-ish metadata fields (date_taken, camera, lens, iso, aperture,
+  // shutter_speed, focal_length). `location` is handled above already, so it's
+  // skipped here to avoid a duplicate SET clause. Each accepts a value or null
+  // (to clear). An empty string on a text field is treated as null so the
+  // per-photo edit form can blank a field out.
+  for (const field of Object.keys(META_FIELDS) as MetaField[]) {
+    if (field === 'location') continue
+    if (!(field in patch)) continue
+    let raw = patch[field]
+    if (raw === '') raw = null
+    const coerced = coerceMetaValue(field, raw)
+    if ('error' in coerced) return jsonError('validation', 400, { details: [coerced.error] })
+    setClauses.push(`${META_FIELDS[field].column} = ?`)
+    values.push(coerced.value)
   }
 
   if (setClauses.length === 0) {
@@ -503,6 +567,89 @@ async function permanentDeletePhoto(env: Env, id: string): Promise<Response> {
 }
 
 /**
+ * Bulk metadata mapping: `POST /api/admin/photos/metadata/bulk`.
+ *
+ * Body:
+ *   {
+ *     "match":  { "field": "lens", "value": "70.0 mm" | null },
+ *     "set":    { "aperture": "f/2.8", "camera": "Fujifilm X-T1", ... },
+ *     "dryRun": true            // optional -- count matches without writing
+ *   }
+ *
+ * Applies `set` to every live-or-trashed photo whose `match.field` equals
+ * `match.value` (or IS NULL when value is null). This is the "wherever lens = X,
+ * set aperture = Y" / "rename camera A -> B" primitive. `field`/`set` keys are
+ * checked against the META_FIELDS allowlist before touching SQL. Returns the
+ * number of matched rows (dryRun) or updated rows.
+ */
+async function bulkUpdateMetadata(request: Request, env: Env): Promise<Response> {
+  let body: unknown
+  try {
+    body = await request.json()
+  } catch {
+    return jsonError('invalid_json', 400)
+  }
+  if (typeof body !== 'object' || body === null) return jsonError('validation', 400)
+  const b = body as Record<string, unknown>
+
+  // --- match ---
+  const match = b.match
+  if (typeof match !== 'object' || match === null) {
+    return jsonError('validation', 400, { details: ['match must be an object { field, value }'] })
+  }
+  const m = match as Record<string, unknown>
+  if (!isMetaField(m.field)) {
+    return jsonError('validation', 400, { details: [`match.field must be one of: ${Object.keys(META_FIELDS).join(', ')}`] })
+  }
+  const matchField = m.field
+  // match.value may be null (IS NULL) or a concrete value; validate its kind.
+  let matchValue: string | number | null
+  if (m.value === null || m.value === undefined) {
+    matchValue = null
+  } else {
+    const coerced = coerceMetaValue(matchField, m.value)
+    if ('error' in coerced) return jsonError('validation', 400, { details: [`match.${coerced.error}`] })
+    matchValue = coerced.value
+  }
+
+  // --- set ---
+  if (typeof b.set !== 'object' || b.set === null) {
+    return jsonError('validation', 400, { details: ['set must be an object of field -> value'] })
+  }
+  const setInput = b.set as Record<string, unknown>
+  const setClauses: string[] = []
+  const setValues: (string | number | null)[] = []
+  for (const [field, value] of Object.entries(setInput)) {
+    if (!isMetaField(field)) {
+      return jsonError('validation', 400, { details: [`set.${field} is not an editable field`] })
+    }
+    const coerced = coerceMetaValue(field, value === '' ? null : value)
+    if ('error' in coerced) return jsonError('validation', 400, { details: [`set.${coerced.error}`] })
+    setClauses.push(`${META_FIELDS[field].column} = ?`)
+    setValues.push(coerced.value)
+  }
+  if (setClauses.length === 0) {
+    return jsonError('validation', 400, { details: ['set must contain at least one field'] })
+  }
+
+  const matchCol = META_FIELDS[matchField].column
+  const whereClause = matchValue === null ? `${matchCol} IS NULL` : `${matchCol} = ?`
+
+  if (b.dryRun === true) {
+    const stmt = env.DB.prepare(`SELECT COUNT(*) AS n FROM photos WHERE ${whereClause}`)
+    const bound = matchValue === null ? stmt : stmt.bind(matchValue)
+    const row = await bound.first<{ n: number }>()
+    return Response.json({ ok: true, matched: row?.n ?? 0, dryRun: true }, { status: 200 })
+  }
+
+  const sql = `UPDATE photos SET ${setClauses.join(', ')}, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE ${whereClause}`
+  const bindArgs = matchValue === null ? setValues : [...setValues, matchValue]
+  const result = await env.DB.prepare(sql).bind(...bindArgs).run()
+
+  return Response.json({ ok: true, updated: result.meta.changes }, { status: 200 })
+}
+
+/**
  * Routes `/api/admin/*` requests. Called from worker.ts only after the
  * Access+JWT gate (or the localhost dev bypass) has already authorized the
  * request -- this function assumes the caller is trusted.
@@ -519,6 +666,11 @@ export async function handleAdminApi(request: Request, env: Env, url: URL): Prom
 
   if (pathname === '/api/admin/photos/order') {
     if (method === 'PUT') return reorderPhotos(request, env)
+    return jsonError('method_not_allowed', 405)
+  }
+
+  if (pathname === '/api/admin/photos/metadata/bulk') {
+    if (method === 'POST') return bulkUpdateMetadata(request, env)
     return jsonError('method_not_allowed', 405)
   }
 

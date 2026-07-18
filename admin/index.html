@@ -67,6 +67,18 @@
         </div>
       </section>
 
+      <!-- Metadata cleanup: bulk mapping rules -->
+      <section id="metadata-section" class="space-y-3">
+        <button type="button" id="metadata-toggle"
+                class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-base-content/50 hover:text-base-content transition-colors">
+          <svg id="metadata-chevron" class="w-4 h-4 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          Metadata cleanup
+        </button>
+        <div id="metadata-root" class="hidden"></div>
+      </section>
+
       <!-- Grid (3E-2) -->
       <section id="loading-state" class="text-center py-20 text-base-content/60">Loading photos&hellip;</section>
       <section id="error-state" class="hidden text-center py-20 text-error"></section>
