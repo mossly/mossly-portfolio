@@ -368,6 +368,22 @@ async function updatePhoto(request: Request, env: Env, id: string): Promise<Resp
     setClauses.push('category = ?')
     values.push(patch.category)
   }
+  if ('is_highlight' in patch) {
+    if (typeof patch.is_highlight !== 'boolean') {
+      return jsonError('validation', 400, { details: ['is_highlight must be a boolean'] })
+    }
+    if (patch.is_highlight) {
+      // Newly-highlighted photos append at the end of the highlights order;
+      // re-highlighting an already-highlighted photo keeps its position.
+      setClauses.push(
+        `is_highlight = 1,
+         highlight_order = CASE WHEN is_highlight = 1 THEN highlight_order
+           ELSE (SELECT COALESCE(MAX(highlight_order), -1) + 1 FROM photos WHERE is_highlight = 1) END`,
+      )
+    } else {
+      setClauses.push('is_highlight = 0')
+    }
+  }
   if ('status' in patch) {
     if (patch.status !== 'draft' && patch.status !== 'published') {
       return jsonError('validation', 400, { details: ['status must be "draft" or "published"'] })
@@ -465,6 +481,43 @@ async function reorderPhotos(request: Request, env: Env): Promise<Response> {
          SET sort_order = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now')
          WHERE id = ? AND category = ?`,
       ).bind(start + i, id, category),
+    )
+    const results = await env.DB.batch(statements)
+    for (const result of results) updated += result.meta.changes
+  }
+
+  return Response.json({ ok: true, updated }, { status: 200 })
+}
+
+/**
+ * Persists a new front-to-back order for the highlights gallery:
+ * `highlight_order` becomes each id's index in `ids`. Same chunked-batch
+ * shape as reorderPhotos; the `is_highlight = 1` guard means a stale id
+ * (un-highlighted since the admin page loaded) matches zero rows instead of
+ * corrupting the order.
+ */
+async function reorderHighlights(request: Request, env: Env): Promise<Response> {
+  let body: unknown
+  try {
+    body = await request.json()
+  } catch {
+    return jsonError('invalid_json', 400)
+  }
+  if (typeof body !== 'object' || body === null) return jsonError('validation', 400)
+  const ids = (body as Record<string, unknown>).ids
+  if (!Array.isArray(ids) || !ids.every(isNonEmptyString)) {
+    return jsonError('validation', 400, { details: ['ids must be an array of non-empty strings'] })
+  }
+
+  let updated = 0
+  for (let start = 0; start < ids.length; start += ORDER_BATCH_CHUNK_SIZE) {
+    const chunk = ids.slice(start, start + ORDER_BATCH_CHUNK_SIZE)
+    const statements = chunk.map((id, i) =>
+      env.DB.prepare(
+        `UPDATE photos
+         SET highlight_order = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now')
+         WHERE id = ? AND is_highlight = 1`,
+      ).bind(start + i, id),
     )
     const results = await env.DB.batch(statements)
     for (const result of results) updated += result.meta.changes
@@ -661,6 +714,11 @@ export async function handleAdminApi(request: Request, env: Env, url: URL): Prom
   if (pathname === '/api/admin/photos') {
     if (method === 'GET') return listPhotos(env)
     if (method === 'POST') return createPhoto(request, env)
+    return jsonError('method_not_allowed', 405)
+  }
+
+  if (pathname === '/api/admin/photos/highlights/order') {
+    if (method === 'PUT') return reorderHighlights(request, env)
     return jsonError('method_not_allowed', 405)
   }
 

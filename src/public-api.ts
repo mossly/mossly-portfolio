@@ -44,6 +44,10 @@ type PublicPhotoRow = Pick<
   | 'shutter_speed'
   | 'focal_length'
   | 'location'
+  // Server-side only: drives the synthetic 'highlights' group below. Not part
+  // of the public Photo shape (toPublicPhoto never emits them).
+  | 'is_highlight'
+  | 'highlight_order'
 >
 
 const PUBLIC_COLUMNS = [
@@ -73,6 +77,8 @@ const PUBLIC_COLUMNS = [
   'shutter_speed',
   'focal_length',
   'location',
+  'is_highlight',
+  'highlight_order',
 ].join(', ')
 
 function variantUrl(imagesBase: string, key: string): string {
@@ -153,11 +159,20 @@ export async function handlePublicPhotos(env: Env): Promise<Response> {
     ).all<PublicPhotoRow>()
 
     const grouped: Partial<Record<PhotoCategory, Photo[]>> = {}
+    // Synthetic 'highlights' gallery: flagged photos from any category,
+    // ordered by highlight_order. Each Photo keeps its real `category`, so
+    // the lightbox metadata stays truthful; the same photo simply appears in
+    // two groups of the response.
+    const highlights: { order: number; photo: Photo }[] = []
     for (const row of results ?? []) {
       const category = row.category
       const photo = toPublicPhoto(row, env.IMAGES_BASE)
       if (!grouped[category]) grouped[category] = []
       grouped[category]!.push(photo)
+      if (row.is_highlight) highlights.push({ order: row.highlight_order, photo })
+    }
+    if (highlights.length > 0) {
+      grouped.highlights = highlights.sort((a, b) => a.order - b.order).map(h => h.photo)
     }
 
     return Response.json(grouped, {

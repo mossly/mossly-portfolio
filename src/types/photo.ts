@@ -1,4 +1,8 @@
-export type PhotoCategory = 
+export type PhotoCategory =
+  // 'highlights' is a synthetic gallery: never stored in photos.category
+  // (isValidCategory validates against CATEGORY_ORDER, which excludes it) --
+  // the public API materializes it from rows with is_highlight = 1.
+  | 'highlights'
   | 'wildlife'
   | 'bird'
   | 'landscape'
@@ -84,6 +88,10 @@ export interface AdminPhoto {
   status: PhotoStatus
   deleted_at: string | null
   sort_order: number
+  /** 0/1 -- SQLite has no boolean. 1 = part of the synthetic highlights gallery. */
+  is_highlight: number
+  /** Ordering within the highlights gallery, independent of `sort_order`. */
+  highlight_order: number
 
   medium_key: string
   medium_w: number
@@ -159,6 +167,7 @@ export interface PhotoPatch {
   location?: string | null
   category?: PhotoCategory
   status?: PhotoStatus
+  is_highlight?: boolean
   // EXIF-ish metadata fields. `''` or `null` clears the column.
   date_taken?: string | null
   camera?: string | null
@@ -176,5 +185,13 @@ export interface PhotoPatch {
  */
 export interface PhotoOrderUpdate {
   category: PhotoCategory
+  ids: string[]
+}
+
+/**
+ * Body of `PUT /api/admin/photos/highlights/order` — the full ordered list of
+ * highlighted ids, front-to-back. `highlight_order` is set to each id's index.
+ */
+export interface HighlightOrderUpdate {
   ids: string[]
 }

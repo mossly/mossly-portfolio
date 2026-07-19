@@ -4,7 +4,7 @@
 // the authoritative behavior.
 import '../src/styles/main.css'
 import Sortable from 'sortablejs'
-import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoPatch, PhotoStatus } from '../src/types/photo'
+import type { AdminPhoto, HighlightOrderUpdate, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoPatch, PhotoStatus } from '../src/types/photo'
 import { CATEGORY_ORDER, GALLERY_CONFIG } from '../src/config/images'
 import { initThemeToggle } from '../src/components/theme-toggle'
 import { initMetadataPanel } from './metadata-panel'
@@ -188,7 +188,28 @@ function render() {
       .sort(),
   ]
 
-  galleryRoot.innerHTML = orderedCategories
+  // Synthetic highlights section first: starred live photos from any
+  // category, ordered by highlight_order, drag-sortable independently of the
+  // per-category grids. (The same photo also appears in its home category.)
+  const highlighted = photos
+    .filter(p => !p.deleted_at && p.is_highlight)
+    .sort((a, b) => a.highlight_order - b.highlight_order)
+  const highlightsSection = `
+    <section data-category="highlights">
+      <h2 class="text-2xl font-bold uppercase tracking-wide mb-4 pb-2 border-b border-base-300">
+        ★ HIGHLIGHTS
+        <span class="text-sm font-normal text-base-content/50">(${highlighted.length})</span>
+      </h2>
+      ${highlighted.length > 0
+        ? `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+                data-sortable-highlights>
+             ${highlighted.map(renderCard).join('')}
+           </div>`
+        : '<p class="text-sm text-base-content/50">No highlights yet — star photos below (☆) to add them.</p>'}
+    </section>
+  `
+
+  galleryRoot.innerHTML = highlightsSection + orderedCategories
     .map(category => {
       const items = byCategory.get(category) ?? []
       // Live photos are draggable (rendered in their own grid, ordered by
@@ -249,6 +270,73 @@ function attachSortables() {
     })
     sortables.push(sortable)
   })
+
+  const highlightsContainer = galleryRoot.querySelector<HTMLElement>('[data-sortable-highlights]')
+  if (highlightsContainer) {
+    sortables.push(
+      Sortable.create(highlightsContainer, {
+        animation: 150,
+        ghostClass: 'sortable-ghost',
+        chosenClass: 'sortable-chosen',
+        dragClass: 'sortable-drag',
+        forceFallback: true,
+        onEnd: () => void handleHighlightReorder(highlightsContainer),
+      }),
+    )
+  }
+}
+
+/**
+ * Highlights-grid counterpart of handleReorder: persists the post-drop order
+ * as `highlight_order` via PUT /api/admin/photos/highlights/order, with the
+ * same optimistic-update / revert-on-failure behavior.
+ */
+async function handleHighlightReorder(container: HTMLElement) {
+  const newIds = Array.from(container.querySelectorAll<HTMLElement>('[data-photo-card]'))
+    .map(el => el.getAttribute('data-photo-card'))
+    .filter((id): id is string => !!id)
+
+  const previousOrder = new Map<string, number>()
+  for (const photo of photos) {
+    if (photo.is_highlight && !photo.deleted_at) previousOrder.set(photo.id, photo.highlight_order)
+  }
+
+  const previousIds = Array.from(previousOrder.keys()).sort(
+    (a, b) => (previousOrder.get(a) ?? 0) - (previousOrder.get(b) ?? 0),
+  )
+  if (newIds.length === previousIds.length && newIds.every((id, i) => id === previousIds[i])) {
+    return
+  }
+
+  newIds.forEach((id, index) => {
+    const photo = photos.find(p => p.id === id)
+    if (photo) photo.highlight_order = index
+  })
+
+  try {
+    const res = await fetch('/api/admin/photos/highlights/order', {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ ids: newIds } satisfies HighlightOrderUpdate),
+    })
+    if (!res.ok) {
+      let detail = ''
+      try {
+        const body = (await res.json()) as { error?: string } | null
+        detail = body?.error ? `: ${body.error}` : ''
+      } catch {
+        // ignore -- non-JSON error body
+      }
+      throw new Error(`highlight reorder failed (${res.status})${detail}`)
+    }
+  } catch (err) {
+    for (const [id, order] of previousOrder) {
+      const photo = photos.find(p => p.id === id)
+      if (photo) photo.highlight_order = order
+    }
+    render()
+    showToast(err instanceof Error ? err.message : 'Highlight reorder failed', true)
+  }
 }
 
 /**
@@ -339,6 +427,13 @@ function renderView(photo: AdminPhoto): string {
     ${photo.location ? `<p class="text-xs text-base-content/60 truncate">📍 ${escapeHtml(photo.location)}</p>` : ''}
     <p class="text-xs text-base-content/40 truncate">${escapeHtml(photo.filename)}</p>
     <div class="card-actions justify-end mt-1 gap-1">
+      ${!photo.deleted_at
+        ? `<button type="button" class="btn btn-sm ${photo.is_highlight ? 'btn-warning' : 'btn-ghost'}"
+                   data-action="toggle-highlight" data-id="${photo.id}"
+                   title="${photo.is_highlight ? 'Remove from highlights' : 'Add to highlights'}">
+             ${photo.is_highlight ? '★' : '☆'}
+           </button>`
+        : ''}
       <button type="button" class="btn btn-sm" data-action="edit" data-id="${photo.id}">Edit</button>
       ${!photo.deleted_at
         ? `<button type="button" class="btn btn-sm" data-action="toggle-status" data-id="${photo.id}">
@@ -472,6 +567,21 @@ async function toggleStatus(photo: AdminPhoto) {
   }
 }
 
+async function toggleHighlight(photo: AdminPhoto) {
+  try {
+    const { photo: updated } = await apiFetch<{ photo: AdminPhoto }>(`/api/admin/photos/${photo.id}`, {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ is_highlight: !photo.is_highlight } satisfies PhotoPatch),
+    })
+    replacePhoto(updated)
+    render()
+    showToast(updated.is_highlight ? 'Added to highlights' : 'Removed from highlights')
+  } catch (err) {
+    showToast(err instanceof Error ? err.message : 'Update failed', true)
+  }
+}
+
 async function deletePhotoHandler(photo: AdminPhoto) {
   const ok = await confirmDialog(`Delete "${photo.title || photo.filename}"? This soft-deletes the row (R2 objects are kept).`)
   if (!ok) return
@@ -535,6 +645,11 @@ galleryRoot.addEventListener('click', event => {
   if (action === 'cancel-edit') {
     editingId = null
     render()
+    return
+  }
+  if (action === 'toggle-highlight' && id) {
+    const photo = photos.find(p => p.id === id)
+    if (photo) void toggleHighlight(photo)
     return
   }
   if (action === 'toggle-status' && id) {

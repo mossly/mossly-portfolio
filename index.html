@@ -50,13 +50,14 @@
         <div class="flex justify-center sm:hidden">
           <div class="dropdown dropdown-bottom">
             <div tabindex="0" role="button" class="btn btn-sm">
-              <span id="selected-category">Bird</span>
+              <span id="selected-category">Highlights</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </div>
             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a data-category="bird" class="category-dropdown-item active">Bird</a></li>
+            <li><a data-category="highlights" class="category-dropdown-item active">Highlights</a></li>
+            <li><a data-category="bird" class="category-dropdown-item">Bird</a></li>
             <li><a data-category="landscape" class="category-dropdown-item">Landscape</a></li>
             <li><a data-category="portrait" class="category-dropdown-item">Portrait</a></li>
             <li><a data-category="concert" class="category-dropdown-item">Concert</a></li>
@@ -74,7 +75,8 @@
         
         <!-- Tablet/Desktop: Horizontal buttons -->
         <div class="hidden sm:flex flex-wrap justify-center gap-2">
-          <button class="btn btn-primary btn-sm" data-category="bird">Bird</button>
+          <button class="btn btn-primary btn-sm" data-category="highlights">Highlights</button>
+          <button class="btn btn-ghost btn-sm" data-category="bird">Bird</button>
           <button class="btn btn-ghost btn-sm" data-category="landscape">Landscape</button>
           <button class="btn btn-ghost btn-sm" data-category="portrait">Portrait</button>
           <button class="btn btn-ghost btn-sm" data-category="concert">Concert</button>
