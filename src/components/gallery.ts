@@ -141,6 +141,10 @@ export class GalleryComponent {
 
     this.setupCategoryButtons()
     this.renderAllGalleries()
+    // Sync button/dropdown active state to the resolved starting category --
+    // the static HTML marks 'highlights' active, but gallery-manager may have
+    // fallen back to another gallery (e.g. no photos are flagged yet).
+    this.updateCategoryButtons(galleryManager.getCurrentCategory())
     this.showGallery(galleryManager.getCurrentCategory())
   }
 

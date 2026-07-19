@@ -1,10 +1,10 @@
 import type { Photo, PhotoCategory, Gallery } from '../types/photo'
-import { GALLERY_CONFIG, CATEGORY_ORDER } from '../config/images'
+import { GALLERY_CONFIG, PUBLIC_CATEGORY_ORDER } from '../config/images'
 
 export class GalleryManager {
   private photos: Record<PhotoCategory, Photo[]> = {} as Record<PhotoCategory, Photo[]>
   private galleries: Map<PhotoCategory, Gallery> = new Map()
-  private currentCategory: PhotoCategory = 'bird'
+  private currentCategory: PhotoCategory = 'highlights'
   private listeners: Set<(category: PhotoCategory) => void> = new Set()
 
   /**
@@ -45,6 +45,13 @@ export class GalleryManager {
         coverPhoto: list[0] as Photo,
       })
     }
+    // The default landing gallery ('highlights') is synthetic and only exists
+    // once at least one photo is flagged -- fall back to the first available
+    // gallery so the page never boots pointed at a gallery that isn't there.
+    if (!this.galleries.has(this.currentCategory)) {
+      const first = this.getCategories()[0]
+      if (first) this.currentCategory = first
+    }
   }
 
   /**
@@ -69,8 +76,9 @@ export class GalleryManager {
   }
 
   getCategories(): PhotoCategory[] {
-    // Return categories in the original website order (single source: CATEGORY_ORDER)
-    return CATEGORY_ORDER.filter(category => this.galleries.has(category))
+    // Return categories in the original website order (single source:
+    // PUBLIC_CATEGORY_ORDER -- highlights first, then the real categories)
+    return PUBLIC_CATEGORY_ORDER.filter(category => this.galleries.has(category))
   }
 
   getGallery(category: PhotoCategory): Gallery | undefined {
