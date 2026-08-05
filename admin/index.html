@@ -67,6 +67,18 @@
         </div>
       </section>
 
+      <section id="category-section" class="space-y-3">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-base-content/50">Categories</h2>
+        <form id="category-form" class="flex flex-col sm:flex-row gap-2 max-w-xl">
+          <label class="sr-only" for="category-name">Category name</label>
+          <input id="category-name" name="name" type="text" maxlength="80" required
+                 placeholder="New category name" class="input input-sm input-bordered flex-1">
+          <button type="submit" class="btn btn-sm btn-primary">Create category</button>
+        </form>
+        <p class="text-xs text-base-content/50">The category slug is generated from the name and used for uploads and the public gallery.</p>
+        <div id="category-list" class="flex flex-wrap gap-2"></div>
+      </section>
+
       <!-- Metadata cleanup: bulk mapping rules -->
       <section id="metadata-section" class="space-y-3">
         <button type="button" id="metadata-toggle"

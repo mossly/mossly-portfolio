@@ -4,8 +4,8 @@
 // the authoritative behavior.
 import '../src/styles/main.css'
 import Sortable from 'sortablejs'
-import type { AdminPhoto, HighlightOrderUpdate, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoPatch, PhotoStatus } from '../src/types/photo'
-import { CATEGORY_ORDER, GALLERY_CONFIG } from '../src/config/images'
+import type { AdminPhoto, AdminPhotoCategory, HighlightOrderUpdate, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoPatch, PhotoStatus } from '../src/types/photo'
+import { GALLERY_CONFIG } from '../src/config/images'
 import { initThemeToggle } from '../src/components/theme-toggle'
 import { initMetadataPanel } from './metadata-panel'
 import type { MainToWorkerMessage, ProcessedPhoto, WorkerToMainMessage } from './upload-types'
@@ -18,14 +18,6 @@ initThemeToggle()
 // testing will 404/broken-image there; that's expected, not a bug. See the
 // PR body for how local verification confirms the R2 objects instead.
 const IMAGES_BASE = 'https://images.mossly.org'
-
-// Categories a photo may be filed under via this UI. Mirrors the backend's
-// `isValidCategory` (validated against the same CATEGORY_ORDER list) -- 'about'
-// and 'projects' are page-content rows, not gallery photos, and intentionally
-// excluded from the upload/edit category choices (though existing rows in
-// those categories still display in the grid).
-const EDITABLE_CATEGORIES: PhotoCategory[] = CATEGORY_ORDER
-const DISPLAY_CATEGORY_ORDER: PhotoCategory[] = [...CATEGORY_ORDER, 'about', 'projects']
 
 type QueueState = 'processing' | 'uploading' | 'done' | 'duplicate' | 'error'
 
@@ -43,6 +35,7 @@ interface QueueItem {
 // ---------------------------------------------------------------------------
 
 let photos: AdminPhoto[] = []
+let categories: AdminPhotoCategory[] = []
 /** ids known to exist (live grid + already-completed uploads this session) --
  * the client dedup pre-check. Server `content_hash` UNIQUE is the authority. */
 const knownIds = new Set<string>()
@@ -70,6 +63,9 @@ const confirmRoot = document.getElementById('confirm-root') as HTMLElement
 const metadataRoot = document.getElementById('metadata-root') as HTMLElement
 const metadataToggle = document.getElementById('metadata-toggle') as HTMLElement
 const metadataChevron = document.getElementById('metadata-chevron') as HTMLElement
+const categoryForm = document.getElementById('category-form') as HTMLFormElement
+const categoryNameInput = document.getElementById('category-name') as HTMLInputElement
+const categoryList = document.getElementById('category-list') as HTMLElement
 
 // ---------------------------------------------------------------------------
 // Small utilities
@@ -97,7 +93,25 @@ function showToast(message: string, error = false) {
 }
 
 function categoryLabel(category: PhotoCategory): string {
-  return GALLERY_CONFIG[category]?.displayName ?? category.toUpperCase()
+  return categories.find(item => item.slug === category)?.name
+    ?? GALLERY_CONFIG[category as keyof typeof GALLERY_CONFIG]?.displayName
+    ?? category.toUpperCase()
+}
+
+function populateCategorySelect() {
+  const currentValue = categorySelect.value
+  categorySelect.innerHTML = categories
+    .map(category => `<option value="${escapeHtml(category.slug)}">${escapeHtml(category.name)}</option>`)
+    .join('')
+  if (currentValue && categories.some(category => category.slug === currentValue)) {
+    categorySelect.value = currentValue
+  }
+}
+
+function renderCategoryList() {
+  categoryList.innerHTML = categories
+    .map(category => `<span class="badge badge-ghost badge-lg">${escapeHtml(category.name)}</span>`)
+    .join('')
 }
 
 /** In-page confirm modal (never `window.confirm` -- native dialogs block/annoy). */
@@ -157,8 +171,14 @@ async function loadPhotos() {
   errorState.classList.add('hidden')
   galleryRoot.innerHTML = ''
   try {
-    const data = await apiFetch<{ photos: AdminPhoto[] }>('/api/admin/photos')
-    photos = data.photos
+    const [photoData, categoryData] = await Promise.all([
+      apiFetch<{ photos: AdminPhoto[] }>('/api/admin/photos'),
+      apiFetch<{ categories: AdminPhotoCategory[] }>('/api/admin/categories'),
+    ])
+    photos = photoData.photos
+    categories = categoryData.categories
+    populateCategorySelect()
+    renderCategoryList()
     knownIds.clear()
     for (const photo of photos) knownIds.add(photo.id)
     loadingState.classList.add('hidden')
@@ -181,11 +201,10 @@ function render() {
     else byCategory.set(photo.category, [photo])
   }
 
+  const knownCategoryOrder = categories.map(category => category.slug)
   const orderedCategories = [
-    ...DISPLAY_CATEGORY_ORDER.filter(c => byCategory.has(c)),
-    ...Array.from(byCategory.keys())
-      .filter(c => !DISPLAY_CATEGORY_ORDER.includes(c as PhotoCategory))
-      .sort(),
+    ...knownCategoryOrder.filter(category => byCategory.has(category)),
+    ...Array.from(byCategory.keys()).filter(category => !knownCategoryOrder.includes(category)).sort(),
   ]
 
   // Synthetic highlights section first: starred live photos from any
@@ -447,8 +466,8 @@ function renderView(photo: AdminPhoto): string {
 }
 
 function renderEditForm(photo: AdminPhoto): string {
-  const categoryOptions = Array.from(new Set<PhotoCategory>([...EDITABLE_CATEGORIES, photo.category]))
-    .map(c => `<option value="${c}" ${c === photo.category ? 'selected' : ''}>${escapeHtml(categoryLabel(c))}</option>`)
+  const categoryOptions = Array.from(new Set<PhotoCategory>([...categories.map(category => category.slug), photo.category]))
+    .map(c => `<option value="${escapeHtml(c)}" ${c === photo.category ? 'selected' : ''}>${escapeHtml(categoryLabel(c))}</option>`)
     .join('')
   return `
     <form data-action="save" data-id="${photo.id}" class="space-y-2">
@@ -686,13 +705,6 @@ galleryRoot.addEventListener('submit', event => {
 // Upload pipeline (3E-3)
 // ---------------------------------------------------------------------------
 
-EDITABLE_CATEGORIES.forEach(category => {
-  const opt = document.createElement('option')
-  opt.value = category
-  opt.textContent = categoryLabel(category)
-  categorySelect.appendChild(opt)
-})
-
 const uploadWorker = new Worker(new URL('./upload-worker.ts', import.meta.url), { type: 'module' })
 
 function renderQueue() {
@@ -897,6 +909,42 @@ dropzone.addEventListener('drop', event => {
     enqueueFiles(event.dataTransfer.files)
   }
 })
+
+categoryForm.addEventListener('submit', event => {
+  event.preventDefault()
+  void createCategory()
+})
+
+async function createCategory() {
+  const name = categoryNameInput.value.trim()
+  if (!name) return
+
+  const submitButton = categoryForm.querySelector<HTMLButtonElement>('button[type="submit"]')
+  if (submitButton) {
+    submitButton.disabled = true
+    submitButton.textContent = 'Creating…'
+  }
+  try {
+    const { category } = await apiFetch<{ category: AdminPhotoCategory }>('/api/admin/categories', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name }),
+    })
+    categories = [...categories, category].sort((a, b) => a.sort_order - b.sort_order)
+    categoryNameInput.value = ''
+    populateCategorySelect()
+    renderCategoryList()
+    render()
+    showToast(`Created ${category.name}`)
+  } catch (err) {
+    showToast(err instanceof Error ? err.message : 'Category creation failed', true)
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false
+      submitButton.textContent = 'Create category'
+    }
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Metadata cleanup panel (collapsible)

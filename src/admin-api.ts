@@ -16,8 +16,7 @@
 // See docs/phase-3e-plan.md ("3E-1") for the authoritative route schemas.
 
 import type { Env } from './worker'
-import type { AdminPhoto, PhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoStatus } from './types/photo'
-import { CATEGORY_ORDER } from './config/images'
+import type { AdminPhoto, AdminPhotoCategory, PhotoInsert, PhotoOrderUpdate, PhotoStatus } from './types/photo'
 
 type Variant = 'medium' | 'large' | 'full' | 'original'
 
@@ -93,8 +92,18 @@ function isValidVariant(variant: string): variant is Variant {
   return variant === 'medium' || variant === 'large' || variant === 'full' || variant === 'original'
 }
 
-function isValidCategory(value: unknown): value is PhotoCategory {
-  return typeof value === 'string' && (CATEGORY_ORDER as string[]).includes(value)
+const CATEGORY_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+const RESERVED_CATEGORY_SLUGS = new Set(['highlights', 'about', 'projects'])
+
+async function categoryExists(env: Env, value: unknown): Promise<boolean> {
+  if (typeof value !== 'string' || !CATEGORY_SLUG_RE.test(value)) return false
+  const row = await env.DB.prepare('SELECT slug FROM categories WHERE slug = ?').bind(value).first<{ slug: string }>()
+  return !!row
+}
+
+async function getCategorySlugs(env: Env): Promise<Set<string>> {
+  const { results } = await env.DB.prepare('SELECT slug FROM categories ORDER BY sort_order ASC').all<{ slug: string }>()
+  return new Set((results ?? []).map(row => row.slug))
 }
 
 function isNonEmptyString(value: unknown): value is string {
@@ -138,7 +147,7 @@ function isUniqueConstraintError(err: unknown): boolean {
  * Validates a `POST /api/admin/photos` body. Returns a list of human-readable
  * error strings; an empty list means the body is valid.
  */
-function validatePhotoInsert(body: unknown): string[] {
+function validatePhotoInsert(body: unknown, validCategories: Set<string>): string[] {
   const errors: string[] = []
   if (typeof body !== 'object' || body === null) {
     return ['body must be a JSON object']
@@ -149,7 +158,9 @@ function validatePhotoInsert(body: unknown): string[] {
   if (!isNonEmptyString(b.content_hash) || !CONTENT_HASH_RE.test(b.content_hash)) {
     errors.push('content_hash must be a full 64-char lowercase hex sha256')
   }
-  if (!isValidCategory(b.category)) errors.push(`category must be one of: ${CATEGORY_ORDER.join(', ')}`)
+  if (typeof b.category !== 'string' || !validCategories.has(b.category)) {
+    errors.push(`category must be one of: ${Array.from(validCategories).join(', ')}`)
+  }
   if (!isNonEmptyString(b.title)) errors.push('title must be a non-empty string')
   if (!isOptionalString(b.description)) errors.push('description must be a string')
   if (!isNonEmptyString(b.filename)) errors.push('filename must be a non-empty string')
@@ -196,6 +207,64 @@ async function listPhotos(env: Env): Promise<Response> {
     'SELECT * FROM photos ORDER BY category ASC, sort_order ASC',
   ).all<AdminPhoto>()
   return Response.json({ photos: results ?? [] }, { status: 200 })
+}
+
+async function listCategories(env: Env): Promise<Response> {
+  const { results } = await env.DB.prepare(
+    'SELECT slug, name, sort_order, created_at, updated_at FROM categories ORDER BY sort_order ASC, name ASC',
+  ).all<AdminPhotoCategory>()
+  return Response.json({ categories: results ?? [] }, { status: 200 })
+}
+
+function slugifyCategoryName(name: string): string {
+  return name
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 48)
+}
+
+async function createCategory(request: Request, env: Env): Promise<Response> {
+  let body: unknown
+  try {
+    body = await request.json()
+  } catch {
+    return jsonError('invalid_json', 400)
+  }
+  if (typeof body !== 'object' || body === null) return jsonError('validation', 400)
+
+  const input = body as Record<string, unknown>
+  const name = typeof input.name === 'string' ? input.name.trim() : ''
+  if (name.length < 1 || name.length > 80) {
+    return jsonError('validation', 400, { details: ['name must be between 1 and 80 characters'] })
+  }
+
+  const requestedSlug = input.slug === undefined ? '' : typeof input.slug === 'string' ? input.slug.trim().toLowerCase() : null
+  if (requestedSlug === null || (requestedSlug && (!CATEGORY_SLUG_RE.test(requestedSlug) || requestedSlug.length > 48))) {
+    return jsonError('validation', 400, { details: ['slug must contain only lowercase letters, numbers, and hyphens'] })
+  }
+  const slug = requestedSlug || slugifyCategoryName(name)
+  if (!slug || RESERVED_CATEGORY_SLUGS.has(slug)) {
+    return jsonError('validation', 400, { details: ['name produces a reserved or invalid category slug'] })
+  }
+
+  const existing = await env.DB.prepare('SELECT slug FROM categories WHERE slug = ?').bind(slug).first<{ slug: string }>()
+  if (existing) return jsonError('conflict', 409, { details: ['a category with this name already exists'] })
+
+  const maxOrder = await env.DB.prepare('SELECT COALESCE(MAX(sort_order), -1) AS maxOrder FROM categories').first<{ maxOrder: number }>()
+  const sortOrder = (maxOrder?.maxOrder ?? -1) + 1
+  const result = await env.DB.prepare(
+    'INSERT INTO categories (slug, name, sort_order) VALUES (?, ?, ?)',
+  ).bind(slug, name, sortOrder).run()
+  if (result.meta.changes !== 1) return jsonError('internal', 500)
+
+  const category = await env.DB.prepare(
+    'SELECT slug, name, sort_order, created_at, updated_at FROM categories WHERE slug = ?',
+  ).bind(slug).first<AdminPhotoCategory>()
+  return Response.json({ category }, { status: 201 })
 }
 
 async function putBlob(request: Request, env: Env, id: string, variant: string): Promise<Response> {
@@ -248,7 +317,7 @@ async function createPhoto(request: Request, env: Env): Promise<Response> {
     return jsonError('invalid_json', 400)
   }
 
-  const errors = validatePhotoInsert(body)
+  const errors = validatePhotoInsert(body, await getCategorySlugs(env))
   if (errors.length > 0) {
     return jsonError('validation', 400, { details: errors })
   }
@@ -362,8 +431,8 @@ async function updatePhoto(request: Request, env: Env, id: string): Promise<Resp
     values.push(patch.location)
   }
   if ('category' in patch) {
-    if (!isValidCategory(patch.category)) {
-      return jsonError('validation', 400, { details: [`category must be one of: ${CATEGORY_ORDER.join(', ')}`] })
+    if (!(await categoryExists(env, patch.category))) {
+      return jsonError('validation', 400, { details: ['category must be an existing category slug'] })
     }
     setClauses.push('category = ?')
     values.push(patch.category)
@@ -431,15 +500,15 @@ async function updatePhoto(request: Request, env: Env, id: string): Promise<Resp
  * Validates a `PUT /api/admin/photos/order` body. Returns a list of
  * human-readable error strings; an empty list means the body is valid.
  */
-function validateOrderUpdate(body: unknown): string[] {
+async function validateOrderUpdate(body: unknown, env: Env): Promise<string[]> {
   const errors: string[] = []
   if (typeof body !== 'object' || body === null) {
     return ['body must be a JSON object']
   }
   const b = body as Record<string, unknown>
 
-  if (!isValidCategory(b.category)) {
-    errors.push(`category must be one of: ${CATEGORY_ORDER.join(', ')}`)
+  if (!(await categoryExists(env, b.category))) {
+    errors.push('category must be an existing category slug')
   }
   if (!Array.isArray(b.ids)) {
     errors.push('ids must be an array')
@@ -466,7 +535,7 @@ async function reorderPhotos(request: Request, env: Env): Promise<Response> {
     return jsonError('invalid_json', 400)
   }
 
-  const errors = validateOrderUpdate(body)
+  const errors = await validateOrderUpdate(body, env)
   if (errors.length > 0) {
     return jsonError('validation', 400, { details: errors })
   }
@@ -710,6 +779,12 @@ async function bulkUpdateMetadata(request: Request, env: Env): Promise<Response>
 export async function handleAdminApi(request: Request, env: Env, url: URL): Promise<Response> {
   const { pathname } = url
   const { method } = request
+
+  if (pathname === '/api/admin/categories') {
+    if (method === 'GET') return listCategories(env)
+    if (method === 'POST') return createCategory(request, env)
+    return jsonError('method_not_allowed', 405)
+  }
 
   if (pathname === '/api/admin/photos') {
     if (method === 'GET') return listPhotos(env)

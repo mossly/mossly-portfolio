@@ -1,4 +1,4 @@
-import type { Photo, PhotoCategory, Gallery } from '../types/photo'
+import type { Photo, PhotoCategory, PhotoCategoryDefinition, Gallery } from '../types/photo'
 import { GALLERY_CONFIG, PUBLIC_CATEGORY_ORDER } from '../config/images'
 
 export class GalleryManager {
@@ -6,6 +6,7 @@ export class GalleryManager {
   private galleries: Map<PhotoCategory, Gallery> = new Map()
   private currentCategory: PhotoCategory = 'highlights'
   private listeners: Set<(category: PhotoCategory) => void> = new Set()
+  private categoryDefinitions = new Map<string, PhotoCategoryDefinition>()
 
   /**
    * Loads the gallery data from the live `/api/photos` endpoint (Phase 3G).
@@ -29,18 +30,28 @@ export class GalleryManager {
       console.error('Failed to load photos from /api/photos:', err)
       this.photos = {} as Record<PhotoCategory, Photo[]>
     }
+
+    try {
+      const res = await fetch('/api/categories')
+      if (res.ok) {
+        const definitions = (await res.json()) as PhotoCategoryDefinition[]
+        this.categoryDefinitions = new Map(definitions.map(category => [category.slug, category]))
+      }
+    } catch (err) {
+      console.warn('Failed to load category definitions:', err)
+    }
     this.initializeGalleries()
   }
 
   private initializeGalleries() {
     this.galleries = new Map()
     for (const [category, photos] of Object.entries(this.photos)) {
-      const config = GALLERY_CONFIG[category as PhotoCategory]
-      if (!config) continue
+      const config = GALLERY_CONFIG[category as keyof typeof GALLERY_CONFIG]
+      const definition = this.categoryDefinitions.get(category)
       const list = photos as Photo[]
       this.galleries.set(category as PhotoCategory, {
         category: category as PhotoCategory,
-        displayName: config.displayName,
+        displayName: definition?.name ?? config?.displayName ?? category.toUpperCase(),
         photos: list,
         coverPhoto: list[0] as Photo,
       })
@@ -76,9 +87,20 @@ export class GalleryManager {
   }
 
   getCategories(): PhotoCategory[] {
-    // Return categories in the original website order (single source:
-    // PUBLIC_CATEGORY_ORDER -- highlights first, then the real categories)
-    return PUBLIC_CATEGORY_ORDER.filter(category => this.galleries.has(category))
+    const configured = this.categoryDefinitions.size > 0
+      ? [...this.categoryDefinitions.values()]
+          .sort((a, b) => a.sort_order - b.sort_order || a.name.localeCompare(b.name))
+          .map(category => category.slug as PhotoCategory)
+      : PUBLIC_CATEGORY_ORDER
+    const remaining = [...this.galleries.keys()].filter(category => !configured.includes(category))
+    return [...configured.filter(category => this.galleries.has(category)), ...remaining]
+  }
+
+  getCategoryLabel(category: PhotoCategory): string {
+    return this.galleries.get(category)?.displayName
+      ?? this.categoryDefinitions.get(category)?.name
+      ?? GALLERY_CONFIG[category as keyof typeof GALLERY_CONFIG]?.displayName
+      ?? category.toUpperCase()
   }
 
   getGallery(category: PhotoCategory): Gallery | undefined {

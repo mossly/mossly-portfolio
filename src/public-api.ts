@@ -10,7 +10,22 @@
 // "/api/photos response shape") for the authoritative contract.
 
 import type { Env } from './worker'
-import type { AdminPhoto, ImageVariant, Photo, PhotoCategory, PhotoMetadata } from './types/photo'
+import type { AdminPhoto, ImageVariant, Photo, PhotoCategory, PhotoCategoryDefinition, PhotoMetadata } from './types/photo'
+
+export async function handlePublicCategories(env: Env): Promise<Response> {
+  try {
+    const { results } = await env.DB.prepare(
+      'SELECT slug, name, sort_order FROM categories ORDER BY sort_order ASC, name ASC',
+    ).all<PhotoCategoryDefinition>()
+    return Response.json(results ?? [], {
+      status: 200,
+      headers: { 'Cache-Control': 'public, max-age=60' },
+    })
+  } catch (err) {
+    console.error('GET /api/categories failed:', err)
+    return Response.json({ error: 'internal' }, { status: 500 })
+  }
+}
 
 // The projection pulled from D1 -- an explicit column list (not `SELECT *`)
 // so admin-only columns (content_hash, original_bytes, status, deleted_at,
