@@ -20,6 +20,10 @@ export const CATEGORY_ORDER: PhotoCategory[] = [
 // the real categories.
 export const PUBLIC_CATEGORY_ORDER: PhotoCategory[] = ['highlights', ...CATEGORY_ORDER]
 
+// These categories have dedicated pages and must not appear in the public
+// photography gallery, even when their photo buckets are returned by the API.
+export const PUBLIC_CATEGORY_EXCLUSIONS: PhotoCategory[] = ['about', 'projects']
+
 export const GALLERY_CONFIG = {
   highlights: { displayName: 'HIGHLIGHTS' },
   bird: { displayName: 'BIRD' },
