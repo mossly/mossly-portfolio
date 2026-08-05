@@ -1,4 +1,4 @@
-export type PhotoCategory =
+export type BuiltInPhotoCategory =
   // 'highlights' is a synthetic gallery: never stored in photos.category
   // (isValidCategory validates against CATEGORY_ORDER, which excludes it) --
   // the public API materializes it from rows with is_highlight = 1.
@@ -17,6 +17,22 @@ export type PhotoCategory =
   | 'street'
   | 'about'
   | 'projects'
+
+// Category slugs are user-managed records, so the set cannot be closed at
+// compile time. Keep the built-in union available for callers that want it,
+// while allowing categories created in the admin portal.
+export type PhotoCategory = BuiltInPhotoCategory | (string & {})
+
+export interface PhotoCategoryDefinition {
+  slug: string
+  name: string
+  sort_order: number
+}
+
+export interface AdminPhotoCategory extends PhotoCategoryDefinition {
+  created_at: string
+  updated_at: string
+}
 
 export interface PhotoMetadata {
   camera?: string

@@ -1,5 +1,4 @@
 import { galleryManager } from '../utils/gallery-manager'
-import { GALLERY_CONFIG } from '../config/images'
 import type { Photo, PhotoCategory } from '../types/photo'
 import { LightboxComponent } from './lightbox'
 import LazyLoad from 'vanilla-lazyload'
@@ -149,6 +148,27 @@ export class GalleryComponent {
   }
 
   private setupCategoryButtons() {
+    const categories = galleryManager.getCategories()
+    const categoryMarkup = categories
+      .map(category => galleryManager.getCategoryLabel(category))
+      .map((label, index) => {
+        const category = categories[index]
+        return { category, label }
+      })
+
+    const dropdownMenu = document.getElementById('category-dropdown-menu')
+    if (dropdownMenu) {
+      dropdownMenu.innerHTML = categoryMarkup
+        .map(({ category, label }) => `<li><a data-category="${this.escapeAttribute(category)}" class="category-dropdown-item">${this.escapeHtml(label)}</a></li>`)
+        .join('')
+    }
+    const desktopMenu = document.getElementById('category-desktop-menu')
+    if (desktopMenu) {
+      desktopMenu.innerHTML = categoryMarkup
+        .map(({ category, label }, index) => `<button class="btn ${index === 0 ? 'btn-primary' : 'btn-ghost'} btn-sm" data-category="${this.escapeAttribute(category)}">${this.escapeHtml(label)}</button>`)
+        .join('')
+    }
+
     // Setup desktop buttons
     const desktopButtons = document.querySelectorAll('button[data-category]')
     desktopButtons.forEach(button => {
@@ -176,6 +196,14 @@ export class GalleryComponent {
         })
       }
     })
+  }
+
+  private escapeHtml(value: string): string {
+    return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+  }
+
+  private escapeAttribute(value: string): string {
+    return this.escapeHtml(value)
   }
 
 
@@ -482,7 +510,7 @@ export class GalleryComponent {
     // Update dropdown button text
     const selectedCategorySpan = document.getElementById('selected-category')
     if (selectedCategorySpan) {
-      selectedCategorySpan.textContent = GALLERY_CONFIG[activeCategory].displayName
+      selectedCategorySpan.textContent = galleryManager.getCategoryLabel(activeCategory)
     }
   }
 

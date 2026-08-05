@@ -2,7 +2,7 @@
 
 import { isValidAccessRequest } from './auth'
 import { handleAdminApi } from './admin-api'
-import { handlePublicPhotos } from './public-api'
+import { handlePublicCategories, handlePublicPhotos } from './public-api'
 
 export interface Env {
   ASSETS: { fetch: (request: Request) => Promise<Response> }
@@ -24,6 +24,13 @@ export default {
         return Response.json({ ok: false, error: 'method_not_allowed' }, { status: 405 })
       }
       return handlePublicPhotos(env)
+    }
+
+    if (url.pathname === '/api/categories') {
+      if (request.method !== 'GET') {
+        return Response.json({ ok: false, error: 'method_not_allowed' }, { status: 405 })
+      }
+      return handlePublicCategories(env)
     }
 
     if (url.pathname.startsWith('/api/admin/')) {
