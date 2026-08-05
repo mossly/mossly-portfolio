@@ -1,5 +1,5 @@
 import type { Photo, PhotoCategory, PhotoCategoryDefinition, Gallery } from '../types/photo'
-import { GALLERY_CONFIG, PUBLIC_CATEGORY_ORDER } from '../config/images'
+import { GALLERY_CONFIG, PUBLIC_CATEGORY_EXCLUSIONS, PUBLIC_CATEGORY_ORDER } from '../config/images'
 
 export class GalleryManager {
   private photos: Record<PhotoCategory, Photo[]> = {} as Record<PhotoCategory, Photo[]>
@@ -92,8 +92,11 @@ export class GalleryManager {
           .sort((a, b) => a.sort_order - b.sort_order || a.name.localeCompare(b.name))
           .map(category => category.slug as PhotoCategory)
       : PUBLIC_CATEGORY_ORDER
-    const remaining = [...this.galleries.keys()].filter(category => !configured.includes(category))
-    return [...configured.filter(category => this.galleries.has(category)), ...remaining]
+    const isPublicCategory = (category: PhotoCategory) => !PUBLIC_CATEGORY_EXCLUSIONS.includes(category)
+    const remaining = [...this.galleries.keys()].filter(
+      category => isPublicCategory(category) && !configured.includes(category),
+    )
+    return [...configured.filter(category => isPublicCategory(category) && this.galleries.has(category)), ...remaining]
   }
 
   getCategoryLabel(category: PhotoCategory): string {
