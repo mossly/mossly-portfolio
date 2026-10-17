@@ -5,6 +5,7 @@
     { "match": { "field": "camera", "value": "Canon Canon EOS 700D" }, "set": { "camera": "Canon EOS 700D" } },
     { "match": { "field": "camera", "value": "Canon Canon EOS R5" }, "set": { "camera": "Canon EOS R5" } },
     { "match": { "field": "camera", "value": "NIKON CORPORATION NIKON Z 8" }, "set": { "camera": "Nikon Z8" } },
+    { "match": { "field": "camera", "value": "NIKON Z 8" }, "set": { "camera": "Nikon Z8" } },
     { "match": { "field": "camera", "value": "FUJIFILM X-T1" }, "set": { "camera": "Fujifilm X-T1" } },
     { "match": { "field": "camera", "value": "FUJIFILM X-T3" }, "set": { "camera": "Fujifilm X-T3" } },
     { "match": { "field": "camera", "value": "FUJIFILM X-T30" }, "set": { "camera": "Fujifilm X-T30" } },

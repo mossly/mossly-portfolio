@@ -4,6 +4,13 @@
   "description": "Aaron Moss Photography Portfolio",
   "type": "module",
   "scripts": {
+    "quality:audit": "tsx scripts/audit-image-quality.ts",
+    "quality:benchmark": "tsx scripts/benchmark-image-quality.ts",
+    "quality:prepare": "tsx scripts/prepare-image-quality.ts",
+    "quality:summary": "tsx scripts/summarize-image-quality.ts",
+    "quality:report": "tsx scripts/report-image-quality.ts",
+    "quality:escalate": "tsx scripts/escalate-image-quality.ts",
+    "test:quality": "tsx --test scripts/image-quality.test.ts",
     "dev": "vite",
     "build": "tsc && tsc -p tsconfig.worker.json --noEmit && vite build",
     "preview": "vite preview",

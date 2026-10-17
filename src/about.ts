@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize footer with a different quote
     new Footer('footer', {
-      quote: 'Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever... It remembers little things, long after you have forgotten everything.',
-      author: 'Aaron Siskind'
+      quote: 'Life is like riding a bicycle. To keep your balance you must keep moving.',
+      author: 'Albert Einstein'
     })
   } catch (error) {
     console.error('Error initializing about page:', error)

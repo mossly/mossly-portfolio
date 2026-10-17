@@ -23,6 +23,9 @@ jobs:
       - name: Typecheck
         run: npx tsc --noEmit
 
+      - name: Image quality regression tests
+        run: npm run test:quality
+
       - name: Lint
         run: npm run lint
 
